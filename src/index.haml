@@ -18,6 +18,203 @@
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
 %body
+  %nav.navbar.navbar-inverse.navbar-fixed-top
+    .container
+      .navbar-header
+        %button.navbar-toggle.collapsed{aria-controls: "navbar", aria-expanded: "false", data-target: "#navbar", data-toggle: "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{href: "#"} Algolia
+      #navbar.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li.active
+            %a{href: "#"} Home
+          %li
+            %a{href: "#about"} About
+
+  %header.hero
+    .container
+      .spacer60
+      %h1.text-center Community
+
+  %main
+    %section.projects
+      .container
+        .row
+          .col-sm-6
+            .project-wrapper-big
+              .project-desc
+                instantsearch.js
+          .col-sm-6
+            .row
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    helper.js
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    autocomplete.js
+            .spacer20
+            .row
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    Stackoverflow
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    Grader
+        .spacer20
+        .row
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Magento
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Zendesk
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Jekyll
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Salesforce
+        .spacer20
+        .row
+          .col-sm-6
+            .project-wrapper-big
+              .project-desc
+                DocSearch
+          .col-sm-6
+            .row
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    HN Search
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    Github Search
+            .spacer20
+            .row
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    SuperSearch
+              .col-sm-6
+                .project-wrapper
+                  .project-desc
+                    Goodies
+        .spacer20
+        .row
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Talks
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Datasets
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                SearchBox
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Expect-JSX
+
+        .spacer20
+        .row
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Blog
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Blog
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Blog
+          .col-sm-3
+            .project-wrapper
+              .project-desc
+                Blog
+
+      .container
+        %h2.text-center Api Clients & tools
+      .tool-category
+        .container
+          %h3 Web
+      .container
+        %ul.list-inline
+          %li algoliasearch.js
+          %li instantsearch.js
+          %li autocomplete.js
+          %li algolia-helper.js
+      .tool-category
+        .container
+          %h3 Mobile
+      .container
+        %ul.list-inline
+          %li android
+          %li swift
+          %li objective-c
+      .tool-category
+        .container
+          %h3 Back-end
+      .container
+        %ul.list-inline
+          %li Scala
+          %li ...
+
+
+    %section.events
+      .container
+        %h2.text-center Events
+        .row
+          .col-sm-6
+            .event-wrapper-big
+              .event-desc
+                Event
+          .col-sm-6
+            .row
+              .col-sm-6
+                .event-wrapper
+                  .event-desc
+                    Event
+              .col-sm-6
+                .event-wrapper
+                  .event-desc
+                    Event
+            .spacer20
+            .row
+              .col-sm-6
+                .event-wrapper
+                  .event-desc
+                    Event
+              .col-sm-6
+                .event-wrapper
+                  .event-desc
+                    Event
+
+    %footer.footer
+      .container
+        .row
+          .col-sm-6
+            %h3 Want to work with us
+          .col-sm-3
+            %h3 Connect
+          .col-sm-3
+            %h3 Keep updated
 
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
