@@ -120,7 +120,7 @@ gulp.task('lint:scss', function() {
   return gulp.src('src/scss/*.scss')
     .pipe(scsslint({
       customReport: scssLintStylish,
-      config: '.scss-lint.yml'
+      config: 'scss-lint.yml'
     }));
 });
 
