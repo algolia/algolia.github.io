@@ -1,0 +1,234 @@
+.sbx-custom__filters {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: - 120px;
+  margin: 6px;
+  user-select: none;
+  cursor: pointer;
+
+  @media (max-width: $bp-small) {
+    right: - 59px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    @media (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+    @media (max-width: $bp-small) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.filters {
+  left: 0;
+  right: 0;
+  padding: 5vw 0 4vw;
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.tabs {
+  list-style: none;
+  display: block;
+  width: 190px;
+  box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+
+  a {
+    display: inline-block;
+    font-size: .9em;
+    width: 50%;
+    padding: 8px 0 10px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .active {
+    color: black;
+    background-color: #fff;
+  }
+}
+
+.ais-menu {
+  animation: fadeleft .2s ease;
+}
+.menu {
+  animation: faderight .2s ease;
+}
+
+
+.tab-panel {
+  display: none;
+  visibility: hidden;
+  max-width: 800px ;
+  margin: 0 auto;
+  &.active {
+    visibility: visible;
+    display: block;
+    transform: translateX(0);
+  }
+
+  .searchbox {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  margin: 0;
+  transition: transform .3s ease-in, opacity .6s ease;
+  opacity: 1;
+
+  .overlay-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #fff;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &.hide {
+    opacity: 0;
+    transition: transform .3s ease-in, opacity .2s ease;
+    display: block !important;
+    transform: translateX(100vw);
+  }
+
+  .close {
+    position: absolute;
+    user-select: none;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    z-index: 9000;
+    background-color: transparent;
+    padding: 24px 24px 12px 12px;
+    cursor: pointer;
+    border: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+#refinements {
+  clear: both;
+  padding: 12px .5vw;
+
+  > li, div {
+    list-style: none;
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-right: 8px;
+    user-select: inherit;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      div {
+        display: inline-block;
+      }
+
+      svg {
+        display: inline;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        top: -2px;
+        position: relative;
+        fill: #00A3FF;
+      }
+    }
+  }
+
+  .ais-current-refined-values--list {
+    svg {
+      fill: #BD245E;
+    }
+  }
+  .ais-current-refined-values--item {
+    animation: bounce .5s ease-in;
+    font-size: 1.2em;
+  }
+}
+
+.items, .ais-refinement-list--list, .ais-menu--list{
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.items li, .ais-refinement-list--item, .ais-menu--item{
+  flex-grow: 1;
+  background: rgba(#06132B,.8);
+  box-shadow: inset 0 0 0 1px #00A3FF;
+  text-align: center;
+  display: inline-block;
+  margin: 2px;
+  padding: 10px 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  &:hover {
+    text-shadow: 0 0 5px white;
+    background: rgba(#00A3FF,.5);
+  }
+
+  em {
+    font-style: normal;
+    font-weight: 800;
+  }
+}
+
+.ais-refinement-list--item, .ais-menu--item {
+  width: 100%
+}
+
+.ais-refinement-list--item__active, .ais-menu--item__active {
+  color: #fff;
+  background: rgba($ais_blue,.3);
+}

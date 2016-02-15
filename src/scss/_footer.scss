@@ -1,0 +1,70 @@
+.poweredby {
+  color: white;
+  display: block;
+  width: 400px;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px 0 8px;
+  margin: 0 auto 40px;
+  background-color: rgba(#02132B,.8);
+  border-radius: 25px;
+  @media (max-width: $bp-small) {
+    font-size: 14px;
+    width: 220px;
+    border-radius: 50px;
+  }
+  .algolia {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    top: -1px;
+    width: 70px;
+    text-indent: -9999px;
+    background: url('img/logo-algolia.svg') no-repeat center center / contain;
+    color: transparent;
+  }
+  .instantsearch {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    top: -1px;
+    width: 150px;
+    text-indent: -9999px;
+    background: url('img/logo-instantsearch.svg') no-repeat center center / contain;
+    color: transparent;
+  }
+}
+
+
+.KOOL {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    font-size: 1.2em;
+    content: '<3';
+    color: white;
+  }
+  svg {
+    display: none;
+  }
+  &:hover{
+    &::after {
+      display: none;
+    }
+    svg {
+      position: absolute;
+      display: block;
+      top: 5px;
+      left: 8px;
+      animation: bounce .2s ease-in;
+      width: 20px;
+      height: 20px;
+      fill: $ais_red;
+    }
+  }
+}
