@@ -1,15 +1,16 @@
-.project-wrapper-big{
-  height: 320px;
-  width: 100%;
-  background-color: red;
-  position: relative;
+.projects{
+  padding: 20px 0 40px;
 }
 
 .project-wrapper{
   height: 150px;
   width: 100%;
-  background-color: red;
+  background-color: #ccc;
   position: relative;
+}
+
+.project-wrapper.big{
+  height: 320px;
 }
 
 .project-desc{

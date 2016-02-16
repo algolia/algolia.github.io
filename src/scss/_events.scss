@@ -1,19 +1,16 @@
 .events {
-  background: green;
+  background: $primary-color;
+  padding: 0 0 40px;
+  color: white;
 }
-
-.event-wrapper-big{
-  height: 320px;
-  width: 100%;
-  background-color: red;
-  position: relative;
-}
-
 .event-wrapper{
   height: 150px;
   width: 100%;
-  background-color: red;
+  background-color: #eee;
   position: relative;
+  &.big {
+    height: 320px;
+  }
 }
 
 .event-desc{

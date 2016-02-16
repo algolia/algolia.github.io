@@ -3,7 +3,8 @@
   %meta{charset: "UTF-8"}
   %title Algolia Community
   %link{href: "app.css", rel: "stylesheet", type: "text/css"}
-  %link{href: "", rel: "stylesheet", type: "text/css"}
+  %link{href: "//fonts.googleapis.com/css?family=Raleway:100,400,600", rel: "stylesheet", type: "text/css"}
+  %link{href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600", rel: "stylesheet", type: "text/css"}
   %link{rel:"icon", type: "image/x-icon", href:"favicon.ico"}
   %meta{name: "description", content:""}
   %meta{name: "viewport", content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
@@ -26,7 +27,8 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand{href: "#"} Algolia
+        %a.navbar-brand{href: "http://community.algolia.com"}
+          %img{src: "img/logo-algolia.svg", width:"100px"}
       #navbar.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li.active
@@ -44,7 +46,7 @@
       .container
         .row
           .col-sm-6
-            .project-wrapper-big
+            .project-wrapper.big
               .project-desc
                 instantsearch.js
           .col-sm-6
@@ -62,7 +64,7 @@
               .col-sm-6
                 .project-wrapper
                   .project-desc
-                    Stackoverflow
+                    Wordpress
               .col-sm-6
                 .project-wrapper
                   .project-desc
@@ -88,7 +90,7 @@
         .spacer20
         .row
           .col-sm-6
-            .project-wrapper-big
+            .project-wrapper.big
               .project-desc
                 DocSearch
           .col-sm-6
@@ -116,7 +118,7 @@
           .col-sm-3
             .project-wrapper
               .project-desc
-                Talks
+                StackOverflow
           .col-sm-3
             .project-wrapper
               .project-desc
@@ -135,23 +137,24 @@
           .col-sm-3
             .project-wrapper
               .project-desc
-                Blog
+                Blog 1
           .col-sm-3
             .project-wrapper
               .project-desc
-                Blog
+                Blog 2
           .col-sm-3
             .project-wrapper
               .project-desc
-                Blog
+                Blog 3
           .col-sm-3
             .project-wrapper
               .project-desc
-                Blog
+                Blog 4
 
+    %section.tools
       .container
-        %h2.text-center Api Clients & tools
-      .tool-category
+        %h2.text-center.m-b-large Api Clients & Tools
+      .tools-category.tools-web
         .container
           %h3 Web
       .container
@@ -160,7 +163,7 @@
           %li instantsearch.js
           %li autocomplete.js
           %li algolia-helper.js
-      .tool-category
+      .tools-category.tools-mobile
         .container
           %h3 Mobile
       .container
@@ -168,7 +171,7 @@
           %li android
           %li swift
           %li objective-c
-      .tool-category
+      .tools-category.tools-backend
         .container
           %h3 Back-end
       .container
@@ -179,10 +182,10 @@
 
     %section.events
       .container
-        %h2.text-center Events
+        %h2.text-center.m-b-large Events
         .row
           .col-sm-6
-            .event-wrapper-big
+            .event-wrapper.big
               .event-desc
                 Event
           .col-sm-6

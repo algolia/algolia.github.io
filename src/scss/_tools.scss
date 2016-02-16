@@ -1,3 +1,16 @@
-.tool-category {
-    background: yellow;
+.tools-category {
+    padding: 8px 0 20px;
+    &.tools-web {
+      background-color: $cabaret;
+    }
+    &.tools-mobile {
+      background-color: $sea-green;
+    }
+    &.tools-backend {
+      background-color: $saffron-mango;
+    }
+}
+
+.tools {
+  padding: 0 0 40px;
 }

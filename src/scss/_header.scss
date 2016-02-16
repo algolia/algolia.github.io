@@ -1,6 +1,14 @@
 .hero {
-  background-color: blue;
+  background-color: $primary-color;
   height: 200px;
   color: white;
   margin-bottom: 20px;
+  h1 {
+    font-size: 5em;
+    font-weight: 100;
+  }
+}
+.navbar-brand {
+  position: relative;
+  top: -4px;
 }
