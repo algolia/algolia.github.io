@@ -8,6 +8,8 @@
   background-color: $primary-color;
   position: relative;
   color: #fff;
+  outline: 2px solid lighten($primary-color, 10%);
+  
   &.big{
     height: 310px;
   }
@@ -21,24 +23,45 @@
   }
 }
 
+// Projects structure
+.project-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 0;
+}
 
 
-.project-desc{
+.project-desc {
+  text-align: center;
+  
+  a {
+    color: #fff;
+  }
+}
+
+.project-footer{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(black,.8);
   line-height: 40px;
   padding: 0 10px;
   text-transform: uppercase;
   color: white;
+  width: 100%;
+  max-height: 40px;
+  a {
+    float: right;
+    svg {
+      right: 0;
+    }
+  }
 }
 
-
 // Color the project blocs
-@each $class, $value in $gradients{
+@each $class, $value, $color in $gradients{
   .#{$class} {
-    background: #{$value}
+    background: #{$value};
+    outline: 2px solid lighten($color, 10%);
   }
 }

@@ -19,17 +19,19 @@ $brand-warning: #f0ad4e;
 $brand-danger: #ff5f5f;
 
 // Gradients
+// @doc
+//      class - gradient - first-color
 $gradients: (
-  instantsearch: 'linear-gradient(to top right, #1d3657, #3e6790)',
-  docsearch:' linear-gradient(to bottom right, #254266, #167095)',
-  helperjs: 'linear-gradient(to top right, #34a3c7, #177296)',
-  magento: 'linear-gradient(to top right, #ff66b7, #dc6637)',
-  salesforce: 'linear-gradient(to bottom right, #635aa4, #c870da)',
-  zendesk: 'linear-gradient(to top right, #067864, #87cf4c)',
-  autocompletejs: 'linear-gradient(to top right, #377d1c, #13b7bd)',
-  hackernews: 'linear-gradient(to right, #fea925, #f58823)',
-  supersearch: 'linear-gradient(to top right, #47185e, #195aac)',
-  githubsearch: 'linear-gradient(to top right, #989ca0, #65686d)'
+  (instantsearch, 'linear-gradient(to top right, #1d3657, #3e6790)',#1d3657 ),
+  (docsearch,' linear-gradient(to bottom right, #254266, #167095)', #254266),
+  (helperjs, 'linear-gradient(to top right, #34a3c7, #177296)', #34a3c7),
+  (magento, 'linear-gradient(to top right, #ff66b7, #dc6637)', #ff66b7),
+  (salesforce, 'linear-gradient(to bottom right, #635aa4, #c870da)', #635aa4),
+  (zendesk, 'linear-gradient(to top right, #067864, #87cf4c)', #067864),
+  (autocompletejs, 'linear-gradient(to top right, #377d1c, #13b7bd)', #377d1c),
+  (hackernews, 'linear-gradient(to right, #fea925, #f58823)', #fea925),
+  (supersearch, 'linear-gradient(to top right, #47185e, #195aac)', #47185e),
+  (githubsearch, 'linear-gradient(to top right, #989ca0, #65686d)',#989ca0 )
 );
 
 
