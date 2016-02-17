@@ -7,11 +7,15 @@
   width: 100%;
   background-color: #ccc;
   position: relative;
+  &.big{
+    height: 320px;
+  }
+  &.hx2 {
+    height: 320px;
+  }
 }
 
-.project-wrapper.big{
-  height: 320px;
-}
+
 
 .project-desc{
   position: absolute;
