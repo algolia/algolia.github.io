@@ -536,15 +536,12 @@ sub {
 
 .icon {
   display: inline-block;
-  max-width: 32px;
-  max-height: 32px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); }
-  .project-desc .icon {
-    padding-left: 16px; }
-    .project-desc .icon use {
+  max-width: 36px;
+  max-height: 36px; }
+  .project-footer .icon {
+    right: 0;
+    padding-right: 16px; }
+    .project-footer .icon use {
       fill: #fff; }
 
 .hero {
@@ -573,7 +570,8 @@ sub {
   width: 100%;
   background-color: #1F3B5D;
   position: relative;
-  color: #fff; }
+  color: #fff;
+  outline: 2px solid #2c5383; }
   .project-wrapper.big {
     height: 310px; }
   .project-wrapper.hx2 {
@@ -581,46 +579,71 @@ sub {
   .project-wrapper.newsletter {
     background: #167195; }
 
+.project-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 0; }
+
 .project-desc {
+  text-align: center; }
+  .project-desc a {
+    color: #fff; }
+
+.project-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   line-height: 40px;
   padding: 0 10px;
   text-transform: uppercase;
-  color: white; }
+  color: white;
+  width: 100%;
+  max-height: 40px; }
+  .project-footer a {
+    float: right; }
+    .project-footer a svg {
+      right: 0; }
 
 .instantsearch {
-  background: linear-gradient(to top right, #1d3657, #3e6790); }
+  background: linear-gradient(to top right, #1d3657, #3e6790);
+  outline: 2px solid #2a4e7d; }
 
 .docsearch {
-  background:  linear-gradient(to bottom right, #254266, #167095); }
+  background:  linear-gradient(to bottom right, #254266, #167095);
+  outline: 2px solid #335a8b; }
 
 .helperjs {
-  background: linear-gradient(to top right, #34a3c7, #177296); }
+  background: linear-gradient(to top right, #34a3c7, #177296);
+  outline: 2px solid #5ab6d4; }
 
 .magento {
-  background: linear-gradient(to top right, #ff66b7, #dc6637); }
+  background: linear-gradient(to top right, #ff66b7, #dc6637);
+  outline: 2px solid #ff99cf; }
 
 .salesforce {
-  background: linear-gradient(to bottom right, #635aa4, #c870da); }
+  background: linear-gradient(to bottom right, #635aa4, #c870da);
+  outline: 2px solid #827bb6; }
 
 .zendesk {
-  background: linear-gradient(to top right, #067864, #87cf4c); }
+  background: linear-gradient(to top right, #067864, #87cf4c);
+  outline: 2px solid #08a98c; }
 
 .autocompletejs {
-  background: linear-gradient(to top right, #377d1c, #13b7bd); }
+  background: linear-gradient(to top right, #377d1c, #13b7bd);
+  outline: 2px solid #49a725; }
 
 .hackernews {
-  background: linear-gradient(to right, #fea925, #f58823); }
+  background: linear-gradient(to right, #fea925, #f58823);
+  outline: 2px solid #febd58; }
 
 .supersearch {
-  background: linear-gradient(to top right, #47185e, #195aac); }
+  background: linear-gradient(to top right, #47185e, #195aac);
+  outline: 2px solid #662287; }
 
 .githubsearch {
-  background: linear-gradient(to top right, #989ca0, #65686d); }
+  background: linear-gradient(to top right, #989ca0, #65686d);
+  outline: 2px solid #b3b6b8; }
 
 .events {
   background: #1F3B5D;
