@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  max-width: 32px;	
+  max-height: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+ 
+	
+  // Specific to project descriptions
+  .project-desc &{	
+    padding-left: 16px;
+  	
+    use {
+      fill: #fff;
+  	}
+  }
+}
+

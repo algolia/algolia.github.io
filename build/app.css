@@ -534,6 +534,19 @@ sup {
 sub {
   bottom: -0.25em; }
 
+.icon {
+  display: inline-block;
+  max-width: 32px;
+  max-height: 32px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .project-desc .icon {
+    padding-left: 16px; }
+    .project-desc .icon use {
+      fill: #fff; }
+
 .hero {
   background-color: #1F3B5D;
   height: 200px;
