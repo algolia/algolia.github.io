@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>illus-autocomplete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-771.000000, -415.000000)">
+            <g id="autocomplete" sketch:type="MSLayerGroup" transform="translate(714.000000, 375.000000)">
+                <g id="illus-autocomplete" transform="translate(57.000000, 40.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-167" opacity="0.512010261" fill-opacity="0.252774004" fill="#7ED321" cx="51" cy="51" r="51"></circle>
+                    <circle id="Oval-167" fill-opacity="0.252774004" fill="#7ED321" cx="50.5" cy="50.5" r="37.5"></circle>
+                    <circle id="Oval-167" fill-opacity="0.252774004" fill="#7ED321" cx="51" cy="51" r="21"></circle>
+                    <path d="M51,22.6315789 C35.8152174,22.6315789 23.5,35.0079444 23.5,50.2681231 C23.5,65.5283019 35.8152174,77.9046673 51,77.9046673 C66.1847826,77.9046673 78.5,65.5283019 78.5,50.2681231 C78.5,35.0079444 66.1847826,22.6315789 51,22.6315789 L51,22.6315789 Z M51,74.7636718 C37.5359776,74.7636718 26.6254767,63.7989977 26.6254767,50.2681231 C26.6254767,36.7372486 37.5359776,25.7725744 51,25.7725744 C64.4640224,25.7725744 75.3745233,36.7372486 75.3745233,50.2681231 C75.3745233,63.7989977 64.4640224,74.7636718 51,74.7636718 L51,74.7636718 Z M30.673913,50.2681231 L33.0652174,50.2681231 C33.0652174,40.2949355 41.076087,32.24429 51,32.24429 L51,29.8411122 C39.7608696,29.8411122 30.673913,38.9731877 30.673913,50.2681231 L30.673913,50.2681231 Z M52.1956522,80.3078451 L49.8043478,80.3078451 L49.8043478,83.9126117 L36.6521739,83.9126117 L36.6521739,86.3157895 L65.3478261,86.3157895 L65.3478261,83.9126117 L52.1956522,83.9126117 L52.1956522,80.3078451 L52.1956522,80.3078451 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
