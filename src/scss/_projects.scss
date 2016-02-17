@@ -5,13 +5,19 @@
 .project-wrapper{
   height: 150px;
   width: 100%;
-  background-color: #ccc;
+  background-color: $primary-color;
   position: relative;
+  color: #fff;
   &.big{
-    height: 320px;
+    height: 310px;
   }
   &.hx2 {
-    height: 320px;
+    height: 310px;
+  }
+
+  // Mono colors if needed 
+  &.newsletter {
+    background: #167195;
   }
 }
 
@@ -27,4 +33,12 @@
   padding: 0 10px;
   text-transform: uppercase;
   color: white;
+}
+
+
+// Color the project blocs
+@each $class, $value in $gradients{
+  .#{$class} {
+    background: #{$value}
+  }
 }

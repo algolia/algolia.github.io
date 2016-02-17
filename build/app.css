@@ -571,12 +571,15 @@ sub {
 .project-wrapper {
   height: 150px;
   width: 100%;
-  background-color: #ccc;
-  position: relative; }
+  background-color: #1F3B5D;
+  position: relative;
+  color: #fff; }
   .project-wrapper.big {
-    height: 320px; }
+    height: 310px; }
   .project-wrapper.hx2 {
-    height: 320px; }
+    height: 310px; }
+  .project-wrapper.newsletter {
+    background: #167195; }
 
 .project-desc {
   position: absolute;
@@ -588,6 +591,36 @@ sub {
   padding: 0 10px;
   text-transform: uppercase;
   color: white; }
+
+.instantsearch {
+  background: linear-gradient(to top right, #1d3657, #3e6790); }
+
+.docsearch {
+  background:  linear-gradient(to bottom right, #254266, #167095); }
+
+.helperjs {
+  background: linear-gradient(to top right, #34a3c7, #177296); }
+
+.magento {
+  background: linear-gradient(to top right, #ff66b7, #dc6637); }
+
+.salesforce {
+  background: linear-gradient(to bottom right, #635aa4, #c870da); }
+
+.zendesk {
+  background: linear-gradient(to top right, #067864, #87cf4c); }
+
+.autocompletejs {
+  background: linear-gradient(to top right, #377d1c, #13b7bd); }
+
+.hackernews {
+  background: linear-gradient(to right, #fea925, #f58823); }
+
+.supersearch {
+  background: linear-gradient(to top right, #47185e, #195aac); }
+
+.githubsearch {
+  background: linear-gradient(to top right, #989ca0, #65686d); }
 
 .events {
   background: #1F3B5D;

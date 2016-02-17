@@ -46,23 +46,23 @@
       .container
         .row
           .col-sm-6
-            .project-wrapper.big
+            .project-wrapper.big.instantsearch
               .project-desc
                 %a{href: "https://community.algolia.com/instantsearch.js/"}instantsearch.js
                 %a{href: "https://github.com/algolia/instantsearch.js"}
                   %svg.icon
                     %use{xlink:href: "#icon-github"}
-            .spacer20
+            .spacer10
             .row
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.magento
                   .project-desc
                     %a{href: "https://community.algolia.com/magento/"}Magento
                     %a{href: "https://github.com/algolia/magento"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.zendesk
                   .project-desc
                     %a{href: "https://community.algolia.com/zendesk/"}Zendesk
                     %a{href: "https://github.com/algolia/zendesk"}
@@ -71,64 +71,64 @@
           .col-sm-6
             .row
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.big.helperjs
                   .project-desc
                     %a{href: "http://algolia.github.io/algoliasearch-helper-js/"}helper.js
                     %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
                 .spacer10
-                .project-wrapper.hx2
+                .project-wrapper.salesforce
                   .project-desc
-                    %a{href: "https://wordpress.algolia.com/"}Wordpress
+                    %a{href: "https://wordpress.algolia.com/"}Salesforce
                     %a{href: "https://github.com/algolia/wordpress-search"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
-                .project-wrapper.hx2
+                .project-wrapper.autocompletejs
+                  .project-desc
+                    %a{href: "https://github.com/algolia/autocomplete.js"}Grader
+                    %a{href: "https://github.com/algolia/autocomplete.js"}
+                      %svg.icon
+                        %use{xlink:href: "#icon-github"}
+                .spacer10
+                .project-wrapper.hx2.autocompletejs
                   .project-desc
                     %a{href: "https://github.com/algolia/autocomplete.js"}autocomplete.js
                     %a{href: "https://github.com/algolia/autocomplete.js"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
-                .spacer10
-                .project-wrapper
-                  .project-desc
-                    %a{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}Jekyll
-                    %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
-                      %svg.icon
-                        %use{xlink:href: "#icon-github"}
 
 
-        .spacer20
+        .spacer10
         .row
           .col-sm-6
-            .project-wrapper.big
+            .project-wrapper.big.docsearch
               .project-desc
-                %a{href: "http://hn.algolia.com"}Hn Search
-                %a{href: "https://github.com/algolia/hn-search"}
+                %a{href: "https://community.algolia.com/docsearch/"}DocSearch
+                %a{href: "https://github.com/algolia/docsearch"}
                   %svg.icon
                     %use{xlink:href: "#icon-github"}
           .col-sm-6
             .row
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.hackernews
                   .project-desc
-                    %a{href: "https://community.algolia.com/docsearch/"}DocSearch
-                    %a{href: "https://github.com/algolia/docsearch"}
+                    %a{href: "http://hn.algolia.com"}Hn Search
+                    %a{href: "https://github.com/algolia/hn-search"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.githubsearch
                   .project-desc
                     %a{href: "https://github.algolia.com"}Github Search
                     %a{href: "https://github.com/algolia/github-awesome-autocomplete"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
-            .spacer20
+            .spacer10
             .row
               .col-sm-6
-                .project-wrapper
+                .project-wrapper.supersearch
                   .project-desc
                     %a{href: "https://community.algolia.com/supersearch"}SuperSearch
                     %a{href: "https://github.com/algolia/supersearch"}
@@ -137,51 +137,63 @@
               .col-sm-6
                 .project-wrapper
                   .project-desc
-                    %a{href: "https://community.algolia.com/supersearch"}Goodies
-                    %a{href: "https://github.com/algolia/supersearch"}
+                    %a{href: "http://stackoverflow.com/questions/tagged/algolia"}StackOverflow
+        .spacer10
+
+        .row
+          .col-sm-3
+              .project-wrapper
+                .project-desc
+                  %a{href: "http://shipow.github.io/searchbox/"}SearchBox
+                    %a{href: "https://github.com/Shipow/searchbox"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
-        .spacer20
-        .row
+              .spacer10
+              .project-wrapper
+                .project-desc
+                  %a{href: "http://shipow.github.io/searchbox/"}SearchBox
+                    %a{href: "https://github.com/Shipow/searchbox"}
+                      %svg.icon
+                        %use{xlink:href: "#icon-github"}
           .col-sm-3
-            .project-wrapper
-              .project-desc
-                %a{href: "http://stackoverflow.com/questions/tagged/algolia"}StackOverflow
+            .project-wrapper.big
+                .project-desc
+                  Tools
+                  
+          .col-sm-6
+              .project-wrapper.newsletter
+                .project-desc
+                  %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
+            .spacer10
+            .row
+              .col-sm-6
+                .project-wrapper.newsletter
+                  .project-desc
+                    %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
+              .col-sm-6
+                .project-wrapper.newsletter
+                  .project-desc
+                    %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
 
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                Datasets
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                %a{href: "http://shipow.github.io/searchbox/"}SearchBox
-                  %a{href: "https://github.com/Shipow/searchbox"}
-                    %svg.icon
-                      %use{xlink:href: "#icon-github"}
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                %a{href: "https://github.com/algolia/expect-jsx"}Expect-JSX
-
-        .spacer20
-        .row
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                Blog 1
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                Blog 2
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                Blog 3
-          .col-sm-3
-            .project-wrapper
-              .project-desc
-                Blog 4
+            
+        -# .spacer10
+        -# .row
+        -#   .col-sm-3
+        -#     .project-wrapper
+        -#       .project-desc
+        -#         Blog 1
+        -#   .col-sm-3
+        -#     .project-wrapper
+        -#       .project-desc
+        -#         Blog 2
+        -#   .col-sm-3
+        -#     .project-wrapper
+        -#       .project-desc
+        -#         Blog 3
+        -#   .col-sm-3
+        -#     .project-wrapper
+        -#       .project-desc
+        -#         Blog 4
 
     %section.tools
       .container
@@ -230,7 +242,7 @@
                 .event-wrapper
                   .event-desc
                     Event
-            .spacer20
+            .spacer10
             .row
               .col-sm-6
                 .event-wrapper

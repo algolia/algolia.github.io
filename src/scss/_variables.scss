@@ -18,6 +18,21 @@ $brand-info: #5bc0de;
 $brand-warning: #f0ad4e;
 $brand-danger: #ff5f5f;
 
+// Gradients
+$gradients: (
+  instantsearch: 'linear-gradient(to top right, #1d3657, #3e6790)',
+  docsearch:' linear-gradient(to bottom right, #254266, #167095)',
+  helperjs: 'linear-gradient(to top right, #34a3c7, #177296)',
+  magento: 'linear-gradient(to top right, #ff66b7, #dc6637)',
+  salesforce: 'linear-gradient(to bottom right, #635aa4, #c870da)',
+  zendesk: 'linear-gradient(to top right, #067864, #87cf4c)',
+  autocompletejs: 'linear-gradient(to top right, #377d1c, #13b7bd)',
+  hackernews: 'linear-gradient(to right, #fea925, #f58823)',
+  supersearch: 'linear-gradient(to top right, #47185e, #195aac)',
+  githubsearch: 'linear-gradient(to top right, #989ca0, #65686d)'
+);
+
+
 $searchbox: (
   input-width: 500px,
   input-height: 40px,
