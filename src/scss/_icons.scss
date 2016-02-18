@@ -1,8 +1,6 @@
 .icon {
   display: inline-block;
 
-
-
   // Specific to project descriptions
   .project-footer &{
     max-width: 24px;
@@ -17,15 +15,5 @@
         fill: $value;
       }
     }
-  }
-
-
-  // Sizes
-
-  &.small {
-    max-width: 46px;
-    max-height: 40px;
-    height: auto;
-    max-height: auto;
   }
 }

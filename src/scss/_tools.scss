@@ -4,38 +4,41 @@
 
 .tools-category {
   padding: 8px 0 20px;
+  margin-bottom: 20px;
 
   &.tools-web {
-    background-color: $cabaret;
+    background-image: linear-gradient($cabaret, $saffron-mango);
   }
 
   &.tools-mobile {
-    background-color: $sea-green;
+    background-image: linear-gradient($saffron-mango, $sea-green);
   }
 
   &.tools-backend {
-    background-color: $saffron-mango;
+    background-image: linear-gradient($sea-green, #1E3A5E);
   }
 
   h3 {
+    font-weight: bold;
+    font-size: 1.4em;
     margin-bottom: 40px;
+    padding-bottom: 4px;
+    border-bottom: solid 2px rgba(white,.4);
   }
 }
 
 .list-tools {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  padding: 0;
   li {
     display: inline-block;
-    width: 23%;
-    margin: 0 5px;
+    width: 25%;
     text-align: center;
-    margin-bottom: 10px;
-    box-shadow: inset 0 0 2px black;
+    margin: 0 0 10px 0;
     padding: 30px;
     a {
-      // color: white;
+      color: white;
       font-weight: bold;
       font-size: 1em;
       text-transform: uppercase;
