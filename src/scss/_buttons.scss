@@ -27,6 +27,11 @@
   @each $class, $value in $icon-colors {
     &.#{$class} {
       border-color: $value;
+
+      &:hover {
+        background: $value;
+        color: #fff;
+      }
     }
   }
   

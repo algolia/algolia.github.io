@@ -52,7 +52,8 @@
     font-weight: bold;
     width: 100%;
     padding: 0 20px;
-
+    font-size: 13px;
+    max-width: 80%;
     &.no-padding{
       padding: 0;
     }
@@ -73,7 +74,7 @@
   
   svg {
     margin: 10px 0;
-    
+
   }
 
   .project-wrapper:not(.big) &{
@@ -98,9 +99,6 @@
   position: relative;
   z-index: 99;
 
-  &:not(.center-block) {
-    margin: 10px 0;
-  }
   
 
   &.center-block{
@@ -145,15 +143,16 @@
   max-height: 40px;
 
   a {
-    position: relative;
+    position: absolute;
     float: right;
-    top: -8px;
-    right: -8px;
+    bottom: 0;
+    right: 0;
     width: calc(32px + 16px);
     height: calc(32px + 16px);
     text-align: center;
     padding: 8px;
     line-height: calc(32px + 16px);
+    z-index: 99;
 
     svg {
       display: inline-block;
