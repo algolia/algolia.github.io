@@ -1,11 +1,10 @@
 .icon {
   display: inline-block;
-  max-width: 80px;	
-  max-height: 80px;
- 
-	
+
+
+
   // Specific to project descriptions
-  .project-footer &{	
+  .project-footer &{
     max-width: 24px;
     max-height: 24px;
   }
@@ -30,4 +29,3 @@
     max-height: auto;
   }
 }
-

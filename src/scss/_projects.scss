@@ -47,13 +47,13 @@
   justify-content: center;
   flex-wrap: wrap;
 
-
   p {
     font-weight: bold;
     width: 100%;
     padding: 0 20px;
     font-size: 13px;
-    max-width: 80%;
+    max-width: 90%;
+
     &.no-padding{
       padding: 0;
     }
@@ -71,8 +71,8 @@
       color: inherit;
     }
   }
-  
-  svg {
+
+  svg, img {
     margin: 10px 0;
 
   }
@@ -84,7 +84,6 @@
       clear: both;
     }
   }
-
 }
 
 // title
@@ -92,14 +91,12 @@
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold;
-  display: block;  
+  display: block;
   padding: 0;
   text-align: center;
   width: 100%;
   position: relative;
   z-index: 99;
-
-  
 
   &.center-block{
     display: flex;
@@ -141,6 +138,7 @@
   color: white;
   width: auto;
   max-height: 40px;
+  opacity: .6;
 
   a {
     position: absolute;
@@ -156,7 +154,7 @@
 
     svg {
       display: inline-block;
-      width: 32px;
+      width: 20px;
       margin: auto;
       float: none;
     }

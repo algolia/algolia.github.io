@@ -57,7 +57,6 @@
                   .col-xs-7.text-left
                     %a{href: "https://community.algolia.com/instantsearch.js/"}
                       %img{src: "img/logo-instantsearch.svg"}
-                    .spacer5
                     %p.no-padding Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
               .project-footer
                 %a{href: "https://github.com/algolia/instantsearch.js"}
@@ -71,18 +70,17 @@
                   .project-desc
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-magento"}
-                    
                     %a.project-title{href: "https://community.algolia.com/magento/"}Magento
                     .spacer10
                   .project-footer
-
+              .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.zendesk
                   .project-header PLUGIN
                   .project-desc
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-zendesk"}
-                    
+
                     %a.project-title{href: "https://community.algolia.com/zendesk/"} Zendesk
                     .spacer10
                   .project-footer
@@ -96,11 +94,11 @@
                 .project-wrapper.big.helperjs
                   .project-header LIBRARY
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 80}
                       %use{xlink:href: "#icon-helperjs"}
-                    
-                    %a.project-title{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper
-                    .spacer10.js
+                    .spacer20
+                    %a.project-title{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
+                    .spacer10
                     %p Your best companion for implmenting advanced search features with Algolia
                   .project-footer
                     %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
@@ -112,11 +110,10 @@
                   .project-desc
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-salesforce"}
-                    
                     %a.project-title{href: "https://wordpress.algolia.com/"} Salesforce
                     .spacer10
                   .project-footer
-
+              .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.grader
                   .project-header TOOL
@@ -127,16 +124,13 @@
                       %span Grader
                     %a{class: "button pink to-bottom", href:"#"} Evaluate your search
 
-                  .project-footer
-                    
                 .spacer10
                 .project-wrapper.big.autocompletejs
                   .project-header LIBRARY
                   .project-desc
                     %img{src: "img/illus-autocomplete.svg"}
-                    
-                    %a.project-title{href: "https://github.com/algolia/autocomplete.js"} autocomplete.
-                    .spacer10js
+                    %a.project-title{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
+                    .spacer10
                     %p Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
                   .project-footer
                     %a{href: "https://github.com/algolia/autocomplete.js"}
@@ -148,16 +142,16 @@
           .col-sm-6
             .project-wrapper.big.docsearch
               .project-header TOOL
+              .spacer10
               .project-desc
                 %a{href: "https://community.algolia.com/docsearch/"}
                   %img{src: "img/illus-docsearch.svg"}
                 %a{href: "https://community.algolia.com/docsearch/"}
-                .spacer20
                 %p.text-center The easiest way to add search to your documentation.
-                .spacer30
-                %a{href: "#", class:"button"}Join the Beta
+                .spacer20
+                %a{href: "#", class:"button"} Join the Beta
               .project-footer
-
+          .spacer10.visible-xs
           .col-sm-6
             .row
               .col-sm-6
@@ -166,22 +160,20 @@
                   .project-desc
                     %svg.icon{height: 30}
                       %use{xlink:href: "#icon-hn"}
-                    
-                    %a.project-title{href: "http://hn.algolia.com"}Hackernews Search
+                    %a.project-title{href: "http://hn.algolia.com"} Hackernews Search
                     .spacer10
                   .project-footer
-
+              .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.githubsearch
                   .project-header TOOL
                   .project-desc
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-github"}
-                    
-                    %a.project-title{href: "https://github.algolia.com"}Github Search
+                    %a.project-title{href: "https://github.algolia.com"} Github Search
                     .spacer10
                   .project-footer
-                    
+
             .spacer10
             .row
               .col-sm-6
@@ -190,22 +182,17 @@
                   .project-desc
                     %svg.icon{height: 50}
                       %use{xlink:href: "#icon-superbowl"}
-                    
                     %a.project-title{href: "https://community.algolia.com/supersearch"} SuperSearch
                     .spacer10
                   .project-footer
-
+              .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper
                   .project-header HELP?
                   .project-desc
                     %img{src: "img/illus-stackoverflow.svg", width: 40}
-                    
-                    %a.project-title{href: "http://stackoverflow.com/questions/tagged/algolia"} 
-                    .spacer10StackOverflow
-
+                    %a.project-title{href: "http://stackoverflow.com/questions/tagged/algolia"} StackOverflow
         .spacer10
-
         .row
           .col-sm-3
               .project-wrapper.searchbox
@@ -215,24 +202,21 @@
                   %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
                   .spacer10
                   %p.text-center A generator for search input.
-                .project-footer
-                  
               .spacer10
               .project-wrapper.swag
                 .project-header SWAG
                 .project-desc
                   %svg.icon{height: 40}
                     %use{xlink:href: "#icon-tshirt"}
-                  
                   %a{href: "#", class: "button full"} Get your free t-shirt
+
           .spacer10.visible-xs
           .col-sm-3
             .project-wrapper.big.expectjs
               .project-header TOOL
               .project-desc
-                %svg.icon{width: 60}
+                %svg.icon{height: 120}
                   %use{xlink:href: "#icon-react"}
-                
                 %a.project-title{href: "https://github.com/algolia/expect-jsx"} Expect JSX
                 .spacer10
                 %p toEqulJSX for mjackson/expect
@@ -241,7 +225,7 @@
             .project-wrapper.newsletter
               .project-header LEARN
               .project-desc
-                %a.project-title{href: "https://github.com/algolia/expect-jsx"}Newsletter
+                %a.project-title{href: "https://github.com/algolia/expect-jsx"} Newsletter
                 .spacer10
                 %p.text-center Learn how to build a delightful  search experience
                 #mc_embed_signup
@@ -265,7 +249,6 @@
                   .project-desc
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-talks"}
-                    
                     %a.project-title{href: "#"} Talks
                     .spacer10
               .spacer10.visible-xs
@@ -275,8 +258,7 @@
                   .project-desc
                     %svg.icon{height: 30}
                       %use{xlink:href: "#icon-index"}
-                    
-                    %a.project-title{href: "#"}Public Datasets
+                    %a.project-title{href: "#"} Public Datasets
                     .spacer10
 
 
