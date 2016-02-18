@@ -41,7 +41,6 @@
 
 .project-desc {
   text-align: center;
-
   p {
     font-weight: bold;
 
@@ -55,6 +54,12 @@
   a {
     color: #fff;
   }
+}
+
+.project-title {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 .project-footer{

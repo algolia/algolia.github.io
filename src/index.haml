@@ -63,10 +63,10 @@
                 .project-wrapper.magento
                   .project-header PLUGIN
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 40}
                       %use{xlink:href: "#icon-magento"}
                     %br
-                    %a{href: "https://community.algolia.com/magento/"}Magento
+                    %a.project-title{href: "https://community.algolia.com/magento/"}Magento
                   .project-footer
                     %a{href: "https://github.com/algolia/magento"}
                       %svg.icon
@@ -75,10 +75,10 @@
                 .project-wrapper.zendesk
                   .project-header PLUGIN
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 40}
                       %use{xlink:href: "#icon-zendesk"}
                     %br
-                    %a{href: "https://community.algolia.com/zendesk/"} Zendesk
+                    %a.project-title{href: "https://community.algolia.com/zendesk/"} Zendesk
                   .project-footer
                     %a{href: "https://github.com/algolia/zendesk"}
                       %svg.icon
@@ -92,7 +92,7 @@
                     %svg.icon
                       %use{xlink:href: "#icon-helperjs"}
                     %br
-                    %a{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
+                    %a.project-title{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
                     %p Your best companion for implmenting advanced search features with Algolia
                   .project-footer
                     %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
@@ -102,10 +102,10 @@
                 .project-wrapper.salesforce
                   .project-header PLUGIN
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 40}
                       %use{xlink:href: "#icon-salesforce"}
                     %br
-                    %a{href: "https://wordpress.algolia.com/"} Salesforce
+                    %a.project-title{href: "https://wordpress.algolia.com/"} Salesforce
                   .project-footer
                     %a{href: "https://github.com/algolia/wordpress-search"}
                       %svg.icon
@@ -114,9 +114,10 @@
                 .project-wrapper.grader
                   .project-header TOOL
                   .project-desc
-                    %svg.icon.small
-                      %use{xlink:href: "#icon-grader", class:"pink"}
-                    %p Grader
+                    %a.project-title
+                      %svg.icon.small
+                        %use{xlink:href: "#icon-grader", class:"pink"}
+                      Grader
                     %a{class: "button pink", href:"#"} Evaluate search on your site
 
                   .project-footer
@@ -129,7 +130,7 @@
                   .project-desc
                     %img{src: "img/illus-autocomplete.svg"}
                     %br
-                    %a{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
+                    %a.project-title{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
                     %p Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
                   .project-footer
                     %a{href: "https://github.com/algolia/autocomplete.js"}
@@ -157,10 +158,10 @@
                 .project-wrapper.hackernews
                   .project-header DEMO
                   .project-desc
-                    %svg.icon
+                    %svg.icon{width: 30}
                       %use{xlink:href: "#icon-hn"}
                     %br
-                    %a{href: "http://hn.algolia.com"}Hackernews Search
+                    %a.project-title{href: "http://hn.algolia.com"}Hackernews Search
                   .project-footer
                     %a{href: "https://github.com/algolia/hn-search"}
                       %svg.icon
@@ -169,10 +170,10 @@
                 .project-wrapper.githubsearch
                   .project-header TOOL
                   .project-desc
-                    %svg.icon
+                    %svg.icon{width: 40}
                       %use{xlink:href: "#icon-github"}
                     %br
-                    %a{href: "https://github.algolia.com"}Github Search
+                    %a.project-title{href: "https://github.algolia.com"}Github Search
                   .project-footer
                     %a{href: "https://github.com/algolia/github-awesome-autocomplete"}
                       %svg.icon
@@ -183,10 +184,10 @@
                 .project-wrapper.supersearch
                   .project-header DEMO
                   .project-desc
-                    %svg.icon
+                    %svg.icon{width: 50}
                       %use{xlink:href: "#icon-superbowl"}
                     %br
-                    %a{href: "https://community.algolia.com/supersearch"} SuperSearch
+                    %a.project-title{href: "https://community.algolia.com/supersearch"} SuperSearch
                   .project-footer
                     %a{href: "https://github.com/algolia/supersearch"}
                       %svg.icon
@@ -195,9 +196,9 @@
                 .project-wrapper
                   .project-header HELP?
                   .project-desc
-                    %img{src: "img/illus-stackoverflow.svg"}
+                    %img{src: "img/illus-stackoverflow.svg", width: 40}
                     %br
-                    %a{href: "http://stackoverflow.com/questions/tagged/algolia"} StackOverflow
+                    %a.project-title{href: "http://stackoverflow.com/questions/tagged/algolia"} StackOverflow
 
         .spacer10
 
@@ -206,11 +207,12 @@
               .project-wrapper.searchbox
                 .project-header TOOL
                 .project-desc
-                  %a{href: "http://shipow.github.io/searchbox/"} SearchBox
+                  .spacer40
+                  %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
                   %p A generator for search input.
                 .project-footer
                   %a{href: "https://github.com/Shipow/searchbox"}
-                    %svg.icon
+                    %svg.icon{width: 40}
                       %use{xlink:href: "#icon-github"}
               .spacer10
               .project-wrapper
@@ -225,36 +227,50 @@
             .project-wrapper.big
               .project-header TOOL
               .project-desc
-                %svg.icon
+                %svg.icon{width: 60}
                   %use{xlink:href: "#icon-react"}
                 %br
-                %a{href: "#"} Expec JSX
+                %a.project-title{href: "https://github.com/algolia/expect-jsx"} Expect JSX
                 %p toEqulJSX for mjackson/expect
 
           .col-sm-6
             .project-wrapper.newsletter
               .project-header LEARN
               .project-desc
-                %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
+                %a.project-title{href: "https://github.com/algolia/expect-jsx"}Newsletter
+                %p Learn how to build a delightful  search experience
+                #mc_embed_signup
+                  %form#mc-embedded-subscribe-form.validate{action: "//algolia.us3.list-manage.com/subscribe/post?u=f7b8acc6ec97794a08484ca9b&amp;id=285b80e148", method: "post", name: "mc-embedded-subscribe-form", novalidate: ""}
+                    #mc_embed_signup_scroll
+                      .input-group
+                        %input#mce-EMAIL.form-control{name: "EMAIL", placeholder: "Email Address", type: "email", value: ""}
+                          %span.input-group-btn
+                            %input#mc-embedded-subscribe.btn.btn-primary{name: "subscribe", type: "submit", value: "Subscribe"}
+                      #mce-responses.clear
+                        #mce-error-response.response{style: "display:none"}
+                        #mce-success-response.response{style: "display:none"}
+                      / real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                      %div{style: "position: absolute; left: -5000px;"}
+                        %input{name: "b_f7b8acc6ec97794a08484ca9b_285b80e148", tabindex: "-1", type: "text", value: ""}/
             .spacer10
             .row
               .col-sm-6
                 .project-wrapper.newsletter
                   .project-header LEARN
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 40}
                       %use{xlink:href: "#icon-talks"}
                     %br
-                    %a{href: "#"} Talks
+                    %a.project-title{href: "#"} Talks
 
               .col-sm-6
                 .project-wrapper.newsletter
                   .project-header LEARN
                   .project-desc
-                    %svg.icon
+                    %svg.icon{height: 30}
                       %use{xlink:href: "#icon-index"}
                     %br
-                    %a{href: "#"}Public Datasets
+                    %a.project-title{href: "#"}Public Datasets
 
 
     %section.tools
