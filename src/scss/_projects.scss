@@ -9,7 +9,7 @@
   position: relative;
   color: #fff;
   outline: 2px solid lighten($primary-color, 10%);
-  
+
   &.big{
     height: 310px;
   }
@@ -17,7 +17,7 @@
     height: 310px;
   }
 
-  // Mono colors if needed 
+  // Mono colors if needed
   &.newsletter {
     background: #167195;
   }
@@ -27,13 +27,16 @@
 .project-header {
   text-align: center;
   font-weight: bold;
-  padding: 16px 0;
+  padding: 8px 0 16px;
+  color: rgba(white,.6)
 }
-
 
 .project-desc {
   text-align: center;
-  
+  .icon {
+    display: inline-block;
+    fill: #fff;
+  }
   a {
     color: #fff;
   }

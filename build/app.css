@@ -582,10 +582,14 @@ sub {
 .project-header {
   text-align: center;
   font-weight: bold;
-  padding: 16px 0; }
+  padding: 8px 0 16px;
+  color: rgba(255, 255, 255, 0.6); }
 
 .project-desc {
   text-align: center; }
+  .project-desc .icon {
+    display: inline-block;
+    fill: #fff; }
   .project-desc a {
     color: #fff; }
 

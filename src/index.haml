@@ -47,10 +47,12 @@
         .row
           .col-sm-6
             .project-wrapper.big.instantsearch
-              %img{src: "img/logo-is.svg"}
-              %img{src: "img/logo-instantsearch.svg"}
+              .project-header TAG
               .project-desc
-                %a{href: "https://community.algolia.com/instantsearch.js/"}instantsearch.js
+                %a{href: "https://community.algolia.com/instantsearch.js/"}
+                  %img{src: "img/logo-is.svg"}
+                  %img{src: "img/logo-instantsearch.svg"}
+              .project-footer
                 %a{href: "https://github.com/algolia/instantsearch.js"}
                   %svg.icon
                     %use{xlink:href: "#icon-github"}
@@ -58,19 +60,25 @@
             .row
               .col-sm-6
                 .project-wrapper.magento
-                  %svg.icon
-                    %use{xlink:href: "#icon-magento"}
+                  .project-header TAG
                   .project-desc
+                    %svg.icon
+                      %use{xlink:href: "#icon-magento"}
+                    %br
                     %a{href: "https://community.algolia.com/magento/"}Magento
+                  .project-footer
                     %a{href: "https://github.com/algolia/magento"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
                 .project-wrapper.zendesk
-                  %svg.icon
-                    %use{xlink:href: "#icon-zendesk"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "https://community.algolia.com/zendesk/"}Zendesk
+                    %svg.icon
+                      %use{xlink:href: "#icon-zendesk"}
+                    %br
+                    %a{href: "https://community.algolia.com/zendesk/"} Zendesk
+                  .project-footer
                     %a{href: "https://github.com/algolia/zendesk"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
@@ -78,48 +86,61 @@
             .row
               .col-sm-6
                 .project-wrapper.big.helperjs
-                  %svg.icon
-                    %use{xlink:href: "#icon-helperjs"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "http://algolia.github.io/algoliasearch-helper-js/"}helper.js
+                    %svg.icon
+                      %use{xlink:href: "#icon-helperjs"}
+                    %br
+                    %a{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
+                  .project-footer
                     %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
                 .spacer10
                 .project-wrapper.salesforce
-                  %svg.icon
-                    %use{xlink:href: "#icon-salesforce"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "https://wordpress.algolia.com/"}Salesforce
+                    %svg.icon
+                      %use{xlink:href: "#icon-salesforce"}
+                    %br
+                    %a{href: "https://wordpress.algolia.com/"} Salesforce
+                  .project-footer
                     %a{href: "https://github.com/algolia/wordpress-search"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
                 .project-wrapper.autocompletejs
-                  %svg.icon
-                    %use{xlink:href: "#icon-grader"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "https://github.com/algolia/autocomplete.js"}Grader
-                    %a{href: "https://github.com/algolia/autocomplete.js"}
+                    %svg.icon
+                      %use{xlink:href: "#icon-grader"}
+                    %a{href: "#"} Grader
+                  .project-footer
+                    %a{href: "#"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
                 .spacer10
                 .project-wrapper.hx2.autocompletejs
-                  %img{src: "img/illus-autocomplete.svg"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "https://github.com/algolia/autocomplete.js"}autocomplete.js
+                    %img{src: "img/illus-autocomplete.svg"}
+                    %br
+                    %a{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
+                  .project-footer
                     %a{href: "https://github.com/algolia/autocomplete.js"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
-
 
         .spacer10
         .row
           .col-sm-6
             .project-wrapper.big.docsearch
-              %img{src: "img/illus-docsearch.svg"}
+              .project-header TAG
               .project-desc
-                %a{href: "https://community.algolia.com/docsearch/"}DocSearch
+                %a{href: "https://community.algolia.com/docsearch/"}
+                  %img{src: "img/illus-docsearch.svg"}
+                %a{href: "https://community.algolia.com/docsearch/"}
+              .project-footer
                 %a{href: "https://github.com/algolia/docsearch"}
                   %svg.icon
                     %use{xlink:href: "#icon-github"}
@@ -127,19 +148,25 @@
             .row
               .col-sm-6
                 .project-wrapper.hackernews
-                  %svg.icon
-                    %use{xlink:href: "#icon-hn"}
+                  .project-header TAG
                   .project-desc
+                    %svg.icon
+                      %use{xlink:href: "#icon-hn"}
+                    %br
                     %a{href: "http://hn.algolia.com"}Hn Search
+                  .project-footer
                     %a{href: "https://github.com/algolia/hn-search"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
                 .project-wrapper.githubsearch
-                  %svg.icon
-                    %use{xlink:href: "#icon-github"}
+                  .project-header TAG
                   .project-desc
+                    %svg.icon
+                      %use{xlink:href: "#icon-github"}
+                    %br
                     %a{href: "https://github.algolia.com"}Github Search
+                  .project-footer
                     %a{href: "https://github.com/algolia/github-awesome-autocomplete"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
@@ -147,71 +174,78 @@
             .row
               .col-sm-6
                 .project-wrapper.supersearch
-                  %svg.icon
-                    %use{xlink:href: "#icon-superbowl"}
+                  .project-header TAG
                   .project-desc
-                    %a{href: "https://community.algolia.com/supersearch"}SuperSearch
+                    %svg.icon
+                      %use{xlink:href: "#icon-superbowl"}
+                    %br
+                    %a{href: "https://community.algolia.com/supersearch"} SuperSearch
+                  .project-footer
                     %a{href: "https://github.com/algolia/supersearch"}
                       %svg.icon
                         %use{xlink:href: "#icon-github"}
               .col-sm-6
                 .project-wrapper
+                  .project-header TAG
                   .project-desc
-                    %a{href: "http://stackoverflow.com/questions/tagged/algolia"}StackOverflow
+                    %img{src: "img/illus-stackoverflow.svg"}
+                    %br
+                    %a{href: "http://stackoverflow.com/questions/tagged/algolia"} StackOverflow
+
         .spacer10
 
         .row
           .col-sm-3
               .project-wrapper
                 .project-desc
-                  %a{href: "http://shipow.github.io/searchbox/"}SearchBox
-                    %a{href: "https://github.com/Shipow/searchbox"}
-                      %svg.icon
-                        %use{xlink:href: "#icon-github"}
+                  %a{href: "http://shipow.github.io/searchbox/"} SearchBox
+                .project-footer
+                  %a{href: "https://github.com/Shipow/searchbox"}
+                    %svg.icon
+                      %use{xlink:href: "#icon-github"}
               .spacer10
               .project-wrapper
+                .project-header SWAG
                 .project-desc
-                  %a{href: "#"}Swag
+                  %svg.icon
+                    %use{xlink:href: "#icon-tshirt"}
+                  %br
+                  %a{href: "#"} Get your free t-shirt
 
           .col-sm-3
             .project-wrapper.big
-                .project-desc
-                  Tools
+              .project-header TAG
+              .project-desc
+                %svg.icon
+                  %use{xlink:href: "#icon-react"}
+                %br
+                %a{href: "#"} Expec JSX
 
           .col-sm-6
-              .project-wrapper.newsletter
-                .project-desc
-                  %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
+            .project-wrapper.newsletter
+              .project-header LEARN
+              .project-desc
+                %a{href: "https://github.com/algolia/expect-jsx"}Newsletter
             .spacer10
             .row
               .col-sm-6
                 .project-wrapper.newsletter
+                  .project-header LEARN
                   .project-desc
-                    %a{href: "https://github.com/algolia/expect-jsx"}Talks
+                    %svg.icon
+                      %use{xlink:href: "#icon-talks"}
+                    %br
+                    %a{href: "#"} Talks
+
               .col-sm-6
                 .project-wrapper.newsletter
+                  .project-header LEARN
                   .project-desc
-                    %a{href: "https://github.com/algolia/expect-jsx"}Public Datasets
+                    %svg.icon
+                      %use{xlink:href: "#icon-index"}
+                    %br
+                    %a{href: "#"}Public Datasets
 
-
-        -# .spacer10
-        -# .row
-        -#   .col-sm-3
-        -#     .project-wrapper
-        -#       .project-desc
-        -#         Blog 1
-        -#   .col-sm-3
-        -#     .project-wrapper
-        -#       .project-desc
-        -#         Blog 2
-        -#   .col-sm-3
-        -#     .project-wrapper
-        -#       .project-desc
-        -#         Blog 3
-        -#   .col-sm-3
-        -#     .project-wrapper
-        -#       .project-desc
-        -#         Blog 4
 
     %section.tools
       .container
