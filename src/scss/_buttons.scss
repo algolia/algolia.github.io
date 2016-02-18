@@ -1,26 +1,27 @@
 .button {
   display: inline-block;
-  padding: 16px 2em;
+  padding: 4px 2em;
   text-align: center;
-  min-width: 116px; 
+  min-width: 116px;
   border: 2px solid #fff;
   color: #fff;
   position: relative;
+  text-transform: uppercase;
 
 
   &:hover {
     background: #fff;
     color: $primary-color;
-    text-decoration: none;  
+    text-decoration: none;
   }
-  
+
   &.full {
     width: calc(100% - 32px);
     left: 0px;
-    padding: 16px;
+    padding: 4px;
   }
 
-  // colors 
+  // colors
   @each $class, $value in $icon-colors {
     &.#{$class} {
       border-color: $value;
