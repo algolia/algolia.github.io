@@ -1,5 +1,9 @@
 .projects{
   padding: 20px 0 40px;
+
+  &:hover .project-wrapper:not(:hover) {
+    opacity: 0.9;
+  }
 }
 
 .project-wrapper{
@@ -8,7 +12,8 @@
   background-color: $primary-color;
   position: relative;
   color: #fff;
-  outline: 2px solid lighten($primary-color, 10%);
+  transition: all 0.3s ease;
+  
 
   &.big{
     height: 310px;
@@ -33,10 +38,12 @@
 
 .project-desc {
   text-align: center;
+
   .icon {
     display: inline-block;
     fill: #fff;
   }
+  
   a {
     color: #fff;
   }
@@ -53,8 +60,11 @@
   color: white;
   width: 100%;
   max-height: 40px;
+
   a {
+    position: relative;
     float: right;
+    right: -16px;
     svg {
       right: 0;
     }
@@ -65,6 +75,5 @@
 @each $class, $value, $color in $gradients{
   .#{$class} {
     background: #{$value};
-    outline: 2px solid lighten($color, 10%);
   }
 }
