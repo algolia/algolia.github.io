@@ -534,6 +534,21 @@ sup {
 sub {
   bottom: -0.25em; }
 
+:root {
+  font-size: 16px; }
+
+* {
+  border-box: box-sizing;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscaled; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 0;
+  margin: 0; }
+
 .icon {
   display: inline-block;
   max-width: 36px;
@@ -570,8 +585,7 @@ sub {
   width: 100%;
   background-color: #1F3B5D;
   position: relative;
-  color: #fff;
-  outline: 2px solid #2c5383; }
+  color: #fff; }
   .project-wrapper.big {
     height: 310px; }
   .project-wrapper.hx2 {
@@ -605,49 +619,41 @@ sub {
   width: 100%;
   max-height: 40px; }
   .project-footer a {
-    float: right; }
+    position: relative;
+    float: right;
+    right: -16px; }
     .project-footer a svg {
       right: 0; }
 
 .instantsearch {
-  background: linear-gradient(to top right, #1d3657, #3e6790);
-  outline: 2px solid #2a4e7d; }
+  background: linear-gradient(to top right, #1d3657, #3e6790); }
 
 .docsearch {
-  background:  linear-gradient(to bottom right, #254266, #167095);
-  outline: 2px solid #335a8b; }
+  background:  linear-gradient(to bottom right, #254266, #167095); }
 
 .helperjs {
-  background: linear-gradient(to top right, #34a3c7, #177296);
-  outline: 2px solid #5ab6d4; }
+  background: linear-gradient(to top right, #34a3c7, #177296); }
 
 .magento {
-  background: linear-gradient(to top right, #ff66b7, #dc6637);
-  outline: 2px solid #ff99cf; }
+  background: linear-gradient(to top right, #ff66b7, #dc6637); }
 
 .salesforce {
-  background: linear-gradient(to bottom right, #635aa4, #c870da);
-  outline: 2px solid #827bb6; }
+  background: linear-gradient(to bottom right, #635aa4, #c870da); }
 
 .zendesk {
-  background: linear-gradient(to top right, #067864, #87cf4c);
-  outline: 2px solid #08a98c; }
+  background: linear-gradient(to top right, #067864, #87cf4c); }
 
 .autocompletejs {
-  background: linear-gradient(to top right, #377d1c, #13b7bd);
-  outline: 2px solid #49a725; }
+  background: linear-gradient(to top right, #377d1c, #13b7bd); }
 
 .hackernews {
-  background: linear-gradient(to right, #fea925, #f58823);
-  outline: 2px solid #febd58; }
+  background: linear-gradient(to right, #fea925, #f58823); }
 
 .supersearch {
-  background: linear-gradient(to top right, #47185e, #195aac);
-  outline: 2px solid #662287; }
+  background: linear-gradient(to top right, #47185e, #195aac); }
 
 .githubsearch {
-  background: linear-gradient(to top right, #989ca0, #65686d);
-  outline: 2px solid #b3b6b8; }
+  background: linear-gradient(to top right, #989ca0, #65686d); }
 
 .events {
   background: #1F3B5D;
