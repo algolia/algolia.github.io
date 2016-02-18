@@ -551,13 +551,15 @@ html, body {
 
 .icon {
   display: inline-block;
-  max-width: 36px;
-  max-height: 36px; }
+  max-width: 80px;
+  max-height: 80px; }
   .project-footer .icon {
-    right: 0;
-    padding-right: 16px; }
-    .project-footer .icon use {
-      fill: #fff; }
+    max-width: 24px;
+    max-height: 24px; }
+  .icon use {
+    fill: #fff; }
+    .icon use.pink {
+      fill: #ff66b7; }
 
 .hero {
   background-color: #1F3B5D;
@@ -577,6 +579,25 @@ html, body {
   height: 300px;
   padding: 40px 0; }
 
+.button {
+  display: inline-block;
+  padding: 16px 2em;
+  text-align: center;
+  min-width: 116px;
+  border: 2px solid #fff;
+  color: #fff;
+  position: relative; }
+  .button:hover {
+    background: #fff;
+    color: #1F3B5D;
+    text-decoration: none; }
+  .button.full {
+    width: calc(100% - 32px);
+    left: 0px;
+    padding: 16px; }
+  .button.pink {
+    border-color: #ff66b7; }
+
 .projects {
   padding: 20px 0 40px; }
   .projects:hover .project-wrapper:not(:hover) {
@@ -591,8 +612,6 @@ html, body {
   transition: all 0.3s ease; }
   .project-wrapper.big {
     height: 310px; }
-  .project-wrapper.hx2 {
-    height: 310px; }
   .project-wrapper.newsletter {
     background: #167195; }
 
@@ -604,6 +623,8 @@ html, body {
 
 .project-desc {
   text-align: center; }
+  .project-desc p {
+    font-weight: bold; }
   .project-desc .icon {
     display: inline-block;
     fill: #fff; }
@@ -624,9 +645,18 @@ html, body {
   .project-footer a {
     position: relative;
     float: right;
-    right: -16px; }
+    top: -8px;
+    right: -8px;
+    width: calc(32px + 16px);
+    height: calc(32px + 16px);
+    text-align: center;
+    padding: 8px;
+    line-height: calc(32px + 16px); }
     .project-footer a svg {
-      right: 0; }
+      display: inline-block;
+      width: 32px;
+      margin: auto;
+      float: none; }
 
 .instantsearch {
   background: linear-gradient(to top right, #1d3657, #3e6790); }

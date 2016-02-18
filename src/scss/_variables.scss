@@ -1,3 +1,5 @@
+$_debug: false;
+
 $cabaret: #E7486B;
 $rouge: #9C4274;
 $sea-green: #13C4A5;
@@ -6,6 +8,7 @@ $violet: #8A63B3;
 $chambray: #3B5295;
 $sunset-orange: #F6624E;
 $saffron-mango: #FDBD57;
+$light-pink: #ff66b7;
 
 $primary-color: #1F3B5D;
 $secondary-color: #F3F4F7;
@@ -34,6 +37,9 @@ $gradients: (
   (githubsearch, 'linear-gradient(to top right, #989ca0, #65686d)',#989ca0 )
 );
 
+$icon-colors:(
+  'pink': $light-pink
+);
 
 $searchbox: (
   input-width: 500px,

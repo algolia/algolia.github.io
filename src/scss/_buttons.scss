@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: 16px 2em;
+  text-align: center;
+  min-width: 116px; 
+  border: 2px solid #fff;
+  color: #fff;
+  position: relative;
+
+
+  &:hover {
+    background: #fff;
+    color: $primary-color;
+    text-decoration: none;  
+  }
+  
+  &.full {
+    width: calc(100% - 32px);
+    left: 0px;
+    padding: 16px;
+  }
+
+  // colors 
+  @each $class, $value in $icon-colors {
+    &.#{$class} {
+      border-color: $value;
+    }
+  }
+}
