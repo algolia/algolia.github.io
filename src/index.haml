@@ -49,10 +49,16 @@
             .project-wrapper.big.instantsearch
               .project-header LIBRARY
               .project-desc
-                %a{href: "https://community.algolia.com/instantsearch.js/"}
-                  %img{src: "img/logo-is.svg"}
-                  %img{src: "img/logo-instantsearch.svg"}
-                  %p Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience
+                .spacer60
+                .row
+                  .col-xs-2.col-xs-offset-2
+                    %a{href: "https://community.algolia.com/instantsearch.js/"}
+                      %img{src: "img/logo-is.svg", width: 70}
+                  .col-xs-7.text-left
+                    %a{href: "https://community.algolia.com/instantsearch.js/"}
+                      %img{src: "img/logo-instantsearch.svg"}
+                    .spacer10
+                    %p Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
               .project-footer
                 %a{href: "https://github.com/algolia/instantsearch.js"}
                   %svg.icon
