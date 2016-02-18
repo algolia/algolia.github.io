@@ -158,6 +158,28 @@
   }
 }
 
+#mc_embed_signup {
+  padding: 0 80px;
+  input {
+    border: solid 2px white;
+    border-radius: 0;
+    height: 34px;
+    padding-left: 12px;
+    background: transparent;
+    box-shadow: inset 4px 4px 0 rgba($primary-color, .2);
+    &::placeholder {
+      color: rgba(white,.7);
+    }
+  }
+  button {
+    color: white;
+    background: transparent;
+    height: 34px;
+    position: relative;
+    left: -2px;
+  }
+}
+
 // Color the project blocs
 @each $class, $value, $color in $gradients{
   .#{$class} {
