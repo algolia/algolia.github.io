@@ -1,9 +1,5 @@
 .projects{
   padding: 20px 0 40px;
-
-  &:hover .project-wrapper:not(:hover) {
-    opacity: 0.9;
-  }
 }
 
 .project-wrapper{
@@ -20,9 +16,7 @@
   }
 
   // Mono colors if needed
-  &.newsletter {
-    background: #167195;
-  }
+ 
   &.searchbox{
     background-image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
     background-position: top;
@@ -32,6 +26,7 @@
 }
 
 // Projects structure
+// header
 .project-header {
   text-align: center;
   font-weight: bold;
@@ -39,11 +34,13 @@
   color: rgba(white,.6);
 }
 
+// desc
 .project-desc {
   text-align: center;
   p {
     font-weight: bold;
-
+    width: 100%;
+    padding: 0 20px;
   }
 
   .icon {
@@ -54,14 +51,49 @@
   a {
     color: #fff;
   }
+
+
 }
 
+// title
 .project-title {
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold;
+  display: block;
+
+  text-align: center;
+  width: 100%;
+  
+
+  &.center-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+
+    + .button {
+      margin-top: 16px;
+    }
+
+    svg {
+      width: 30%;
+
+      + span {
+        width: 30%;
+        padding: 0;
+        margin: 0;
+        line-height: 40px;
+        position: relative;
+        top: 4px;
+        margin-left: 15px;
+      }
+    }
+  }
 }
 
+// footer
 .project-footer{
   position: absolute;
   bottom: 0;
