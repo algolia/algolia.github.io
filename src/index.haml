@@ -118,7 +118,7 @@
                       %use{xlink:href: "#icon-grader", class:"pink"}
                     %p Grader
                     %a{class: "button pink", href:"#"} Evaluate search on your site
-                    
+
                   .project-footer
                     %a{href: "#"}
                       %svg.icon
@@ -203,7 +203,7 @@
 
         .row
           .col-sm-3
-              .project-wrapper
+              .project-wrapper.searchbox
                 .project-header TOOL
                 .project-desc
                   %a{href: "http://shipow.github.io/searchbox/"} SearchBox
@@ -265,7 +265,9 @@
           %h3 Web
       .container
         %ul.list-inline
-          %li algoliasearch.js
+          %li
+            %img{src: "img/icons/javascript.svg"}
+            algoliasearch.js
           %li instantsearch.js
           %li autocomplete.js
           %li algolia-helper.js

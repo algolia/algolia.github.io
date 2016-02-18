@@ -168,13 +168,13 @@ gulp.task('js:min', ['js'], function () {
 //   Task: Images & Optmizations
 // -------------------------------------
 gulp.task('images', function () {
-  return gulp.src('src/img/*')
+  return gulp.src('src/img/**/*')
     .pipe(gulp.dest('build/img'))
     .pipe(livereload());
 });
 
 gulp.task('images:optim', function () {
-  return gulp.src('src/img/*')
+  return gulp.src('src/img/**/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

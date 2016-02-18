@@ -13,7 +13,7 @@
   position: relative;
   color: #fff;
   transition: all 0.3s ease;
-  
+
 
   &.big{
     height: 310px;
@@ -22,6 +22,12 @@
   // Mono colors if needed
   &.newsletter {
     background: #167195;
+  }
+  &.searchbox{
+    background-image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%
   }
 }
 
@@ -38,14 +44,14 @@
 
   p {
     font-weight: bold;
-    
+
   }
 
   .icon {
     display: inline-block;
     fill: #fff;
   }
-  
+
   a {
     color: #fff;
   }
@@ -73,7 +79,7 @@
     text-align: center;
     padding: 8px;
     line-height: calc(32px + 16px);
-    
+
     svg {
       display: inline-block;
       width: 32px;
