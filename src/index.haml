@@ -19,6 +19,12 @@
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
 %body
+  / SVG Sprite
+  %div{style:"height: 0; width: 0; position: absolute; visibility: hidden;"}
+    %svg{focusable: "false", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlns:xlink: "http://www.w3.org/1999/xlink"}
+      %symbol#ripply-scott{viewbox: "0 0 100 100"}
+        %circle#ripple-shape{cx: "1", cy: "1", r: "1"}
+  / /end sprite
   %nav.navbar.navbar-inverse.navbar-fixed-top
     .container
       .navbar-header
@@ -40,7 +46,11 @@
     .container
       .spacer60
       %h1.text-center Community
-
+  / button component
+  %button#js-ripple-btn.button.styl-material
+    Click for Ripple
+    %svg#js-ripple.ripple-obj
+      %use.js-ripple{height: "100", width: "100", xlink:href:"#ripply-scott"}
   %main
     %section.projects
       .container
@@ -400,7 +410,7 @@
             %h3 Connect
           .col-sm-3
             %h3 Keep updated
-
+  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"}
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
 
