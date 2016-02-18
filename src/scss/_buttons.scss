@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  padding: 4px 2em;
+  padding: 4px 16px;
   text-align: center;
   min-width: 116px;
   border: 2px solid #fff;
@@ -8,11 +8,10 @@
   position: relative;
   text-transform: uppercase;
   font-weight: bold;
-  
-
+  white-space: nowrap;
 
   &:hover {
-    background: #fff;
+    background: rgba(#fff,.3);
     color: $primary-color;
     text-decoration: none;
   }
@@ -34,6 +33,4 @@
       }
     }
   }
-  
- 
 }

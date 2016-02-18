@@ -19,7 +19,7 @@
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
 %body
-  %nav.navbar.navbar-inverse.navbar-fixed-top
+  %nav#nav.navbar.navbar-inverse.navbar-fixed-top
     .container
       .navbar-header
         %button.navbar-toggle.collapsed{aria-controls: "navbar", aria-expanded: "false", data-target: "#navbar", data-toggle: "collapse", type: "button"}
@@ -27,19 +27,36 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand{href: "http://community.algolia.com"}
-          %img{src: "img/logo-algolia.svg", width:"100px"}
       #navbar.collapse.navbar-collapse
         %ul.nav.navbar-nav
-          %li.active
-            %a{href: "#"} Home
           %li
-            %a{href: "#about"} About
+            %a{href: "#"} Open Source Projects
+          %li
+            %a{href: "#web"} Web
+          %li
+            %a{href: "#mobile"} Mobile
+          %li
+            %a{href: "#backend"} Backend
+          %li
+            %a{href: "#about"} Events
 
   %header.hero
+    %ul.share
+      %li
+        %svg.icon
+          %use{xlink:href: "#icon-twitter"}
+      %li
+        %svg.icon
+          %use{xlink:href: "#icon-facebook"}
+      %li
+        %svg.icon
+          %use{xlink:href: "#icon-github"}
     .container
       .spacer60
-      %h1.text-center Community
+      %h1.text-center
+        %a.navbar-brand{href: "http://community.algolia.com"}
+          %img{src: "img/logo-algolia.svg", width:"100px"}
+        Community
 
   %main
     %section.projects
@@ -198,9 +215,8 @@
               .project-wrapper.searchbox
                 .project-header TOOL
                 .project-desc
-                  .spacer40
+                  .spacer50
                   %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
-                  .spacer10
                   %p.text-center A generator for search input.
               .spacer10
               .project-wrapper.swag
@@ -217,8 +233,8 @@
               .project-desc
                 %svg.icon{height: 120}
                   %use{xlink:href: "#icon-react"}
+                .spacer20
                 %a.project-title{href: "https://github.com/algolia/expect-jsx"} Expect JSX
-                .spacer10
                 %p toEqulJSX for mjackson/expect
           .spacer10.visible-xs
           .col-sm-6

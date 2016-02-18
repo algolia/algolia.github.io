@@ -3,12 +3,41 @@
   height: 200px;
   color: white;
   margin-bottom: 20px;
+  position: relative;
   h1 {
-    font-size: 5em;
+    font-size: 6em;
     font-weight: 100;
+    position: relative;
+  }
+  .navbar-brand {
+    position: absolute;
+    top: -30px;
+    margin-left: 50px;
   }
 }
 .navbar-brand {
   position: relative;
   top: -4px;
+}
+
+#nav.navbar-inverse {
+  background: transparent;
+  border: none;
+}
+
+.share {
+  list-style: none;
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+
+  li {
+    margin-left: 20px;
+    display: inline-block;
+  }
+  .icon {
+    max-width: 30px;
+    height: 30px;
+  }
 }
