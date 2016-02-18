@@ -16,12 +16,16 @@
   }
 
   // Mono colors if needed
- 
+
   &.searchbox{
     background-image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%
+  }
+
+  &.instantsearch .col-xs-7.text-left{
+    padding-left: 20px;
   }
 }
 
@@ -36,11 +40,22 @@
 
 // desc
 .project-desc {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
   p {
     font-weight: bold;
     width: 100%;
     padding: 0 20px;
+
+    &.no-padding{
+      padding: 0;
+    }
   }
 
   .icon {
@@ -50,8 +65,24 @@
 
   a {
     color: #fff;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+  
+  svg {
+    margin: 10px 0;
+    
   }
 
+  .project-wrapper:not(.big) &{
+    svg {
+      height: 46px;
+      width: 46px;
+      clear: both;
+    }
+  }
 
 }
 
@@ -60,10 +91,16 @@
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold;
-  display: block;
-
+  display: block;  
+  padding: 0;
   text-align: center;
   width: 100%;
+  position: relative;
+  z-index: 99;
+
+  &:not(.center-block) {
+    margin: 10px 0;
+  }
   
 
   &.center-block{
@@ -79,6 +116,7 @@
 
     svg {
       width: 30%;
+      margin: 0;
 
       + span {
         width: 30%;
@@ -103,7 +141,7 @@
   padding: 0 10px;
   text-transform: uppercase;
   color: white;
-  width: 100%;
+  width: auto;
   max-height: 40px;
 
   a {
