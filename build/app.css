@@ -579,13 +579,16 @@ html, body {
 
 .projects {
   padding: 20px 0 40px; }
+  .projects:hover .project-wrapper:not(:hover) {
+    opacity: 0.9; }
 
 .project-wrapper {
   height: 150px;
   width: 100%;
   background-color: #1F3B5D;
   position: relative;
-  color: #fff; }
+  color: #fff;
+  transition: all 0.3s ease; }
   .project-wrapper.big {
     height: 310px; }
   .project-wrapper.hx2 {

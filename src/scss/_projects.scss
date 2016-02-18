@@ -1,5 +1,9 @@
 .projects{
   padding: 20px 0 40px;
+
+  &:hover .project-wrapper:not(:hover) {
+    opacity: 0.9;
+  }
 }
 
 .project-wrapper{
@@ -8,6 +12,7 @@
   background-color: $primary-color;
   position: relative;
   color: #fff;
+  transition: all 0.3s ease;
   
 
   &.big{
