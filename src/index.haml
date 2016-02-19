@@ -19,27 +19,6 @@
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
 %body
-  %nav#nav.navbar.navbar-inverse.navbar-fixed-top
-    .container
-      -# .navbar-header
-      -#   %button.navbar-toggle.collapsed{aria-controls: "navbar", aria-expanded: "false", data-target: "#navbar", data-toggle: "collapse", type: "button"}
-      -#     %span.sr-only Toggle navigation
-      -#     %span.icon-bar
-      -#     %span.icon-bar
-      -#     %span.icon-bar
-      -# #navbar.collapse.navbar-collapse
-      -#   %ul.nav.navbar-nav
-      -#     %li
-      -#       %a{href: "#"} Open Source Projects
-      -#     %li
-      -#       %a{href: "#web"} Web
-      -#     %li
-      -#       %a{href: "#mobile"} Mobile
-      -#     %li
-      -#       %a{href: "#backend"} Backend
-      -#     %li
-      -#       %a{href: "#about"} Events
-
   %header.hero
     .container.pos-rel
       %ul.share
@@ -72,11 +51,11 @@
                   .row
                     .col-xs-2.col-xs-offset-1.col-sm-offset-2
                       %a{href: "https://community.algolia.com/instantsearch.js/"}
-                        %img.icon.img-responsive{src: "img/logo-is.svg", width: 86}
+                        %img.icon.img-responsive{src: "img/logo-is.svg", width: 80}
                     .col-xs-7.text-left
                       %a{href: "https://community.algolia.com/instantsearch.js/"}
                         %img{src: "img/logo-instantsearch.svg"}
-                      %p.no-padding Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
+                      %a.desc.no-padding{href: "https://community.algolia.com/instantsearch.js/"} Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
                 .project-footer
                   %a{href: "https://github.com/algolia/instantsearch.js"}
                     %svg.icon
@@ -121,7 +100,7 @@
                       .spacer20
                       %a.project-title{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
                       .spacer10
-                      %p Your best companion for implmenting advanced search features with Algolia
+                      %p.desc Your best companion for implmenting advanced search features with Algolia
                     .project-footer
                       %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
                         %svg.icon
@@ -156,7 +135,7 @@
                       %img.icon{src: "img/illus-autocomplete.svg"}
                       %a.project-title{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
                       .spacer10
-                      %p Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
+                      %p.desc Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
                     .project-footer
                       %a{href: "https://github.com/algolia/autocomplete.js"}
                         %svg.icon
@@ -171,9 +150,9 @@
                 .spacer10
                 .project-desc
                   %a{href: "https://community.algolia.com/docsearch/"}
-                    %img{src: "img/illus-docsearch.svg"}
+                    %img.icon{src: "img/illus-docsearch.svg"}
                   %a{href: "https://community.algolia.com/docsearch/"}
-                  %p.text-center The easiest way to add search to your documentation.
+                  %p.desc.text-center The easiest way to add search to your documentation.
                   .spacer20
                   %a{href: "#", class:"button"} Join the Beta
                 .project-footer
@@ -185,9 +164,10 @@
                   %figcaption
                     .project-header DEMO
                     .project-desc
-                      %svg.icon{height: 30}
-                        %use{xlink:href: "#icon-hn"}
-                      %a.project-title{href: "http://hn.algolia.com"} Hackernews Search
+                      %a{href: "http://hn.algolia.com?experimental"}
+                        %svg.icon{height: 30}
+                          %use{xlink:href: "#icon-hn"}
+                      %a.project-title{href: "http://hn.algolia.com?experimental"} Hackernews Search
                       .spacer10
                     .project-footer
               .spacer10.visible-xs
@@ -231,7 +211,7 @@
                   .project-desc
                     .spacer50
                     %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
-                    %p.text-center A generator for search input.
+                    %p.desc.text-center A generator for search input.
               .spacer10
               %figure.effect-apollo.project-wrapper.swag
                 %figcaption
