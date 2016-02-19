@@ -23,7 +23,7 @@
   %div{style:"height: 0; width: 0; position: absolute; visibility: hidden;"}
     %svg{focusable: "false", version: "1.1", xmlns: "http://www.w3.org/2000/svg", xmlns:xlink: "http://www.w3.org/1999/xlink"}
       %symbol#ripply-scott{viewbox: "0 0 100 100"}
-        %circle#ripple-shape{cx: "1", cy: "1", r: "1"}
+        %circle#ripple-shape{cx: "1", cy: "1", r: "1", fill:"rgba(255,255,255,0.25)"}
   / /end sprite
   %nav.navbar.navbar-inverse.navbar-fixed-top
     .container
@@ -46,17 +46,14 @@
     .container
       .spacer60
       %h1.text-center Community
-  / button component
-  %button#js-ripple-btn.button.styl-material
-    Click for Ripple
-    %svg#js-ripple.ripple-obj
-      %use.js-ripple{height: "100", width: "100", xlink:href:"#ripply-scott"}
+  
   %main
     %section.projects
       .container
         .row
           .col-sm-6
             .project-wrapper.big.instantsearch
+              %link.rippleJS
               .project-header LIBRARY
               .project-desc
                 .spacer60
@@ -77,6 +74,7 @@
             .row
               .col-sm-6
                 .project-wrapper.magento
+                  %link.rippleJS
                   .project-header PLUGIN
                   .project-desc
                     %svg.icon{height: 40}
@@ -88,6 +86,7 @@
 
               .col-sm-6
                 .project-wrapper.zendesk
+                  %link.rippleJS
                   .project-header PLUGIN
                   .project-desc
                     %svg.icon{height: 40}
@@ -104,6 +103,7 @@
             .row
               .col-sm-6
                 .project-wrapper.big.helperjs
+                  %link.rippleJS
                   .project-header LIBRARY
                   .project-desc
                     %svg.icon
@@ -118,6 +118,7 @@
                         %use{xlink:href: "#icon-github"}
                 .spacer10
                 .project-wrapper.salesforce
+                  %link.rippleJS
                   .project-header PLUGIN
                   .project-desc
                     %svg.icon{height: 40}
@@ -129,6 +130,7 @@
 
               .col-sm-6
                 .project-wrapper.grader
+                  %link.rippleJS
                   .project-header TOOL
                   .project-desc
                     %a.project-title.center-block
@@ -141,6 +143,7 @@
                     
                 .spacer10
                 .project-wrapper.big.autocompletejs
+                  %link.rippleJS
                   .project-header LIBRARY
                   .project-desc
                     %img{src: "img/illus-autocomplete.svg"}
@@ -157,6 +160,7 @@
         .row
           .col-sm-6
             .project-wrapper.big.docsearch
+                  %link.rippleJS
               .project-header TOOL
               .project-desc
                 %a{href: "https://community.algolia.com/docsearch/"}
@@ -172,6 +176,7 @@
             .row
               .col-sm-6
                 .project-wrapper.hackernews
+                  %link.rippleJS
                   .project-header DEMO
                   .project-desc
                     %svg.icon{height: 30}
@@ -183,6 +188,7 @@
 
               .col-sm-6
                 .project-wrapper.githubsearch
+                  %link.rippleJS
                   .project-header TOOL
                   .project-desc
                     %svg.icon{height: 40}
@@ -196,6 +202,7 @@
             .row
               .col-sm-6
                 .project-wrapper.supersearch
+                  %link.rippleJS
                   .project-header DEMO
                   .project-desc
                     %svg.icon{height: 50}
@@ -207,6 +214,7 @@
 
               .col-sm-6
                 .project-wrapper
+                  %link.rippleJS
                   .project-header HELP?
                   .project-desc
                     %img{src: "img/illus-stackoverflow.svg", width: 40}
@@ -219,6 +227,7 @@
         .row
           .col-sm-3
               .project-wrapper.searchbox
+                  %link.rippleJS
                 .project-header TOOL
                 .project-desc
                   .spacer40
@@ -229,6 +238,7 @@
                   
               .spacer10
               .project-wrapper.swag
+                  %link.rippleJS
                 .project-header SWAG
                 .project-desc
                   %svg.icon{height: 40}
@@ -238,6 +248,7 @@
           .spacer10.visible-xs
           .col-sm-3
             .project-wrapper.big.expectjs
+                  %link.rippleJS
               .project-header TOOL
               .project-desc
                 %svg.icon{width: 60}
@@ -249,6 +260,7 @@
           .spacer10.visible-xs
           .col-sm-6
             .project-wrapper.newsletter
+                  %link.rippleJS
               .project-header LEARN
               .project-desc
                 %a.project-title{href: "https://github.com/algolia/expect-jsx"}Newsletter
@@ -271,6 +283,7 @@
             .row
               .col-sm-6
                 .project-wrapper.talks
+                  %link.rippleJS
                   .project-header LEARN
                   .project-desc
                     %svg.icon{height: 40}
@@ -281,6 +294,7 @@
               .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.publicdatas
+                  %link.rippleJS
                   .project-header LEARN
                   .project-desc
                     %svg.icon{height: 30}
@@ -410,7 +424,6 @@
             %h3 Connect
           .col-sm-3
             %h3 Keep updated
-  %script{src: "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"}
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
 
