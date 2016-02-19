@@ -3,10 +3,10 @@
 }
 
 .tools-category {
-  padding: 8px 0 20px 50px;
+  padding: 8px 0 20px 0;
   display: block;
-  width: 90%;
   margin-bottom: 10px;
+  width: 90%;
   &.web{
     height: 140px;
     border-right: 4px solid $brand-primary;
