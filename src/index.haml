@@ -18,7 +18,7 @@
   %meta{property: "og:description", content: ""}
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
-%body
+%body#test
   %nav#nav.navbar.navbar-inverse.navbar-fixed-top
     .container
       .navbar-header
@@ -61,30 +61,32 @@
   %main
 
     %section.projects
-      .container
+      .container#grid
         .row
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.big.instantsearch
-              %figcaption
-                .project-header LIBRARY
-                .project-desc
-                  .spacer60
-                  .row
-                    .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %a{href: "https://community.algolia.com/instantsearch.js/"}
-                        %img.icon.img-responsive{src: "img/logo-is.svg", width: 86}
-                    .col-xs-7.text-left
-                      %a{href: "https://community.algolia.com/instantsearch.js/"}
-                        %img{src: "img/logo-instantsearch.svg"}
-                      %p.no-padding Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
-                .project-footer
-                  %a{href: "https://github.com/algolia/instantsearch.js"}
-                    %svg.icon
-                      %use{xlink:href: "#icon-github"}
+            / test drag 
+            .slide
+              %figure.effect-apollo.project-wrapper.big.instantsearch.grid__item
+                %figcaption.mover-wrap.wrapper__content
+                  .project-header LIBRARY
+                  .project-desc
+                    .spacer60
+                    .row
+                      .col-xs-2.col-xs-offset-1.col-sm-offset-2
+                        %a{href: "https://community.algolia.com/instantsearch.js/"}
+                          %img.icon.img-responsive.mover__element{src: "img/logo-is.svg", width: 86}
+                      .col-xs-7.text-left
+                        %a.mover__element{href: "https://community.algolia.com/instantsearch.js/"}
+                          %img.mover__element{src: "img/logo-instantsearch.svg"}
+                        %p.no-padding.mover__element Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
+                  .project-footer
+                    %a{href: "https://github.com/algolia/instantsearch.js"}
+                      %svg.icon.mover__element
+                        %use{xlink:href: "#icon-github"}
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.magento.elasticstack
+                %figure.effect-apollo.project-wrapper.magento.elasticstack.draggable
                   %figcaption
                     .project-header PLUGIN
                     .project-desc
@@ -95,7 +97,7 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.zendesk
+                %figure.effect-apollo.project-wrapper.zendesk.draggable
                   %figcaption
                     .project-header PLUGIN
                     .project-desc
@@ -112,7 +114,7 @@
           .col-sm-6
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.big.helperjs
+                %figure.effect-apollo.project-wrapper.big.helperjs.draggable
                   %figcaption
                     .project-header LIBRARY
                     .project-desc
@@ -127,7 +129,7 @@
                         %svg.icon
                           %use{xlink:href: "#icon-github"}
                 .spacer10
-                %figure.effect-apollo.project-wrapper.salesforce
+                %figure.effect-apollo.project-wrapper.salesforce.draggable
                   %figcaption
                     .project-header PLUGIN
                     .project-desc
@@ -138,7 +140,7 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.grader
+                %figure.effect-apollo.project-wrapper.grader.draggable
                   %figcaption
                     .project-header TOOL
                     .project-desc
@@ -149,7 +151,7 @@
                       %a{class: "button pink to-bottom", href:"#"} Evaluate your search
 
                 .spacer10
-                %figure.effect-apollo.project-wrapper.big.autocompletejs
+                %figure.effect-apollo.project-wrapper.big.autocompletejs.draggable
                   %figcaption
                     .project-header LIBRARY
                     .project-desc
@@ -165,7 +167,7 @@
         .spacer10
         .row
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.big.docsearch
+            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
               %figcaption
                 .project-header TOOL
                 .spacer10
@@ -181,7 +183,7 @@
           .col-sm-6
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.hackernews
+                %figure.effect-apollo.project-wrapper.hackernews.draggable
                   %figcaption
                     .project-header DEMO
                     .project-desc
@@ -192,7 +194,7 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.githubsearch
+                %figure.effect-apollo.project-wrapper.githubsearch.draggable
                   %figcaption
                     .project-header TOOL
                     .project-desc
@@ -205,7 +207,7 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.supersearch
+                %figure.effect-apollo.project-wrapper.supersearch.draggable
                   %figcaption
                     .project-header DEMO
                     .project-desc
@@ -216,7 +218,7 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper
+                %figure.effect-apollo.project-wrapper.draggable
                   %figcaption
                     .project-header NEED HELP?
                     .project-desc
@@ -225,7 +227,7 @@
         .spacer10
         .row
           .col-sm-3
-              %figure.effect-apollo.project-wrapper.searchbox
+              %figure.effect-apollo.project-wrapper.searchbox.draggable
                 %figcaption
                 .project-header TOOL
                   .project-desc
@@ -233,7 +235,7 @@
                     %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
                     %p.text-center A generator for search input.
               .spacer10
-              %figure.effect-apollo.project-wrapper.swag
+              %figure.effect-apollo.project-wrapper.swag.draggable
                 %figcaption
                   .project-header SWAG
                   .project-desc
@@ -243,7 +245,7 @@
 
           .spacer10.visible-xs
           .col-sm-3
-            %figure.effect-apollo.project-wrapper.big.expectjs
+            %figure.effect-apollo.project-wrapper.big.expectjs.draggable
               %figcaption
                 .project-header TOOL
                 .project-desc
@@ -254,7 +256,7 @@
                   %p toEqulJSX for mjackson/expect
           .spacer10.visible-xs
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.newsletter
+            %figure.effect-apollo.project-wrapper.newsletter.draggable
               %figcaption
                 .project-header LEARN
                 .project-desc
@@ -277,7 +279,7 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.talks
+                %figure.effect-apollo.project-wrapper.talks.draggable
                   %figcaption
                     .project-header LEARN
                     .project-desc
@@ -287,7 +289,7 @@
                     .spacer10
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.publicdatas
+                %figure.effect-apollo.project-wrapper.publicdatas.draggable
                   %figcaption
                     .project-header LEARN
                     .project-desc
