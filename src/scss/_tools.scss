@@ -45,5 +45,16 @@
       text-transform: uppercase;
       white-space: nowrap;
     }
+
+    img {
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      background: #EEE;
+      img {
+        transform: scale(1.2);
+      }
+    }
   }
 }
