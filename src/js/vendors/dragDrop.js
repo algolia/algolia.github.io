@@ -8,6 +8,8 @@
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
+var Draggabilly = require('draggabilly');
+var classie = require('desandro-classie');
 
 ;( function() {
 

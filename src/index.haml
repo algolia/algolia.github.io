@@ -61,13 +61,13 @@
   %main
 
     %section.projects
-      .container#grid
+      .container#grid.grid
         .row
           .col-sm-6
             / test drag 
             .slide
-              %figure.effect-apollo.project-wrapper.big.instantsearch.grid__item
-                %figcaption.mover-wrap.wrapper__content
+              %figure.effect-apollo.project-wrapper.big.instantsearch.grid__item.grid__item
+                %figcaption.mover-wrap.wrapper__content.mover-wrap.wrapper__content
                   .project-header LIBRARY
                   .project-desc
                     .spacer60
@@ -86,8 +86,8 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.magento.elasticstack.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.magento.elasticstack.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header PLUGIN
                     .project-desc
                       %svg.icon{height: 40}
@@ -97,8 +97,8 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.zendesk.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.zendesk.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header PLUGIN
                     .project-desc
                       %svg.icon{height: 40}
@@ -114,8 +114,8 @@
           .col-sm-6
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.big.helperjs.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.big.helperjs.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header LIBRARY
                     .project-desc
                       %svg.icon{height: 80}
@@ -129,8 +129,8 @@
                         %svg.icon
                           %use{xlink:href: "#icon-github"}
                 .spacer10
-                %figure.effect-apollo.project-wrapper.salesforce.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.salesforce.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header PLUGIN
                     .project-desc
                       %svg.icon{height: 40}
@@ -140,8 +140,8 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.grader.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.grader.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header TOOL
                     .project-desc
                       %a.project-title.center-block
@@ -151,8 +151,8 @@
                       %a{class: "button pink to-bottom", href:"#"} Evaluate your search
 
                 .spacer10
-                %figure.effect-apollo.project-wrapper.big.autocompletejs.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.big.autocompletejs.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header LIBRARY
                     .project-desc
                       %img.icon{src: "img/illus-autocomplete.svg"}
@@ -167,8 +167,8 @@
         .spacer10
         .row
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
-              %figcaption
+            %figure.effect-apollo.project-wrapper.big.docsearch.grid__item
+              %figcaption.mover-wrap.wrapper__content
                 .project-header TOOL
                 .spacer10
                 .project-desc
@@ -183,8 +183,8 @@
           .col-sm-6
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.hackernews.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.hackernews.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header DEMO
                     .project-desc
                       %svg.icon{height: 30}
@@ -194,8 +194,8 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.githubsearch.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.githubsearch.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header TOOL
                     .project-desc
                       %svg.icon{height: 40}
@@ -207,8 +207,8 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.supersearch.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.supersearch.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header DEMO
                     .project-desc
                       %svg.icon{height: 50}
@@ -218,8 +218,8 @@
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header NEED HELP?
                     .project-desc
                       %img.icon{src: "img/illus-stackoverflow.svg", width: 40}
@@ -227,16 +227,16 @@
         .spacer10
         .row
           .col-sm-3
-              %figure.effect-apollo.project-wrapper.searchbox.draggable
-                %figcaption
+              %figure.effect-apollo.project-wrapper.searchbox.grid__item
+                %figcaption.mover-wrap.wrapper__content
                 .project-header TOOL
                   .project-desc
                     .spacer50
                     %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
                     %p.text-center A generator for search input.
               .spacer10
-              %figure.effect-apollo.project-wrapper.swag.draggable
-                %figcaption
+              %figure.effect-apollo.project-wrapper.swag.grid__item
+                %figcaption.mover-wrap.wrapper__content
                   .project-header SWAG
                   .project-desc
                     %svg.icon{height: 40}
@@ -245,8 +245,8 @@
 
           .spacer10.visible-xs
           .col-sm-3
-            %figure.effect-apollo.project-wrapper.big.expectjs.draggable
-              %figcaption
+            %figure.effect-apollo.project-wrapper.big.expectjs.grid__item
+              %figcaption.mover-wrap.wrapper__content
                 .project-header TOOL
                 .project-desc
                   %svg.icon{height: 120}
@@ -256,8 +256,8 @@
                   %p toEqulJSX for mjackson/expect
           .spacer10.visible-xs
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.newsletter.draggable
-              %figcaption
+            %figure.effect-apollo.project-wrapper.newsletter.grid__item
+              %figcaption.mover-wrap.wrapper__content
                 .project-header LEARN
                 .project-desc
                   #mc_embed_signup
@@ -279,8 +279,8 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.talks.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.talks.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header LEARN
                     .project-desc
                       %svg.icon{height: 40}
@@ -289,8 +289,8 @@
                     .spacer10
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.publicdatas.draggable
-                  %figcaption
+                %figure.effect-apollo.project-wrapper.publicdatas.grid__item
+                  %figcaption.mover-wrap.wrapper__content
                     .project-header LEARN
                     .project-desc
                       %svg.icon{height: 30}
@@ -486,7 +486,7 @@
           .col-sm-6.col-sm-offset-3
             %img{src: "img/milliseconds-matter.svg"}
         .text-center
-
+    #drop-area
 
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
