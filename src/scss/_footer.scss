@@ -2,3 +2,11 @@
   background-color: #E9EAED;
   padding: 40px 0;
 }
+
+
+.alg-phrase {
+  @media (max-width: $bp-medium){
+    max-width: 90%;
+    margin: auto 5%;
+  }
+}
