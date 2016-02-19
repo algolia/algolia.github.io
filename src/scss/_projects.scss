@@ -25,6 +25,16 @@
   &.instantsearch .col-xs-7.text-left{
     padding-left: 20px;
   }
+
+  .icon {
+    transform: scale(0.9);
+    transition: transform .3s ease;
+  }
+  &:hover {
+    .icon {
+      transform: scale(1.1);
+    }
+  }
 }
 
 // Projects structure

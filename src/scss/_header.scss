@@ -1,18 +1,18 @@
 .hero {
-  background-color: $primary-color;
-  height: 200px;
+  height: 240px;
   color: white;
-  margin-bottom: 20px;
   position: relative;
+  background: url(img/logo-algolia-bg.svg) 30% 100% $primary-color no-repeat;
   h1 {
+    top: 20px;
     font-size: 6em;
     font-weight: 100;
     position: relative;
   }
   .navbar-brand {
     position: absolute;
-    top: -30px;
-    margin-left: 50px;
+    top: -24px;
+    margin-left: 60px;
   }
 }
 .navbar-brand {
