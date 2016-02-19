@@ -21,37 +21,37 @@
 %body
   %nav#nav.navbar.navbar-inverse.navbar-fixed-top
     .container
-      .navbar-header
-        %button.navbar-toggle.collapsed{aria-controls: "navbar", aria-expanded: "false", data-target: "#navbar", data-toggle: "collapse", type: "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-      #navbar.collapse.navbar-collapse
-        %ul.nav.navbar-nav
-          %li
-            %a{href: "#"} Open Source Projects
-          %li
-            %a{href: "#web"} Web
-          %li
-            %a{href: "#mobile"} Mobile
-          %li
-            %a{href: "#backend"} Backend
-          %li
-            %a{href: "#about"} Events
+      -# .navbar-header
+      -#   %button.navbar-toggle.collapsed{aria-controls: "navbar", aria-expanded: "false", data-target: "#navbar", data-toggle: "collapse", type: "button"}
+      -#     %span.sr-only Toggle navigation
+      -#     %span.icon-bar
+      -#     %span.icon-bar
+      -#     %span.icon-bar
+      -# #navbar.collapse.navbar-collapse
+      -#   %ul.nav.navbar-nav
+      -#     %li
+      -#       %a{href: "#"} Open Source Projects
+      -#     %li
+      -#       %a{href: "#web"} Web
+      -#     %li
+      -#       %a{href: "#mobile"} Mobile
+      -#     %li
+      -#       %a{href: "#backend"} Backend
+      -#     %li
+      -#       %a{href: "#about"} Events
 
   %header.hero
-    %ul.share
-      %li
-        %svg.icon
-          %use{xlink:href: "#icon-twitter"}
-      %li
-        %svg.icon
-          %use{xlink:href: "#icon-facebook"}
-      %li
-        %svg.icon
-          %use{xlink:href: "#icon-github"}
-    .container
+    .container.pos-rel
+      %ul.share
+        %li
+          %svg.icon
+            %use{xlink:href: "#icon-twitter"}
+        %li
+          %svg.icon
+            %use{xlink:href: "#icon-facebook"}
+        %li
+          %svg.icon
+            %use{xlink:href: "#icon-github"}
       .spacer60
       %h1.text-center
         %a.navbar-brand{href: "http://community.algolia.com"}
