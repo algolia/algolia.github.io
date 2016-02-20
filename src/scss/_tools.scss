@@ -38,7 +38,9 @@
     padding: 30px;
     height: 140px;
     background: #F9F9F9;
-    a {
+    display: block;
+
+    .title {
       color: #333;
       font-weight: bold;
       font-size: 1em;
@@ -51,6 +53,7 @@
     }
 
     &:hover {
+      text-decoration: none;
       background: #EEE;
       img {
         transform: scale(1.2);

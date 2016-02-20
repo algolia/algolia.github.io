@@ -4,9 +4,11 @@
 .event-wrapper{
   height: 150px;
   width: 100%;
+  display: block;
   background-color: #eee;
   position: relative;
   overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53), box-shadow .2s ease;
 
   img {
     transition: transform .3s ease;
@@ -21,7 +23,6 @@
   &.big {
     height: 310px;
   }
-
 }
 
 .event-desc{
@@ -31,16 +32,24 @@
   right: 0;
   padding: 0 10px 8px;
   color: white;
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
+
   .title {
     text-transform: uppercase;
     font-size: 1.3em;
     line-height: 20px;
     font-weight: bold;
   }
+
   .date {
     font-size: 1.1em;
     font-style: italic;
   }
+
   .icon {
     width: 24px;
     height: 24px;

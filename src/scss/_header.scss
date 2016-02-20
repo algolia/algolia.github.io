@@ -2,13 +2,14 @@
   height: 240px;
   color: white;
   position: relative;
-  // background: url(img/logo-algolia-bg.svg) 30% 100% $primary-color no-repeat;
   background: url(img/header-bg.png), linear-gradient(#1D3556, #28577B);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
+  margin-bottom: 20px;
+
   h1 {
-    top: 0px;
+    top: -10px;
     left: -90px;
     font-size: 5em;
     font-weight: 100;
