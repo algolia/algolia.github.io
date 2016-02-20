@@ -2,12 +2,21 @@
   height: 240px;
   color: white;
   position: relative;
-  background: url(img/logo-algolia-bg.svg) 30% 100% $primary-color no-repeat;
+  // background: url(img/logo-algolia-bg.svg) 30% 100% $primary-color no-repeat;
+  background: url(img/header-bg.png), linear-gradient(#1D3556, #28577B);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
   h1 {
-    top: 20px;
-    font-size: 6em;
+    top: 0px;
+    left: -90px;
+    font-size: 5em;
     font-weight: 100;
     position: relative;
+    a, a:hover {
+      text-decoration: none;
+      color: white;
+    }
 
     @media (max-width: $bp-medium) {
       font-size: 4em;
@@ -20,7 +29,7 @@
     margin-left: 60px;
 
     img {
-      width: 130px;
+      width: 120px;
     }
   }
 }
@@ -38,7 +47,7 @@
   list-style: none;
   display: inline-block;
   position: absolute;
-  top: 60px;
+  top: 30px;
   right: 30px;
 
   li {
