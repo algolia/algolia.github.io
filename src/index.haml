@@ -46,18 +46,16 @@
               %img{src:"img/ee_ux-glass.gif"}
             %figure.effect-apollo.project-wrapper.big.instantsearch.draggable
               %figcaption
-                %link.rippleJS
                 .project-header LIBRARY
-                .project-desc
+                %a.project-desc{href: "https://community.algolia.com/instantsearch.js/"}
+                  %link.rippleJS
                   .spacer60
                   .row
                     .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %a{href: "https://community.algolia.com/instantsearch.js/"}
-                        %img.icon.img-responsive{src: "img/logo-is.svg", width: 80}
+                      %img.icon.img-responsive{src: "img/logo-is.svg", width: 80}
                     .col-xs-7.text-left
-                      %a{href: "https://community.algolia.com/instantsearch.js/"}
-                        %img{src: "img/logo-instantsearch.svg"}
-                      %a.desc.no-padding{href: "https://community.algolia.com/instantsearch.js/"} Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
+                      %img{src: "img/logo-instantsearch.svg"}
+                      %p.desc.no-padding Pick from an extensive library of widgets, to power your search and build a state-of-the-art instant-search experience.
                 .project-footer
                   %a{href: "https://github.com/algolia/instantsearch.js"}
                     %svg.icon
@@ -67,25 +65,24 @@
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.magento
                   %figcaption
-                    %link.rippleJS
                     .project-header PLUGIN
-                    .project-desc
+                    %a.project-desc{href: "https://community.algolia.com/magento/"}
+                      %link.rippleJS
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-magento"}
-                      %a.project-title{href: "https://community.algolia.com/magento/"}Magento
+                      .project-title Magento
                       .spacer10
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.zendesk
                   %figcaption
-                    %link.rippleJS
                     .project-header PLUGIN
-                    .project-desc
+                    %a.project-desc{href: "https://community.algolia.com/zendesk/"}
+                      %link.rippleJS
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-zendesk"}
-
-                      %a.project-title{href: "https://community.algolia.com/zendesk/"} Zendesk
+                      .project-title Zendesk
                       .spacer10
                     .project-footer
                       %a{href: "https://github.com/algolia/zendesk"}
@@ -100,15 +97,15 @@
                   %p.quote "I'm too quick for a video"
                 %figure.effect-apollo.project-wrapper.big.helperjs.draggable
                   %figcaption
-                    %link.rippleJS
                     .project-header LIBRARY
-                    .project-desc
+                    %a.project-desc{href: "http://algolia.github.io/algoliasearch-helper-js/"}
+                      %link.rippleJS
                       %svg.icon{height: 80}
                         %use{xlink:href: "#icon-helperjs"}
                       .spacer20
-                      %a.project-title{href: "http://algolia.github.io/algoliasearch-helper-js/"} helper.js
+                      .project-title helper.js
                       .spacer10
-                      %p.desc Your best companion for implmenting advanced search features with Algolia
+                      .desc Your best companion for implmenting advanced search features with Algolia
                     .project-footer
                       %a{href: "https://github.com/algolia/algoliasearch-helper-js"}
                         %svg.icon
@@ -116,37 +113,37 @@
                 .spacer10
                 %figure.effect-apollo.project-wrapper.salesforce
                   %figcaption
-                    %link.rippleJS
                     .project-header PLUGIN
-                    .project-desc
+                    %a.project-desc{href: "#"}
+                      %link.rippleJS
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-salesforce"}
-                      %a.project-title{href: "https://wordpress.algolia.com/"} Salesforce
+                      .project-title Salesforce
                       .spacer10
                     .project-footer
               .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.grader
                   %figcaption
-                    %link.rippleJS
                     .project-header TOOL
-                    .project-desc
-                      %a.project-title.center-block{href:"#"}
+                    %a.project-desc{href:"#"}
+                      %link.rippleJS
+                      .project-title.center-block
                         %svg.icon{height: 30, class: "small"}
                           %use{xlink:href: "#icon-grader", class:"pink"}
                         %span Grader
-                      %a{class: "button pink to-bottom", href:"#"} Evaluate your search
+                      .button Evaluate your search
 
                 .spacer10
                 %figure.effect-apollo.project-wrapper.big.autocompletejs
                   %figcaption
-                    %link.rippleJS
                     .project-header LIBRARY
-                    .project-desc
+                    %a.project-desc{href: "https://github.com/algolia/autocomplete.js"}
+                      %link.rippleJS
                       %img.icon{src: "img/illus-autocomplete.svg"}
-                      %a.project-title{href: "https://github.com/algolia/autocomplete.js"} autocomplete.js
+                      .project-title autocomplete.js
                       .spacer10
-                      %p.desc Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
+                      .desc Add a fast and fully-featured auto-completion menu for your search box displaying results "as you type".
                     .project-footer
                       %a{href: "https://github.com/algolia/autocomplete.js"}
                         %svg.icon
@@ -157,16 +154,14 @@
           .col-sm-6
             %figure.effect-apollo.project-wrapper.big.docsearch
               %figcaption
-                %link.rippleJS
                 .project-header TOOL
                 .spacer10
-                .project-desc
-                  %a{href: "https://community.algolia.com/docsearch/"}
-                    %img.icon{src: "img/illus-docsearch.svg"}
-                  %a{href: "https://community.algolia.com/docsearch/"}
-                  %p.desc.text-center The easiest way to add search to your documentation.
+                %a.project-desc{href: "https://community.algolia.com/docsearch/"}
+                  %link.rippleJS
+                  %img.icon{src: "img/illus-docsearch.svg"}
+                  .desc.text-center The easiest way to add search to your documentation.
                   .spacer20
-                  %a{href: "#", class:"button"} Join the Beta
+                  .button Join the Beta
                 .project-footer
           .spacer10.visible-xs
           .col-sm-6
@@ -174,25 +169,23 @@
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.hackernews
                   %figcaption
-                    %link.rippleJS
                     .project-header DEMO
-                    .project-desc
-                      %a{href: "http://hn.algolia.com?experimental"}
-                        %svg.icon{height: 30}
-                          %use{xlink:href: "#icon-hn"}
-                      %a.project-title{href: "http://hn.algolia.com?experimental"} Hackernews Search
-                      .spacer10
-                    .project-footer
+                    %a.project-desc{href: "http://hn.algolia.com?experimental"}
+                      %link.rippleJS
+                      %svg.icon{height: 30}
+                        %use{xlink:href: "#icon-hn"}
+                      .project-title Hackernews Search
+
               .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.githubsearch
                   %figcaption
-                    %link.rippleJS
                     .project-header TOOL
-                    .project-desc
+                    %a.project-desc{href: "https://github.algolia.com"}
+                      %link.rippleJS
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-github"}
-                      %a.project-title{href: "https://github.algolia.com"} Github Search
+                      .project-title Github Search
                       .spacer10
                     .project-footer
 
@@ -203,43 +196,42 @@
                   %img{src:"img/ee_supersearch.gif"}
                 %figure.effect-apollo.project-wrapper.supersearch.draggable
                   %figcaption
-                    %link.rippleJS
                     .project-header DEMO
-                    .project-desc
+                    %a.project-desc{href: "https://community.algolia.com/supersearch"}
+                      %link.rippleJS
                       %svg.icon{height: 50}
                         %use{xlink:href: "#icon-superbowl"}
-                      %a.project-title{href: "https://community.algolia.com/supersearch"} SuperSearch
-                      .spacer10
-                    .project-footer
+                      .project-title SuperSearch
+
               .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper
                   %figcaption
-                    %link.rippleJS
                     .project-header NEED HELP?
-                    .project-desc
+                    %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
+                      %link.rippleJS
                       %img.icon{src: "img/illus-stackoverflow.svg", width: 40}
-                      %a.project-title{href: "http://stackoverflow.com/questions/tagged/algolia"} ASK StackOverflow
+                      .project-title ASK StackOverflow
         .spacer10
         .row
           .col-sm-3
               %figure.effect-apollo.project-wrapper.searchbox
                 %figcaption
-                  %link.rippleJS
                   .project-header TOOL
-                    .project-desc
+                    %a.project-desc{href: "http://shipow.github.io/searchbox/"}
+                      %link.rippleJS
                       .spacer50
-                      %a.project-title{href: "http://shipow.github.io/searchbox/"} SearchBox
-                      %p.desc.text-center A generator for search input.
+                      .project-title SearchBox
+                      .desc.text-center A generator for search input.
               .spacer10
               %figure.effect-apollo.project-wrapper.swag
                 %figcaption
-                  %link.rippleJS
                   .project-header SWAG
-                  .project-desc
+                  %a.project-desc{href: "#"}
+                    %link.rippleJS
                     %svg.icon{height: 40}
                       %use{xlink:href: "#icon-tshirt"}
-                    %a{href: "#", class: "button full"} Get your free t-shirt
+                    .button.full Get your free t-shirt
 
           .spacer10.visible-xs
           .col-sm-3
@@ -247,21 +239,21 @@
               %img{src:"img/ee_vvo.png"}
             %figure.effect-apollo.project-wrapper.big.expectjs.draggable
               %figcaption
-                %link.rippleJS
                 .project-header TOOL
-                .project-desc
+                %a.project-desc{href: "https://github.com/algolia/expect-jsx"}
+                  %link.rippleJS
                   %svg.icon{height: 120}
                     %use{xlink:href: "#icon-react"}
                   .spacer20
-                  %a.project-title{href: "https://github.com/algolia/expect-jsx"} Expect JSX
-                  %p.desc toEqulJSX for mjackson/expect
+                  .project-title Expect JSX
+                  .desc toEqulJSX for mjackson/expect
           .spacer10.visible-xs
           .col-sm-6
             %figure.effect-apollo.project-wrapper.newsletter
               %figcaption
-                %link.rippleJS
                 .project-header LEARN
                 .project-desc
+                  %link.rippleJS
                   #mc_embed_signup
                     %form#mc-embedded-subscribe-form.validate{action: "//algolia.us3.list-manage.com/subscribe/post?u=f7b8acc6ec97794a08484ca9b&amp;id=285b80e148", method: "post", name: "mc-embedded-subscribe-form", novalidate: ""}
                       #mc_embed_signup_scroll
@@ -275,9 +267,9 @@
                         / real people should not fill this in and expect good things - do not remove this or risk form bot signups
                         %div{style: "position: absolute; left: -5000px;"}
                           %input{name: "b_f7b8acc6ec97794a08484ca9b_285b80e148", tabindex: "-1", type: "text", value: ""}/
-                .spacer15
-                %span.project-title Newsletter
-                %p.desc.text-center Learn how to build a delightful search experience
+                  .spacer15
+                  .project-title Newsletter
+                  .desc.text-center Learn how to build a delightful search experience
             .spacer10
             .row
               .col-sm-6
@@ -285,10 +277,10 @@
                   %figcaption
                     %link.rippleJS
                     .project-header LEARN
-                    .project-desc
+                    %a.project-desc{href: "#"}
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-talks"}
-                      %a.project-title{href: "#"} Talks
+                      .project-title Talks
                     .spacer10
               .spacer10.visible-xs
               .col-sm-6
@@ -296,12 +288,10 @@
                   %figcaption
                     %link.rippleJS
                     .project-header LEARN
-                    .project-desc
+                    %a.project-desc{href: "#"}
                       %svg.icon{height: 30}
                         %use{xlink:href: "#icon-index"}
-                      %a.project-title{href: "#"} Public Datasets
-                    .spacer10
-
+                      .project-title Public Datasets
 
     %section.tools
       %h2.text-center.m-b-large API Clients & Tools

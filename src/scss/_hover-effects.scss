@@ -31,6 +31,7 @@ figure.effect-apollo {
     height: 100%;
     background: rgba(255,255,255,0.08);
     content: '';
+    user-select: none;
     transition: transform 0.6s;
     transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-150%,0);
   }

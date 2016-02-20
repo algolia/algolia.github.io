@@ -1,5 +1,5 @@
 .projects{
-  padding: 20px 0 40px;
+  padding: 10px 0 40px;
 }
 
 .project-wrapper{
@@ -73,13 +73,17 @@
 
 // desc
 .project-desc {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  text-align: center;
+  padding-top: 44px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
   .desc {
     display: block;
     clear: both;
@@ -89,9 +93,6 @@
     font-size: 13px;
     max-width: 90%;
     color: rgba(white,.7);
-    &:hover {
-      text-decoration: none;
-    }
 
     &.no-padding{
       padding: 0;
@@ -99,6 +100,7 @@
   }
 
   .icon {
+    max-width:100px;
     display: inline-block;
     fill: #fff;
   }
@@ -135,6 +137,7 @@
   text-align: center;
   position: relative;
   z-index: 99;
+  color: white;
 
   &.center-block{
     display: flex;
@@ -201,6 +204,9 @@
 
 #mc_embed_signup {
   padding: 0 80px;
+  .input-group{
+    margin: 0 auto;
+  }
   input {
     border: solid 2px white;
     border-radius: 0;
