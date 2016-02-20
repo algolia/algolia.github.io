@@ -10,12 +10,6 @@
   font-weight: bold;
   white-space: nowrap;
 
-  &:hover {
-    background: rgba(#fff,.3);
-    color: $primary-color;
-    text-decoration: none;
-  }
-
   &.full {
     width: calc(100% - 32px);
     left: 0px;
@@ -30,6 +24,7 @@
       &:hover {
         background: $value;
         color: #fff;
+
       }
     }
   }
