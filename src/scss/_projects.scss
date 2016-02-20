@@ -127,6 +127,10 @@
   }
 }
 
+.docsearch img{
+  max-width: 400px !important;
+}
+
 // title
 .project-title {
   text-transform: uppercase;
@@ -212,10 +216,13 @@
     border-radius: 0;
     height: 34px;
     padding-left: 12px;
-    background: transparent;
-    box-shadow: inset 4px 4px 0 rgba($primary-color, .2);
+    background: rgba($primary-color, .1);
+    box-shadow: inset 3px 3px 0 rgba($primary-color, .2);
     &::placeholder {
       color: rgba(white,.7);
+    }
+    &:focus {
+      outline: 0;
     }
   }
   button {
