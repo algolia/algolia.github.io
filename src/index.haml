@@ -38,11 +38,12 @@
         Community
 
   %main
-
     %section.projects
       .container#grid
         .row
           .col-sm-6
+            .project-wrapper.big.ee
+              %img{src:"img/ee_ux-glass.gif"}
             %figure.effect-apollo.project-wrapper.big.instantsearch.draggable
               %figcaption
                 %link.rippleJS
@@ -97,7 +98,6 @@
                 .project-wrapper.big.ee
                   %img{src:"img/ee_too-quick-devops.gif"}
                   %p.quote "I'm too quick for a video"
-
                 %figure.effect-apollo.project-wrapper.big.helperjs.draggable
                   %figcaption
                     %link.rippleJS
@@ -199,7 +199,9 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.supersearch
+                .project-wrapper.ee
+                  %img{src:"img/ee_supersearch.gif"}
+                %figure.effect-apollo.project-wrapper.supersearch.draggable
                   %figcaption
                     %link.rippleJS
                     .project-header DEMO
@@ -241,7 +243,9 @@
 
           .spacer10.visible-xs
           .col-sm-3
-            %figure.effect-apollo.project-wrapper.big.expectjs
+            .project-wrapper.big.ee
+              %img{src:"img/ee_vvo.png"}
+            %figure.effect-apollo.project-wrapper.big.expectjs.draggable
               %figcaption
                 %link.rippleJS
                 .project-header TOOL
@@ -273,7 +277,7 @@
                           %input{name: "b_f7b8acc6ec97794a08484ca9b_285b80e148", tabindex: "-1", type: "text", value: ""}/
                 .spacer15
                 %span.project-title Newsletter
-                %p.desc.text-center Learn how to build a delightful  search experience
+                %p.desc.text-center Learn how to build a delightful search experience
             .spacer10
             .row
               .col-sm-6
@@ -498,7 +502,7 @@
             %img.alg-phrase{src: "img/milliseconds-matter.svg"}
         .text-center
           .spacer30
-          ©Algolia 2006
+          ©Algolia 2016
 
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
