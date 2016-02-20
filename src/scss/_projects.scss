@@ -19,9 +19,11 @@
     text-align: center;
     margin: 0 5px;
     width: calc(100% - 10px);
+
     img {
       width: 100%;
     }
+
     .quote {
       text-align: center;
       width: 100%;
@@ -81,8 +83,13 @@
   z-index: 10;
   text-align: center;
   padding-top: 44px;
+
   &:hover, &:focus {
     text-decoration: none;
+
+    .button {
+      background: rgba(white,.2);
+    }
   }
   .desc {
     display: block;
@@ -127,8 +134,16 @@
   }
 }
 
+.instantsearch .logo {
+  margin-bottom: 8px;
+}
+
 .docsearch img{
   max-width: 400px !important;
+}
+
+.swag svg {
+  margin: 4px 0;
 }
 
 // title
@@ -151,7 +166,7 @@
     line-height: 40px;
 
     + .button {
-      margin-top: 16px;
+      margin-top: 8px;
     }
 
     svg {
@@ -208,6 +223,7 @@
 
 #mc_embed_signup {
   padding: 0 80px;
+
   .input-group{
     margin: 0 auto;
   }
@@ -218,19 +234,28 @@
     padding-left: 12px;
     background: rgba($primary-color, .1);
     box-shadow: inset 3px 3px 0 rgba($primary-color, .2);
+
     &::placeholder {
       color: rgba(white,.7);
     }
+
     &:focus {
+      box-shadow: none;
       outline: 0;
     }
   }
+
   button {
     color: white;
     background: transparent;
     height: 34px;
     position: relative;
     left: -2px;
+
+    &:focus, &:hover {
+      outline: 0;
+      background-color: rgba(white,.2);
+    }
   }
 }
 
