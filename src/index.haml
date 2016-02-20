@@ -18,7 +18,7 @@
   %meta{property: "og:description", content: ""}
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
-%body#test
+%body
   %nav#nav.navbar.navbar-inverse.navbar-fixed-top
     .container
       .navbar-header
@@ -64,9 +64,9 @@
       .container#grid
         .row
           .col-sm-6
-            / test drag 
+            / test drag
             .slide
-              %figure.effect-apollo.project-wrapper.big.instantsearch.grid__item
+              %figure.effect-apollo.project-wrapper.big.instantsearch.draggable
                 %figcaption.mover-wrap.wrapper__content
                   .project-header LIBRARY
                   .project-desc
@@ -86,7 +86,7 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.magento.elasticstack.draggable
+                %figure.effect-apollo.project-wrapper.magento.draggable
                   %figcaption
                     .project-header PLUGIN
                     .project-desc
@@ -144,7 +144,7 @@
                   %figcaption
                     .project-header TOOL
                     .project-desc
-                      %a.project-title.center-block
+                      %a.project-title.center-block{href:"#"}
                         %svg.icon{height: 30, class: "small"}
                           %use{xlink:href: "#icon-grader", class:"pink"}
                         %span Grader
@@ -486,7 +486,6 @@
           .col-sm-6.col-sm-offset-3
             %img{src: "img/milliseconds-matter.svg"}
         .text-center
-
 
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
