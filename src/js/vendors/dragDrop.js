@@ -96,14 +96,28 @@ var classie = require('classie');
 		animBack : true,
 		// callbacks
 		onStart : function() { return false; },
-		onDrag : function() { return false; },
 		onEnd : function(wasDropped) { return false; }
 	}
 
 	Draggable.prototype.initEvents = function() {
 		this.draggie.on( 'dragStart', this.onDragStart.bind(this) );
-		this.draggie.on( 'dragMove', throttle( this.onDragMove.bind(this), 5 ) );
 		this.draggie.on( 'dragEnd', this.onDragEnd.bind(this) );
+		this.draggie.on( 'pointerDown', this.onPointerDown.bind(this) );
+		this.draggie.on( 'pointerUp', this.onPointerUp.bind(this) );
+	}
+
+	Draggable.prototype.onPointerDown = function() {
+		var el = this.el
+		setTimeout(function() {
+			classie.add(el,"drag");
+		}, 800);
+	}
+
+	Draggable.prototype.onPointerUp = function() {
+		var el = this.el
+		setTimeout(function() {
+			classie.remove( el, "drag" );
+		}, 200);
 	}
 
 	Draggable.prototype.onDragStart = function( instance) {
@@ -113,16 +127,9 @@ var classie = require('classie');
 		this.position = { left : this.el.clientLeft, top : this.el.clientTop };
 	}
 
-	Draggable.prototype.onDragMove = function( instance ) {
-		//callback
-		this.options.onDrag();
-		// scroll page if at viewport's edge
-		if( this.options.scroll ) {
-			this.scrollPage( instance.element );
-		}
-	}
 
 	Draggable.prototype.onDragEnd = function(instance) {
+
 		if( this.options.scroll ) {
 			// reset this.scrollIncrement
 			this.scrollIncrement = 0;
@@ -130,44 +137,15 @@ var classie = require('classie');
 		var dropped = false;
 		//callback
 		this.options.onEnd( dropped );
-		var withAnimation = true;
-		if( dropped ) {
-			// add class is-dropped to draggable ( controls how the draggable appears again at its original position)
-			classie.add( instance.element, 'is-dropped' );
-			// after a timeout remove that class to trigger the transition
-			setTimeout( function() {
-				classie.add( instance.element, 'is-complete' );
 
-				onEndTransition( instance.element, function() {
-					classie.remove( instance.element, 'is-complete' );
-					classie.remove( instance.element, 'is-dropped' );
-				} );
-			}, 25 );
-		}
 		// move back with animation - track if the element moved away from its initial position or if it was dropped in a droppable element
 		if( this.position.left === instance.x && this.position.top === instance.y || dropped ) {
 			// in this case we will not set a transition for the item to move back
 			withAnimation = false;
 		}
 		// move back the draggable element (with or without a transition)
-		this.moveBack( withAnimation );
+		this.moveBack( true );
 	}
-
-
-	Draggable.prototype._getTranslateVal = function( el ) {
-			var h = Math.sqrt( Math.pow( el.position.x, 2 ) + Math.pow( el.position.y, 2 ) ),
-				a = Math.asin( Math.abs( el.position.y ) / h ) / ( Math.PI / 180 ),
-				hL = h + this.options.distDragBack,
-				dx = Math.cos( a * ( Math.PI / 180 ) ) * hL,
-				dy = Math.sin( a * ( Math.PI / 180 ) ) * hL,
-				tx = dx - Math.abs( el.position.x ),
-				ty = dy - Math.abs( el.position.y );
-
-			return {
-				x : el.position.x > 0 ? tx : tx * -1,
-				y : el.position.y > 0 ? ty : ty * -1
-			}
-		};
 
 	// move back the draggable to its original position
 	Draggable.prototype.moveBack = function( withAnimation ) {

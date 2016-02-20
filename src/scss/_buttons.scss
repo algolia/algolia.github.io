@@ -10,6 +10,10 @@
   font-weight: bold;
   white-space: nowrap;
 
+  &:hover {
+    text-decoration: none;
+  }
+
   &.full {
     width: calc(100% - 32px);
     left: 0px;
@@ -20,11 +24,9 @@
   @each $class, $value in $icon-colors {
     &.#{$class} {
       border-color: $value;
-
       &:hover {
         background: $value;
         color: #fff;
-
       }
     }
   }

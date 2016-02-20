@@ -8,15 +8,41 @@
   background-color: $primary-color;
   position: relative;
   color: #fff;
-  transition: transform 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transition: transform 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53), box-shadow .2s ease;
 
-  &.is-dragging {
-    z-index: 999;
-    box-shadow: 0 4px 20px 2px rgba($primary-color,.5);
-    transition: none;
+  &.ee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 5px;
+    width: calc(100% - 10px);
+    .quote {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 10px;
+      display: block;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: white;
+      font-style: italic;
+    }
   }
 
-  &.animate {
+  &.is-pointer-down {
+    transition: transform 0.05s linear, box-shadow .2s ease;
+    transition-delay: .4s;
+  }
+
+  &.drag{
+    box-shadow: 0 4px 20px 2px rgba($primary-color,.5);
+    transition-delay: inherit;
+  }
+
+  &.animate, &.is-dragging {
     z-index: 999;
   }
 
@@ -59,6 +85,7 @@
     padding: 0 20px;
     font-size: 13px;
     max-width: 90%;
+    color: rgba(white,.7);
     &:hover {
       text-decoration: none;
     }
@@ -98,7 +125,7 @@
 // title
 .project-title {
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   display: block;
   padding: 0;
