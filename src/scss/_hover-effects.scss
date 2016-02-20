@@ -7,17 +7,14 @@
 figure.effect-apollo {
   overflow: hidden;
 
-  img {
-    opacity: 0.95;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale3d(1.05,1.05,1);
-    transform: scale3d(1.05,1.05,1);
+  .icon {
+    opacity: 0.7;
+    transition: opacity .35s, transform .35s;
+    transform: scale3d(.9,.9,1);
   }
 
-  &:hover img {
+  &:hover .icon {
     opacity: 1;
-    -webkit-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
   }
   &:not(:hover) {
@@ -34,14 +31,11 @@ figure.effect-apollo {
     height: 100%;
     background: rgba(255,255,255,0.08);
     content: '';
-    -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
-    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-150%,0);
     transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-150%,0);
   }
 
   &:hover figcaption::before {
-    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,150%,0);
     transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,150%,0);
   }
 

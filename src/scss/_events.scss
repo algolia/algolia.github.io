@@ -8,6 +8,16 @@
   position: relative;
   overflow: hidden;
 
+  img {
+    transition: transform .3s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+
   &.big {
     height: 310px;
   }

@@ -8,6 +8,10 @@
     font-size: 6em;
     font-weight: 100;
     position: relative;
+
+    @media (max-width: $bp-medium) {
+      font-size: 4em;
+    }
   }
   .navbar-brand {
     position: absolute;

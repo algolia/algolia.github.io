@@ -3,24 +3,31 @@
 }
 
 .tools-category {
-  padding: 8px 0 20px;
+  padding: 8px 0 20px 0;
+  display: block;
+  margin-bottom: 10px;
+  width: 90%;
+  &.web{
+    height: 140px;
+    border-right: 4px solid $brand-primary;
+  }
 
-  &.tools-web .tool-wrapper{
+  &.mobile{
+    height: 140px;
+    border-right: 4px solid $saffron-mango;
     //background-image: linear-gradient(20deg, rgba($primary-color, .7), $primary-color);
   }
 
-  &.tools-mobile .tool-wrapper{
-    //background-image: linear-gradient(20deg, rgba($primary-color, .7), $primary-color);
-  }
-
-  &.tools-backend .tool-wrapper{
+  &.backend{
+    height: 590px;
+    border-right: 4px solid #C24C83;
     //background-image: linear-gradient(20deg, rgba($primary-color, .7), $primary-color);
   }
 
   h3 {
     font-weight: bold;
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    font-size: 1.3em;
+    margin: 5px 0 10px;
   }
 }
 
@@ -29,6 +36,7 @@
     text-align: center;
     margin: 0 0 10px 0;
     padding: 30px;
+    height: 140px;
     background: #F9F9F9;
     a {
       color: #333;
@@ -36,6 +44,17 @@
       font-size: 1em;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    img {
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      background: #EEE;
+      img {
+        transform: scale(1.2);
+      }
     }
   }
 }

@@ -31,20 +31,6 @@
     background-repeat: no-repeat;
     background-size: 100%
   }
-
-  &.instantsearch .col-xs-7.text-left{
-    padding-left: 20px;
-  }
-
-  .icon {
-    transform: scale(0.9);
-    transition: transform .3s ease;
-  }
-  &:hover {
-    .icon {
-      transform: scale(1.1);
-    }
-  }
 }
 
 // Projects structure
@@ -65,12 +51,17 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  p {
+  .desc {
+    display: block;
+    clear: both;
     font-weight: bold;
     width: 100%;
     padding: 0 20px;
     font-size: 13px;
     max-width: 90%;
+    &:hover {
+      text-decoration: none;
+    }
 
     &.no-padding{
       padding: 0;
