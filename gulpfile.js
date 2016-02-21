@@ -236,7 +236,8 @@ gulp.task('webserver', function() {
 gulp.task('rev', function () {
 	return gulp.src('build/*.html')
 		.pipe(rev({
-      cwd: 'build'
+      cwd: 'build',
+		  fileTypes: ['css','js']
     }))
 		.pipe(gulp.dest('build'));
 });
