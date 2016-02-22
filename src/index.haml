@@ -498,8 +498,16 @@
               %li 
                 %a{href:"https://www.producthunt.com/@algolia"}
                   ProductHunt
-          .col-sm-3
+          .col-sm-3.update
             %h3 Keep updated
+            %div
+              .fb-page{data-adapt-container-width:"true", data-hide-cover:"false", data-href:"https://www.facebook.com/algolia", data-show-facepile:"true", data-small-header:"true"}
+                .fb-xfbml-parse-ignore
+                  %blockquote{cite:"https://www.facebook.com/algolia"}
+                    %a{href:"https://www.facebook.com/algolia"} Algolia
+            %div
+              %a{class:"twitter-follow-button", href:"https://twitter.com/Algolia", data-size:"large"}Follow @Algolia
+
         .row
           .spacer100
           .col-absolute-center
@@ -507,7 +515,16 @@
         .text-center
           .spacer30
           ©<span class="brand-name">Algolia</span> 2016
-
+  %div{id: "fb-root"}
+    %script
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=217461055269773";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  %script window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));     
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
 
