@@ -14,6 +14,21 @@
       padding-bottom: 0.3em;
       margin-bottom: 0.65em;
       border-bottom: 2px solid rgba(#fff, 0.5);
+
+      @media (max-width: $bp-small) {
+        text-align: center;
+        width: calc(100% + 10px);
+        float: left;
+        
+        border-top: 2px solid rgba(#fff, 0.3);
+        border-color: rgba(#fff, 0.3);
+        padding: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        background: rgba(white, 0.05);
+        position: relative;
+        left: -5px;
+      }
     }
   }
   
@@ -31,7 +46,7 @@
   li{
     min-height: 28px;
     line-height: 28px;
-
+    
     a {
       color: #fff;
       text-decoration: none;
@@ -44,6 +59,14 @@
             size: contain;
             repeat: no-repeat;
           };
+        }
+      }
+
+      @media (max-width: $bp-small) {
+        padding-left: 8px;
+
+        &:before {
+          left: 6px;
         }
       }
     }
