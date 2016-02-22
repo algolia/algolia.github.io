@@ -8,4 +8,7 @@
   @media (max-width: $bp-wide) {
     left: -40px;
   }
+  @media (max-width: $bp-small) {
+    left: -20px;
+  }
 }
