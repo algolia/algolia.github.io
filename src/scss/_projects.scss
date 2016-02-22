@@ -62,6 +62,35 @@
     background-repeat: no-repeat;
     background-size: 100%
   }
+
+  &.grader {
+    
+    .project-header {
+      
+      span {
+        display: inline-block;
+
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: url('../img/zigzag.png')no-repeat center center / 80%;
+          position: absolute;
+          top: 0;
+        }
+
+        &:before {
+          left: 65px;
+        }
+
+        &:after {
+          right: 65px;
+        }
+      }
+    }
+  }
 }
 
 // Projects structure
