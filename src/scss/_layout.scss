@@ -26,3 +26,15 @@
     width: calc(100% - 16px);
   }
 }
+
+
+
+// 
+.col-absolute-center {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 630px;
+  position: relative;
+}

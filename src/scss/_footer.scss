@@ -1,6 +1,19 @@
 .footer {
-  background-color: #E9EAED;
+  background-color: $primary-color;
+  border-top: 12px solid darken($primary-color, 7%);
+  border-bottom: 12px solid darken($primary-color, 7%);
   padding: 40px 0;
+  color: #fff;
+
+  .brand-name {
+    width: 100px;
+    height: 44px;
+    background: url('../img/logo-algolia.svg')no-repeat center center / contain;
+    padding: 8px;
+    text-indent: -999px;
+    color: transparent;
+    margin: 0 4px;
+  }
 }
 
 
