@@ -69,57 +69,6 @@
       
       span {
         display: inline-block;
-
-        &:before,
-        &:after {
-          content: '';
-          display: block;
-          width: 24px;
-          height: 40px;
-          background: {
-            image: url('data:image/svg+xml;utf8,#{($zigzag-icon)}');
-            repeat: no-repeat;
-            position:  center center;
-            size: 150%;
-          }
-          position: absolute;
-          top: 4px;
-        }
-
-        &:before {
-          left: 25%;
-        }
-
-        &:after {
-          right: 25%;
-        }
-
-        @include medium-mq {
-          &:before {
-            left: 65px;
-          }
-          &:after {
-            right: 65px;
-          }
-        }
-
-         @include small-mq {
-          &:before {
-            left: 45px;
-          }
-          &:after {
-            right: 45px;
-          }
-        }
-
-        @media (max-width: $bp-small) {
-           &:before {
-            left: 30%;
-            }
-            &:after {
-              right: 30%;
-            }
-        }
       }
     }
   }
