@@ -74,19 +74,24 @@
         &:after {
           content: '';
           display: block;
-          width: 40px;
+          width: 24px;
           height: 40px;
-          background: url('../img/zigzag.png')no-repeat center center / 80%;
+          background: {
+            image: url('data:image/svg+xml;utf8,#{($zigzag-icon)}');
+            repeat: no-repeat;
+            position:  center center;
+            size: 150%;
+          }
           position: absolute;
-          top: 0;
+          top: 4px;
         }
 
         &:before {
-          left: 65px;
+          left: 85px;
         }
 
         &:after {
-          right: 65px;
+          right: 85px;
         }
       }
     }
