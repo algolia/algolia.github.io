@@ -8,6 +8,12 @@
   background-size: auto 100%;
   margin-bottom: 20px;
 
+  @media (max-width: $bp-medium) {
+    background-size: 100%;
+    background-position: bottom center;
+    background-color: #1e3756 !important;
+  }
+
   h1 {
     top: -10px;
     left: -90px;
@@ -21,6 +27,7 @@
 
     @media (max-width: $bp-medium) {
       font-size: 4em;
+      left: -30px;
     }
   }
 
@@ -28,6 +35,10 @@
     position: absolute;
     top: -40px;
     margin-left: 60px;
+
+    @media (max-width: $bp-medium) {
+      margin-left: 40px;
+    }
 
     img {
       width: 120px;
