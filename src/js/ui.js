@@ -10,15 +10,21 @@ $( '.draggable' ).map( function(i) {
 	} );
 } );
 
+
+
 function isMobile(){
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		var wrappers = document.querySelectorAll('figure.project-wrapper');
-		for(i=0;i<wrapper.length;i++) {
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		var wrappers = document.querySelectorAll('figure');
+		for(i=0;i<wrappers.length;i++) {
 			wrappers[i].classList.remove('draggable')
 		}
 	}
 }
 
 window.addEventListener('load', function(){
+	isMobile()
+})
+
+document.addEventListener('DOMContentLoaded', function(){
 	isMobile()
 })

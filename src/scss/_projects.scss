@@ -2,6 +2,13 @@
   padding: 10px 0 40px;
 }
 
+figure {
+  @media (max-width: $bp-small) {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
 .project-wrapper{
   height: 150px;
   width: 100%;
