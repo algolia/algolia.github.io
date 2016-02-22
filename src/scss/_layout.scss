@@ -2,3 +2,27 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+.container {
+  max-width: 1150px;
+}
+
+@include big-mq {
+  .container {
+    width: 1150px;
+  }
+}
+
+
+@include medium-mq {
+  .container {
+    width: calc(100% - 16px);
+    max-width: 1150px;
+  }
+}
+
+@include small-mq {
+  .container {
+    width: calc(100% - 16px);
+  }
+}

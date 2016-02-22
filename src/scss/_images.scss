@@ -1,3 +1,11 @@
 .img-responsive {
   max-width: inherit !important;
 }
+
+[alt="instantsearch"] {
+  position: relative;
+  
+  @media (max-width: $bp-wide) {
+    left: -40px;
+  }
+}

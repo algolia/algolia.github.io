@@ -8,10 +8,11 @@
   background-size: auto 100%;
   margin-bottom: 20px;
 
-  @media (max-width: $bp-medium) {
-    background-size: 100%;
+  @media (max-width: $bp-wide) {
+    background: url(img/header-bg.png), #1D3556;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     background-position: bottom center;
-    background-color: #1e3756 !important;
   }
 
   h1 {
@@ -25,7 +26,12 @@
       color: white;
     }
 
-    @media (max-width: $bp-medium) {
+    @media (max-width: $bp-wide) {
+      font-size: 4em;
+      left: -90px;
+    }
+
+    @media (max-width: $bp-small) {
       font-size: 4em;
       left: -30px;
     }
@@ -36,7 +42,7 @@
     top: -40px;
     margin-left: 60px;
 
-    @media (max-width: $bp-medium) {
+    @media (max-width: $bp-wide) {
       margin-left: 40px;
     }
 
