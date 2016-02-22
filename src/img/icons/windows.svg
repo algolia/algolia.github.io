@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>windows</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-820.000000, -1597.000000)">
+            <g id="windows" sketch:type="MSLayerGroup" transform="translate(820.000000, 1597.000000)">
+                <circle id="Oval-148" fill="#FFFFFF" sketch:type="MSShapeGroup" cx="34.5" cy="35.5" r="33.5"></circle>
+                <path d="M35,70 C54.3299662,70 70,54.3299662 70,35 C70,15.6700338 54.3299662,0 35,0 C15.6700338,0 0,15.6700338 0,35 C0,54.3299662 15.6700338,70 35,70 Z M14.243825,19.834491 L30.1154596,17.6729386 L30.1223976,32.9824148 L14.2583237,33.072756 L14.243825,19.834491 Z M30.1078989,34.7463646 L30.1202184,50.0691832 L14.2561445,47.8881065 L14.255255,34.6435839 L30.1078989,34.7463646 Z M32.0319127,17.3901694 L53.0763828,14.3187566 L53.0763828,32.7877052 L32.0319127,32.9547739 L32.0319127,17.3901694 Z M53.081275,34.8904622 L53.0763383,53.2762434 L32.0318682,50.3060547 L32.0023816,34.8560389 L53.081275,34.8904622 Z" id="objc" fill="#00ADEF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
