@@ -59,3 +59,344 @@
     float: right;
   }
 }
+
+
+// Future events list
+// Can contain up to 4 attendees in this version
+.events .list-item { 
+  max-height: $list-event-height;
+  color: inherit;
+  border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+
+  .date,
+  .user {
+    float: left;
+    height: 100%;
+    width: $list-event-height;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    
+    i, em {
+      float: left;
+      width: 100%;
+      position: relative;
+      height: calc(50% - 22px);
+      font-style: normal;  
+      line-height: 30px;
+    }
+  }
+
+  // Date calendar design
+  .date {
+    border-right: 6px solid #fff;
+    background: #fff;
+    background-image: linear-gradient(to bottom, #fff, darken(#fff, 5%));
+
+    > span {
+      float: left;
+      width: 100%;
+      text-align: center;
+      background: $brand-primary;
+      background-image: linear-gradient(to top left, $brand-primary, darken($brand-primary, 20%));
+      font-weight: bold;
+      height: 32px;
+      letter-spacing: 1px;
+      line-height: 32px;
+    }
+    i, em {
+      color: darken($brand-primary, 20%);
+      font-weight: bolder;
+      padding: 6px 0; 
+    }
+    i {
+      padding-bottom: 0
+    }
+
+    em {
+      &:before {
+        content: '20'
+      }
+    }
+  }
+
+  // The user part
+  .user {
+    float: right;
+    background: linear-gradient(to top left, $primary-color, $brand-primary);
+    border-left: 6px solid #fff;
+    width: calc($list-event-height + 6px);
+    overflow: hidden;
+    position: relative;
+
+    
+    
+    .user-image {
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      left: 0;
+      transition: border 0.3s ease, mix-blend-mode 0.3s ease;
+
+      
+
+      img {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0.45
+      }
+    }
+    
+    // If two users
+    &.two-users {
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+      }
+    }
+    
+    // If three users
+    &.three-users {
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+        height: 50%;
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+
+        &:nth-child(3) {
+          left: 0;
+          border-right: 0;
+          width: 100%;
+          top: 50%;
+          border-top: 2px solid rgba(#fff, 0.45)
+        }
+      }
+    }
+    
+    // If four users
+    &.four-users {
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+        height: 50%;
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          left: 0;
+          border-right: 0;
+          top: 50%;
+          border-top: 2px solid rgba(#fff, 0.45)
+        }
+        &:nth-child(3) {
+          border-right: 2px solid rgba(#fff, 0.45);
+        }
+        &:nth-child(4) {
+          left: 50%;
+        }
+      }
+    }
+  }
+
+
+  h5, p {
+    float:left;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 8px;
+    padding: 0;
+  }
+
+  $font-size: 14px;
+  $line-height: 1.4;
+  $lines-to-show: 2;
+
+p {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 100%;
+  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  margin: 0 auto;
+  margin-left: 8px;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $brand-primary;
+    border-bottom: 3px solid #dadada;
+    display: inline-block;
+    float: left;
+    width: initial;
+    margin: 6px 6px;
+    padding-bottom: 0.3em
+  }
+
+  .row {
+    position: relative;
+    height: $list-event-height;  
+  }
+  .col-sm-3 {
+    position: absolute;
+    height: 100%;
+    width: calc(33.333333% - 36px);
+    right: $list-event-height;
+  } 
+
+
+  // And now let's build something hacky, but smart
+  // By "hacky" I mean it's a bit complex to get what happen
+  // but it do not use any hacks per say.
+  .event-attendees{
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1em;
+    background: $primary-color;
+    background-image: linear-gradient(to right, darken($primary-color, 10%), lighten($primary-color, 5%));
+    height: 100%;
+    padding: 1em 0;
+    padding-left: 2em;
+    padding-right: 6px;
+    text-align: center;
+    
+
+    .user-name {
+      display: inline-block;
+      word-break: break-word;
+      width: 100%;
+
+      // If the user name is NOT the only of type
+      // Meaning : if there is multiple .user-name tags
+      &:not(:only-of-type) {
+        line-height: 22px !important;
+        
+        // Then, target the last one, and adds "And"
+        // before, to get a gramatically correct sentence
+        &:last-of-type:before {
+          content: 'and '
+        }
+        // And then, get before the last tag
+        // And delete the coma ( otherwise it would write "foo, bar, baz, and qux")
+        // and we only want "foo, bar, baz and qux"
+        &:nth-last-of-type(4n+2) {
+          &:after{
+            content: ''
+          }
+        }
+      }
+
+      // Adjust the line height if there is only one attendee
+      &:only-of-type {
+        line-height: round($list-event-height/1.35);
+      }
+
+      @include hasChild('4', '.user-name'){
+        line-height:0 !important; 
+        padding: 0 !important;
+        font-size: 0.9em;
+        position: relative;
+        top: -4px
+      }
+       @include hasChild('2', '.user-name'){
+        padding: 0 !important;
+        position: relative;
+        top: 6px
+      }
+    }
+
+    // Now, we add a coma before each users
+    // if there is only one .user-name it cannot NOT be the last child ( because he is )
+    .user-name:not(:last-child):after {
+      content: ',  '
+    }
+    // And finally, add the end of the sentence "will be there"
+    .user-name:last-child:after {
+      content: ' will be there ';
+      white-space: inherit;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0; 
+      height: 0;
+      top: 0;
+      left: -16px; 
+      border-top: $list-event-height/2  solid transparent;
+      border-bottom: $list-event-height/2  solid transparent;
+      
+      border-left: $list-event-height/2  solid #eeeeee;
+      transition: left 0.3s ease;
+    }
+  }
+
+
+
+
+  &:hover {
+    h5 {
+      color: $primary-color
+    }
+    .user img {
+      opacity: 1;
+    }
+    .user-image {
+      border-color: rgba(white, 1) !important;
+      @supports (mix-blend-mode: screen) {
+        mix-blend-mode: screen;
+      }
+    }
+    .event-attendees {
+      opacity: 1;
+
+      &:before {
+        left: 4px
+      }
+    }
+  }
+}

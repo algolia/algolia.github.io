@@ -25,49 +25,56 @@
   }
 }
 
+@mixin hasChild($number, $selector) {
+
+  &:first-child:nth-last-child(#{$number}),
+  &:first-child:nth-last-child(#{$number}) ~ #{$selector} { 
+    @content
+  }
+}
 
 
 
 // Added by Lucas Bonomi for debugging purposes
 @mixin grid(){
-  box-shadow: inset 0 0 0 1px rgba(purple, .1) !important;
+ outline: 1px solid rgba(purple, .1) !important;
   &:hover{
-    box-shadow: inset 0 0 0 1px rgba(purple, 1) !important;
+   outline: 1px solid rgba(purple, 1) !important;
   }
   *{
-    box-shadow: inset 0 0 0 1px rgba(red, .1) !important;
+   outline: 1px solid rgba(red, .1) !important;
     &:hover{
-      box-shadow: inset 0 0 0 1px rgba(red, 1) !important;
+     outline: 1px solid rgba(red, 1) !important;
     }
     + *{
-      box-shadow: inset 0 0 0 1px rgba(blue, .1) !important;
+     outline: 1px solid rgba(blue, .1) !important;
       &:hover{
-        box-shadow: inset 0 0 0 1px rgba(blue, 1) !important;
+       outline: 1px solid rgba(blue, 1) !important;
       }
       + *{
-        box-shadow: inset 0 0 0 1px rgba(green, .1) !important;
+       outline: 1px solid rgba(green, .1) !important;
         &:hover{
-          box-shadow: inset 0 0 0 1px rgba(green, 1) !important;
+         outline: 1px solid rgba(green, 1) !important;
         }
         + *{
-          box-shadow: inset 0 0 0 1px rgba(purple, .1) !important;
+         outline: 1px solid rgba(purple, .1) !important;
           &:hover{
-            box-shadow: inset 0 0 0 1px rgba(purple, 1) !important;
+           outline: 1px solid rgba(purple, 1) !important;
           }
           + *{
-            box-shadow: inset 0 0 0 1px rgba(red, .1) !important;
+           outline: 1px solid rgba(red, .1) !important;
             &:hover{
-              box-shadow: inset 0 0 0 1px rgba(red, 1) !important;
+             outline: 1px solid rgba(red, 1) !important;
             }
             +  *{
-              box-shadow: inset 0 0 0 1px rgba(blue, .1) !important;
+             outline: 1px solid rgba(blue, .1) !important;
               &:hover{
-                box-shadow: inset 0 0 0 1px rgba(blue, 1) !important;
+               outline: 1px solid rgba(blue, 1) !important;
               }
               +  *{
-                box-shadow: inset 0 0 0 1px rgba(green, .1) !important;
+               outline: 1px solid rgba(green, .1) !important;
                 &:hover{
-                  box-shadow: inset 0 0 0 1px rgba(green, 1) !important;
+                 outline: 1px solid rgba(green, 1) !important;
                 }
               }
             }

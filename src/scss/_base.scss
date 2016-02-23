@@ -18,3 +18,7 @@ html, body {
     @include grid()
   }
 }
+
+p {
+  text-rendering: optimizeLegibility;
+}

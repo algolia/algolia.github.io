@@ -1,3 +1,6 @@
+// Debug function.
+// Set to true to highlight every elements of the page
+// with a border to detect the edges of each
 $_debug: false;
 
 $cabaret: #E7486B;
@@ -90,3 +93,5 @@ $font-family-base: "Open Sans", Helvetica, Arial, sans-serif;
 $headings-font-family: "Raleway", "Times New Roman", Times, serif;
 
 $grid-gutter-width: 10px;
+
+$list-event-height: 96px;
