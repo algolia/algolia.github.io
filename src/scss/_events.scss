@@ -296,7 +296,7 @@ p {
     color: #fff;
     font-size: 1em;
     background: $primary-color;
-    background-image: linear-gradient(to right, darken($primary-color, 10%), lighten($primary-color, 5%));
+    background-image: linear-gradient(to left, $brand-primary, darken($brand-primary, 20%));
     height: 100%;
     padding: 1em 0;
     padding-left: 2em;
@@ -344,7 +344,7 @@ p {
        @include hasChild('2', '.user-name'){
         padding: 0 !important;
         position: relative;
-        top: 6px
+        top: 10px
       }
     }
 
