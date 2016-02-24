@@ -99,6 +99,16 @@ figure {
     }
   }
 
+  &.swag {
+    .button {
+      margin-top: -6px;
+
+      @media (max-width: $bp-small) {
+        margin-top: 0;
+      }
+    }
+  }
+
   @media (min-width: $bp-small) {
     .project-desc {
       p {
@@ -274,7 +284,7 @@ figure {
     line-height: 40px;
 
     + .button {
-      margin-top: 8px;
+      margin-top: 2px;
     }
 
     svg {

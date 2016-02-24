@@ -8,7 +8,10 @@
   position: relative;
   text-transform: uppercase;
   font-weight: bold;
-  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  height: auto;
+  white-space: normal;
 
   &:hover {
     text-decoration: none;
@@ -29,5 +32,9 @@
         color: #fff;
       }
     }
+  }
+
+  @media (max-width: $bp-small) {
+    font-size: 13px;
   }
 }
