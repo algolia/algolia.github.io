@@ -530,3 +530,29 @@ sup {
 sub {
   bottom: -0.25em;
 }
+
+
+.col-absolute-center {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 630px;
+  position: relative;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+.no-padding{
+  padding: 0;
+}
+
+#twitter-widget-0 {
+  @media (max-width: $bp-small) {
+    width: 136px !important;
+    float: right;
+    
+    
+  }
+}
