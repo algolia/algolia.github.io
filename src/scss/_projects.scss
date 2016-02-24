@@ -42,6 +42,11 @@ figure {
       color: white;
       font-style: italic;
     }
+
+    @media (max-width: $bp-small) {
+      display: none;
+      
+    } 
   }
 
   &.is-pointer-down {
@@ -91,17 +96,18 @@ figure {
   @media (max-width: $bp-small) {
    height: auto;
    min-height: 150px;
-    .spacer60 {
-      height: 0
-    }
-    &.newsletter {
-      min-height: 200px !important;
+   .spacer60 {
+    height: 0
+  }
+  &.newsletter {
+    min-height: 200px !important;
 
-      .project-title {
-        top: 10px;
-      }
+    .project-title {
+      top: 10px;
+      margin-bottom: 10px
     }
   }
+}
 }
 
 // Projects structure
@@ -202,7 +208,7 @@ figure {
       clear: both;
       
     }
-     .col-xs-7.text-left {
+    .col-xs-7.text-left {
       float: none !important;
       margin: auto;
       text-align: center;
@@ -215,8 +221,13 @@ figure {
   margin-bottom: 8px;
 }
 
-.docsearch img{
-  max-width: 400px !important;
+.docsearch {
+  img{
+    max-width: 400px !important;
+  }
+  .spacer20 {
+    display: none;
+  }
 }
 
 .swag svg {
