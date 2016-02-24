@@ -87,6 +87,21 @@ figure {
       }
     }
   }
+
+  @media (max-width: $bp-small) {
+   height: auto;
+   min-height: 150px;
+    .spacer60 {
+      height: 0
+    }
+    &.newsletter {
+      min-height: 200px !important;
+
+      .project-title {
+        top: 10px;
+      }
+    }
+  }
 }
 
 // Projects structure
@@ -118,16 +133,22 @@ figure {
   }
   .desc {
     display: block;
+    float: left;
     clear: both;
     font-weight: bold;
     width: 100%;
     padding: 0 20px;
     font-size: 13px;
-    max-width: 90%;
+    max-width: 100%;
     color: rgba(white,.7);
 
     &.no-padding{
       padding: 0;
+    }
+
+    @media (max-width: $bp-small) {
+      padding: 6px 16px;
+      margin-bottom: 1em;
     }
   }
 
@@ -155,6 +176,39 @@ figure {
       height: 46px;
       width: 46px;
       clear: both;
+    }
+  }
+
+  @media (max-width: $bp-small) {
+    position: relative;
+    width: 100%;
+    padding-top: 16px;
+    
+    svg.icon,
+    img.icon {
+      margin: auto;
+      float: none;
+      width: 100%;
+      display: block;
+      margin-bottom: 1em;
+      
+      &[src*="docsearch.svg"] {
+        width: 80%;
+      }
+    }
+
+    .button {
+      display: block;
+      margin: auto;
+      max-width: 90%;
+      clear: both;
+      
+    }
+     .col-xs-7.text-left {
+      float: none !important;
+      margin: auto;
+      text-align: center;
+      
     }
   }
 }
@@ -280,6 +334,25 @@ figure {
     &:focus, &:hover {
       outline: 0;
       background-color: rgba(white,.2);
+    }
+  }
+
+  @media (max-width: $bp-small) {
+    float: left;
+    width: 100%;
+    
+    button, input{
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+    }
+    input {
+      border-bottom: 0;
+    }
+
+    .input-group {
+      margin: 0;
+      width: 100%;
     }
   }
 }

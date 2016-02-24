@@ -30,6 +30,18 @@
 
 
 // 
+.col-xs-2.col-xs-offset-1.col-sm-offset-2 {
+  @media (max-width: $bp-small) {
+    width: 100%;
+    left: 0;
+    margin: 0;
+
+    img {
+      max-width: 80%;
+      width: 100px;
+    }
+  }
+}
 .col-absolute-center {
   left: 0;
   right: 0;
