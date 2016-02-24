@@ -159,7 +159,9 @@
         .spacer10
         .row
           .col-sm-6
-            %figure.effect-apollo.project-wrapper.big.docsearch
+            .project-wrapper.ee.big
+              %img{src:"img/ee_client.gif", class:"contain", alt: "Client VS startups"}
+            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
               %figcaption
                 .project-header TOOL
                 .spacer10
@@ -174,7 +176,9 @@
           .col-sm-6
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.hackernews
+                .project-wrapper.ee
+                  %img{src:"img/ee_psycho-cat.gif", class:"contain", alt: "Psycho cat"}
+                %figure.effect-apollo.project-wrapper.hackernews.draggable
                   %figcaption
                     .project-header TOOL
                     %a.project-desc{href: "http://hn.algolia.com?experimental"}
@@ -185,7 +189,9 @@
 
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.githubsearch
+                .project-wrapper.ee
+                  %img{src:"img/ee_balance-bear.gif", alt: "Meow"}
+                %figure.effect-apollo.project-wrapper.githubsearch.draggable
                   %figcaption
                     .project-header TOOL
                     %a.project-desc{href: "https://github.algolia.com"}
@@ -220,28 +226,30 @@
         .spacer10
         .row
           .col-sm-3
-              %figure.effect-apollo.project-wrapper.searchbox
-                %figcaption
-                  .project-header TOOL
-                  %a.project-desc{href: "http://shipow.github.io/searchbox/"}
-                    %link.rippleJS
-                    .spacer50
-                    .project-title SearchBox
-                    .desc.text-center A generator for search input.
-              .spacer10
-              %figure.effect-apollo.project-wrapper.swag
-                %figcaption
-                  .project-header SWAG
-                  %a.project-desc{href: "#"}
-                    %link.rippleJS
-                    %svg.icon{height: 40}
-                      %use{xlink:href: "#icon-tshirt"}
-                    .button.full Get your free t-shirt
+            .project-wrapper.ee
+              %img{src:"img/ee_pizza.gif", alt: "Hmmmm Piiiizzaaaaa"}
+            %figure.effect-apollo.project-wrapper.searchbox.draggable
+              %figcaption
+                .project-header TOOL
+                %a.project-desc{href: "http://shipow.github.io/searchbox/"}
+                  %link.rippleJS
+                  .spacer50
+                  .project-title SearchBox
+                  .desc.text-center A generator for search input.
+            .spacer10
+            %figure.effect-apollo.project-wrapper.swag
+              %figcaption
+                .project-header SWAG
+                %a.project-desc{href: "#"}
+                  %link.rippleJS
+                  %svg.icon{height: 40}
+                    %use{xlink:href: "#icon-tshirt"}
+                  .button.full Get your free t-shirt
 
           .spacer10.visible-xs
           .col-sm-3
             .project-wrapper.big.ee
-              %img{src:"img/ee_vvo.png", alt: "vvo.js"}
+              %img{src:"img/ee_vvo.jpg", alt: "vvo.js"}
             %figure.effect-apollo.project-wrapper.big.expectjs.draggable
               %figcaption
                 .project-header TOOL
@@ -278,7 +286,9 @@
             .spacer10
             .row
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.talks
+                .project-wrapper.ee
+                  %img{src:"http://img.pandawhale.com/53248-Jim-Carrey-dumb-and-dumber-par-XKye.gif", alt: "UX"}
+                %figure.effect-apollo.project-wrapper.talks.draggable
                   %figcaption
                     %link.rippleJS
                     .project-header LEARN

@@ -26,9 +26,23 @@ figure {
     text-align: center;
     margin: 0 5px;
     width: calc(100% - 10px);
+    height: 100%;
+    &:not(.big) {
+      max-height: 150px
+    }
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+
+      &.bottom-center {
+        object-position: center center;
+      }
+      &.contain {
+        object-fit: contain
+      }
     }
 
     .quote {
@@ -94,20 +108,23 @@ figure {
   }
 
   @media (max-width: $bp-small) {
-   height: auto;
-   min-height: 150px;
-   .spacer60 {
-    height: 0
-  }
-  &.newsletter {
-    min-height: 200px !important;
-
-    .project-title {
-      top: 10px;
-      margin-bottom: 10px
+     height: auto;
+     min-height: 150px;
+     .spacer60 {
+      height: 0
+    }
+    &.newsletter {
+      min-height: 200px !important;
+      .project-title {
+        top: 10px;
+      }
+      .project-desc {
+        .desc {
+          margin-top: 8px;
+        }
+      }
     }
   }
-}
 }
 
 // Projects structure
