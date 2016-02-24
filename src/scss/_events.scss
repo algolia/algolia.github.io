@@ -67,7 +67,7 @@
   max-height: $list-event-height;
   color: inherit;
   border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 
 
   .date,
@@ -130,7 +130,10 @@
     width: calc($list-event-height + 6px);
     overflow: hidden;
     position: relative;
-
+    
+    @media (max-width: $bp-small) {
+      display: none;
+    }
     
     
     .user-image {
@@ -248,20 +251,20 @@
   $line-height: 1.4;
   $lines-to-show: 2;
 
-p {
-  display: block; /* Fallback for non-webkit */
-  display: -webkit-box;
-  max-width: 100%;
-  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
-  margin: 0 auto;
-  margin-left: 8px;
-  font-size: $font-size;
-  line-height: $line-height;
-  -webkit-line-clamp: $lines-to-show;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  p {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 100%;
+    height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    margin-left: 8px;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   h5 {
     font-size: 1.2em;
     font-weight: bold;
@@ -304,6 +307,10 @@ p {
     text-align: center;
     
 
+    @media (max-width: $bp-small) {
+      display: none;
+    }
+
     .user-name {
       display: inline-block;
       word-break: break-word;
@@ -341,7 +348,7 @@ p {
         position: relative;
         top: -4px
       }
-       @include hasChild('2', '.user-name'){
+      @include hasChild('2', '.user-name'){
         padding: 0 !important;
         position: relative;
         top: 10px
@@ -397,6 +404,37 @@ p {
       &:before {
         left: 4px
       }
+    }
+  }
+}
+
+
+@media (max-width: $bp-small) {
+  .event-wrapper.list-item {
+    .col-sm-6 {
+    }
+    .event-description{
+      clear: both;
+      max-width: calc(100% - 100px);
+      left: 100px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 44px;
+      padding: 0 6px;
+      padding-left: 0; 
+    }
+
+    $font-size: 13px;
+    $line-height: 1.6;
+    $lines-to-show: 2;
+
+    p {
+      max-width: calc(100% - 1px);
+      height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+      font-size: $font-size;
+      line-height: $line-height;
+      -webkit-line-clamp: $lines-to-show;
     }
   }
 }
