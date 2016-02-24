@@ -242,9 +242,12 @@ figure {
   img{
     max-width: 400px !important;
   }
-  .spacer20 {
-    display: none;
-  }
+ 
+ @media (max-width: $bp-small) {
+    .spacer20 {
+      display: none;
+    }
+ }
 }
 
 .swag svg {
