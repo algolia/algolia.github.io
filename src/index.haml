@@ -118,16 +118,21 @@
                         %svg.icon
                           %use{xlink:href: "#icon-github"}
                 .spacer10
-                %figure.effect-apollo.project-wrapper.jekyll
-                  %figcaption
-                    .project-header PLUGIN
-                    %a.project-desc{href: "#"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-jekyll"}
-                      .project-title Jekyll
-                      .spacer10
-                    .project-footer
+                %div
+                  .col-sm-12.no-padding
+                    .project-wrapper.ee
+                      %img{src:"img/ee_pushforce.png", class:"contain", alt: "Push -force my friend!"}                  
+                    %figure.effect-apollo.project-wrapper.jekyll.draggable
+                      %figcaption
+                        .project-header PLUGIN
+                        %a.project-desc{href: "#"}
+                          %link.rippleJS
+                          %svg.icon{height: 40}
+                            %use{xlink:href: "#icon-jekyll"}
+                          .project-title Jekyll
+                          .spacer10
+                        .project-footer
+                
               .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.grader
