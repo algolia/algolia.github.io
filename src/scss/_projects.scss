@@ -135,6 +135,19 @@ figure {
       }
     }
   }
+
+  &.peek-trigger:hover {
+    .project-header {
+      transform: scale(0);
+    }
+    .project-title {
+      transform: translateY(-50px)
+    }
+    svg.icon:not(.github),
+    img.icon[alt="stackoverflow"] {
+      transform: translateY(-45px) scale(0.85);
+    }
+  }
 }
 
 // Projects structure
@@ -144,6 +157,7 @@ figure {
   font-weight: bold;
   padding: 8px 0 16px;
   color: rgba(white,.6);
+  transition: transform 0.2s ease;
 }
 
 // desc
@@ -187,6 +201,8 @@ figure {
     max-width:100px;
     display: inline-block;
     fill: #fff;
+    transition: transform 0.3s ease !important;
+    will-change: transform;
   }
 
   a {
@@ -207,6 +223,7 @@ figure {
       height: 46px;
       width: 46px;
       clear: both;
+      transition: width 0.3s ease;
     }
   }
 
@@ -275,6 +292,7 @@ figure {
   position: relative;
   z-index: 99;
   color: white;
+  transition: transform 0.2s ease;
 
   &.center-block{
     display: flex;
