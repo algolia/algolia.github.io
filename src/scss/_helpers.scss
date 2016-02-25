@@ -556,3 +556,12 @@ sub {
     
   }
 }
+
+.constrain {
+  max-width: 70% !important;
+}
+
+p.constrain {
+  max-width: 70% !important;
+  margin: auto;
+}
