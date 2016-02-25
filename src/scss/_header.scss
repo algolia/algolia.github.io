@@ -69,7 +69,7 @@
   right: 0px;
 
   li {
-    margin-left: 20px;
+    margin-left: 6px;
     display: inline-block;
   }
   .icon {
@@ -99,6 +99,9 @@
     }
     &[href*="producthunt"]:hover {
       background: $orange-producthunt
+    }
+    &[href*="linkedin"]:hover {
+      background: $blue-linkedin
     }
   }
 }
