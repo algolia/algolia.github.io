@@ -145,7 +145,11 @@ figure {
     }
     svg.icon:not(.github),
     img.icon[alt="stackoverflow"] {
-      transform: translateY(-45px) scale(0.85);
+      transform: translateY(-45px) scale(0.8) !important;
+    }
+
+    svg.icon.github {
+      transform: scale(0.6) translate3d(10px, 10px, 0) !important
     }
   }
 }
@@ -157,7 +161,7 @@ figure {
   font-weight: bold;
   padding: 8px 0 16px;
   color: rgba(white,.6);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 // desc
@@ -292,7 +296,7 @@ figure {
   position: relative;
   z-index: 99;
   color: white;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 
   &.center-block{
     display: flex;
@@ -335,6 +339,7 @@ figure {
   width: auto;
   max-height: 40px;
   opacity: .6;
+  z-index: 92;
 
   a {
     position: absolute;
