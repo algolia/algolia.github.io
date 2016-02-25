@@ -1,6 +1,6 @@
 .rippleJS .ripple {
   background: rgba(white, 0.4) !important;
-  transition: all 1s ease !important;
+  transition: transform 0.5s ease !important;
 }
 
 .drag .rippleJS {

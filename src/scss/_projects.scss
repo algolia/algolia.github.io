@@ -137,7 +137,8 @@ figure {
   }
 
   &.peek-trigger:hover {
-    .project-header {
+    .project-header,
+    .desc {
       transform: scale(0);
     }
     .project-title {
