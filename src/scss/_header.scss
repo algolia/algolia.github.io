@@ -76,6 +76,12 @@
     max-width: 20px;
     height: 20px;
     line-height: 32px;
+    position: relative;
+    top: 2px;
+  }
+
+ a[href*="producthunt"] .icon{
+    width: 14px !important;
   }
 
   a {
@@ -98,7 +104,7 @@
       background: $purple-github
     }
     &[href*="producthunt"]:hover {
-      background: $orange-producthunt
+      background: $orange-producthunt;
     }
     &[href*="linkedin"]:hover {
       background: $blue-linkedin
