@@ -51,6 +51,7 @@
   %main
     %section.projects
       .container#grid
+        
         .row
           .col-sm-6
             .project-wrapper.big.ee
@@ -145,17 +146,17 @@
                 
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.grader
+                %figure.effect-apollo.project-wrapper.blog
                   %figcaption
-                    .project-header %span TOOL
-                    %a.project-desc{href:"#"}
+                    .project-header PLUGIN
+                    %a.project-desc{href: "#"}
                       %link.rippleJS
-                      .project-title.center-block
-                        %svg.icon{height: 30, class: "small"}
-                          %use{xlink:href: "#icon-grader", class:"pink"}
-                        %span Grader
-                      .button Evaluate your search
-
+                      %svg.icon{height: 40}
+                        %use{xlink:href: "#icon-blog", class: "pink"}
+                      .project-title Algolia's Blog
+                      .spacer10
+                    .project-footer
+                   
                 .spacer10
                 %figure.effect-apollo.project-wrapper.big.autocompletejs
                   %figcaption
@@ -237,7 +238,9 @@
 
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger
+                .project-wrapper.ee
+                  %img{src:"img/ee_gianluca.png", class:"contain",  alt: "Meow"}                
+                %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
                   %figcaption
                     .project-header NEED HELP?
                     %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
@@ -516,146 +519,7 @@
                     %svg.icon
                       %use{xlink:href: "#icon-calendar"}
       .spacer20
-      .container
-        .row
-          .col-sm-12
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-sylvain.jpg"}
-              .row
-                %div.col-sm-6
-                  %h5 TechCrunch Disrupt
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Sylvain Utard 
-        .spacer10
-        .row
-          .col-sm-12 
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-gianluca.jpg"}
-              .row
-                %div.col-sm-6
-                  %h5 CSS Meetup
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Gianluca Bargelli 
-
-        .spacer10      
-        .row
-          .col-sm-12 
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user.two-users
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-olivier-2.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-sylvain.jpg"}
-
-              .row
-                %div.col-sm-6
-                  %h5 DotJS
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Olivier Lance 
-                    %span.user-name Sylvain Utard 
-
-        .spacer10
-        .row        
-          .col-sm-12
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user.three-users
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-nicolas-2.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-lucas.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-antoine-2.jpg"}
-          
-              .row
-                %div.col-sm-6
-                  %h5 DotCSS
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Nicolas Baissas 
-                    %span.user-name Lucas Bonomi
-                    %span.user-name Antoine Plu
-
-        .spacer10
-        .row
-          .col-sm-12 
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-kevin.jpg"}
-              .row
-                %div.col-sm-6
-                  %h5 StutgartJS
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Kevin Granger 
-
-        .spacer10
-        .row
-          .col-sm-12 
-            %a.event-wrapper.list-item{href:"#"}
-              %span.date 
-                %span 14 
-                %i JAN
-                %em 16
-              %span.user.four-users
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-vvo.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-sylvain.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-antoine.jpg"}
-                %span.user-image
-                  %img{src: "https://www.algolia.com/static_assets/images/about-kevin.jpg"}
-              .row
-                %div.col-sm-6
-                  %h5 API Days
-                %div.col-sm-6.event-description
-                  %p TechCrunch Disrupt is the world’s leading authority in debuting revolutionary startups, introducing game-changing technologies, and discussing what’s top of mind for the tech industry’s key innovators. 
-                %div.col-sm-3
-                  .event-attendees
-                    %span.user-name Vincent Voyer
-                    %span.user-name Sylvain Utard
-                    %span.user-name Antoine Gauvain 
-                    %span.user-name Kevin Granger
-
+      
 
     %footer.footer
       .container
