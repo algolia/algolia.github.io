@@ -9,10 +9,9 @@
   pointer-events: none;
 
 	p {
-		line-height: 1;
+		line-height: 16px;
 		font-size: 13px;
 		text-align: center;
-		text-transform: lowercase;
 		padding: 0 12px;
 		max-width: 250px;
 		width: 100%;
@@ -21,6 +20,6 @@
 		
 	}
 	.project-wrapper:hover &{
-		transform: translateY(55%);
+		transform: translateY(34%);
 	}
 }
