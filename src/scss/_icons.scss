@@ -16,4 +16,18 @@
       }
     }
   }
+  &.big {
+    max-width: 580px;
+    width: 100%;
+  }
+  &.center {
+    margin: auto;
+    display: block;
+    
+  }
+  .blog &{
+    width: 100% !important;
+    max-width: 240px !important;
+    margin: 0;
+  }
 }

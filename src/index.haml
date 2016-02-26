@@ -148,12 +148,15 @@
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.blog
                   %figcaption
-                    .project-header PLUGIN
+                    .project-header READING
                     %a.project-desc{href: "#"}
                       %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-blog", class: "pink"}
-                      .project-title Algolia's Blog
+                      .project-title
+                        %svg.icon
+                            %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
+
+                      .spacer10
+                      .button.blue.full VISIT ALGOLIA'S BLOG
                       .spacer10
                     .project-footer
                    
@@ -294,7 +297,6 @@
               %figcaption
                 .project-header LEARN
                 .project-desc
-                  %link.rippleJS
                   #mc_embed_signup
                     %form#mc-embedded-subscribe-form.validate{action: "//algolia.us3.list-manage.com/subscribe/post?u=f7b8acc6ec97794a08484ca9b&amp;id=285b80e148", method: "post", name: "mc-embedded-subscribe-form", novalidate: ""}
                       #mc_embed_signup_scroll
@@ -547,7 +549,10 @@
                   Github
               %li 
                 %a{href:"https://www.producthunt.com/@algolia"}
-                  ProductHunt
+                  ProductHunt              
+              %li 
+                %a{href:"https://www.linkedin.com/company/algolia"}
+                  Linkedin
           .col-sm-3.update
             %h3 Keep updated
             %div
@@ -561,7 +566,8 @@
         .row
           .spacer100
           .col-absolute-center
-            %img.alg-phrase{src: "img/milliseconds-matter.svg", alt: "millisecondsmatter"}
+            %svg.icon.big.center
+              %use{xlink:href: "#icon-millisecondsmatter", class:"grey"}
         .text-center
           .spacer30
           ©<span class="brand-name">Algolia</span> 2016

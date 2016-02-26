@@ -22,3 +22,14 @@ html, body {
 p {
   text-rendering: optimizeLegibility;
 }
+
+@media (max-width: 960px) {
+  .project-wrapper {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: $bp-small) {
+  .project-wrapper {
+    font-size: 14px !important;
+  }
+}
