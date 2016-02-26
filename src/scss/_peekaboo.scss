@@ -19,7 +19,7 @@
 		display: block
 		
 	}
-	.project-wrapper:hover &{
+	.project-wrapper:not(.coming-soon):hover &{
 		transform: translateY(34%);
 	}
 }

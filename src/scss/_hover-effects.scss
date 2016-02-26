@@ -14,7 +14,10 @@ figure.effect-apollo {
   }
 
   &:hover .icon {
-    opacity: 1;
+    opacity: 1 !important;
+  }
+
+  &:hover .project-desc .icon {
     transform: scale3d(1,1,1);
   }
   &:not(:hover) {
@@ -33,7 +36,6 @@ figure.effect-apollo {
     opacity: 0.1;
     content: '';
     user-select: none;
-    -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
     transform: scale3d(1.9,1.4,1) rotate(45deg) translate3d(0,-150%,0);
     pointer-events:none;

@@ -136,7 +136,7 @@ figure {
     }
   }
 
-  &.peek-trigger:hover {
+  &.peek-trigger:not(.coming-soon):hover {
     .project-header,
     .desc {
       transform: scale(0);
@@ -148,9 +148,39 @@ figure {
     img.icon[alt="stackoverflow"] {
       transform: translateY(-45px) scale(0.8) !important;
     }
+  }
 
-    svg.icon.github {
-      transform: scale(0.6) translate3d(10px, 10px, 0) !important
+
+  // If comming soon
+  &.coming-soon {
+    cursor: not-allowed;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(black, 0.5);
+      width: 100%;
+      height: 70%;
+      z-index: 50;
+      transform: scale3d(1.9,1.4,1) rotate(-45deg);
+      transform-origin: 50% 30%;
+    }
+    &:after {
+      content: '';
+      background: rgba(black, 0.6) url(../img/coming-soon.svg)no-repeat center center / 50%;
+      text-transform: uppercase;
+      z-index: 51;
+      position: absolute;
+      
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+      opacity: 0.7;
+      
+      top: 0;
+      left: 0;
     }
   }
 }
@@ -247,6 +277,7 @@ figure {
       
       &[src*="docsearch.svg"] {
         width: 80%;
+        max-width: 320px !important;
       }
     }
 
@@ -339,27 +370,39 @@ figure {
   text-transform: uppercase;
   color: white;
   width: auto;
-  max-height: 40px;
   opacity: .6;
   z-index: 92;
 
   a {
-    position: absolute;
+    position:  absolute;
     float: right;
-    bottom: 0;
-    right: 0;
-    width: calc(32px + 16px);
-    height: calc(32px + 16px);
+    width: auto;
+    height: auto;
     text-align: center;
     padding: 8px;
-    line-height: calc(32px + 16px);
+    line-height: 1;
     z-index: 99;
+    top: -154px;
+    right: 0px;
+
+    .project-wrapper.big &{
+      top: -314px;
+    }
 
     svg {
       display: inline-block;
       width: 20px;
       margin: auto;
       float: none;
+    }
+
+    &[href*="facebook"] {
+      svg {
+        height: 18px;
+        top: 2px;
+        position: relative;
+        
+      }
     }
   }
 }
