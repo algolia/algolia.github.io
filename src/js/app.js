@@ -24,8 +24,13 @@ function assignEasterEggs(){
 }
 
 
-
-function isMobile(){
+function ifSafari() {
+  var isSafari = /constructor/i.test(window.HTMLElement);
+  if(isSafari){
+    document.body.classList.add('safari')
+  }
+}
+function ifMobile(){
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     return;
   }
@@ -43,5 +48,6 @@ function isMobile(){
 }
 
 window.addEventListener('load', function(){
-  isMobile()
+  ifMobile()
+  ifSafari()
 })
