@@ -13,7 +13,8 @@ function assignEasterEggs(){
     'ee_pushforce.png': 'pushForce',
     'ee_too-quick-devops.gif': 'tooQuickDevops',
     'ee_ux-glass.gif': 'uxGlass',
-    'ee_vvo.jpg': 'vvoThumb'  
+    'ee_vvo.jpg': 'vvoThumb',
+    'ee_jimcarrey.gif': 'jimCarrey'
   };
   for (var key in links) {
     if (links.hasOwnProperty(key)) {
