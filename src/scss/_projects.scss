@@ -167,7 +167,13 @@ figure {
     }
     &:after {
       content: '';
-      background: rgba(black, 0.6) url(img/illus-coming-soon.svg)no-repeat center center / 50%;
+      background: {
+        color: rgba(black, 0.6);
+        image: url(img/illus-coming-soon.svg);
+        repeat: no-repeat;
+        position:  center center;
+        size: 50%;
+      }
       text-transform: uppercase;
       z-index: 51;
       position: absolute;
