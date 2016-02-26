@@ -36,7 +36,7 @@ figure.effect-apollo {
     opacity: 0.1;
     content: '';
     user-select: none;
-    transition: transform 0.6s;
+    transition: transform 0.85s;
     transform: scale3d(1.9,1.4,1) rotate(45deg) translate3d(0,-150%,0);
     pointer-events:none;
     will-change: transform;
