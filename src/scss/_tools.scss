@@ -7,21 +7,20 @@
   display: block;
   margin-bottom: 10px;
   width: 90%;
-  &.web{
+
+  &.web {
     height: 140px;
     border-right: 4px solid $brand-primary;
   }
 
-  &.mobile{
+  &.mobile {
     height: 140px;
     border-right: 4px solid $saffron-mango;
-    //background-image: linear-gradient(20deg, rgba($primary-color, .7), $primary-color);
   }
 
-  &.backend{
+  &.backend {
     height: 440px;
     border-right: 4px solid #C24C83;
-    //background-image: linear-gradient(20deg, rgba($primary-color, .7), $primary-color);
   }
 
   h3 {
@@ -38,6 +37,7 @@
 }
 
 .list-tools {
+
   .tool-wrapper {
     text-align: center;
     margin: 0 0 10px 0;
@@ -62,6 +62,7 @@
       text-decoration: none;
       background: #EEE;
       outline: 1px solid #E4E4E6;
+      
       img {
         transform: scale(1.2);
       }

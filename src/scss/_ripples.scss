@@ -6,3 +6,9 @@
 .drag .rippleJS {
   cursor: move;
 }
+
+@media (max-width: $bp-small) {
+  .rippleJS {
+    display: none !important; 
+  }
+}

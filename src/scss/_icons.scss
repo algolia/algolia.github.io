@@ -2,7 +2,7 @@
   display: inline-block;
 
   // Specific to project descriptions
-  .project-footer &{
+  .project-footer & {
     max-width: 24px;
     max-height: 24px;
   }
@@ -25,7 +25,7 @@
     display: block;
     
   }
-  .blog &{
+  .blog & {
     width: 100% !important;
     max-width: 240px !important;
     margin: 0;

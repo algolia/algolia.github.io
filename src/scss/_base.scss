@@ -1,4 +1,4 @@
-:root {
+::root {
   font-size: 16px;
 }
 
@@ -6,6 +6,7 @@
   border-box: box-sizing;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscaled;
+  font-weight: 300;
 }
 
 html, body {
@@ -13,10 +14,6 @@ html, body {
   float: left;
   padding: 0;
   margin: 0;
-
-  @if $_debug == true {
-    @include grid()
-  }
 }
 
 p {

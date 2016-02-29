@@ -1,4 +1,4 @@
-.projects{
+.projects {
   padding: 10px 0 40px;
 }
 
@@ -9,7 +9,7 @@ figure {
   }
 }
 
-.project-wrapper{
+.project-wrapper {
   height: 150px;
   width: 100%;
   background-color: $primary-color;
@@ -27,6 +27,7 @@ figure {
     margin: 0 5px;
     width: calc(100% - 10px);
     height: 100%;
+
     &:not(.big) {
       max-height: 150px
     }
@@ -68,7 +69,7 @@ figure {
     transition-delay: .4s;
   }
 
-  &.drag{
+  &.drag {
     box-shadow: 0 4px 20px 2px rgba($primary-color,.5);
     transition-delay: inherit;
   }
@@ -77,16 +78,18 @@ figure {
     z-index: 999;
   }
 
-  &.big{
+  &.big {
     height: 310px;
   }
 
   // Mono colors if needed
-  &.searchbox{
-    background-image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 100%
+  &.searchbox {
+    background: {
+      image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
+      position: top;
+      repeat: no-repeat;
+      size: 100%
+    }
   }
 
   &.grader {

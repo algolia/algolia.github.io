@@ -1,7 +1,8 @@
 .events {
   padding: 40px 0 40px;
 }
-.event-wrapper{
+
+.event-wrapper {
   height: 150px;
   width: 100%;
   display: block;
@@ -28,7 +29,7 @@
   }
 }
 
-.event-desc{
+.event-desc {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -68,7 +69,6 @@
   color: inherit;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-
 
   .date,
   .user {
@@ -135,7 +135,6 @@
       display: none;
     }
     
-    
     .user-image {
       width: 100%;
       position: absolute;
@@ -143,8 +142,6 @@
       height: 100%;
       left: 0;
       transition: border 0.3s ease, mix-blend-mode 0.3s ease;
-
-      
 
       img {
         transition: opacity 0.3s ease, transform 0.3s ease;
@@ -154,6 +151,7 @@
     
     // If two users
     &.two-users {
+
       .user-image {
         width: 50%;
         overflow: hidden;
@@ -164,7 +162,6 @@
           width: 100%;
         }
 
-
         &:nth-child(2) {
           left: 50%;
           border-right: 0;
@@ -174,6 +171,7 @@
     
     // If three users
     &.three-users {
+
       .user-image {
         width: 50%;
         overflow: hidden;
@@ -203,6 +201,7 @@
     
     // If four users
     &.four-users {
+
       .user-image {
         width: 50%;
         overflow: hidden;
@@ -227,9 +226,11 @@
           top: 50%;
           border-top: 2px solid rgba(#fff, 0.45)
         }
+
         &:nth-child(3) {
           border-right: 2px solid rgba(#fff, 0.45);
         }
+
         &:nth-child(4) {
           left: 50%;
         }
@@ -287,154 +288,4 @@
     width: calc(33.333333% - 36px);
     right: $list-event-height;
   } 
-
-
-  // And now let's build something hacky, but smart
-  // By "hacky" I mean it's a bit complex to get what happen
-  // but it do not use any hacks per say.
-  .event-attendees{
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    color: #fff;
-    font-size: 1em;
-    background: $primary-color;
-    background-image: linear-gradient(to left, $brand-primary, darken($brand-primary, 20%));
-    height: 100%;
-    padding: 1em 0;
-    padding-left: 2em;
-    padding-right: 6px;
-    text-align: center;
-    
-
-    @media (max-width: $bp-small) {
-      display: none;
-    }
-
-    .user-name {
-      display: inline-block;
-      word-break: break-word;
-      width: 100%;
-
-      // If the user name is NOT the only of type
-      // Meaning : if there is multiple .user-name tags
-      &:not(:only-of-type) {
-        line-height: 22px !important;
-        
-        // Then, target the last one, and adds "And"
-        // before, to get a gramatically correct sentence
-        &:last-of-type:before {
-          content: 'and '
-        }
-        // And then, get before the last tag
-        // And delete the coma ( otherwise it would write "foo, bar, baz, and qux")
-        // and we only want "foo, bar, baz and qux"
-        &:nth-last-of-type(4n+2) {
-          &:after{
-            content: ''
-          }
-        }
-      }
-
-      // Adjust the line height if there is only one attendee
-      &:only-of-type {
-        line-height: round($list-event-height/1.35);
-      }
-
-      @include hasChild('4', '.user-name'){
-        line-height:0 !important; 
-        padding: 0 !important;
-        font-size: 0.9em;
-        position: relative;
-        top: -4px
-      }
-      @include hasChild('2', '.user-name'){
-        padding: 0 !important;
-        position: relative;
-        top: 10px
-      }
-    }
-
-    // Now, we add a coma before each users
-    // if there is only one .user-name it cannot NOT be the last child ( because he is )
-    .user-name:not(:last-child):after {
-      content: ',  '
-    }
-    // And finally, add the end of the sentence "will be there"
-    .user-name:last-child:after {
-      content: ' will be there ';
-      white-space: inherit;
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 0; 
-      height: 0;
-      top: 0;
-      left: -16px; 
-      border-top: $list-event-height/2  solid transparent;
-      border-bottom: $list-event-height/2  solid transparent;
-      
-      border-left: $list-event-height/2  solid #eeeeee;
-      transition: left 0.3s ease;
-    }
-  }
-
-
-
-
-  &:hover {
-    h5 {
-      color: $primary-color
-    }
-    .user img {
-      opacity: 1;
-    }
-    .user-image {
-      border-color: rgba(white, 1) !important;
-      @supports (mix-blend-mode: screen) {
-        mix-blend-mode: screen;
-      }
-    }
-    .event-attendees {
-      opacity: 1;
-
-      &:before {
-        left: 4px
-      }
-    }
-  }
-}
-
-
-@media (max-width: $bp-small) {
-  .event-wrapper.list-item {
-    .col-sm-6 {
-    }
-    .event-description{
-      clear: both;
-      max-width: calc(100% - 100px);
-      left: 100px;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 44px;
-      padding: 0 6px;
-      padding-left: 0; 
-    }
-
-    $font-size: 13px;
-    $line-height: 1.6;
-    $lines-to-show: 2;
-
-    p {
-      max-width: calc(100% - 1px);
-      height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
-      font-size: $font-size;
-      line-height: $line-height;
-      -webkit-line-clamp: $lines-to-show;
-    }
-  }
 }

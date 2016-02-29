@@ -531,7 +531,6 @@ sub {
   bottom: -0.25em;
 }
 
-
 .col-absolute-center {
   left: 0;
   right: 0;
@@ -546,15 +545,6 @@ sub {
 }
 .no-padding{
   padding: 0 !important;
-}
-
-#twitter-widget-0 {
-  @media (max-width: $bp-small) {
-    width: 136px !important;
-    float: right;
-    
-    
-  }
 }
 
 .constrain {

@@ -28,9 +28,6 @@
 }
 
 
-
-// 
-
 .col-xs-2.col-xs-offset-1.col-sm-offset-2 {
   @media (max-width: $bp-small) {
     width: 100%;
@@ -41,5 +38,14 @@
       max-width: 80%;
       width: 100px;
     }
+  }
+}
+
+// This is a fix to a layout issue caused
+// by the Twitter sharing widget
+#twitter-widget-0 {
+  @media (max-width: $bp-small) {
+    width: 136px !important;
+    float: right;  
   }
 }
