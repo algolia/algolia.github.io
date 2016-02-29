@@ -17,7 +17,7 @@
   %meta{property: "og:title", content: "Algolia Community"}
   %meta{property: "og:description", content: ""}
   %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
- 
+
 %body
   %header.hero
     .container.pos-rel
@@ -166,7 +166,7 @@
                             %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
 
                       .spacer10
-                      .button.blue.full VISIT ALGOLIA'S BLOG
+                      %a{href: "https://blog.algolia.com/", class:"button blue full"} VISIT ALGOLIA'S BLOG
                       .spacer10
        
                    
@@ -320,10 +320,7 @@
                   .spacer20
                   .project-title Expect JSX
                   .desc toEqualJSX for mjackson/expect.
-                .project-footer 
-                  %a{href:"https://twitter.com/algolia", target: "blank"}
-                    %svg.icon
-                      %use{xlink:href: "#icon-github"}
+
 
           .spacer10.visible-xs
           .col-sm-6
@@ -503,10 +500,10 @@
         %h2.text-center.m-b-large Events& meetups
         .row
           .col-sm-6
-            %a.event-wrapper.big{href:"#", target: "blank"}
+            %a.event-wrapper.big{href:"http://mtpcon.com/sf/product-managers-product-managers/", target: "blank"}
               %img.img-responsive{src:"img/event-mdtp.png", alt: "mind the product"}
               .event-desc
-                %span.date May 4th - San Francisco
+                %span.date May <strong>4th</strong> - San Francisco
                 %br
                 %span.title Mind the product
                 %svg.icon
@@ -515,20 +512,20 @@
           .col-sm-6
             .row
               .col-sm-6
-                %a.event-wrapper{href:"#", target: "blank"}
+                %a.event-wrapper{href: "http://www.terrapinn.com/exhibition/retail-world-asia/index.stm", target: "blank"}
                   %img.img-responsive{src:"img/event-retail.png", alt: "retail asia"}
                   .event-desc
-                    %span.date Date
+                    %span.date April <strong>20th</strong> / <strong>21st</strong> - Singapore
                     %br
                     %span.title Retail Tech Asia
                     %svg.icon
                       %use{xlink:href: "#icon-calendar"}
               .spacer10.visible-xs
               .col-sm-6
-                %a.event-wrapper{href:"#", target: "blank"}
+                %a.event-wrapper{href:"http://www.irce.com/", target: "blank"}
                   %img.img-responsive{src:"img/event-irce.png", alt: "irce"}
                   .event-desc
-                    %span.date Date
+                    %span.date June <strong>7th</strong> / <strong>10th</strong> - Chicago
                     %br
                     %span.title IRCE
                     %svg.icon
@@ -536,20 +533,20 @@
             .spacer10
             .row
               .col-sm-6
-                %a.event-wrapper{href:"#", target: "blank"}
+                %a.event-wrapper{href:"https://riseconf.com/", target: "blank"}
                   %img.img-responsive{src:"img/event-rise.png", alt: "rise"}
                   .event-desc
-                    %span.date Date
+                    %span.date  May <strong>31th</strong> / June <strong>2nd</strong> - Hong Kong
                     %br
                     %span.title RISE
                     %svg.icon
                       %use{xlink:href: "#icon-calendar"}
               .spacer10.visible-xs
               .col-sm-6
-                %a.event-wrapper{href:"#", target: "blank"}
+                %a.event-wrapper{href:"https://www.ecommerceparis.com/", target: "blank"}
                   %img.img-responsive{src:"img/event-ecomshow.png", alt: "ecommerce show"}
                   .event-desc
-                    %span.date Date
+                    %span.date September <strong>12th</strong> / <strong>14th</strong> - Paris
                     %br
                     %span.title Ecommerce Show
                     %svg.icon
@@ -564,10 +561,10 @@
             %h3 Want to work with us
             %ul.list-unstyled
               %li 
-                %a{href: "#", target: "blank"}
+                %a{href: "https://www.algolia.com/careers", target: "blank"}
                   Our open positions
               %li 
-                %a{href: "#", target: "blank"}
+                %a{href: "https://www.algolia.com/about", target: "blank"}
                   About us
           .col-sm-3
             %h3 Connect

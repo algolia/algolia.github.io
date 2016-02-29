@@ -98,7 +98,15 @@ figure {
       }
     }
   }
-
+  &.blog {
+    .button {
+      float: none;
+      display: block;
+      margin: auto;
+      top: 60px;
+      z-index: 999;
+    }
+  }
   &.swag {
     .button {
       margin-top: -6px;
