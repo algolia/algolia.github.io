@@ -106,8 +106,12 @@ figure {
       float: none;
       display: block;
       margin: auto;
-      top: 60px;
       z-index: 999;
+      top: 60px;
+      
+      @media (max-width: $bp-small) {
+        top: 0;
+      }
     }
   }
   &.swag {
