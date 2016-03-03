@@ -184,6 +184,14 @@ gulp.task('images:optim', function () {
 });
 
 // -------------------------------------
+//   Task: Copy files
+// -------------------------------------
+gulp.task('copy', function () {
+  return gulp.src('src/CNAME')
+    .pipe(gulp.dest('build'));
+});
+
+// -------------------------------------
 //   Task: Favicons
 // -------------------------------------
 gulp.task("favicons", function () {
@@ -250,7 +258,7 @@ gulp.task('build:dev',['clean'], function(callback) {
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', 'rev', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', 'rev', callback);
 });
 
 gulp.task('build:haml', function(callback) {
@@ -269,5 +277,5 @@ gulp.task('dev', function(callback) {
 // -------------------------------------
 gulp.task('deploy',['build:prod'], function(callback) {
   return gulp.src('build/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({'origin': 'master'}));
 });
