@@ -277,5 +277,5 @@ gulp.task('dev', function(callback) {
 // -------------------------------------
 gulp.task('deploy',['build:prod'], function(callback) {
   return gulp.src('build/**/*')
-    .pipe(ghPages({'origin': 'master'}));
+    .pipe(ghPages({branch: "master"}));
 });
