@@ -1,0 +1,71 @@
+.tools {
+
+}
+
+.tools-category {
+  padding: 8px 0 20px 0;
+  display: block;
+  margin-bottom: 10px;
+  width: 90%;
+
+  &.web {
+    height: 140px;
+    border-right: 4px solid $brand-primary;
+  }
+
+  &.mobile {
+    height: 140px;
+    border-right: 4px solid $saffron-mango;
+  }
+
+  &.backend {
+    height: 440px;
+    border-right: 4px solid #C24C83;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 8px 0 10px;
+  }
+
+  img {
+    position: relative;
+    top: 6px;
+    height: 76px;
+  }
+}
+
+.list-tools {
+
+  .tool-wrapper {
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 30px;
+    height: 140px;
+    background: #F9F9F9;
+    display: block;
+
+    .title {
+      color: #333;
+      font-weight: bold;
+      font-size: 1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    img {
+      transition: transform .3s ease;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background: #EEE;
+      outline: 1px solid #E4E4E6;
+      
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

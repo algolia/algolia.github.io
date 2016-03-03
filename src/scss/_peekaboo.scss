@@ -1,0 +1,27 @@
+
+.peek-a-boo {
+	position: absolute;
+	transform: translateY(250%);	
+	top: 50%;
+	transition: transform 0.3s ease;
+	width: 100%;
+	z-index: 90;
+  pointer-events: none;
+
+	p {
+		line-height: 16px;
+		font-size: 13px;
+		text-align: center;
+		padding: 0 12px;
+		max-width: 250px;
+		width: 100%;
+		margin: auto;
+		display: block;
+		font-weight: 500;
+		
+		
+	}
+	.project-wrapper:not(.coming-soon):hover & {
+		transform: translateY(34%);
+	}
+}

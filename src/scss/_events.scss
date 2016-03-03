@@ -1,0 +1,291 @@
+.events {
+  padding: 40px 0 40px;
+}
+
+.event-wrapper {
+  height: 150px;
+  width: 100%;
+  display: block;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53), box-shadow .2s ease;
+
+  img {
+    transition: transform .3s ease;
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.05);
+    }
+  }
+
+  &.big {
+    height: 310px;
+  }
+}
+
+.event-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10px 8px;
+  color: white;
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    line-height: 20px;
+    font-weight: bold;
+  }
+
+  .date {
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    float: right;
+  }
+}
+
+
+// Future events list
+// Can contain up to 4 attendees in this version
+.events .list-item { 
+  max-height: $list-event-height;
+  color: inherit;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+  .date,
+  .user {
+    float: left;
+    height: 100%;
+    width: $list-event-height;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    
+    i, em {
+      float: left;
+      width: 100%;
+      position: relative;
+      height: calc(50% - 22px);
+      font-style: normal;  
+      line-height: 30px;
+    }
+  }
+
+  // Date calendar design
+  .date {
+    border-right: 6px solid #fff;
+    background: #fff;
+    background-image: linear-gradient(to bottom, #fff, darken(#fff, 5%));
+
+    > span {
+      float: left;
+      width: 100%;
+      text-align: center;
+      background: $brand-primary;
+      background-image: linear-gradient(to top left, $brand-primary, darken($brand-primary, 20%));
+      font-weight: bold;
+      height: 32px;
+      letter-spacing: 1px;
+      line-height: 32px;
+    }
+    i, em {
+      color: darken($brand-primary, 20%);
+      font-weight: bolder;
+      padding: 6px 0; 
+    }
+    i {
+      padding-bottom: 0
+    }
+
+    em {
+      &:before {
+        content: '20'
+      }
+    }
+  }
+
+  // The user part
+  .user {
+    float: right;
+    background: linear-gradient(to top left, $primary-color, $brand-primary);
+    border-left: 6px solid #fff;
+    width: calc($list-event-height + 6px);
+    overflow: hidden;
+    position: relative;
+    
+    @media (max-width: $bp-small) {
+      display: none;
+    }
+    
+    .user-image {
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      height: 100%;
+      left: 0;
+      transition: border 0.3s ease, mix-blend-mode 0.3s ease;
+
+      img {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0.45
+      }
+    }
+    
+    // If two users
+    &.two-users {
+
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+      }
+    }
+    
+    // If three users
+    &.three-users {
+
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+        height: 50%;
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+
+        &:nth-child(3) {
+          left: 0;
+          border-right: 0;
+          width: 100%;
+          top: 50%;
+          border-top: 2px solid rgba(#fff, 0.45)
+        }
+      }
+    }
+    
+    // If four users
+    &.four-users {
+
+      .user-image {
+        width: 50%;
+        overflow: hidden;
+        border-right: 2px solid rgba(#fff, 0.45);
+        height: 50%;
+
+        img {
+          min-width: 0;
+          width: 100%;
+        }
+
+
+        &:nth-child(2) {
+          left: 50%;
+          border-right: 0;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          left: 0;
+          border-right: 0;
+          top: 50%;
+          border-top: 2px solid rgba(#fff, 0.45)
+        }
+
+        &:nth-child(3) {
+          border-right: 2px solid rgba(#fff, 0.45);
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+        }
+      }
+    }
+  }
+
+
+  h5, p {
+    float:left;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-left: 8px;
+    padding: 0;
+  }
+
+  $font-size: 14px;
+  $line-height: 1.4;
+  $lines-to-show: 2;
+
+  p {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 100%;
+    height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    margin-left: 8px;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $brand-primary;
+    border-bottom: 3px solid #dadada;
+    display: inline-block;
+    float: left;
+    width: initial;
+    margin: 6px 6px;
+    padding-bottom: 0.3em
+  }
+
+  .row {
+    position: relative;
+    height: $list-event-height;  
+  }
+  .col-sm-3 {
+    position: absolute;
+    height: 100%;
+    width: calc(33.333333% - 36px);
+    right: $list-event-height;
+  } 
+}

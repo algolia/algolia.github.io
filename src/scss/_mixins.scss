@@ -1,0 +1,34 @@
+// responsive mixins 
+// @Doc : 
+/*
+
+  selector {
+    @include <size>-mq{
+      // Styles for responsive 
+    }
+  }
+
+*/
+@mixin big-mq {
+  @media (min-width: $bp-wide) and (max-width: $bp-big){
+    @content
+  }
+}
+@mixin medium-mq {
+  @media (min-width: $bp-medium) and (max-width: $bp-wide){
+    @content
+  }
+}
+@mixin small-mq {
+  @media (min-width: $bp-small) and (max-width: $bp-medium){
+    @content
+  }
+}
+
+@mixin hasChild($number, $selector) {
+
+  &:first-child:nth-last-child(#{$number}),
+  &:first-child:nth-last-child(#{$number}) ~ #{$selector} { 
+    @content
+  }
+}

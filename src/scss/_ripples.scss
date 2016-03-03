@@ -1,0 +1,14 @@
+.rippleJS .ripple {
+  background: rgba(white, 0.4) !important;
+  transition: transform 0.5s ease !important;
+}
+
+.drag .rippleJS {
+  cursor: move;
+}
+
+@media (max-width: $bp-small) {
+  .rippleJS {
+    display: none !important; 
+  }
+}

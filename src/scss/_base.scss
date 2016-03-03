@@ -1,0 +1,32 @@
+::root {
+  font-size: 16px;
+}
+
+* {
+  border-box: box-sizing;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscaled;
+  font-weight: 300;
+}
+
+html, body {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 960px) {
+  .project-wrapper {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: $bp-small) {
+  .project-wrapper {
+    font-size: 14px !important;
+  }
+}

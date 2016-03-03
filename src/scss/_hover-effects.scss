@@ -1,0 +1,50 @@
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+// from http://tympanus.net/Development/HoverEffectIdeas/index2.html
+figure.effect-apollo {
+  overflow: hidden;
+
+  .icon {
+    opacity: 0.7;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale3d(.9,.9,1);
+  }
+
+  &:hover .icon {
+    opacity: 1 !important;
+  }
+
+  &:hover .project-desc .icon {
+    transform: scale3d(1,1,1);
+  }
+  &:not(:hover) {
+    figcaption:before {
+      transition: none !important
+    }
+  }
+
+  figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(white, 0.5);
+    opacity: 0.1;
+    content: '';
+    user-select: none;
+    transition: transform 0.85s;
+    transform: scale3d(1.9,1.4,1) rotate(45deg) translate3d(0,-150%,0);
+    pointer-events:none;
+    will-change: transform;
+  }
+
+  &:hover figcaption::before {
+    transform: scale3d(1.9,1.4,1) rotate(45deg) translate3d(0,150%,0);
+  }
+
+  h2 {
+    text-align: left;
+  }
+}
