@@ -92,13 +92,15 @@ figure {
     }
   }
 
-  &.grader {
-    
-    .project-header {
-      
-      span {
-        display: inline-block;
-      }
+  &.searchbox {
+    .project-title {
+      position: relative;
+      top: -14px;
+    }
+    .project-desc .desc {
+      position: relative;
+      top: -10px;  
+      line-height: 1;
     }
   }
   &.blog {
@@ -157,7 +159,7 @@ figure {
       transform: scale(0);
     }
     .project-title {
-      transform: translateY(-50px)
+      transform: translateY(-54px)
     }
     svg.icon:not(.github),
     img.icon[alt="stackoverflow"] {

@@ -14,7 +14,13 @@ function assignEasterEggs(){
     'ee_too-quick-devops.gif': 'tooQuickDevops',
     'ee_ux-glass.gif': 'uxGlass',
     'ee_vvo.jpg': 'vvoThumb',
-    'ee_jimcarrey.gif': 'jimCarrey'
+    'ee_jimcarrey.gif': 'jimCarrey',
+    'ee_pumpgirl.gif': 'pumpIt',
+    'ee_flyingsquirrels.gif': 'flyingSquirrels',
+    'ee_trainblocked.gif': 'blockedTrain',
+    'ee_uselessbox.gif': 'uselessBox',
+    'ee_terminator.gif': 'terminatorRaising',
+    'ee_dance.gif': 'dancers'
   };
   for (var key in links) {
     if (links.hasOwnProperty(key)) {
