@@ -171,6 +171,9 @@ figure {
   // If comming soon
   &.coming-soon {
     cursor: not-allowed;
+    .project-title {
+      z-index: 0;
+    }
     &:before {
       content: '';
       display: block;
