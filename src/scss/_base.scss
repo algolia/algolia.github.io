@@ -4,9 +4,14 @@
 
 * {
   border-box: box-sizing;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscaled;
-  font-weight: 300;
+  font-weight: 400;
+  
+  @include isRetina {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscaled;
+    font-weight: 300;
+    text-rendering: optimizeLegibility
+  }
 }
 
 html, body {

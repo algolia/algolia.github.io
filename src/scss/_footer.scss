@@ -110,5 +110,12 @@
       margin-bottom: 16px;
     }
   }
+
+
+  .icon {
+    @media (max-width: $bp-small) {
+      max-width: 80%;
+    }
+  }
 }
 

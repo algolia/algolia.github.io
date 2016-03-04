@@ -44,7 +44,9 @@ figure {
       &.contain {
         object-fit: contain
       }
+        visibility: hidden
     }
+
 
     .quote {
       text-align: center;
@@ -108,7 +110,7 @@ figure {
       float: none;
       display: block;
       margin: auto;
-      z-index: 999;
+      z-index: 10;
       top: 60px;
       
       @media (max-width: $bp-small) {
@@ -210,6 +212,7 @@ figure {
     }
   }
 }
+
 
 // Projects structure
 // header
