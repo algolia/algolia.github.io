@@ -21,7 +21,7 @@
     font-size: 5em;
     font-weight: 100;
     position: relative;
-        width: 50%;
+    width: auto;
 
     a, a:hover {
       text-decoration: none;
@@ -38,7 +38,8 @@
       left: 20%;
       top: 20px;
       text-align: left;
-
+      width: 0;
+      
       a {
         padding-left: 40px;
       }
