@@ -1,5 +1,5 @@
 .hero {
-  height: 240px;
+  height: 200px;
   color: white;
   position: relative;
   background: url(img/header-bg.png), linear-gradient(#1D3556, #28577B);
@@ -40,7 +40,7 @@
 
   .navbar-brand {
     position: absolute;
-    top: -40px;
+    top: -44px;
     margin-left: 60px;
 
     @media (max-width: $bp-wide) {
@@ -49,12 +49,18 @@
 
     img {
       width: 120px;
+
+      &.logo-community {
+        position: absolute;
+        left: -200px;
+        top: 20px;
+      }
     }
   }
 }
 .navbar-brand {
   position: relative;
-  top: -4px;
+  top: -6px;
 }
 
 #nav.navbar-inverse {
