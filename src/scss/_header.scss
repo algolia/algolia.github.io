@@ -59,25 +59,45 @@
 
     img {
       width: 120px;
+      position: relative;
+      max-width: 120px;
 
+      .logo-community{
+        max-width: 120px;
+      }
+
+      &:not(.logo-community) {
+        left: -20%;
+        @media (max-width: $bp-medium) {
+          left: 5%;
+          max-width: 100px;
+        }
+        @media (max-width: $bp-small) {
+          left: 0;
+          top: 10px;
+          max-width: 80px;
+        }
+      }
       &.logo-community {
         position: absolute;
         left: -250px;
         top: 20px;
-        width: 100%;
+        width: 120px;
         max-width: 120px;
-          
+        display: block;
+        
+
         @media (max-width: $bp-wide) {
-                  max-width: 100px;
-            width: 80%;
-            left: -140px;
-            top: 10px;
+          max-width: 100px;
+          width: 120px;
+          left: -140px;
+          top: 10px;
         }
         @media (max-width: $bp-small) {
-            max-width: 100px;
-            width: 80%;
-            left: -100px;
-            top: 10px;
+          max-width: 80px;
+          width: 80%;
+          left: -100px;
+          top: 10px;
         }
       }
     }
@@ -112,7 +132,7 @@
     top: 2px;
   }
 
- a[href*="producthunt"] .icon{
+  a[href*="producthunt"] .icon{
     width: 14px !important;
   }
 
