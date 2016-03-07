@@ -617,6 +617,9 @@
         .text-center
           .spacer30
           ©<span class="brand-name">Algolia</span> 2016
+
+
+
   %div{id: "fb-root"}
     %script
       (function(d, s, id) {
@@ -626,7 +629,29 @@
         js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5&appId=217461055269773";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-  %script window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));
+
+  %script{type: "text/javascript"}
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1654938174769952');
+      fbq('track', "PageView");
+  %noscript
+    %img{height: "1",src: "https://www.facebook.com/tr?id=1654938174769952&ev=PageView&noscript=1",style: "display:none",width: "1"}
+
+  %script 
+    window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));
+  
+  %script{src: "//platform.twitter.com/oct.js",type: "text/javascript"}
+      twttr.conversion.trackPid('nuhd9', { tw_sale_amount: 0, tw_order_quantity: 0 });
+  %noscript
+    %img{alt: "",height: "1",src: "https://analytics.twitter.com/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
+    %img{alt: "",height: "1",src: "//t.co/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
+
+  %script
+    adroll_adv_id = "TGR7R4XSGVGYVPX4LQBDFQ"; adroll_pix_id = "YQNWNHGUUBD2JMY7BVOBWM"; (function () { var _onload = function(){ if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return} if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return} var scr = document.createElement("script"); var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com"); scr.setAttribute('async', 'true'); scr.type = "text/javascript"; scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr); }; if (window.addEventListener) {window.addEventListener('load', _onload, false);} else {window.attachEvent('onload', _onload)} }());
   %script{src: "js/app.js"}
   -# <!-- inject:js --><!-- endinject -->
 
