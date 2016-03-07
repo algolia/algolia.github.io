@@ -33,15 +33,25 @@
     }
 
     @media (max-width: $bp-small) {
-      font-size: 4em;
-      left: -30px;
+      font-size: 3em;
+      left: 20%;
+      top: 20px;
+      text-align: left;
+
+      a {
+        padding-left: 40px;
+      }
     }
   }
 
   .navbar-brand {
     position: absolute;
     top: -44px;
-    margin-left: 60px;
+    margin-left: 100px;
+    
+    @media (max-width: $bp-small) {
+      left: 0%;
+    }
 
     @media (max-width: $bp-wide) {
       margin-left: 40px;
@@ -52,8 +62,23 @@
 
       &.logo-community {
         position: absolute;
-        left: -200px;
+        left: -250px;
         top: 20px;
+        width: 100%;
+        max-width: 120px;
+          
+        @media (max-width: $bp-wide) {
+                  max-width: 100px;
+            width: 80%;
+            left: -140px;
+            top: 10px;
+        }
+        @media (max-width: $bp-small) {
+            max-width: 100px;
+            width: 80%;
+            left: -100px;
+            top: 10px;
+        }
       }
     }
   }
