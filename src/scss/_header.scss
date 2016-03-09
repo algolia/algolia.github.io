@@ -17,98 +17,56 @@
 
   h1 {
     top: -10px;
-    left: -90px;
+    left: 200px;
     font-size: 5em;
     font-weight: 100;
     position: relative;
     width: auto;
-
     a, a:hover {
       text-decoration: none;
       color: white;
     }
+    .logo-algolia {
+      position: absolute;
+      top: -44px;
+      left: 55px;
 
-    @media (max-width: $bp-wide) {
-      font-size: 4em;
-      left: -90px;
-    }
-
-    @media (max-width: $bp-small) {
-      font-size: 3em;
-      left: 20%;
-      top: 20px;
-      text-align: left;
-      width: 0;
-      
-      a {
-        padding-left: 40px;
+      img {
+        width: 90px;
+        position: relative;
+        max-width: 120px;
       }
     }
-  }
 
-  .navbar-brand {
-    position: absolute;
-    top: -44px;
-    margin-left: 100px;
-    
-    @media (max-width: $bp-small) {
-      left: 0%;
-    }
-
-    @media (max-width: $bp-wide) {
-      margin-left: 40px;
-    }
-
-    img {
+    .logo-community {
+      position: absolute;
+      top: -20px;
+      left: -110px;
       width: 120px;
-      position: relative;
       max-width: 120px;
-
-      .logo-community{
-        max-width: 120px;
-      }
-
-      &:not(.logo-community) {
-        left: -20%;
-        @media (max-width: $bp-medium) {
-          left: 5%;
-          max-width: 100px;
-        }
-        @media (max-width: $bp-small) {
-          left: 0;
-          top: 10px;
-          max-width: 80px;
+      display: block;
+    }
+    @media (max-width: $bp-small) {
+      font-size: 3.5em;
+      left: 100px;
+      .logo-algolia {
+        top: -30px;
+        left: 40px;
+        img {
+          width: 60px;
         }
       }
-      &.logo-community {
-        position: absolute;
-        left: -250px;
-        top: 20px;
-        width: 120px;
-        max-width: 120px;
-        display: block;
-        
-
-        @media (max-width: $bp-wide) {
-          max-width: 100px;
-          width: 120px;
-          left: -140px;
-          top: 10px;
-        }
-        @media (max-width: $bp-small) {
-          max-width: 80px;
-          width: 80%;
-          left: -100px;
-          top: 10px;
+      .logo-community {
+        top: -10px;
+        left: -80px;
+        img {
+          width: 70px;
         }
       }
     }
   }
 }
-.navbar-brand {
-  position: relative;
-  top: -6px;
-}
+
 
 #nav.navbar-inverse {
   background: transparent;
@@ -144,7 +102,7 @@
     display: block;
     text-align: center;
     line-height: 42px;
-    
+
     border-radius: 100%;
     transition: background 0.2s ease;
 
@@ -174,5 +132,4 @@
       margin-left: 2px;
     }
   }
-
 }

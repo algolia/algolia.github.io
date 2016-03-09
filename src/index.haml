@@ -6,7 +6,7 @@
   %link{href: "//fonts.googleapis.com/css?family=Raleway:100,400,600", rel: "stylesheet", type: "text/css"}
   %link{href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600", rel: "stylesheet", type: "text/css"}
   %link{rel:"icon", type: "image/x-icon", href:"favicon.ico"}
-  %meta{name: "description", content:""}
+  %meta{name: "description", content:"Discover Algolia & build great search with our community"}
   %meta{name: "viewport", content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
   -# twitter
   %meta{name: "twitter:card", content: "summary_large_image"}
@@ -43,16 +43,16 @@
             %svg.icon
               %use{xlink:href: "#icon-producthunt"}
       .spacer60
-      %h1.text-center
-        %a.navbar-brand{href: "https://www.algolia.com"}
-          %img{src: "img/logos/logo-community.svg", width: 100, class: "logo-community", alt: "Community Logo"}
+      %h1
+        %a.logo-community{href: "https://community.algolia.com"}
+          %img{src: "img/logos/logo-community.svg", width: 100, alt: "Community Logo"}
+        %a.logo-algolia{href: "https://www.algolia.com"}
           %img{src: "img/logo-algolia.svg", width: 100, alt: "Algolia"}
         %a{href: "https://community.algolia.com" } Community
 
   %main
     %section.projects
       .container#grid
-
         .row
           .col-sm-6
             .project-wrapper.big.ee
@@ -641,9 +641,9 @@
   %noscript
     %img{height: "1",src: "https://www.facebook.com/tr?id=1654938174769952&ev=PageView&noscript=1",style: "display:none",width: "1"}
 
-  %script 
+  %script
     window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));
-  
+
   %script{src: "//platform.twitter.com/oct.js",type: "text/javascript"}
       twttr.conversion.trackPid('nuhd9', { tw_sale_amount: 0, tw_order_quantity: 0 });
   %noscript
