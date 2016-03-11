@@ -6,7 +6,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  margin-bottom: 20px;
 
   @media (max-width: $bp-wide) {
     background: url(img/header-background.png), #1D3556;
@@ -22,6 +21,7 @@
     font-weight: 100;
     position: relative;
     width: auto;
+    display: inline-block;
     a, a:hover {
       text-decoration: none;
       color: white;
