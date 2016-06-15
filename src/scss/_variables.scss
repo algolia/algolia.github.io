@@ -51,20 +51,21 @@ $bp-small: 768px;
 // @doc
 //      class - gradient - first-color
 $gradients: (
-  (instantsearch, 'linear-gradient(to top right, #1d3657, #3e6790)',#1d3657 ),
-  (docsearch,' linear-gradient(to bottom right, #254266, #167095)', #254266),
+  (instantsearch, 'linear-gradient(to bottom right, #70279F, #1485C0)',#1485C0 ),
+  (docsearch,'linear-gradient(to bottom right, #107D8B, #4F69B6)', #4F69B6),
   (helperjs, 'linear-gradient(202deg, #3cafd4 0, #167195 100%)', #34a3c7),
+  (places, 'linear-gradient(to bottom right, #3A5395, #1C7BBC)', #1C7BBC),
   (magento, 'linear-gradient(to top right, #ff66b7, #dc6637)', #ff66b7),
-  (jekyll, 'linear-gradient(119deg, #8766de 0, #4c7ff6 100%);', #635aa4),
+  (jekyll, 'linear-gradient(119deg, #9D55DA 0, #E8313B 100%);', #E8313B),
   (zendesk, 'linear-gradient(59deg, #2e9d89 0, #90d44b 100%)', #067864),
-  (autocompletejs, 'linear-gradient(to top right, #377d1c, #13b7bd)', #377d1c),
+  (autocompletejs, 'linear-gradient(to top right, #27B79A, #00587F)', #00587F),
   (hackernews, 'linear-gradient(to right, #fea925, #f58823)', #fea925),
   (supersearch, 'linear-gradient(306deg, #1b6185 0, #723790 100%)', #47185e),
   (githubsearch, 'linear-gradient(149deg, #7f9dc4 0, #382a5b 100%)',#989ca0 ),
   (swag, 'linear-gradient(to bottom, #87689b 0, #ec3b70 100%)', #87689b ),
   (talks, 'linear-gradient(357deg, #1d3657 0, #b25e5e 100%)', #1d3657),
   (publicdatas, 'linear-gradient(to bottom, #178461 0, #308a3e 100%)', #178461),
-  (expectjs, 'linear-gradient(194deg, #685aa7 0, #1d3657 100%)', #685aa7), 
+  (expectjs, 'linear-gradient(194deg, #685aa7 0, #1d3657 100%)', #685aa7),
   (newsletter, 'linear-gradient(140deg, #35a4c9 0, #13c4a5 100%)', #35a4c9),
   (blog, 'linear-gradient(to bottom right, #2E4054, #4D5967)', '#0c1723')
 );
