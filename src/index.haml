@@ -528,9 +528,6 @@
               %li
                 %a{href: "https://www.algolia.com/about"}
                   About us
-              %li
-                %a{href: "https://www.algolia.com/policies/terms"}
-                  Privacy Policy
           .col-sm-3
             %h3 Connect
             %ul.list-unstyled.connect
@@ -567,8 +564,12 @@
                 %use{xlink:href: "#icon-millisecondsmatter", class:"grey"}
         .text-center
           .spacer30
-          ©<span class="brand-name">Algolia</span> 2016
-
+          ©<span class="brand-name">Algolia</span>
+          %a{href: "https://www.algolia.com/policies/terms", target:"_blank"}
+            Terms of service
+          &nbsp;-&nbsp;
+          %a{href: "https://www.algolia.com/policies/privacy", target:"_blank"}
+            Privacy Policy
 
   %div{id: "fb-root"}
     %script
