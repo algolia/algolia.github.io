@@ -165,19 +165,18 @@
               .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.ee
-                  %img{src:"#", class:"contain", alt: "Try me!", id: "uselessBox"}
-                %figure.effect-apollo.project-wrapper.blog.draggable
+                  %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
+                %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
                   %figcaption
-                    .project-header READING
-                    %a.project-desc{href: "javascript:void(0)"}
+                    .project-header NEED HELP?
+                    %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
                       %link.rippleJS
-                      .project-title
-                        %svg.icon
-                            %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
+                      %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
+                      .project-title ASK StackOverflow
+                    .project-footer
+                    .peek-a-boo
+                      %p Have Algolia related questions? Ask the community.
 
-                      .spacer10
-                      %a{href: "https://blog.algolia.com/", class:"button blue full"} VISIT ALGOLIA'S BLOG
-                      .spacer10
 
 
                 .spacer10
@@ -237,6 +236,7 @@
                       %a{href: "https://github.com/algolia/supersearch/"}
                         %svg.icon.github
                           %use{xlink:href: "#icon-github"}
+              .spacer10.visible-xs
 
               .col-sm-6
                 .row
@@ -259,18 +259,23 @@
                 .spacer10
                 .row
                   .col-sm-12
-                    .project-wrapper.ee
-                      %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
-                    %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
-                      %figcaption
-                        .project-header NEED HELP?
-                        %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
-                          %link.rippleJS
-                          %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
-                          .project-title ASK StackOverflow
-                        .project-footer
-                        .peek-a-boo
-                          %p Have Algolia related questions? Ask the community.
+                      .project-wrapper.ee
+                        %img{src:"#", class:"contain", alt: "Psycho cat", id: "psychoCat"}
+                      %figure.effect-apollo.project-wrapper.peek-trigger.hackernews.draggable
+                        %figcaption
+                          .project-header TOOL
+                          %a.project-desc{href: "https://hn.algolia.com?experimental"}
+                            %link.rippleJS
+                            %svg.icon{height: 30}
+                              %use{xlink:href: "#icon-hn"}
+                            .project-title Hackernews Search
+                          .project-footer
+                            %a{href: "https://github.com/algolia/hn-search"}
+                              %svg.icon.github
+                                %use{xlink:href: "#icon-github"}
+
+                          .peek-a-boo
+                            %p The power of Algolia search unleashed on Hacker News.
         .spacer10
         .row
           .col-sm-3
@@ -339,35 +344,52 @@
                           %input{name: "b_f7b8acc6ec97794a08484ca9b_285b80e148", tabindex: "-1", type: "text", value: ""}/
                   .spacer15
                   .project-title Newsletter
-                  .desc.text-center Sign up for our newsletter to stay in the loop on Algolia news and product updates.
+                  .desc.text-center Sign up for our newsletter to stay in the loop on Algolia updates.
             .spacer10
             .row
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", alt: "Dumb and dumber", id: "jimCarrey"}
-                %figure.effect-apollo.project-wrapper.talks.peek-trigger.draggable.coming-soon
-                  %figcaption
-                    %link.rippleJS
-                    .project-header LEARN
-                    %a.project-desc{href: "#"}
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-talks"}
-                      .project-title Talks
-                    .peek-a-boo
-                      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
-                    .spacer10
-              .spacer10.visible-xs
               .col-sm-6
                 %figure.effect-apollo.project-wrapper.peek-trigger.publicdatas
                   %figcaption
                     %link.rippleJS
                     .project-header LEARN
-                    %a.project-desc{href: "#"}
+                    %a.project-desc{href: "http://codepen.io/Algolia/"}
                       %svg.icon{height: 30}
                         %use{xlink:href: "#icon-codepen"}
                       .project-title Code snippets
                     .peek-a-boo
-                      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
+                      %p Explore Algolia's recipes, demos and samples on Codepen.
+
+
+              -# .col-sm-6
+              -#   .project-wrapper.ee
+              -#     %img{src:"#", alt: "Dumb and dumber", id: "jimCarrey"}
+              -#   %figure.effect-apollo.project-wrapper.talks.peek-trigger.draggable.coming-soon
+              -#     %figcaption
+              -#       %link.rippleJS
+              -#       .project-header LEARN
+              -#       %a.project-desc{href: "#"}
+              -#         %svg.icon{height: 40}
+              -#           %use{xlink:href: "#icon-talks"}
+              -#         .project-title Talks
+              -#       .peek-a-boo
+              -#         %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
+              -#       .spacer10
+              .spacer10.visible-xs
+              .col-sm-6
+                .project-wrapper.ee
+                  %img{src:"#", class:"contain", alt: "Try me!", id: "uselessBox"}
+                %figure.effect-apollo.project-wrapper.blog.draggable
+                  %figcaption
+                    .project-header READING
+                    %a.project-desc{href: "javascript:void(0)"}
+                      %link.rippleJS
+                      .project-title
+                        %svg.icon
+                            %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
+
+                      .spacer10
+                      %a{href: "https://blog.algolia.com/", class:"button blue full"} VISIT ALGOLIA'S BLOG
+
 
     %section.tools
       %h2.text-center.m-b-large API Clients & Tools
