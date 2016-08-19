@@ -17,12 +17,9 @@ function assignEasterEggs(){
     'w_277,h_310,f_auto,c_fill/ee_too-quick-devops_cl8kov.gif': 'tooQuickDevops',
     'w_565,h_310,f_auto,c_fill/ee_ux-glass_bi6kb0.gif': 'uxGlass',
     'w_277,h_310,f_auto,c_fill/ee_vvo_gzsxfu.jpg': 'vvoThumb',
-    'w_277,h_150,f_auto,c_fill/ee_jimcarrey_emzemf.gif': 'jimCarrey',
     'b_rgb:214062,e_displace/h_310,w_277,f_auto,c_fill/ee_pumpgirl_wsbhu8.gif': 'pumpIt',
     'f_auto,c_fill/ee_flyingsquirrels_hfuw6n.gif': 'flyingSquirrels',
     'w_277,h_150,f_auto,c_fill/ee_trainblocked_tg1wsv.gif': 'blockedTrain',
-    'w_277,h_150,f_auto,c_fill/ee_uselessbox_jq9rsv.gif': 'uselessBox',
-    'w_277,h_150,f_auto,c_fill/ee_terminator_d14hfy.gif': 'terminatorRaising',
     'w_565,h_150,f_auto,c_fill/ee_dance_lpj2nj.gif': 'dancers'
   };
   for (var key in links) {
@@ -67,33 +64,3 @@ window.addEventListener('load', function(){
   ifMobile()
   ifSafari()
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
