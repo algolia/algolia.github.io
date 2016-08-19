@@ -142,26 +142,25 @@
                           %use{xlink:href: "#icon-github"}
 
                 .spacer10
-                %div
-                  .col-sm-12.no-padding
-                    .project-wrapper.ee
-                      %img{src:"#", class:"contain", alt: "Push -force my friend!", id: "pushForce"}
-                    %figure.effect-apollo.project-wrapper.peek-trigger.jekyll.draggable
-                      %figcaption
-                        .project-header PLUGIN
-                        %a.project-desc{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}
-                          %link.rippleJS
-                          %svg.icon{height: 40}
-                            %use{xlink:href: "#icon-jekyll"}
-                          .project-title Jekyll
-                          .spacer10
-                      .project-footer
-                        %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
-                          %svg.icon.github
-                            %use{xlink:href: "#icon-github"}
+                .col-sm-12.no-padding
+                  .project-wrapper.ee
+                    %img{src:"#", class:"contain", alt: "Push -force my friend!", id: "pushForce"}
+                  %figure.effect-apollo.project-wrapper.peek-trigger.jekyll.draggable
+                    %figcaption
+                      .project-header PLUGIN
+                      %a.project-desc{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}
+                        %link.rippleJS
+                        %svg.icon{height: 40}
+                          %use{xlink:href: "#icon-jekyll"}
+                        .project-title Jekyll
+                        .spacer10
+                    .project-footer
+                      %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
+                        %svg.icon.github
+                          %use{xlink:href: "#icon-github"}
 
-                      .peek-a-boo
-                        %p Search your static HTML Jekyll sites with the Algolia for Jekyll plugin.
+                    .peek-a-boo
+                      %p Search your static HTML Jekyll sites with the Algolia for Jekyll plugin.
 
               .spacer10.visible-xs
               .col-sm-6
@@ -224,78 +223,54 @@
           .col-sm-6
             .row
               .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", class:"contain", alt: "Psycho cat", id: "psychoCat"}
-                %figure.effect-apollo.project-wrapper.peek-trigger.hackernews.draggable
+                .project-wrapper.big.ee
+                %figure.big.effect-apollo.project-wrapper.helperjs
                   %figcaption
-                    .project-header TOOL
-                    %a.project-desc{href: "https://hn.algolia.com?experimental"}
+                    .project-header LIBRARY
+                    %a.project-desc{href: "https://community.algolia.com/algoliasearch-helper-js/"}
                       %link.rippleJS
-                      %svg.icon{height: 30}
-                        %use{xlink:href: "#icon-hn"}
-                      .project-title Hackernews Search
-                    .project-footer
-                      %a{href: "https://github.com/algolia/hn-search"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
-
-                    .peek-a-boo
-                      %p The power of Algolia search unleashed on Hacker News.
-
-              .spacer10.visible-xs
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", alt: "Meow", id: "balanceBear"}
-                %figure.effect-apollo.project-wrapper.peek-trigger.githubsearch.draggable
-                  %figcaption
-                    .project-header TOOL
-                    %a.project-desc{href: "https://github.algolia.com"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-github"}
-                      .project-title Github Search
+                      %img.icon{src:"img/logo-helper.svg"}
+                      .project-title Helper.js
                       .spacer10
-                    .project-footer
-
-                    .peek-a-boo
-                      %p Search for repositories and people faster than ever.
-
-            .spacer10
-            .row
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", alt: "I'll kill you! I'll kill you! Human!", id: "terminatorRaising"}
-                %figure.effect-apollo.project-wrapper.peek-trigger.supersearch.draggable
-                  %figcaption
-                    .project-header DEMO
-                    %a.project-desc{href: "https://community.algolia.com/supersearch/"}
-                      %link.rippleJS
-                      %svg.icon{height: 50}
-                        %use{xlink:href: "#icon-superbowl"}
-                      .project-title SuperSearch
+                      .desc Your best companion for implementing advanced search features with Algolia
                     .project-footer
                       %a{href: "https://github.com/algolia/supersearch/"}
                         %svg.icon.github
                           %use{xlink:href: "#icon-github"}
 
-                    .peek-a-boo
-                      %p Find and watch every SuperBowl commercial ever aired.
-
-              .spacer10.visible-xs
               .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
-                %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
-                  %figcaption
-                    .project-header NEED HELP?
-                    %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
-                      %link.rippleJS
-                      %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
-                      .project-title ASK StackOverflow
-                    .project-footer
+                .row
+                  .col-sm-12
+                    .project-wrapper.ee
+                      %img{src:"#", alt: "Meow", id: "balanceBear"}
+                    %figure.effect-apollo.project-wrapper.peek-trigger.githubsearch.draggable
+                      %figcaption
+                        .project-header TOOL
+                        %a.project-desc{href: "https://github.algolia.com"}
+                          %link.rippleJS
+                          %svg.icon{height: 40}
+                            %use{xlink:href: "#icon-github"}
+                          .project-title Github Search
+                          .spacer10
+                        .project-footer
+                        .peek-a-boo
+                          %p Search for repositories and people faster than ever.
 
-                    .peek-a-boo
-                      %p Have Algolia related questions? Ask the community.
+                .spacer10
+                .row
+                  .col-sm-12
+                    .project-wrapper.ee
+                      %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
+                    %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
+                      %figcaption
+                        .project-header NEED HELP?
+                        %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
+                          %link.rippleJS
+                          %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
+                          .project-title ASK StackOverflow
+                        .project-footer
+                        .peek-a-boo
+                          %p Have Algolia related questions? Ask the community.
         .spacer10
         .row
           .col-sm-3
@@ -383,13 +358,13 @@
                     .spacer10
               .spacer10.visible-xs
               .col-sm-6
-                %figure.effect-apollo.project-wrapper.peek-trigger.publicdatas.coming-soon
+                %figure.effect-apollo.project-wrapper.peek-trigger.publicdatas
                   %figcaption
                     %link.rippleJS
                     .project-header LEARN
                     %a.project-desc{href: "#"}
                       %svg.icon{height: 30}
-                        %use{xlink:href: "#icon-code"}
+                        %use{xlink:href: "#icon-codepen"}
                       .project-title Code snippets
                     .peek-a-boo
                       %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
