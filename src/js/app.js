@@ -12,6 +12,7 @@ function assignEasterEggs(){
     'h_310,w_565,f_auto,c_fit/ee_client_wmg5na.gif': 'clientReaction',
     'w_277,h_150,f_auto,c_fill/ee_gianluca_wjxviy.png': 'gianlucaMeme',
     'f_auto,c_fill/ee_pizza_tpfwrg.gif': 'pizzaGradient',
+    'w_277,h_150,f_auto,c_fill/ee_catshirt.gif ': 'catShirt',
     'w_277,h_150,f_auto,c_fill/ee_nyan_tqq2lj.gif ': 'psychoCat',
     'w_277,h_150,f_auto,c_fill/ee_pushforce_ruydz3.gif': 'pushForce',
     'w_277,h_310,f_auto,c_fill/ee_too-quick-devops_cl8kov.gif': 'tooQuickDevops',
