@@ -68,9 +68,9 @@
                   .spacer60
                   .row
                     .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %img.icon.img-responsive{src: "img/logo-is.svg", width: 80, alt: "instantsearch"}
+                      %img{src: "img/logo-is.svg", width: 60, alt: "instantsearch"}
                     .col-xs-7.text-left
-                      %img.logo{src: "img/logo-instantsearch.svg", , alt: "instants"}
+                      %img.logo{src: "img/logo-instantsearch.svg", width: 200 , alt: "instantsearch"}
                       %p.desc.no-padding Pick from an extensive library of UI widgets to power your search and build a state-of-the-art instant-search experience.
                 .project-footer
                   %a{href: "https://github.com/algolia/instantsearch.js"}
@@ -90,7 +90,7 @@
                       %link.rippleJS
                       %svg.icon{height: 40}
                         %use{xlink:href: "#icon-magento"}
-                      .project-title Magento
+                      .project-title Magento 1 & 2
                       .spacer10
                     .project-footer
                       %a{href: "https://github.com/algolia/magento"}
@@ -98,6 +98,45 @@
                           %use{xlink:href: "#icon-github"}
                     .peek-a-boo
                       %p Deliver fast and relevant search results with the Algolia extension for Magento.
+              .spacer10.visible-xs
+              .col-sm-6
+                %figure.effect-apollo.project-wrapper.peek-trigger.wordpress
+                  %figcaption
+                    .project-header PLUGIN
+                    %a.project-desc{href: "https://community.algolia.com/wordpress/"}
+                      %link.rippleJS
+                      %svg.icon{height: 40}
+                        %use{xlink:href: "#icon-wordpress"}
+                      .project-title WordPress
+                      .spacer10
+                    .project-footer
+                      %a{href: "https://github.com/algolia/algoliasearch-wordpress"}
+                        %svg.icon.github
+                          %use{xlink:href: "#icon-github"}
+
+                    .peek-a-boo
+                      %p Help your users find what they’re looking for at the speed of thought!
+            .spacer10
+            .row
+              .col-sm-6
+                .project-wrapper.ee
+                  %img{src:"#", class:"contain", alt: "Push -force my friend!", id: "pushForce"}
+                %figure.effect-apollo.project-wrapper.peek-trigger.jekyll.draggable
+                  %figcaption
+                    .project-header PLUGIN
+                    %a.project-desc{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}
+                      %link.rippleJS
+                      %svg.icon{height: 40}
+                        %use{xlink:href: "#icon-jekyll"}
+                      .project-title Jekyll
+                      .spacer10
+                  .project-footer
+                    %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
+                      %svg.icon.github
+                        %use{xlink:href: "#icon-github"}
+
+                  .peek-a-boo
+                    %p Search your static HTML Jekyll sites with the Algolia for Jekyll plugin.
               .spacer10.visible-xs
               .col-sm-6
                 .project-wrapper.ee
@@ -123,6 +162,105 @@
             .row
               .col-sm-6
                 .project-wrapper.big.ee
+                %figure.big.effect-apollo.project-wrapper.helperjs
+                  %figcaption
+                    .project-header LIBRARY
+                    %a.project-desc{href: "https://community.algolia.com/algoliasearch-helper-js/"}
+                      %link.rippleJS
+                      %img.icon{src:"img/logo-helper.svg"}
+                      .project-title Helper.js
+                      .spacer10
+                      .desc Your best companion for implementing advanced search features with Algolia
+                    .project-footer
+                      %a{href: "https://github.com/algolia/algoliasearch-helper-js/"}
+                        %svg.icon.github
+                          %use{xlink:href: "#icon-github"}
+
+              .spacer10.visible-xs
+              .col-sm-6
+
+                .row
+                  .col-sm-12
+                    .project-wrapper.ee
+                      %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
+                    %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
+                      %figcaption
+                        .project-header NEED HELP?
+                        %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
+                          %link.rippleJS
+                          %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
+                          .project-title ASK StackOverflow
+                        .project-footer
+                        .peek-a-boo
+                          %p Have Algolia related questions? Ask the community.
+                .spacer10
+                .row
+                  .col-sm-12
+                    .project-wrapper.ee
+                      %img{src:"#", class:"contain", alt: "Try me!", id: "uselessBox"}
+                    %figure.effect-apollo.project-wrapper.blog.draggable
+                      %figcaption
+                        .project-header READING
+                        %a.project-desc{href: "javascript:void(0)"}
+                          %link.rippleJS
+                          .project-title
+                            %svg.icon
+                                %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
+                          .spacer10
+                          %a{href: "https://blog.algolia.com/", class:"button full"} VISIT ALGOLIA'S BLOG
+
+
+            .spacer10
+            .row
+              .col-sm-12
+                .project-wrapper.big.ee
+                  %img{src:"#", class:"contain", alt: "Pump it pump it", id: "pumpIt"}
+                %figure.effect-apollo.project-wrapper.big.autocompletejs.draggable
+                  %figcaption
+                    .project-header LIBRARY
+                    .spacer40
+                    .row
+                      .col-xs-2.col-xs-offset-1.col-sm-offset-2
+                        .spacer40
+                        %img.icon{src: "img/illus-autocomplete.svg", alt: "autocomplete", width: "70"}
+                      .col-xs-7.text-left
+                        %a.project-desc{href: "https://github.com/algolia/autocomplete.js"}
+                          %link.rippleJS
+                          .project-title autocomplete.js
+                          .spacer10
+                          %p.desc Display as-you-type search results with autocomplete.js.
+                    .project-footer
+                      %a{href: "https://github.com/algolia/autocomplete.js"}
+                        %svg.icon
+                          %use{xlink:href: "#icon-github"}
+
+
+        .spacer10
+        .row
+          .col-sm-6
+            .project-wrapper.ee.big
+              %img{src:"#", class:"contain", alt: "Client VS startups", id: "clientReaction"}
+            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
+              %figcaption
+                .project-header TOOL
+                .spacer10
+                %a.project-desc{href: "https://community.algolia.com/docsearch/"}
+                  %link.rippleJS
+                  .spacer40
+                  %img.icon{src: "img/illus-docsearch.svg", alt: "doc search", width:280}
+                  .desc.text-center Search your documentation quickly and easily with DocSearch.
+                  .spacer40
+                  .button Join the Program
+                .project-footer
+                  %a{href:"https://github.com/algolia/docsearch"}
+                    %svg.icon.github
+                      %use{xlink:href: "#icon-github"}
+
+          .spacer10.visible-xs
+          .col-sm-6
+            .row
+              .col-sm-6
+                .project-wrapper.big.ee
                   %img{src:"#", alt: "Too quick!", id: "tooQuickDevops"}
                   %p.quote "I'm too quick for a video!"
                 %figure.effect-apollo.project-wrapper.big.places.draggable
@@ -141,101 +279,6 @@
                         %svg.icon.github
                           %use{xlink:href: "#icon-github"}
 
-                .spacer10
-                .col-sm-12.no-padding
-                  .project-wrapper.ee
-                    %img{src:"#", class:"contain", alt: "Push -force my friend!", id: "pushForce"}
-                  %figure.effect-apollo.project-wrapper.peek-trigger.jekyll.draggable
-                    %figcaption
-                      .project-header PLUGIN
-                      %a.project-desc{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}
-                        %link.rippleJS
-                        %svg.icon{height: 40}
-                          %use{xlink:href: "#icon-jekyll"}
-                        .project-title Jekyll
-                        .spacer10
-                    .project-footer
-                      %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
-
-                    .peek-a-boo
-                      %p Search your static HTML Jekyll sites with the Algolia for Jekyll plugin.
-
-              .spacer10.visible-xs
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
-                %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
-                  %figcaption
-                    .project-header NEED HELP?
-                    %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
-                      %link.rippleJS
-                      %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
-                      .project-title ASK StackOverflow
-                    .project-footer
-                    .peek-a-boo
-                      %p Have Algolia related questions? Ask the community.
-
-
-
-                .spacer10
-                .col-sm-12.no-padding
-                  .project-wrapper.big.ee
-                    %img{src:"#", class:"contain", alt: "Pump it pump it", id: "pumpIt"}
-                  %figure.effect-apollo.project-wrapper.big.autocompletejs.draggable
-                    %figcaption
-                      .project-header LIBRARY
-                      %a.project-desc{href: "https://github.com/algolia/autocomplete.js"}
-                        %link.rippleJS
-                        %img.icon{src: "img/illus-autocomplete.svg", alt: "auto complete"}
-                        .project-title autocomplete.js
-                        .spacer10
-                        .desc Display as-you-type search results with autocomplete.js.
-                      .project-footer
-                        %a{href: "https://github.com/algolia/autocomplete.js"}
-                          %svg.icon
-                            %use{xlink:href: "#icon-github"}
-
-        .spacer10
-        .row
-          .col-sm-6
-            .project-wrapper.ee.big
-              %img{src:"#", class:"contain", alt: "Client VS startups", id: "clientReaction"}
-            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
-              %figcaption
-                .project-header TOOL
-                .spacer10
-                %a.project-desc{href: "https://community.algolia.com/docsearch/"}
-                  %link.rippleJS
-                  .spacer40
-                  %img.icon{src: "img/illus-docsearch.svg", alt: "doc search"}
-                  .desc.text-center Search your documentation quickly and easily with DocSearch.
-                  .spacer40
-                  .button Join the Program
-                .project-footer
-                  %a{href:"https://github.com/algolia/docsearch"}
-                    %svg.icon.github
-                      %use{xlink:href: "#icon-github"}
-
-          .spacer10.visible-xs
-          .col-sm-6
-            .row
-              .col-sm-6
-                .project-wrapper.big.ee
-                %figure.big.effect-apollo.project-wrapper.helperjs
-                  %figcaption
-                    .project-header LIBRARY
-                    %a.project-desc{href: "https://community.algolia.com/algoliasearch-helper-js/"}
-                      %link.rippleJS
-                      %img.icon{src:"img/logo-helper.svg"}
-                      .project-title Helper.js
-                      .spacer10
-                      .desc Your best companion for implementing advanced search features with Algolia
-                    .project-footer
-                      %a{href: "https://github.com/algolia/algoliasearch-helper-js/"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
               .spacer10.visible-xs
 
               .col-sm-6
@@ -363,39 +406,9 @@
                       %p Explore Algolia's recipes, demos and samples on Codepen.
 
 
-              -# .col-sm-6
-              -#   .project-wrapper.ee
-              -#     %img{src:"#", alt: "Dumb and dumber", id: "jimCarrey"}
-              -#   %figure.effect-apollo.project-wrapper.talks.peek-trigger.draggable.coming-soon
-              -#     %figcaption
-              -#       %link.rippleJS
-              -#       .project-header LEARN
-              -#       %a.project-desc{href: "#"}
-              -#         %svg.icon{height: 40}
-              -#           %use{xlink:href: "#icon-talks"}
-              -#         .project-title Talks
-              -#       .peek-a-boo
-              -#         %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commo
-              -#       .spacer10
-              .spacer10.visible-xs
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", class:"contain", alt: "Try me!", id: "uselessBox"}
-                %figure.effect-apollo.project-wrapper.blog.draggable
-                  %figcaption
-                    .project-header READING
-                    %a.project-desc{href: "javascript:void(0)"}
-                      %link.rippleJS
-                      .project-title
-                        %svg.icon
-                            %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
-
-                      .spacer10
-                      %a{href: "https://blog.algolia.com/", class:"button blue full"} VISIT ALGOLIA'S BLOG
-
 
     %section.tools
-      %h2.text-center.m-b-large API Clients & Tools
+      %h2.text-center.m-b-large API Clients, Tools & Integrations
       .container
         .row
           .col-sm-2.text-center.hidden-xs
@@ -408,18 +421,21 @@
             .tools-category.backend
               %img{src:"img/illus-backend.svg", alt: "backend"}
               %h3 Back-end
+            .tools-category.integrations
+              %img{src:"img/illus-integrations.svg", alt: "integrations", width: 60}
+              %h3 Integrations
           .col-sm-10
             .row.list-tools
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-helper-js"}
-                  %img{src: "img/icons/algolia-helper.svg", height:50, alt: "helper"}
-                  .spacer10
-                  .title  algolia-helper.js
               .col-sm-3.col-xs-6
                 %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-js"}
                   %img{src: "img/icons/javascript.svg", height:50, alt: "js"}
                   .spacer10
                   .title algoliasearch.js
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-helper-js"}
+                  %img{src: "img/icons/helperjs.svg", height:50, alt: "helper"}
+                  .spacer10
+                  .title  algolia-helper.js
               .col-sm-3.col-xs-6
                 %a.tool-wrapper{href:"https://github.com/algolia/autocomplete.js"}
                   %img{src: "img/icons/autocompletejs.svg", height:50, alt: "autocomplete"}
@@ -514,6 +530,32 @@
                   %img{src: "img/icons/symfony.svg", height:50, alt: "symfony"}
                   .spacer10
                   .title Symfony
+            .row.list-tools
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-wordpress/"}
+                  %img{src: "img/icons/wordpress.svg", height:50, alt: "js"}
+                  .spacer10
+                  .title WordPress
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-magento/"}
+                  %img{src: "img/icons/magento.svg", height:50, alt: "helper"}
+                  .spacer10
+                  .title  Magento
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-magento-2/"}
+                  %img{src: "img/icons/magento2.svg", height:50, alt: "helper"}
+                  .spacer10
+                  .title  Magento 2
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-zendesk"}
+                  %img{src: "img/icons/zendesk.svg", height:50, alt: "autocomplete"}
+                  .spacer10
+                  .title  Zendesk
+              .col-sm-3.col-xs-6
+                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-jekyll"}
+                  %img{src: "img/icons/jekyll.svg", height:50, alt: "instantsearch"}
+                  .spacer10
+                  .title Jekyll
 
     .spacer40
     %footer.footer
@@ -609,8 +651,8 @@
     %img{alt: "",height: "1",src: "https://analytics.twitter.com/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
     %img{alt: "",height: "1",src: "//t.co/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
 
-  %script
-    adroll_adv_id = "TGR7R4XSGVGYVPX4LQBDFQ"; adroll_pix_id = "YQNWNHGUUBD2JMY7BVOBWM"; (function () { var _onload = function(){ if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return} if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return} var scr = document.createElement("script"); var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com"); scr.setAttribute('async', 'true'); scr.type = "text/javascript"; scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr); }; if (window.addEventListener) {window.addEventListener('load', _onload, false);} else {window.attachEvent('onload', _onload)} }());
+  -# %script
+  -#   adroll_adv_id = "TGR7R4XSGVGYVPX4LQBDFQ"; adroll_pix_id = "YQNWNHGUUBD2JMY7BVOBWM"; (function () { var _onload = function(){ if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return} if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return} var scr = document.createElement("script"); var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com"); scr.setAttribute('async', 'true'); scr.type = "text/javascript"; scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr); }; if (window.addEventListener) {window.addEventListener('load', _onload, false);} else {window.attachEvent('onload', _onload)} }());
   %script
     var _kmq = _kmq || []; var _kmk = _kmk || '55469e64b104e85e15613b087c7d95bf9c0b1d6e'; function _kms(u){ setTimeout(function(){ var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u; f.parentNode.insertBefore(s, f); }, 1); } _kms('//i.kissmetrics.com/i.js'); _kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
   %script{src: "js/app.js"}

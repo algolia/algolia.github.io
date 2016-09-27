@@ -3,18 +3,6 @@
 }
 
 .project-wrapper {
-  [alt="instantsearch"] {
-    position: relative;
-    width: 100%;
-
-    @media (max-width: $bp-wide) {
-      left: -40px;
-    }
-    @media (max-width: $bp-small) {
-      left: 0px;
-      width: 60px;
-    }
-  }
 
   @media (max-width: $bp-small) {
     [alt="stackoverflow"] {

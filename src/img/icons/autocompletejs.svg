@@ -1,15 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
     <title>autocompletejs</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Desktop-HD" sketch:type="MSArtboardGroup" transform="translate(-624.000000, -1588.000000)">
-            <g id="tools" sketch:type="MSLayerGroup" transform="translate(0.000000, 1417.000000)">
-                <g id="autocompletejs" transform="translate(624.000000, 171.000000)" sketch:type="MSShapeGroup">
-                    <circle id="Oval-148" fill="#FFFFFF" cx="35.5" cy="35.5" r="33.5"></circle>
-                    <path d="M35,70 C54.3299662,70 70,54.3299662 70,35 C70,15.6700338 54.3299662,0 35,0 C15.6700338,0 0,15.6700338 0,35 C0,54.3299662 15.6700338,70 35,70 Z M35.5,10.8382138 C23.9854377,10.8382138 14.6468557,20.2231642 14.6468557,31.7948991 C14.6468557,43.366634 23.9854377,52.7515843 35.5,52.7515843 C47.0145623,52.7515843 56.3531443,43.366634 56.3531443,31.7948991 C56.3531443,20.2231642 47.0145623,10.8382138 35.5,10.8382138 Z M17.4980337,31.6912992 C17.4980337,21.7491626 25.5147876,13.6926037 35.4078029,13.6926037 C45.3008183,13.6926037 53.3175722,21.7491626 53.3175722,31.6912992 C53.3175722,41.6334358 45.3008183,49.6899948 35.4078029,49.6899948 C25.5147876,49.6899948 17.4980337,41.6334358 17.4980337,31.6912992 Z M20.4371303,32.3757136 L22.1941988,32.3757136 C22.1941988,25.0476732 28.0803786,19.1322672 35.3722132,19.1322672 L35.3722132,17.3664743 C27.1139909,17.3664743 20.4371303,24.0764872 20.4371303,32.3757136 Z M34.2150938,54.3651286 L34.2150938,57.9018808 L21.3110741,57.9018808 L21.3110741,60.2597156 L49.465299,60.2597156 L49.465299,57.9018808 L36.5612793,57.9018808 L36.5612793,54.3651286 L34.2150938,54.3651286 Z" fill="#18AEA3"></path>
+    <defs>
+        <linearGradient x1="80.6194196%" y1="100%" x2="22.9910714%" y2="11.5848214%" id="linearGradient-1">
+            <stop stop-color="#273786" offset="0%"></stop>
+            <stop stop-color="#2897C5" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="79.1042755%" cy="82.3870889%" fx="79.1042755%" fy="82.3870889%" r="83.6882473%" id="radialGradient-2">
+            <stop stop-color="#4A0606" offset="0%"></stop>
+            <stop stop-color="#1198B2" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-785.000000, -1458.000000)">
+            <g id="tools" transform="translate(40.000000, 1437.000000)">
+                <g id="Group-2">
+                    <g id="autocompletejs" transform="translate(745.000000, 21.000000)">
+                        <path d="M35,70 C54.3299662,70 70,54.3299662 70,35 C70,15.6700338 54.3299662,0 35,0 C15.6700338,0 0,15.6700338 0,35 C0,54.3299662 15.6700338,70 35,70 Z" fill="url(#linearGradient-1)"></path>
+                        <path d="M14.9861315,34.7179921 C14.9861315,23.3885807 24.1215021,14.2078507 35.3949382,14.2078507 C46.6683744,14.2078507 55.803745,23.3885807 55.803745,34.7179921 C55.803745,46.0474036 46.6683744,55.2281336 35.3949382,55.2281336 C24.1215021,55.2281336 14.9861315,46.0474036 14.9861315,34.7179921 Z" id="Path" fill="#FFFFFF" opacity="0.355352146"></path>
+                        <path d="M11.7371146,34.8360478 C11.7371146,48.0224434 22.3787546,58.7169217 35.5,58.7169217 C48.6212454,58.7169217 59.2628854,48.0224434 59.2628854,34.8360478 C59.2628854,21.6496522 48.6212454,10.9551739 35.5,10.9551739 C22.3787546,10.9551739 11.7371146,21.6496522 11.7371146,34.8360478 Z" id="Path" stroke="#FFFFFF" stroke-width="2"></path>
+                        <path d="M22.7469219,55.7588599 C20.1298149,52.2474773 18.5794465,47.887019 18.5794465,43.1635161 C18.5794465,31.5496738 27.9520099,22.1305733 39.5084717,22.1305733 C46.2901696,22.1305733 52.3197953,25.3742423 56.1446054,30.4016238 C54.3730019,30.0484342 52.541324,29.8632302 50.6667049,29.8632302 C35.9554792,29.8632302 23.8887626,41.2689337 22.7469219,55.7588599 Z" id="Combined-Shape" fill="url(#radialGradient-2)" opacity="0.475804571" transform="translate(37.362026, 38.944717) rotate(-180.000000) translate(-37.362026, -38.944717) "></path>
+                        <circle id="Oval-2" fill="#FFFFFF" opacity="0.164820429" cx="28" cy="26" r="6"></circle>
+                        <circle id="Oval-2-Copy" fill="#FFFFFF" opacity="0.496735075" cx="35.5" cy="34.5" r="1.5"></circle>
+                        <circle id="Oval-2-Copy" fill="#FFFFFF" opacity="0.496735075" cx="29.5" cy="43.5" r="1.5"></circle>
+                        <circle id="Oval-2-Copy-2" fill="#7AE9F5" opacity="0.496735075" cx="50" cy="39" r="1"></circle>
+                        <circle id="Oval-2-Copy" fill="#82F8FF" opacity="0.853311567" cx="46.5" cy="47.5" r="1.5"></circle>
+                        <circle id="Oval-2" fill="#FFFFFF" cx="29.5" cy="26.5" r="2.5"></circle>
+                        <circle id="Oval-2" fill="#FFFFFF" opacity="0.15234375" cx="35.5" cy="36.5" r="2.5"></circle>
+                    </g>
                 </g>
             </g>
         </g>

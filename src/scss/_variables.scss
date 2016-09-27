@@ -59,7 +59,7 @@ $gradients: (
   (jekyll, 'linear-gradient(119deg, #9D55DA 0, #E8313B 100%);', #E8313B),
   (zendesk, 'linear-gradient(59deg, #2e9d89 0, #90d44b 100%)', #067864),
   (autocompletejs, 'linear-gradient(to top right, #27B79A, #00587F)', #00587F),
-  (hackernews, 'linear-gradient(to right, #DC029D, #FC7218)', #fea925),
+  (hackernews, 'linear-gradient(to right, #FF9B03, #FC7218)', #fea925),
   (supersearch, 'linear-gradient(306deg, #1b6185 0, #723790 100%)', #47185e),
   (githubsearch, 'linear-gradient(149deg, #3A4667 0, #5D2770 100%)',#989ca0 ),
   (represent, 'linear-gradient(to bottom, #87689b 0, #ec3b70 100%)', #87689b ),
@@ -67,7 +67,9 @@ $gradients: (
   (publicdatas, 'linear-gradient(125deg, #13C4A5 0, #1D3858 100%)', #178461),
   (expectjs, 'linear-gradient(194deg, #685aa7 0, #1d3657 100%)', #685aa7),
   (newsletter, 'linear-gradient(140deg, #1D3858 0, #36385D 100%)', #35a4c9),
-  (blog, 'linear-gradient(to bottom right, #375396, #0D1528)', '#0c1723')
+  (blog, 'linear-gradient(140deg, #1D3858 0, #36385D 100%)', #35a4c9),
+  (wordpress, 'linear-gradient(to bottom right, #4A2AB2, #23A5E9)', '#0c1723'),
+  (stackoverflow, 'linear-gradient(to top left, #4A2AB2, #263080)', '#0c1723')
 );
 
 $icon-colors:(

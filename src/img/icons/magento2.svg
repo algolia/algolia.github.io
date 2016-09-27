@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="67px" height="67px" viewBox="0 0 67 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>magento2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="96.731179%" y1="94.8856027%" x2="3.10546875%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#C71111" offset="0%"></stop>
+            <stop stop-color="#FFA15B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-441.000000, -2338.000000)">
+            <g id="tools" transform="translate(40.000000, 1437.000000)">
+                <g id="Group-2">
+                    <g id="magento2" transform="translate(401.000000, 901.000000)">
+                        <circle id="Oval-148-Copy" fill="url(#linearGradient-1)" cx="33.5" cy="33.5" r="33.5"></circle>
+                        <path d="M46,26.1455106 L46,46.4358867 L40.9997247,49.3348804 L40.9997247,29.0445043 L28.4993577,21.7973425 L15.999633,29.0438593 L15.999633,49.3348804 L11,46.4358867 L11,26.1455106 L28.4993577,16 L46,26.1455106 Z M28.5006423,56.5820422 L20.9999082,52.2332292 L20.9999082,31.942853 L25.9995412,29.0438593 L25.9995412,49.3348804 L28.4993577,50.8595125 L31.0004588,49.3348804 L31.0004588,29.0445043 L36.0007341,31.942853 L36.0007341,52.2332292 L28.5006423,56.5820422 Z" id="community/icon-magento" fill="#FFFFFF"></path>
+                        <text id="2" font-family="Arial-Black, Arial Black" font-size="17" font-weight="700" fill="#FFFFFF">
+                            <tspan x="48.3305664" y="29">2</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -93,6 +93,31 @@ figure {
     }
   }
 
+  &.autocompletejs{
+    .project-title {
+      text-align: left;
+    }
+    .desc{
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &.instantsearch {
+    background: {
+      image: url('img/bg-instansearch.jpg');
+      size: 100%
+    }
+  }
+
+  &.docsearch {
+    background: {
+      image: url('img/bg-docsearch.jpg');
+      size: 100%
+    }
+  }
+
   &.searchbox {
     background: {
       image: url('img/illus-searchbox.svg'), linear-gradient(#34A3C7,#1E3A5E);
