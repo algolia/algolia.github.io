@@ -3,7 +3,6 @@
     "dev": "gulp dev"
   },
   "devDependencies": {
-    "aws-sdk": "^2.7.13",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",

@@ -10,7 +10,6 @@ const livereload = require('gulp-livereload');
 
 //deploy
 const ghPages = require('gulp-gh-pages');
-const AWS = require('aws-sdk');
 const awspublish = require('gulp-awspublish');
 
 //css
@@ -277,7 +276,6 @@ gulp.task('dev', function(callback) {
 gulp.task('s3-deploy', ['build:prod'], function() {
   var publisher = awspublish.create({
     region: 'us-east-1',
-    credentials: new AWS.SharedIniFileCredentials({profile: 'community.algolia.com'}),
     params: {
       Bucket: 'community.algolia.com'
     }
