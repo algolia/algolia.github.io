@@ -9,4 +9,4 @@ script:
   - gulp s3-deploy
 branches:
   only:
-    - src
+    - source
