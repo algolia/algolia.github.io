@@ -10,6 +10,8 @@ const livereload = require('gulp-livereload');
 
 //deploy
 const ghPages = require('gulp-gh-pages');
+const AWS = require('aws-sdk');
+const awspublish = require('gulp-awspublish');
 
 //css
 const sass = require('gulp-sass');
@@ -270,6 +272,22 @@ gulp.task('build:haml', function(callback) {
 // -------------------------------------
 gulp.task('dev', function(callback) {
   runSequence('build:dev', 'watch', 'webserver', callback);
+});
+
+gulp.task('s3-deploy', ['build:prod'], function() {
+  var publisher = awspublish.create({
+    region: 'us-east-1',
+    credentials: new AWS.SharedIniFileCredentials({profile: 'community.algolia.com'}),
+    params: {
+      Bucket: 'community.algolia.com'
+    }
+  });
+
+  return gulp.src('build/**/*')
+    // .pipe(awspublish.gzip({ ext: '.gz'}))
+    .pipe(publisher.publish())
+    .pipe(publisher.cache())
+    .pipe(awspublish.reporter());
 });
 
 // -------------------------------------
