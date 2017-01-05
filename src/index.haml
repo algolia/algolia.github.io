@@ -376,18 +376,13 @@
                 .project-desc
                   %link.rippleJS
                   #mc_embed_signup
-                    %form#mc-embedded-subscribe-form.validate{action: "//algolia.us3.list-manage.com/subscribe/post?u=f7b8acc6ec97794a08484ca9b&amp;id=285b80e148", method: "post", name: "mc-embedded-subscribe-form", novalidate: ""}
+                    %form#mc-embedded-subscribe-form.validate{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", novalidate: ""}
                       #mc_embed_signup_scroll
                         .input-group
-                          %input#mce-EMAIL{ name: "EMAIL", placeholder: "Email Address", type: "email", value: ""}
+                          .mc-signupmessage
+                          %input#mce-EMAIL{ name: "email", placeholder: "Email Address", type: "email", value: ""}
                           %button#mc-embedded-subscribe.button{ type: "submit"}
                             Subscribe
-                        #mce-responses.clear
-                          #mce-error-response.response{style: "display:none"}
-                          #mce-success-response.response{style: "display:none"}
-                        / real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                        %div{style: "position: absolute; left: -5000px;"}
-                          %input{name: "b_f7b8acc6ec97794a08484ca9b_285b80e148", tabindex: "-1", type: "text", value: ""}/
                   .spacer15
                   .project-title Newsletter
                   .desc.text-center Sign up for our newsletter to stay in the loop on Algolia updates.
