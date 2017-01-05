@@ -75,7 +75,7 @@ $('#mc_embed_signup').on('submit', function success(event) {
   var $message = $('.mc-signupmessage');
   var email = $('#mce-EMAIL').val();
   if (email) {
-    window.pardotAppendIframe('https://go.algolia.com/l/139121/2016-06-09/f3kzm?email=' + encodeURI(email));
+    window.pardotAppendIframe('https://go.pardot.com/l/139121/2016-06-09/f3kzm?email=' + encodeURI(email));
     $signupForm.addClass('mc_embed_signup--success');
     $message.html('Thank you for subscribing <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35"><path d="M18 4.02C16.552 2.25 14.057.297 10.103.297 3.373.297 0 6.63 0 12.547c0 9.776 15.135 20.15 16.99 21.435.607.422 1.413.422 2.02 0C20.864 32.695 36 22.322 36 12.546 36 6.63 32.627.298 25.896.298c-3.953 0-6.448 1.954-7.896 3.72v.002z" fill="#fb366e" fill-rule="evenodd"/></svg>');
   }
