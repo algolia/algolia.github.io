@@ -1,111 +1,42 @@
-// Debug function.
-// Set to true to highlight every elements of the page
-// with a border to detect the edges of each
-$_debug: false;
 
-$cabaret: #e7486b;
-$rouge: #9c4274;
-$sea-green: #13c4a5;
-$blue-green: #10a4b8;
-$violet: #8a63b3;
-$chambray: #3b5295;
-$sunset-orange: #f6624e;
-$saffron-mango: #fdbd57;
-$light-pink: #ff66b7;
-$ic-pink: rgb(255, 102, 183);
-$gray: #e9eaed;
+//---------------------------
+//  Font stack
+//---------------------------
 
-$primary-color: #1f3b5d;
-$secondary-color: #f3f4f7;
-$tertiary-color: #8191b1;
+$browser-context: 16; // <-- Used for px to em conversion
+$font-stack: 'Open Sans',open sans,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
-$brand-primary: #46aeda;
-$brand-secondary: #fa3870;
-$brand-success: #32b28c;
-$brand-info: #5bc0de;
-$brand-warning: #f0ad4e;
-$brand-danger: #ff5f5f;
-
-// share colors
-$purple-github: #9f6ecb;
-$blue-facebook: #4a75dd;
-$blue-twitter: #46aeda;
-$orange-producthunt: #da552f;
-$blue-linkedin: #0076b4;
-$green-instantsearch: #FFF;
-$blue-react: #FFF;
-
-$social-links: (
-  'twitter': "<svg width=\'25px\' height=\'20px\' viewBox=\'0 0 25 20\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' xmlns:sketch=\'http://www.bohemiancoding.com/sketch/ns\'><!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch --><title>icon-twitter</title><desc>Created with Sketch.</desc><defs></defs><g id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\' sketch:type=\'MSPage\'><g id=\'Desktop-HD\' sketch:type=\'MSArtboardGroup\' transform=\'translate(-887.000000, -31.000000)\' fill=\'%23FFFFFF\'><g id=\'header\' sketch:type=\'MSLayerGroup\' transform=\'translate(-44.000000, 0.000000)\'><path d=\'M955.610581,33.3674876 C954.70585,33.7696458 953.732178,34.0409152 952.710546,34.162312 C953.753659,33.5378428 954.55348,32.5486836 954.930659,31.3686866 C953.954988,31.9476945 952.874906,32.3678373 951.724384,32.5946446 C950.803667,31.6134785 949.491282,31 948.039017,31 C945.250887,31 942.990308,33.2605785 942.990308,36.0492082 C942.990308,36.4443723 943.03477,36.8295449 943.121197,37.1997302 C938.924764,36.9889094 935.203927,34.9791177 932.713543,31.9242144 C932.278913,32.6695809 932.030124,33.5368437 932.030124,34.4630564 C932.030124,36.2145676 932.921367,37.7602538 934.276215,38.6654843 C933.448918,38.6390068 932.67008,38.4117001 931.989159,38.0335215 C931.98866,38.0545037 931.98866,38.0759854 931.98866,38.0974672 C931.98866,40.5433881 933.72918,42.5836539 936.039217,43.048259 C935.615577,43.1631613 935.169456,43.2251087 934.708847,43.2251087 C934.383124,43.2251087 934.066893,43.1936354 933.758655,43.1341859 C934.401609,45.139981 936.266024,46.6002398 938.475146,46.6407054 C936.747115,47.9950542 934.570465,48.802368 932.204476,48.802368 C931.797322,48.802368 931.395164,48.7783884 931,48.7314283 C933.2351,50.16471 935.888844,51 938.739921,51 C948.027527,51 953.10571,43.3065394 953.10571,36.6342109 C953.10571,36.4153969 953.101214,36.1970825 953.091722,35.9802668 C954.077884,35.2698706 954.934156,34.3801269 955.610581,33.3674876 L955.610581,33.3674876 Z\' id=\'icon-twitter\' sketch:type=\'MSShapeGroup\'></path></g></g></g></svg>",
-  'facebook': "<svg width=\'10px\' height=\'20px\' viewBox=\'0 0 10 20\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' xmlns:sketch=\'http://www.bohemiancoding.com/sketch/ns\'><!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch --><title>icon-facebook</title><desc>Created with Sketch.</desc><defs></defs><g id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\' sketch:type=\'MSPage\'><g id=\'Desktop-HD\' sketch:type=\'MSArtboardGroup\' transform=\'translate(-849.000000, -30.000000)\' fill=\'%23FFFFFF\'><g id=\'header\' sketch:type=\'MSLayerGroup\' transform=\'translate(-44.000000, 0.000000)\'><path d=\'M902.293314,36.4760919 L899.128338,36.4760919 L899.128338,34.4003312 C899.128338,33.6207824 899.645001,33.4390395 900.008901,33.4390395 L902.242393,33.4390395 L902.242393,30.0120058 L899.166425,30 C895.751811,30 894.974746,32.5559925 894.974746,34.1916787 L894.974746,36.4760919 L893,36.4760919 L893,40.0074519 L894.974746,40.0074519 L894.974746,50 L899.128338,50 L899.128338,40.0074519 L901.93107,40.0074519 L902.293314,36.4760919 L902.293314,36.4760919 Z\' id=\'icon-facebook\' sketch:type=\'MSShapeGroup\'></path></g></g></g></svg>",
-  'github': "<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'no\'?><svg width=\'41px\' height=\'40px\' viewBox=\'0 0 41 40\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' xmlns:sketch=\'http://www.bohemiancoding.com/sketch/ns\'><!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch --><title>icon-github</title><desc>Created with Sketch.</desc><defs></defs><g id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\' sketch:type=\'MSPage\'><g id=\'Desktop-HD\' sketch:type=\'MSArtboardGroup\' transform=\'translate(-803.000000, -733.000000)\' fill=\'%23FFFFFF\'><g id=\'github\' sketch:type=\'MSLayerGroup\' transform=\'translate(714.000000, 685.000000)\'><g id=\'icon-github\' transform=\'translate(89.000000, 48.000000)\' sketch:type=\'MSShapeGroup\'><path d=\'M20.4981123,0 C9.17934866,0 0,9.17809018 0,20.5006292 C0,29.5579054 5.87332331,37.2409221 14.0194604,39.9516867 C15.0451211,40.1404586 15.4188895,39.5074434 15.4188895,38.9637803 C15.4188895,38.4767488 15.4012708,37.1880659 15.3912029,35.4777924 C9.68903281,36.7161362 8.48592652,32.7292735 8.48592652,32.7292735 C7.55339329,30.3608152 6.2093373,29.7303171 6.2093373,29.7303171 C4.34804629,28.4592529 6.35028699,28.4844225 6.35028699,28.4844225 C8.40790079,28.6291476 9.49019307,30.5974094 9.49019307,30.5974094 C11.3187636,33.7297646 14.288775,32.8249179 15.4566439,32.300132 C15.6428988,30.9762117 16.1727186,30.0726235 16.7579115,29.5604224 C12.2059916,29.0431873 7.41999447,27.2838331 7.41999447,19.4284048 C7.41999447,17.1908284 8.21912889,15.3597409 9.53046441,13.9275914 C9.31903987,13.4090979 8.61554989,11.3237975 9.73182111,8.50228675 C9.73182111,8.50228675 11.4521624,7.95107278 15.3685503,10.6039473 C17.003315,10.1483778 18.7576353,9.9218515 20.5006292,9.91304214 C22.2423647,9.9218515 23.9954265,10.1483778 25.6327082,10.6039473 C29.5465791,7.95107278 31.2644035,8.50228675 31.2644035,8.50228675 C32.3831916,11.3237975 31.6797016,13.4090979 31.4695356,13.9275914 C32.7833881,15.3597409 33.5762301,17.1908284 33.5762301,19.4284048 C33.5762301,27.3039688 28.7826821,29.0368949 24.2169189,29.5440621 C24.9518708,30.1770773 25.6075386,31.4280058 25.6075386,33.339636 C25.6075386,36.0806041 25.582369,38.2917524 25.582369,38.9637803 C25.582369,39.5124774 25.952362,40.1505264 26.9918659,39.9504282 C35.1317106,37.2333712 41,29.5553884 41,20.5006292 C41,9.17809018 31.8206513,0 20.4981123,0\' id=\'Fill-50\'></path></g></g></g></g></svg>",
-  'producthunt': "<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'no\'?><svg width=\'28px\' height=\'34px\' viewBox=\'0 0 28 34\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' xmlns:sketch=\'http://www.bohemiancoding.com/sketch/ns\'><!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch --><title>icon-producthunt</title><desc>Created with Sketch.</desc><defs></defs><g id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\' sketch:type=\'MSPage\'><g id=\'-icon-search\' sketch:type=\'MSArtboardGroup\' transform=\'translate(-158.000000, -598.000000)\' fill=\'%23FFFFFF\'><path d=\'M167.468354,620.810127 L174.764636,620.810127 C179.974557,620.810127 185.548507,615.901528 185.548507,609.405063 C185.548507,602.908599 180.097941,598 175.08553,598 L166.607595,598 L158,598 L158,632 L167.468354,632 L167.468354,620.810127 L167.468354,620.810127 Z M167.468354,605.316456 L171.912614,605.316456 C174.43189,605.316456 176.506329,606.578 176.506329,608.966341 C176.506329,611.354682 174.625771,613.063291 172.355098,613.063291 L167.468354,613.063291 L167.468354,605.316456 L167.468354,605.316456 L167.468354,605.316456 Z\' id=\'icon-producthunt\' sketch:type=\'MSShapeGroup\'></path></g></g></svg>",
-  'linkedin': "<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'no\'?> <svg width=\'34px\' height=\'32px\' viewBox=\'0 0 34 32\' version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' xmlns:sketch=\'http://www.bohemiancoding.com/sketch/ns\'> <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch --> <title>icon-linkedin</title> <desc>Created with Sketch.</desc> <defs></defs> <g id=\'Page-1\' stroke=\'none\' stroke-width=\'1\' fill=\'none\' fill-rule=\'evenodd\' sketch:type=\'MSPage\'> <g id=\'icons\' sketch:type=\'MSArtboardGroup\' transform=\'translate(-188.000000, -236.000000)\' fill=\'%23000000\'> <path d=\'M188,239.72752 C188,238.652129 188.379988,237.762038 189.139974,237.057221 C189.89996,236.352403 190.892355,236 192.117188,236 C193.34202,236 194.323347,236.352403 195.061198,237.057221 C195.799049,237.762038 196.175347,238.652129 196.190104,239.72752 C196.204861,240.78838 195.832252,241.674837 195.072266,242.386921 C194.312279,243.099004 193.312506,243.455041 192.072917,243.455041 L192.028646,243.455041 C190.81857,243.455041 189.844622,243.099004 189.106771,242.386921 C188.36892,241.674837 188,240.78838 188,239.72752 Z M188.420573,268 L188.420573,246.39782 L195.72526,246.39782 L195.72526,268 L188.420573,268 Z M199.753906,268 C199.78342,262.201606 199.798177,257.500472 199.798177,253.896458 C199.798177,250.292443 199.790799,248.141693 199.776042,247.444142 L199.753906,246.39782 L207.036458,246.39782 L207.036458,249.536785 L206.992188,249.536785 C207.287328,249.071751 207.589842,248.664852 207.89974,248.316076 C208.209637,247.967301 208.626516,247.589466 209.150391,247.182561 C209.674265,246.775656 210.316185,246.459583 211.076172,246.234332 C211.836158,246.009082 212.680985,245.896458 213.610677,245.896458 C216.134127,245.896458 218.163187,246.721154 219.697917,248.370572 C221.232647,250.01999 222,252.435951 222,255.618529 L222,268 L214.717448,268 L214.717448,256.446866 C214.717448,254.920973 214.418623,253.725708 213.820964,252.861035 C213.223304,251.996363 212.289937,251.564033 211.020833,251.564033 C210.091141,251.564033 209.31272,251.814711 208.685547,252.316076 C208.058374,252.817441 207.589845,253.438688 207.279948,254.179837 C207.117621,254.615806 207.036458,255.204356 207.036458,255.945504 L207.036458,268 L199.753906,268 Z\' id=\'icon-linkedin\' sketch:type=\'MSShapeGroup\' fill=\'%23fff\'></path> </g> </g> </svg>"
-);
-
-// breakpoints
-$bp-big: 1500px;
-$bp-wide: 1200px;
+//---------------------------
+//  Responsive breakpoints
+//---------------------------
+$bp-huge: 2000px;
+$bp-big: 1440px;
 $bp-medium: 960px;
 $bp-small: 768px;
 
-// Gradients
-// @doc
-//      class - gradient - first-color
-$gradients: (
-  (discourse,'linear-gradient(to bottom, #F7F7FE, #EEF0F6)',#1485C0 ),
-  (instantsearchandroid, 'linear-gradient(to bottom left, #1cc7d0, #2dde98)',#1485C0 ),
-  (instantsearchreact, 'linear-gradient(to bottom, #3F6ADE, #1A2456)',#1485C0 ),
-  (instantsearch, 'linear-gradient(to bottom right, #70279F, #1485C0)',#1485C0 ),
-  (docsearch,'linear-gradient(to bottom right, #107D8B, #4F69B6)', #4F69B6),
-  (helperjs, 'linear-gradient(202deg, #FFBE4C 0, #F48F49 100%)', #34a3c7),
-  (places, 'linear-gradient(to bottom right, #3A5395, #1C7BBC)', #1C7BBC),
-  (magento, 'linear-gradient(to top right, #ff66b7, #dc6637)', #ff66b7),
-  (jekyll, 'linear-gradient(119deg, #9D55DA 0, #E8313B 100%);', #E8313B),
-  (zendesk, 'linear-gradient(59deg, #2e9d89 0, #90d44b 100%)', #067864),
-  (autocompletejs, 'linear-gradient(to top right, #27B79A, #00587F)', #00587F),
-  (hackernews, 'linear-gradient(to right, #FF9B03, #FC7218)', #fea925),
-  (supersearch, 'linear-gradient(306deg, #1b6185 0, #723790 100%)', #47185e),
-  (githubsearch, 'linear-gradient(149deg, #3A4667 0, #5D2770 100%)',#989ca0 ),
-  (represent, 'linear-gradient(to bottom, #87689b 0, #ec3b70 100%)', #87689b ),
-  (talks, 'linear-gradient(357deg, #1d3657 0, #b25e5e 100%)', #1d3657),
-  (publicdatas, 'linear-gradient(125deg, #13C4A5 0, #1D3858 100%)', #178461),
-  (expectjs, 'linear-gradient(194deg, #685aa7 0, #1d3657 100%)', #685aa7),
-  (newsletter, 'linear-gradient(140deg, #1D3858 0, #36385D 100%)', #35a4c9),
-  (blog, 'linear-gradient(140deg, #1D3858 0, #36385D 100%)', #35a4c9),
-  (wordpress, 'linear-gradient(to bottom right, #4A2AB2, #23A5E9)', '#0c1723'),
-  (stackoverflow, 'linear-gradient(to top left, #4A2AB2, #263080)', '#0c1723')
-);
+//---------------------------
+//  Element dimensions
+//---------------------------
+$max-container-width: 940px;
+$nav-height: 60px;
+$beta-banner-height: 30px;
+$margin: 16px;
 
-$icon-colors:(
-  'pink': $light-pink,
-  'blue': $brand-primary,
-  'grey': #b6b8be,
-  'white': #ffffff
-);
-
-$searchbox: (
-  input-width: 500px,
-  input-height: 40px,
-  border-width: 3px,
-  border-radius: 0px,
-  input-border-color: #fff,
-  input-focus-border-color: #fff,
-  input-background: #001B3A,
-  input-focus-background: #001B3A,
-  font-size: .9em,
-  placeholder-color: #EEE,
-  icon-size: 24px,
-  icon-position: left,
-  icon-color: #fff,
-  icon-background: #3e82f7,
-  icon-background-opacity: 0,
-  icon-clear-size: 16px
-);
-
-$font-family-base: "Open Sans", Helvetica, Arial, sans-serif;
-$headings-font-family: "Raleway", "Times New Roman", Times, serif;
-
-$grid-gutter-width: 10px;
-
-$list-event-height: 96px;
+//---------------------------
+//  General colors
+//---------------------------
+$purple-heart: rgb(142,67,231);
+$mulberry: rgb(184,69,146);
+$radical-red: rgb(255,79,129);
+$bittersweet: rgb(255,108,95);
+$koromiko-1: rgb(255,193,104);
+$shamrock: rgb(45,222,152);
+$java: rgb(28,199,208);
+$cerulean: rgb(0,174,255);
+$royal-blue: rgb(51,105,231);
+$bunting: rgb(24,35,89);
+$deep-cove:  rgb(5, 15, 44);
+$titan-white: rgb(247,247,255);
+$cloudy-blue: #c4c8d7;
+$cloudy-blue-2: #a6b0d8;
+$sexy-white: #F4FAFE;

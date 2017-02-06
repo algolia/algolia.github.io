@@ -1,3 +1,4 @@
+
 var Draggable = require('./vendors/Draggable.js');
 
 // https://github.com/samthor/rippleJS, not a commonJS module
@@ -60,6 +61,14 @@ function ifMobile(){
 
 }
 
+const analytics = require('./analytics.js');
+const templates = require('./templates.js');
+const instantsearch = require('instantsearch.js');
+
+const APP_ID = "HXQH62TCI4";
+const API_KEY = "0b9f3069b37517348a864b7239a8abfa";
+const INDEX_NAME = "community_testing";
+
 window.pardotAppendIframe = function pardotAppendIframe(url) {
   var iframe = document.createElement('iframe');
   iframe.src = url;
@@ -80,7 +89,31 @@ $('#mc_embed_signup').on('submit', function success(event) {
   }
 });
 
-window.addEventListener('load', function(){
-  ifMobile()
-  ifSafari()
-})
+window.onload = () => {
+  search.start();
+}
+
+let search = instantsearch({
+  appId: APP_ID,
+  apiKey: API_KEY,
+  indexName: INDEX_NAME
+});
+
+// add a searchBox widget
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#alg-community__search',
+    placeholder: 'Search for libraries in France...'
+  })
+);
+
+// add a hits widget
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.alg-communityprojects__hits',
+    hitsPerPage: 10,
+    templates:{
+      item: templates.hitTemplate,
+    }
+  })
+);
