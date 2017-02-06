@@ -1,33 +1,35 @@
-::root {
-  font-size: 16px;
+:root {
+  font-size: 14px;
+}
+
+@media (max-width: $bp-small ) {
+  :root {
+    font-size: calc(3vw + 0.4vh / 2)
+  }
 }
 
 * {
-  border-box: box-sizing;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscaled;
-  font-weight: 300;
-  text-rendering: optimizeLegibility
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  @include isRetina {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscaled;
+  }
 }
 
 html, body {
-  width: 100%;
-  float: left;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
-p {
-  text-rendering: optimizeLegibility;
-}
-
-@media (max-width: 960px) {
-  .project-wrapper {
-    font-size: 12px !important;
-  }
-}
-@media (max-width: $bp-small) {
-  .project-wrapper {
-    font-size: 14px !important;
-  }
+body {
+  background: #fff;
+  font-family: "Open Sans","Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  float: left;
 }

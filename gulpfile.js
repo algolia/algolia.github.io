@@ -117,13 +117,13 @@ gulp.task('scss', function () {
 // -------------------------------------
 //   Task: Lint SCSS
 // -------------------------------------
-gulp.task('lint:scss', function() {
-  return gulp.src('src/scss/*.scss')
-    .pipe(scsslint({
-      customReport: scssLintStylish,
-      config: 'scss-lint.yml'
-    }));
-});
+// gulp.task('lint:scss', function() {
+//   return gulp.src('src/scss/*.scss')
+//     .pipe(scsslint({
+//       customReport: scssLintStylish,
+//       config: 'scss-lint.yml'
+//     }));
+// });
 
 // -------------------------------------
 //   Task: Minify CSS
@@ -220,7 +220,7 @@ gulp.task("favicons", function () {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('src/*.haml', ['build:haml']);
-  gulp.watch('src/scss/**/*.scss', ['scss','lint:scss']);
+  gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/js/**/*.js', ['js', 'lint:js']);
   gulp.watch('src/img/**/*',['images']);
 });

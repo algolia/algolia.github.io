@@ -1,0 +1,220 @@
+$hitType: #5BA2D2;
+
+.alg-community {
+
+  .alg-communityheader {
+    background: linear-gradient(324.77deg, #3369E6 0%, #4639A1 80.62%, #4B2E91 100%);
+    position: relative;
+
+    @include diagonal(-6deg, #FFF,50%, false,before){
+      left: 0;
+      bottom:0;
+      transform: skewY(-4deg) translate(0,50%);
+    }
+
+    .alg-communityheader__container {
+      max-width: 1000px;
+      margin: 0 auto;
+      color: #fff;
+      font-weight: 300;
+      padding: 0 20px;  
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 400;
+      padding: em(117,36) em(20,36) 0 em(20,36);
+
+      & + p {
+        font-size: 21px;
+        padding-bottom: em(25,21);
+        padding: 0 em(20,21) em(25,21) em(20,21);
+      }
+    }
+  }
+
+  .alg-communityareas {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 #C0C8D9;
+    display: flex;
+    background-color: #FFF;
+    color: $bunting;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content:"";
+      top: 50%;
+      left:50%;
+      height: calc(100% - 40px);
+      transform: translate(-50%,-50%);
+      background-color: #DEDEF7;
+      width: 1px;
+    }
+
+    .alg-communityareas__area {
+      min-width: 50%; 
+      padding: 0 20px;
+
+      &:first-child {
+        text-align: center;
+      }
+    }
+
+    button {
+      border: 2px solid rgba(157, 157, 189, 1);
+      background-color: transparent;
+      border-radius: 25px;
+      color: $bunting;
+      font-size: 16px;
+      padding: em(7,16) em(30,16);
+      margin: 0 auto em(30,16) auto;
+      display: block;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin: em(30,18) 0 em(14,18) 0;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    p {
+      min-height: 6em;
+      max-width: 70%;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: em(27,15);
+      font-weight: 400;
+    }
+  }
+
+  .alg-communityprojects {
+    position: relative;
+    max-width: 1160px;
+    margin: em(72,16) auto 0 auto;
+
+    .alg-communityprojects__search {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        margin: 0;
+        font-size: 26px;
+        color: $bunting;
+      }
+
+      input {
+        margin-left: em(30,16);
+        border: 1px solid #9D9DBD;
+        color: #9D9DBC;
+        font-size: 16px;
+        padding: em(8,16) em(20,16) em(8,16) em(56,16);
+        border-radius: 25px;
+        min-width: 320px;
+      }
+    }
+  }
+
+  .alg-communityprojects__hits {
+    margin-top: em(70,14);
+
+    .ais-hits--item:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .ais-hits--item {
+    width: 23%;
+    float: left;
+    margin-right: 2.66%;
+
+    &:nth-child(4n){
+      margin-right: 0%;
+    }
+  }
+
+  .alg-communityhit {
+    box-shadow: 0 1px 3px 0 #C0C8D9;
+    border-radius: 4px;
+    padding-top: em(54,14);
+    position: relative;
+    margin-top: 70px;
+
+    .alg-communityhit__stats {
+      display: flex;
+      text-align: center;
+      border-top: 1px solid #F5F5FD;
+      min-height: 34px;
+
+      svg {
+        vertical-align: middle;
+      }
+
+      a {
+        color: #C0C8D9;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+          color: $bunting;
+        }
+      }
+
+      .alg-communitystat {
+        flex: 0 0 33%;
+        padding: em(6,14) 0;
+
+        &:not(:last-child) {
+          border-right: 1px solid #F5F5FD;
+        }
+      }
+    }
+
+    .alg-communityhit__icon {
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      top:0;
+      left: 50%;
+      transform: translate(-50%,-34px);
+    }
+
+    .alg-communityhit__type {
+      color: $hitType;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    .alg-communityhit__name {
+      color: $bunting;
+      font-size: 19px;
+      font-weight: 400;
+      margin: em(5,19) 0 em(7,19) 0;
+    }
+
+    .alg-communityhit__description {
+      color: #69719B;
+      font-size: 13px;
+      line-height: em(20,13);
+      margin: 0 0 em(24,13) 0;
+      min-height: 3em;
+    }
+
+    .alg-communityhit__details {
+      padding: 0 20px;
+    }
+  }
+}
