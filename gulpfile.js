@@ -39,6 +39,13 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
 
+
+const algolia = require('algoliasearch');
+const config = require('./config.json');
+const async = require('async');
+const _ = require('lodash');
+const fs = require('fs');
+
 // *************************************
 //
 // Available tasks:
@@ -267,6 +274,42 @@ gulp.task('s3-deploy', ['build:prod'], function() {
     .pipe(publisher.cache())
     .pipe(awspublish.reporter());
 });
+
+// -------------------------------------
+//   Task: Algolia
+// -------------------------------------
+
+gulp.task('export:algolia-index', function(){
+  var client = algolia(config.algolia.appID, config.algolia.apiKey);
+  var index = client.initIndex(config.algolia.index);
+  fs.readFile('src/community-projects.json', 'utf8', function (err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    var data = _.chunk(JSON.parse(data), [size=100]);
+    return index.clearIndex(function(err, content) {
+      index.waitTask(content.taskID, function() {
+        async.each(data, function(batch, callback) {
+          index.addObjects(batch, function(err, result){
+            index.waitTask(result.taskID, function() {
+              console.log('Indexed '+ batch.length + ' objects');
+              callback();
+            });
+          });
+        }, function(err){
+          console.log(err);
+        });
+      });
+    });
+  });
+});
+
+gulp.task('export:algolia-settings', function(){
+  var client = algolia(config.algolia.appID, config.algolia.apiKey);
+  var index = client.initIndex(config.algolia.index);
+  index.setSettings(config.algolia.settings,function(err, content) {});
+});
+
 
 // -------------------------------------
 //   Task: Deploy Github Page

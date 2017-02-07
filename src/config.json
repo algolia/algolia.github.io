@@ -1,0 +1,50 @@
+{
+  "algolia": {
+    "appID": "",
+    "apiKey": "",
+    "index": "algolia-community",
+    "settings": {
+      "minWordSizefor1Typo": 4,
+      "minWordSizefor2Typos": 8,
+      "hitsPerPage": 20,
+      "maxValuesPerFacet": 100,
+      "attributesToIndex":
+       [],
+      "numericAttributesToIndex": null,
+      "attributesToRetrieve": null,
+      "allowTyposOnNumericTokens": false,
+      "ignorePlurals": true,
+      "advancedSyntax": false,
+      "removeStopWords": false,
+      "replaceSynonymsInHighlight": false,
+      "distinct": false,
+      "unretrievableAttributes": null,
+      "optionalWords":
+       [],
+      "attributesForFaceting":
+       [],
+      "attributesToSnippet": null,
+      "attributesToHighlight": null,
+      "attributeForDistinct": null,
+      "synonyms":
+       [],
+      "ranking":
+       [ "typo",
+         "geo",
+         "words",
+         "filters",
+         "proximity",
+         "attribute",
+         "exact",
+         "custom" ],
+      "customRanking": [],
+      "separatorsToIndex": "+-%/",
+      "removeWordsIfNoResults": "none",
+      "queryType": "prefixAll",
+      "highlightPreTag": "<em>",
+      "highlightPostTag": "</em>",
+      "snippetEllipsisText": "",
+      "typoTolerance": "true"
+    }
+  }
+}
