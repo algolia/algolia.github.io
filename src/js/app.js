@@ -2,10 +2,11 @@ const analytics = require('./analytics.js');
 const templates = require('./templates.js');
 const instantsearch = require('instantsearch.js');
 
+const navigation = require('./navigation.js');
+
 const APP_ID = "HXQH62TCI4";
 const API_KEY = "0b9f3069b37517348a864b7239a8abfa";
 const INDEX_NAME = "community_testing";
-
 
 window.pardotAppendIframe = function pardotAppendIframe(url) {
   var iframe = document.createElement('iframe');
@@ -31,10 +32,23 @@ window.onload = () => {
   search.start();
 }
 
+const DefaultContainer = document.querySelector('#alg-communitycontainer--default');
+const SearchContainer = document.querySelector('#alg-communitycontainer');
+
 let search = instantsearch({
   appId: APP_ID,
   apiKey: API_KEY,
-  indexName: INDEX_NAME
+  indexName: INDEX_NAME,
+  searchFunction: (helper) => {
+    if(helper.state.query == ""){
+      DefaultContainer.style.display = "flex";
+      SearchContainer.style.display = "none";
+    } else {
+      DefaultContainer.style.display = "none";
+      SearchContainer.style.display = "flex";
+      helper.search()
+    }
+  }
 });
 
 // add a searchBox widget
@@ -45,10 +59,21 @@ search.addWidget(
   })
 );
 
+search.addWidget(
+  instantsearch.widgets.menu({
+    container: '.alg-communityprojects__facets__is',
+    attributeName: 'type',
+    limit: 10,
+    templates: {
+      item: templates.menuTemplate
+    }
+  })
+);
+
 // add a hits widget
 search.addWidget(
   instantsearch.widgets.hits({
-    container: '.alg-communityprojects__hits',
+    container: '.alg-communityprojects__hits__is',
     hitsPerPage: 10,
     templates:{
       item: templates.hitTemplate,

@@ -33,3 +33,16 @@ body {
   font-size: 1em;
   float: left;
 }
+
+button {
+  cursor: pointer;
+  transition: 100ms ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.96);
+  }
+}

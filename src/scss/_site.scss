@@ -1,5 +1,107 @@
 $hitType: #5BA2D2;
 
+@keyframes handAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+$colorTypeMap: (
+  ('Libra', #1DAEFC),
+  ('Plugins', #3369E7),
+  ('Tools', #8E43E7),
+  ('Demos', #2DDE98),
+  ('Learn', #FC4F81),
+  ('Api Clients', #050F2C)
+);
+
+.alg-header {
+  width: 100%;
+  padding-top: em(16,16);
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%,0);
+  z-index: 10;
+  padding: 16px 20px;
+
+  .alg-header__container {
+    max-width: 1160px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .alg-headerhome {
+    display: flex;
+  }
+
+  .alg-headermenu {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,0);
+
+    .alg-headermenu__links {
+      display: flex;
+      padding-left: 0;
+      list-style-type: none;
+      color: white;
+
+      > li {
+        padding-right: 16px;
+        font-size: 16px;
+        font-weight: 300;
+
+        &:not(:last-child) {
+          margin-right: em(35,16);
+        }
+      }
+    }
+  }
+
+  .alg-headerhome__search {
+    margin-right: em(35,14);
+
+    input {
+      border:none;
+      appearance: none;
+      background-color: transparent;
+    }
+  }
+ 
+  .alg-headerhome__link {
+
+    a {
+      font-weight: 300;
+      color: white;
+      text-decoration: none;
+      padding-right: 12px;
+      font-size: 16px;
+
+      svg {
+        transform: rotate(-90deg) translateY(12px);
+      }
+    }
+  }
+}
+
 .alg-community {
 
   .alg-communityheader {
@@ -25,6 +127,15 @@ $hitType: #5BA2D2;
       font-size: 36px;
       font-weight: 400;
       padding: em(117,36) em(20,36) 0 em(20,36);
+
+      span {
+        display: inline-block;
+        transform-origin: left 20% bottom 10%;
+      }
+
+      &:hover span {
+        animation: handAnimation 500ms 200ms ease forwards;
+      }
 
       & + p {
         font-size: 21px;
@@ -72,6 +183,14 @@ $hitType: #5BA2D2;
       margin: 0 auto em(30,16) auto;
       display: block;
       font-weight: 400;
+
+      svg {
+        transform: translate(6px, 0) rotate(-90deg);
+      }
+
+      &:hover {
+        background-color: #9D9DC0;
+      }
     }
 
     h3 {
@@ -94,7 +213,7 @@ $hitType: #5BA2D2;
   .alg-communityprojects {
     position: relative;
     max-width: 1160px;
-    margin: em(72,16) auto 0 auto;
+    margin: em(72,16) auto em(72,16) auto;
 
     .alg-communityprojects__search {
       display: flex;
@@ -104,22 +223,167 @@ $hitType: #5BA2D2;
         margin: 0;
         font-size: 26px;
         color: $bunting;
+        font-weight: 400;
+      }
+
+      #alg-community__search {
+        flex: 1;
+      }
+
+      .ais-search-box {
+        width: 100%;
+        max-width: 320px;
+        border: 1px solid #9D9DBD;
+        margin-left: em(30,16);
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width:44px;
+          left:0;
+          height: 100%;
+          background-color: #F2F2F6;
+          border-radius: 25px 0 0 25px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='none' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          background-position: center;
+          background-repeat: no-repeat;
+        }
       }
 
       input {
-        margin-left: em(30,16);
-        border: 1px solid #9D9DBD;
+        border:none;
+        width: 100%;
+        border-radius: 25px;
+        background-color: transparent;
         color: #9D9DBC;
         font-size: 16px;
         padding: em(8,16) em(20,16) em(8,16) em(56,16);
-        border-radius: 25px;
-        min-width: 320px;
+
+        &:focus {
+          outline: none;
+        }
       }
+    }
+
+    .alg-communitycontainer {
+      max-width: 1160px;
+      margin-top: em(70,14);
+      display: flex;
+    }
+
+    .ais-hits {
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  
+  .alg-communityprojects__facets {
+    width: 20%;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .ais-menu--item {
+      font-size: 16px;
+      color: #182359;
+      position: relative;
+      line-height: em(40,16);
+      cursor: pointer;
+
+      &:hover .alg-facet__tile {
+        transform: translate(6px, -50%) scaleY(.7);
+      }
+    }
+
+    .alg-facet__tile {
+      position: absolute;
+      left:0;
+      top:50%;
+      height:20px;
+      width: 3px;
+      transform: translate(0,-50%);
+      transition: 170ms ease;
+    }
+
+    @each $type in $colorTypeMap {
+      .alg-facet__tile[data-type^="#{nth($type, 1)}"] {
+        background-color: nth($type,2)
+      }
+    }
+
+    .alg-facet__name {
+      display: inline-block;
+      background-color: #FFF;
+      padding-left: 14px;
+      padding-right: 2px;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        border-bottom: 1px dashed #C0C8D9;
+        z-index: -1;
+      }
+    }
+
+    .alg-facet__number {
+      float: right;
+      background-color: #FFF;
     }
   }
 
   .alg-communityprojects__hits {
-    margin-top: em(70,14);
+    width: 80%;
+    padding-left: 40px;
+
+    header:hover {
+        
+      .alg-communityprojects__hitstype:after {
+        width: 40px;
+      }
+    }
+
+    .alg-communityprojects__hitstype {
+      color: #1F3B5D;
+      font-size: 18px;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        content:"";
+        position: absolute;
+        width: 27px;
+        height: 3px;
+        left:0;
+        bottom:-10px;
+        transition: 380ms ease;
+        transform-origin: left center;
+      }
+
+      @each $type in $colorTypeMap {
+        &[data-type^="#{nth($type, 1)}"]:after {
+          background-color: nth($type,2)
+        }
+      }
+    }
+
+    .alg-communityprojects__hitsdesc {
+      margin-top: 2px;
+      color: #9D9DBC;
+      font-weight: 300;
+    }
 
     .ais-hits--item:after {
       content: "";
@@ -149,7 +413,12 @@ $hitType: #5BA2D2;
     border-radius: 4px;
     padding-top: em(54,14);
     position: relative;
-    margin-top: 70px;
+    margin-top: 32px;
+    transition: .25s ease;
+
+    &:hover {
+      transform: translate(0,-8px);
+    }
 
     .alg-communityhit__stats {
       display: flex;
@@ -188,6 +457,12 @@ $hitType: #5BA2D2;
       top:0;
       left: 50%;
       transform: translate(-50%,-34px);
+
+      svg {
+        fill: transparent;
+        width: 84px;
+        height: 87px;
+      }
     }
 
     .alg-communityhit__type {

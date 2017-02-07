@@ -2,7 +2,9 @@ exports.hitTemplate = (hit) => `
   <article class="alg-communityhit">
     <div class="alg-communityhit__details">
       <div class="alg-communityhit__icon">
-        <svg width="84" height="87" viewBox="0 0 84 87" xmlns="http://www.w3.org/2000/svg"><path d="M54.86 61.857c-5.56 4.328-12.52 6.9-20.072 6.9-18.228 0-33.005-14.99-33.005-33.483C1.783 16.782 16.56 1.79 34.788 1.79c18.23 0 33.006 14.992 33.006 33.484 0 8.845-3.38 16.89-8.902 22.874l2.796 2.796.874-.875c.782-.782 2.055-.776 2.83-.002l16.394 16.396c.78.78.784 2.043 0 2.828l-5.74 5.738c-.78.78-2.053.775-2.827 0L56.822 68.636c-.78-.78-.783-2.043.002-2.828l.993-.993-2.958-2.957zm-20.072 1.32c15.19 0 27.505-12.492 27.505-27.903 0-15.41-12.314-27.903-27.505-27.903-15.19 0-27.504 12.494-27.504 27.904s12.314 27.904 27.504 27.904z" stroke="#3369E7" stroke-width="2" fill="#FFF" fill-rule="evenodd" stroke-opacity=".182"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="#icon-${hit.icon}"></use>
+        </svg>
       </div>
       <p class="alg-communityhit__type">${hit.type}</p>
       <h3 class="alg-communityhit__name">${hit.name}</h3>
@@ -29,4 +31,10 @@ exports.hitTemplate = (hit) => `
       </div>
     </div>
   </article>
+`;
+
+exports.menuTemplate = (menuItem) => `
+  <span class="alg-facet__tile" data-type="${menuItem.name}"></span>
+  <span class="alg-facet__name">${menuItem.name}</span>
+  <span class="alg-facet__number">${menuItem.count}</span>
 `;
