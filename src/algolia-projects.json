@@ -7,6 +7,7 @@
     url_forum: "" ;
     discussion_count: "" ;
     icon: "" ;
-    featured: false
+    featured: false ;
+    objectID: ""
   }
 ]
