@@ -1,13 +1,14 @@
 [
-  { name: "autocomplete.js" ;
-    category: "Tool" ;
-    description: "Display as-you-type search results with a dropdown." ;
-    url_home: false ;
-    url_github: "https://github.com/algolia/autocomplete.js" ;
-    url_forum: "" ;
-    discussion_count: "" ;
-    icon: "" ;
-    featured: false ;
-    objectID: ""
+  { "name": "autocomplete.js",
+    "category": "Tool",
+    "description": "Display as-you-type search results with a dropdown.",
+    "url_home": false,
+    "url_github": "https://github.com/algolia/autocomplete.js",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "",
+    "featured": false ,
+    "objectID": "",
+    "ranking": 1000
   }
 ]
