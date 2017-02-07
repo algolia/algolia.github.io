@@ -43,6 +43,7 @@
   "dependencies": {
     "browsernizr": "^2.1.0",
     "instantsearch.js": "^1.10.5",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "mo-js": "^0.288.1"
   }
 }

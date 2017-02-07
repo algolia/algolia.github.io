@@ -1,3 +1,30 @@
+
+//---------------------------
+//  Bem helper
+//---------------------------
+@mixin component($component, $element: false, $modifier: false) {
+  @if $element !=false and $modifier==false {
+    .cm-#{$component}__#{$element} {
+      @content
+    }
+  }
+  @if $element !=false and $modifier !=false {
+    .cm-#{$component}__#{$element}--#{$modifier} {
+      @content
+    }
+  }
+  @if $element==false and $modifier !=false {
+    .cm-#{$component}--#{$modifier} {
+      @content
+    }
+  }
+  @else if $element==false and $modifier==false {
+    .cm-#{$component} {
+      @content
+    }
+  }
+}
+
 //---------------------------
 //  Detect retina screen
 //---------------------------
