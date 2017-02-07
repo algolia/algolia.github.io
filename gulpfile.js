@@ -282,7 +282,7 @@ gulp.task('s3-deploy', ['build:prod'], function() {
 gulp.task('export:algolia-index', function(){
   var client = algolia(config.algolia.appID, config.algolia.apiKey);
   var index = client.initIndex(config.algolia.index);
-  fs.readFile('src/community-projects.json', 'utf8', function (err, data) {
+  fs.readFile('src/algolia-projects.json', 'utf8', function (err, data) {
     if (err) {
       return console.log(err);
     }
