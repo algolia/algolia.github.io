@@ -6,7 +6,7 @@
     "url_github": "https://github.com/algolia/autocomplete.js",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "autocomplete.js",
+    "icon": "autocomplete",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -18,7 +18,7 @@
     "url_github": "https://github.com/algolia/instantsearch.js",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "go",
+    "icon": "instantsearch",
     "featured": false ,
     "objectID": "",
     "ranking": 1000

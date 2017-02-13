@@ -78,7 +78,7 @@ const renderItem = (data) => {
     <article class="alg-communityhit">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
-          <div class="alg-communityhit__iconcontainer" style="background-color: ${colors[data.category]}">
+          <div id="icon-${data.name.replace('.js','').toLowerCase()}" class="alg-communityhit__iconcontainer" style="background-color: ${colors[data.category]}">
             <img src="/img/projects/${data.icon}.svg" alt="" />
           </div>
           <svg class="icon-glass" width="84px" height="87px" viewBox="0 0 84 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
