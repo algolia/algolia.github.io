@@ -22,12 +22,13 @@ $hitType: #5BA2D2;
 }
 
 $colorTypeMap: (
+  ('Represent',#000),
   ('Libra', #1DAEFC),
-  ('Plugins', #3369E7),
-  ('Tools', #8E43E7),
-  ('Demos', #2DDE98),
+  ('Plugin', #3369E7),
+  ('Tool', #8E43E7),
+  ('Demo', #2DDE98),
   ('Learn', #FC4F81),
-  ('Api Clients', #050F2C)
+  ('API Client', #050F2C)
 );
 
 .alg-header {
@@ -212,8 +213,9 @@ $colorTypeMap: (
 
   .alg-communityprojects {
     position: relative;
-    max-width: 1160px;
+    max-width: 1200px;
     margin: em(72,16) auto em(72,16) auto;
+    padding: 0 20px;
 
     .alg-communityprojects__search {
       display: flex;
@@ -298,6 +300,10 @@ $colorTypeMap: (
       line-height: em(40,16);
       cursor: pointer;
 
+      a {
+        color: inherit;
+      }
+
       &:hover .alg-facet__tile {
         transform: translate(6px, -50%) scaleY(.7);
       }
@@ -332,7 +338,7 @@ $colorTypeMap: (
         position: absolute;
         right: 0;
         bottom: 14px;
-        border-bottom: 1px dashed #C0C8D9;
+        border-bottom: 1px dashed #E2E2E2;
         z-index: -1;
       }
     }
@@ -359,7 +365,6 @@ $colorTypeMap: (
       font-size: 18px;
       font-weight: 400;
       position: relative;
-      display: inline-block;
 
       &:after {
         content:"";

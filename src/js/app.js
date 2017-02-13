@@ -4,9 +4,112 @@ const instantsearch = require('instantsearch.js');
 
 const navigation = require('./navigation.js');
 
-const APP_ID = "HXQH62TCI4";
-const API_KEY = "0b9f3069b37517348a864b7239a8abfa";
-const INDEX_NAME = "community_testing";
+const projects = require('./../algolia-projects.json');
+const config = require('./../../config.json');
+
+let { appID, apiKey, index } = config.algolia;
+
+appID = "HXQH62TCI4";
+apiKey = "0b9f3069b37517348a864b7239a8abfa";
+index = "community_testing";
+
+const sortProjectsByCategory = (projects) => {
+  let sorted = {};
+  projects.sort((a, b) => {
+    const catA = a.category,
+          catB = b.category;
+    if(catA > catB) return -1;
+    else if ( catA < catB ) return 1;
+    return 0;
+  });
+
+  projects.forEach((p, index) => {
+    if(!sorted[p.category]){
+      sorted[p.category] = [];
+    }
+    sorted[p.category].push(p);
+  });
+  return sorted;
+}
+
+const renderResults = (projects) => {
+
+  const injectInside = document.querySelector(".alg-communityprojects__hits");
+
+  Object.keys(projects).forEach(cat => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "alg-communityprojects__hitswrapper";
+    wrapper.innerHTML = renderCategoryTemplate(cat);
+    const wrapperHits = wrapper.querySelector('.ais-hits');
+
+    if(projects[cat] && projects[cat].length) {
+      const categoryArray = projects[cat];
+      categoryArray.forEach(project => {
+        const article = renderItem(project);
+        wrapperHits.appendChild(article);
+      });
+    }
+    injectInside.appendChild(wrapper);
+  });
+}
+
+const renderCategoryTemplate = (category) => {
+  return `
+    <header>
+      <h3 class="alg-communityprojects__hitstype" data-type="${category}">${category}</h3>
+      <p>${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
+    </header>
+    <div class="ais-hits"></div>
+  `
+}
+
+const renderItem = (data) => {
+  const wrapperDiv = document.createElement("div");
+  wrapperDiv.className = "ais-hits--item";
+  wrapperDiv.innerHTML = `
+    <article class="alg-communityhit">
+      <div class="alg-communityhit__details">
+        <div class="alg-communityhit__icon">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${data.icon}"></use>
+          </svg>
+        </div>
+        <p class="alg-communityhit__type">${data.category}</p>
+        <h3 class="alg-communityhit__name">${data.name}</h3>
+        <p class="alg-communityhit__description">${data.description}</p>
+      </div>
+    </article>
+  `;
+  return wrapperDiv;
+} 
+
+const renderMenuList = (projects) => {
+  const listContainer = document.querySelector(".alg-communityprojects__facets ul");
+
+  Object.keys(projects).forEach(type => {
+    const typeCategory = projects[type];
+    if(typeCategory && typeCategory.length){
+      const li = renderMenuItem(type, typeCategory.length)
+      listContainer.appendChild(li);
+    }
+  });
+}
+
+const renderMenuItem = (category, count) => {
+  const li = document.createElement("li");
+  li.className = "ais-menu--item";
+  li.innerHTML = `
+    <li class="ais-menu--item">
+      <a href="#">
+        <span class="alg-facet__tile" data-type="${category}">
+        </span><span class="alg-facet__name">${category}</span>
+        <span class="alg-facet__number">${count}</span>
+      </a>
+    </li>
+  `;
+  return li;
+}
+
 
 window.pardotAppendIframe = function pardotAppendIframe(url) {
   var iframe = document.createElement('iframe');
@@ -30,15 +133,18 @@ $('#mc_embed_signup').on('submit', function success(event) {
 
 window.onload = () => {
   search.start();
+  const sorted = sortProjectsByCategory(projects);
+  renderMenuList(sorted);
+  renderResults(sorted);
 }
 
 const DefaultContainer = document.querySelector('#alg-communitycontainer--default');
 const SearchContainer = document.querySelector('#alg-communitycontainer');
 
 let search = instantsearch({
-  appId: APP_ID,
-  apiKey: API_KEY,
-  indexName: INDEX_NAME,
+  appId: appID,
+  apiKey: apiKey,
+  indexName: index,
   searchFunction: (helper) => {
     if(helper.state.query == ""){
       DefaultContainer.style.display = "flex";
