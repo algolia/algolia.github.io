@@ -478,6 +478,29 @@ $colorTypeMap: (
         margin-left: -7px;
         background-color: blue;
         border-radius: 100%;
+        overflow: hidden;
+
+        &:before {
+          content:"";
+          display: block;
+          width:calc(100% - 8px);
+          height:calc(100% - 8px);
+          position: absolute;
+          transform: translate(4px, 4px);
+          background-color: rgba(255,255,255,.3);
+          border-radius: 150%;
+        }
+
+        &:after {
+          content:"";
+          display: block;
+          width:150%;
+          height:150%;
+          position: absolute;
+          background-color: inherit;
+          transform: translate(2px,8px);
+          border-radius: 150%;
+        }
 
         img {
           position: absolute;
@@ -487,7 +510,28 @@ $colorTypeMap: (
           fill: transparent;
           width: 43px;
           height: auto;
+          z-index: 10;
         }
+      }
+
+      .alg-icon-tool{
+        background-color: #8E32ED;
+      }
+
+      .alg-icon-library {
+        background-color: #01ADFF;
+      }
+
+      .alg-icon-plugin {
+        background-color: #3369E7;
+      }
+
+      .alg-icon-api-client {
+        background-color: #182359;
+      }
+
+      .alg-icon-learn {
+        background-color: #FF3075;
       }
 
       #icon-zendesk img {
