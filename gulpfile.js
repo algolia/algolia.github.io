@@ -78,28 +78,25 @@ gulp.task('haml', function () {
 //   Task: Inline Svg Icons
 // -------------------------------------
 gulp.task('icons', function () {
-  var svgs = gulp.src('src/svg-icons/*.svg')
-  // .pipe(svgmin(function (file) {
-  //   var prefix = path.basename(file.relative, path.extname(file.relative));
-  //   return {
-  //     plugins: [
-  //       {removeDesc: true},
-  //       {removeDoctype: true},
-  //       {removeEmptyAttrs: true},
-  //       {removeUnknownsAndDefaults: true}, 
-  //       {removeUnusedNS: true},
-  //       {removeEditorsNSData: true},
-  //       { cleanupIds: false }
-  //     ]
-  //   }
-  // }))
-  // .pipe(cheerio({
-  //   run: function ($) {
-  //     $('[fill]').removeAttr('fill');
-  //     $('title').remove();
-  //   },
-  //   parserOptions: { xmlMode: true }
-  // }))
+  var svgs = gulp.src(['src/svg-icons/*.svg','src/img/projects/*.svg'])
+  .pipe(svgmin(function (file) {
+    var prefix = path.basename(file.relative, path.extname(file.relative));
+    return {
+      plugins: [
+        {
+          cleanupIDs: {
+          prefix: prefix + '-'
+        }
+      }
+      ]
+    }
+  }))
+  .pipe(cheerio({
+    run: function ($) {
+      $('title').remove();
+    },
+    parserOptions: { xmlMode: true }
+  }))
   .pipe(svgstore({ 
     inlineSvg: false
   }));
@@ -252,7 +249,7 @@ gulp.task('build:dev',['clean'], function(callback) {
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons','rev', callback);
 });
 
 gulp.task('build:haml', function(callback) {
