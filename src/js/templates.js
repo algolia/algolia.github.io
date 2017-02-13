@@ -34,7 +34,9 @@ exports.hitTemplate = (hit) => `
 `;
 
 exports.menuTemplate = (menuItem) => `
-  <span class="alg-facet__tile" data-type="${menuItem.name}"></span>
-  <span class="alg-facet__name">${menuItem.name}</span>
-  <span class="alg-facet__number">${menuItem.count}</span>
+  <a href="#">
+    <span class="alg-facet__tile" data-type="${menuItem.name}"></span>
+    <span class="alg-facet__name">${menuItem.name}</span>
+    <span class="alg-facet__number">${menuItem.count}</span>
+  </a>
 `;
