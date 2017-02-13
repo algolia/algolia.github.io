@@ -81,10 +81,7 @@ gulp.task('icons', function () {
     var prefix = path.basename(file.relative, path.extname(file.relative));
     return {
       plugins: [{
-        cleanupIDs: {
-          prefix: prefix + '-',
-          minify: true
-        }
+        cleanupIDs: false
       }]
     }
   }))
@@ -184,7 +181,10 @@ gulp.task('images:optim', function () {
   return gulp.src('src/img/**/*')
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [
+        {removeViewBox: false},
+        {cleanupIDs: false}
+        ],
       use: [pngquant()]
     }))
     .pipe(gulp.dest('build/img'));
