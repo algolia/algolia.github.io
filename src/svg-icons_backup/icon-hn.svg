@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="34px" viewBox="0 0 30 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-hn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" >
+        <g id="Desktop-HD"  transform="translate(-579.000000, -737.000000)" fill="#FFFFFF">
+            <g id="hackernews"  transform="translate(484.000000, 685.000000)">
+                <g id="icon-hn" transform="translate(95.000000, 52.000000)" >
+                    <path d="M22.0574574,0 L30,0 L18.7962813,21.25 L18.7962813,34 L11.800531,34 L11.800531,21.25 L0.193548387,0 L8.45168903,0 L15.4123723,14.8041663 L22.0574574,0 L22.0574574,0 L22.0574574,0 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

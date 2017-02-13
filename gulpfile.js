@@ -40,6 +40,8 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
 const favicons = require("gulp-favicons");
 
+//debug utils
+var gutil = require('gulp-util');
 
 const algolia = require('algoliasearch');
 const config = require('./config.json');
@@ -78,22 +80,30 @@ gulp.task('haml', function () {
 // -------------------------------------
 gulp.task('icons', function () {
   var svgs = gulp.src('src/svg-icons/*.svg')
-  .pipe(svgmin(function (file) {
-    var prefix = path.basename(file.relative, path.extname(file.relative));
-    return {
-      plugins: [{
-        cleanupIDs: false
-      }]
-    }
-  }))
-  .pipe(cheerio({
-    run: function ($) {
-      $('[fill]').removeAttr('fill');
-      $('title').remove();
-    },
-    parserOptions: { xmlMode: true }
-  }))
-  .pipe(svgstore({ inlineSvg: true }));
+  // .pipe(svgmin(function (file) {
+  //   var prefix = path.basename(file.relative, path.extname(file.relative));
+  //   return {
+  //     plugins: [
+  //       {removeDesc: true},
+  //       {removeDoctype: true},
+  //       {removeEmptyAttrs: true},
+  //       {removeUnknownsAndDefaults: true}, 
+  //       {removeUnusedNS: true},
+  //       {removeEditorsNSData: true},
+  //       { cleanupIds: false }
+  //     ]
+  //   }
+  // }))
+  // .pipe(cheerio({
+  //   run: function ($) {
+  //     $('[fill]').removeAttr('fill');
+  //     $('title').remove();
+  //   },
+  //   parserOptions: { xmlMode: true }
+  // }))
+  .pipe(svgstore({ 
+    inlineSvg: false
+  }));
   function fileContents (filePath, file) {
     return file.contents.toString();
   }
@@ -182,10 +192,6 @@ gulp.task('images:optim', function () {
   return gulp.src('src/img/**/*')
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [
-        {removeViewBox: false},
-        {cleanupIDs: false}
-        ],
       use: [pngquant()]
     }))
     .pipe(gulp.dest('build/img'));
@@ -266,7 +272,7 @@ gulp.task('build:dev',['clean'], function(callback) {
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', 'rev', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', callback);
 });
 
 gulp.task('build:haml', function(callback) {
