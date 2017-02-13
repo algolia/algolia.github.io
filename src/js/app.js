@@ -64,7 +64,6 @@ const renderCategoryTemplate = (category) => {
 }
 
 const renderItem = (data) => {
-  console.log(data);
   const wrapperDiv = document.createElement("div");
   wrapperDiv.className = "ais-hits--item";
   wrapperDiv.innerHTML = `
