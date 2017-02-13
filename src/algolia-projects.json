@@ -6,7 +6,7 @@
     "url_github": "https://github.com/algolia/autocomplete.js",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "autocomplete.js",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -18,7 +18,7 @@
     "url_github": "https://github.com/algolia/instantsearch.js",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "instantsearch.js",
+    "icon": "go",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -30,7 +30,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "places",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -42,7 +42,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "helper.js",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -54,7 +54,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "instantsearch-react",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -66,7 +66,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "magento",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -78,7 +78,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "wordpress",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -90,7 +90,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "zendesk",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -102,7 +102,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "jekyll",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -114,7 +114,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "woocommerce",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -126,7 +126,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "shopify",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -138,7 +138,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "javascript",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -150,7 +150,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "ror",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -162,7 +162,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "ruby",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -174,7 +174,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "django",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -186,7 +186,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "scala",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -198,7 +198,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "symfony",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -210,7 +210,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "go",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -222,7 +222,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "python",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -234,7 +234,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "node",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -246,7 +246,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "cli",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -258,7 +258,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "java",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -270,7 +270,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "tshirt",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -282,7 +282,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "superbowlsearch",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -294,7 +294,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "searchstone",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -306,7 +306,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "hackernews",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -318,7 +318,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "docsearch",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -330,7 +330,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "searchbox",
     "featured": false ,
     "objectID": "",
     "ranking": 1000
@@ -354,7 +354,7 @@
     "url_github": "",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "",
+    "icon": "grader",
     "featured": false ,
     "objectID": "",
     "ranking": 1000

@@ -7,6 +7,15 @@ const navigation = require('./navigation.js');
 const projects = require('./../algolia-projects.json');
 const config = require('./../../config.json');
 
+const colors = {
+  "Library" : "#01ADFF",
+  "Plugin" : "#3369E7",
+  "API Client": "#182359",
+  "Learn": "#FF3075",
+  "Demo": "#FF544D",
+  "Tool": "#8E32ED"
+}
+
 let { appID, apiKey, index } = config.algolia;
 
 appID = "HXQH62TCI4";
@@ -69,8 +78,11 @@ const renderItem = (data) => {
     <article class="alg-communityhit">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
-          <svg width="84px" height="87px" viewBox="0 0 84 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${data.icon}"></use>
+          <div class="alg-communityhit__iconcontainer" style="background-color: ${colors[data.category]}">
+            <img src="/img/projects/${data.icon}.svg" alt="" />
+          </div>
+          <svg class="icon-glass" width="84px" height="87px" viewBox="0 0 84 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-glass"></use>
           </svg>
         </div>
         <p class="alg-communityhit__type">${data.category}</p>
@@ -79,7 +91,7 @@ const renderItem = (data) => {
         <div class="alg-communityhit__stats">   
            <div class="alg-communitystat">   
              <a>   
-               <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use>
                </svg>    
              </a>    

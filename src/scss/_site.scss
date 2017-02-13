@@ -423,7 +423,7 @@ $colorTypeMap: (
     border-radius: 4px;
     padding-top: em(54,14);
     position: relative;
-    margin-top: 32px;
+    margin-top: 60px;
     transition: .25s ease;
 
     &:hover {
@@ -468,10 +468,36 @@ $colorTypeMap: (
       left: 50%;
       transform: translate(-50%,-34px);
 
-      svg {
-        fill: transparent;
+      .alg-communityhit__iconcontainer {
+        position: absolute;
+        transform: translate(-50%, 0px);
+        left:50%;
+        top: 7px;
+        width: 56px;
+        height: 56px;
+        margin-left: -7px;
+        background-color: blue;
+        border-radius: 100%;
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          fill: transparent;
+          width: 43px;
+          height: auto;
+        }
+      }
+
+      .icon-glass {
+        position: absolute;
+        left:50%;
+        top: 0;
         width: 84px;
         height: 87px;
+        transform: translate(-50%, 0px);
+        z-index: 10;
       }
     }
 
