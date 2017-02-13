@@ -490,6 +490,18 @@ $colorTypeMap: (
         }
       }
 
+      #icon-zendesk img {
+        margin-left: -1px;
+      }
+
+      #icon-autocomplete img {
+        width: 35px;
+      }
+
+      #icon-instantsearch img {
+        width: 30px;
+      }
+
       .icon-glass {
         position: absolute;
         left:50%;
