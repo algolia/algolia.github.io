@@ -21,15 +21,13 @@ $hitType: #5BA2D2;
   }
 }
 
-$colorTypeMap: (
-  ('Represent',#000),
-  ('Libra', #1DAEFC),
-  ('Plugin', #3369E7),
-  ('Tool', #8E43E7),
-  ('Demo', #2DDE98),
-  ('Learn', #FC4F81),
-  ('API Client', #050F2C)
-);
+$toolColor: #8E32ED;
+$libraryColor: #01ADFF;
+$pluginColor: #3369E7;
+$apiClientColor: #182359;
+$learnColor: #FF3075;
+$representColor: #2DDE98;
+$demoColor: #FF6C5F;
 
 .alg-header {
   width: 100%;
@@ -223,9 +221,9 @@ $colorTypeMap: (
 
       h1 {
         margin: 0;
-        font-size: 26px;
+        font-size: 36px;
         color: $bunting;
-        font-weight: 400;
+        font-weight: 600;
       }
 
       #alg-community__search {
@@ -235,21 +233,22 @@ $colorTypeMap: (
       .ais-search-box {
         width: 100%;
         max-width: 320px;
-        border: 1px solid #9D9DBD;
-        margin-left: em(30,16);
+        border: 1px solid #D4D8E3;
+        margin-left: em(38,14);
         border-radius: 25px;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 1px 1px 0 rgba(85,96,110,0.2);
 
         &:after {
+          color: $pluginColor;
           content: "";
           position: absolute;
           width:44px;
           left:0;
           height: 100%;
-          background-color: #F2F2F6;
           border-radius: 25px 0 0 25px;
-          background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='none' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='currentColor' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-position: center;
           background-repeat: no-repeat;
         }
@@ -300,29 +299,38 @@ $colorTypeMap: (
       line-height: em(40,16);
       cursor: pointer;
 
+      &--header {
+
+        .alg-facet__name {
+          padding-left: 0;
+        }
+      }
+
       a {
         color: inherit;
       }
 
       &:hover .alg-facet__tile {
-        transform: translate(6px, -50%) scaleY(.7);
+        transform: translate(3px, -50%) scaleY(.7);
       }
     }
 
+    .alg-facet-tool .alg-facet__tile { background-color: $toolColor }
+    .alg-facet-represent .alg-facet__tile { background-color: $representColor }
+    .alg-facet-api-client .alg-facet__tile { background-color: $apiClientColor }
+    .alg-facet-learn .alg-facet__tile { background-color: $learnColor }
+    .alg-facet-demo .alg-facet__tile { background-color: $demoColor }
+    .alg-facet-library .alg-facet__tile { background-color: $libraryColor }
+    .alg-facet-plugin .alg-facet__tile { background-color: $pluginColor }
+
     .alg-facet__tile {
       position: absolute;
-      left:0;
+      left:4px;
       top:50%;
       height:20px;
       width: 3px;
       transform: translate(0,-50%);
       transition: 170ms ease;
-    }
-
-    @each $type in $colorTypeMap {
-      .alg-facet__tile[data-type^="#{nth($type, 1)}"] {
-        background-color: nth($type,2)
-      }
     }
 
     .alg-facet__name {
@@ -346,6 +354,8 @@ $colorTypeMap: (
     .alg-facet__number {
       float: right;
       background-color: #FFF;
+      color: #9D9DBD;
+      padding-left: 3px;
     }
   }
 
@@ -355,20 +365,71 @@ $colorTypeMap: (
 
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
+
+      &:hover .alg-communityprojects__hitstype:after {
+        transform: scaleX(1.4);
+      }
     }
 
-    header:hover {
-        
-      .alg-communityprojects__hitstype:after {
-        width: 40px;
+    header {
+      position: relative;
+    }
+    
+    .alg-header-tool {
+      h3:after { background-color: $toolColor }
+      .alg-viewmore { color: $toolColor }
+    }
+
+    .alg-header-plugin {
+      h3:after { background-color: $pluginColor }
+      .alg-viewmore { color: $pluginColor }
+    }
+
+    .alg-header-represent {
+      h3:after { background-color: $representColor }
+      .alg-viewmore { color: $representColor }
+    }
+
+    .alg-header-api-client {
+      h3:after { background-color: $apiClientColor }
+      .alg-viewmore { color: $apiClientColor }
+    }
+
+    .alg-header-learn {
+      h3:after { background-color: $learnColor }
+      .alg-viewmore { color: $learnColor }
+    }
+
+    .alg-header-demo {
+      h3:after { background-color: $demoColor }
+      .alg-viewmore { color: $demoColor }
+    }
+
+    .alg-header-library {
+      h3:after { background-color: $libraryColor }
+      .alg-viewmore { color: $libraryColor }
+    }
+
+    .alg-viewmore {
+      font-size: 16px; 
+      padding-right: 18px;
+      margin-left: 20px;
+      text-decoration: none;
+      vertical-align: baseline;
+      font-weight: 400;
+
+      svg {  
+        transform: translate(6px, 0) rotate(-90deg)
       }
     }
 
     .alg-communityprojects__hitstype {
       color: #1F3B5D;
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 30px;
+      font-weight: 300;
       position: relative;
+      display: inline-block;
+      margin-bottom: em(22,30);
 
       &:after {
         content:"";
@@ -379,12 +440,6 @@ $colorTypeMap: (
         bottom:-10px;
         transition: 380ms ease;
         transform-origin: left center;
-      }
-
-      @each $type in $colorTypeMap {
-        &[data-type^="#{nth($type, 1)}"]:after {
-          background-color: nth($type,2)
-        }
       }
     }
 
@@ -408,12 +463,21 @@ $colorTypeMap: (
   }
 
   .ais-hits--item {
-    width: 23%;
+    width: 24%;
     display: inline-block;
-    margin-right: 2.66%;
+    margin-right: 1.333%;
     vertical-align: top;
 
-    &:nth-child(4n){
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      .alg-communityhit {
+        margin-top: 30px;
+      }
+    }
+
+    &:nth-child(4n) {
       margin-right: 0%;
     }
   }
@@ -441,7 +505,7 @@ $colorTypeMap: (
       }
 
       a {
-        color: #C0C8D9;
+        color: #9D9DBD;
         cursor: pointer;
         display: block;
 
@@ -451,8 +515,12 @@ $colorTypeMap: (
       }
 
       .alg-communitystat {
-        flex: 0 0 33%;
+        flex: 0 0 31%;
         padding: em(6,14) 0;
+
+        &:nth-child(2){
+          flex: 0 0 38%;
+        }
 
         &:not(:last-child) {
           border-right: 1px solid #F5F5FD;
@@ -508,30 +576,38 @@ $colorTypeMap: (
           top: 50%;
           transform: translate(-50%, -50%);
           fill: transparent;
-          width: 43px;
+          width: 50px;
           height: auto;
           z-index: 10;
         }
       }
 
       .alg-icon-tool{
-        background-color: #8E32ED;
+        background-color: $toolColor;
       }
 
       .alg-icon-library {
-        background-color: #01ADFF;
+        background-color: $libraryColor;
       }
 
       .alg-icon-plugin {
-        background-color: #3369E7;
+        background-color: $pluginColor;
       }
 
       .alg-icon-api-client {
-        background-color: #182359;
+        background-color: $apiClientColor;
       }
 
       .alg-icon-learn {
-        background-color: #FF3075;
+        background-color: $learnColor;
+      }
+
+      .alg-icon-represent {
+        background-color: $representColor;
+      }
+
+      .alg-icon-demo {
+        background-color: $demoColor;
       }
 
       #icon-zendesk img {
