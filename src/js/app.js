@@ -97,15 +97,22 @@ const sortProjectsByCategory = (projects) => {
 
 const renderResults = (projects) => {
   const injectInside = document.querySelector(".alg-communityprojects__hits");
-
   Object.keys(projects).forEach(cat => {
+    let categoryArray = projects[cat];
+    let viewMore = null;
+
+    if(categoryArray.length > 4){
+      viewMore = categoryArray.length;
+      categoryArray = categoryArray.splice(0,4)
+      viewMore -= categoryArray.length;
+    }
+    
     const wrapper = document.createElement("div");
     wrapper.className = "alg-communityprojects__hitswrapper";
-    wrapper.innerHTML = renderCategoryTemplate(cat);
+    wrapper.innerHTML = templates.headerTemplate(cat, viewMore);
     const wrapperHits = wrapper.querySelector('.ais-hits');
 
-    if(projects[cat] && projects[cat].length) {
-      const categoryArray = projects[cat];
+    if(categoryArray && categoryArray.length) {
       categoryArray.forEach(project => {
         const article = renderItem(project);
         wrapperHits.appendChild(article);
@@ -113,16 +120,6 @@ const renderResults = (projects) => {
     }
     injectInside.appendChild(wrapper);
   });
-}
-
-const renderCategoryTemplate = (category) => {
-  return `
-    <header>
-      <h3 class="alg-communityprojects__hitstype" data-type="${category}">${category}</h3>
-      <p>${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
-    </header>
-    <div class="ais-hits"></div>
-  `;
 }
 
 const renderItem = (data) => {
@@ -134,6 +131,9 @@ const renderItem = (data) => {
 
 const renderMenuList = (projects) => {
   const listContainer = document.querySelector(".alg-communityprojects__facets ul");
+  const totalProjects = Object.keys(projects).reduce((prev, current) => prev += projects[current].length, 0);
+  const totalLi = renderMenuItem("All Projects", totalProjects, true);
+  listContainer.appendChild(totalLi);
 
   Object.keys(projects).forEach(type => {
     const typeCategory = projects[type];
@@ -144,18 +144,10 @@ const renderMenuList = (projects) => {
   });
 }
 
-const renderMenuItem = (category, count) => {
+const renderMenuItem = (category, count, isHeader) => {
   const li = document.createElement("li");
   li.className = "ais-menu--item";
-  li.innerHTML = `
-    <li class="ais-menu--item">
-      <a href="#">
-        <span class="alg-facet__tile" data-type="${category}">
-        </span><span class="alg-facet__name">${category}</span>
-        <span class="alg-facet__number">${count}</span>
-      </a>
-    </li>
-  `;
+  li.innerHTML = templates.menuTemplate(category, count, isHeader)
   return li;
 }
 
@@ -220,7 +212,7 @@ search.addWidget(
     attributeName: 'category',
     limit: 10,
     templates: {
-      item: templates.menuTemplate
+      item: templates.menuTemplate_is
     }
   })
 );

@@ -39,10 +39,36 @@ exports.hitTemplate = (data) => `
     </article>
 `;
 
-exports.menuTemplate = (menuItem) => `
-  <a href="#">
-    <span class="alg-facet__tile" data-type="${menuItem.name}"></span>
-    <span class="alg-facet__name">${menuItem.name}</span>
-    <span class="alg-facet__number">${menuItem.count}</span>
-  </a>
+exports.menuTemplate = (name, value, isHeader) => `
+  <li class="${isHeader ? "ais-menu--item--header": ""} ais-menu--item alg-facet-${name.toLowerCase().split(" ").join("-")}">
+    <a href="#">
+      <span class="alg-facet__tile">
+      </span><span class="alg-facet__name">${name}</span>
+      <span class="alg-facet__number">${value}</span>
+    </a>
+  </li>
 `;
+
+exports.menuTemplate_is = (category) => `
+  <div class="ais-menu--item alg-facet-${category.name.toLowerCase().split(" ").join("-")}">
+    <a href="#">
+      <span class="alg-facet__tile">
+      </span><span class="alg-facet__name">${category.name}</span>
+      <span class="alg-facet__number">${category.count}</span>
+    </a>
+  </div>
+`;
+
+exports.headerTemplate = (category, viewMore) => {
+  const displayShowMore = typeof viewMore === "number" && viewMore > 0;
+
+  return `<header class="alg-header-${category.toLowerCase().split(" ").join("-")}">
+    <div>
+      <h3 class="alg-communityprojects__hitstype">
+      ${category}
+      ${displayShowMore ? `<a class="alg-viewmore" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg></a>` : ""}</h3>
+      <p class="alg-communityprojects__hitsdesc">${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
+  </header>
+  <div class="ais-hits"></div>`;
+}
+
