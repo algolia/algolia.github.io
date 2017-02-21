@@ -41,7 +41,7 @@ exports.hitTemplate = (data) => `
 
 exports.menuTemplate = (name, value, isHeader) => `
   <li class="${isHeader ? "ais-menu--item--header": ""} ais-menu--item alg-facet-${name.toLowerCase().split(" ").join("-")}">
-    <a href="#">
+    <a href="#" data-tag="${name}">
       <span class="alg-facet__tile">
       </span><span class="alg-facet__name">${name}</span>
       <span class="alg-facet__number">${value}</span>
