@@ -177,6 +177,13 @@ window.onload = () => {
   const sorted = sortProjectsByCategory(projects);
   renderMenuList(sorted);
   renderResults(sorted);
+
+  document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventListener('click', addTagToHelper));
+}
+
+const addTagToHelper = (event) => {
+  search.helper.toggleRefine('category', event.target.dataset.tag);
+  search.helper.search();
 }
 
 const DefaultContainer = document.querySelector('#alg-communitycontainer--default');

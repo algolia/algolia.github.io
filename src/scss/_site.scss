@@ -303,6 +303,7 @@ $demoColor: #FF6C5F;
 
         .alg-facet__name {
           padding-left: 0;
+          font-weight: bold;
         }
       }
 
@@ -337,7 +338,8 @@ $demoColor: #FF6C5F;
       display: inline-block;
       background-color: #FFF;
       padding-left: 14px;
-      padding-right: 2px;
+      padding-right: 8px;
+      font-size: 14px;
 
       &:before {
         content: "";
