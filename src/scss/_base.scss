@@ -2,7 +2,7 @@
   font-size: 14px;
 }
 
-@media (max-width: $bp-small ) {
+@media (max-width: $screen-sm ) {
   :root {
     font-size: calc(3vw + 0.4vh / 2)
   }
