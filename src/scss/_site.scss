@@ -42,7 +42,6 @@ $demoColor: #FF6C5F;
   .alg-header__container {
     max-width: 1160px;
     position: relative;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +91,6 @@ $demoColor: #FF6C5F;
       color: white;
       text-decoration: none;
       padding-right: 12px;
-      font-size: 16px;
 
       svg {
         transform: rotate(-90deg) translateY(12px);
@@ -122,8 +120,6 @@ $demoColor: #FF6C5F;
     }
 
     h1 {
-      margin: 0;
-      font-size: 36px;
       font-weight: 400;
       padding: em(117,36) em(20,36) 0 em(20,36);
 
@@ -135,17 +131,11 @@ $demoColor: #FF6C5F;
       &:hover span {
         animation: handAnimation 500ms 200ms ease forwards;
       }
-
-      & + p {
-        font-size: 21px;
-        padding-bottom: em(25,21);
-        padding: 0 em(20,21) em(25,21) em(20,21);
-      }
-    }
+    }  
   }
 
   .alg-communityareas {
-    border-radius: 4px;
+    border-radius: $border-radius-base;
     box-shadow: 0 1px 3px 0 #C0C8D9;
     display: flex;
     background-color: #FFF;
@@ -165,45 +155,22 @@ $demoColor: #FF6C5F;
 
     .alg-communityareas__area {
       min-width: 50%; 
-      padding: 0 20px;
-
-      &:first-child {
-        text-align: center;
-      }
     }
 
     button {
-      border: 2px solid rgba(157, 157, 189, 1);
-      background-color: transparent;
-      border-radius: 25px;
-      color: $bunting;
-      font-size: 16px;
-      padding: em(7,16) em(30,16);
-      margin: 0 auto em(30,16) auto;
-      display: block;
-      font-weight: 400;
 
       svg {
         transform: translate(6px, 0) rotate(-90deg);
       }
-
-      &:hover {
-        background-color: #9D9DC0;
-      }
     }
 
     h3 {
-      margin: em(30,18) 0 em(14,18) 0;
       font-weight: 400;
-      font-size: 18px;
-      text-align: center;
     }
 
     p {
       min-height: 6em;
       max-width: 70%;
-      margin: 0 auto;
-      font-size: 15px;
       line-height: em(27,15);
       font-weight: 400;
     }
@@ -212,7 +179,6 @@ $demoColor: #FF6C5F;
   .alg-communityprojects {
     position: relative;
     max-width: 1200px;
-    margin: em(72,16) auto em(72,16) auto;
     padding: 0 20px;
 
     .alg-communityprojects__search {
@@ -220,8 +186,6 @@ $demoColor: #FF6C5F;
       align-items: center;
 
       h1 {
-        margin: 0;
-        font-size: 36px;
         color: $bunting;
         font-weight: 600;
       }
@@ -271,7 +235,6 @@ $demoColor: #FF6C5F;
 
     .alg-communitycontainer {
       max-width: 1160px;
-      margin-top: em(70,14);
       display: flex;
     }
 
@@ -293,7 +256,6 @@ $demoColor: #FF6C5F;
       padding-left: 0;
     }
     .ais-menu--item {
-      font-size: 16px;
       color: #182359;
       position: relative;
       line-height: em(40,16);
@@ -413,7 +375,6 @@ $demoColor: #FF6C5F;
     }
 
     .alg-viewmore {
-      font-size: 16px; 
       padding-right: 18px;
       margin-left: 20px;
       text-decoration: none;
@@ -427,11 +388,9 @@ $demoColor: #FF6C5F;
 
     .alg-communityprojects__hitstype {
       color: #1F3B5D;
-      font-size: 30px;
       font-weight: 300;
       position: relative;
       display: inline-block;
-      margin-bottom: em(22,30);
 
       &:after {
         content:"";
@@ -638,26 +597,17 @@ $demoColor: #FF6C5F;
     .alg-communityhit__type {
       color: $hitType;
       text-transform: uppercase;
-      font-size: 11px;
       letter-spacing: 1px;
-      margin: 0;
-      padding: 0 20px;
     }
 
     .alg-communityhit__name {
       color: $bunting;
-      font-size: 19px;
       font-weight: 400;
-      margin: em(5,19) 0 em(7,19) 0;
-      padding: 0 20px;
     }
 
     .alg-communityhit__description {
       color: #69719B;
-      font-size: 13px;
       line-height: em(20,13);
-      padding: 0 20px em(24,13) 20px;
-      margin: 0;
       min-height: 3em;
     }
   }

@@ -9,9 +9,9 @@ exports.hitTemplate = (data) => `
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-glass"></use>
           </svg>
         </div>
-        <p class="alg-communityhit__type">${data.category}</p>
-        <h3 class="alg-communityhit__name">${data.name}</h3>
-        <p class="alg-communityhit__description">${data.description}</p>
+        <p class="alg-communityhit__type text-sm m-t-none m-b-none padder">${data.category}</p>
+        <h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3>
+        <p class="alg-communityhit__description text-sm m-t-none padder m-b">${data.description}</p>
         <div class="alg-communityhit__stats">   
            <div class="alg-communitystat">   
              <a>   
@@ -64,9 +64,9 @@ exports.headerTemplate = (category, viewMore) => {
 
   return `<header class="alg-header-${category.toLowerCase().split(" ").join("-")}">
     <div>
-      <h3 class="alg-communityprojects__hitstype">
+      <h3 class="alg-communityprojects__hitstype text-xl">
       ${category}
-      ${displayShowMore ? `<a class="alg-viewmore" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg></a>` : ""}</h3>
+      ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg></a>` : ""}</h3>
       <p class="alg-communityprojects__hitsdesc">${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
   </header>
   <div class="ais-hits"></div>`;

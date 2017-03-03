@@ -7,7 +7,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "autocomplete",
-    "featured": false ,
+    "featured": true ,
     "objectID": "",
     "ranking": 1000
   },
@@ -19,7 +19,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "instantsearch",
-    "featured": false ,
+    "featured": true ,
     "objectID": "",
     "ranking": 1000
   },
@@ -31,7 +31,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "places",
-    "featured": false ,
+    "featured": true ,
     "objectID": "",
     "ranking": 1000
   },
@@ -43,7 +43,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "helper.js",
-    "featured": false ,
+    "featured": true ,
     "objectID": "",
     "ranking": 1000
   },
