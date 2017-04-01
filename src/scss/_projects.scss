@@ -111,10 +111,28 @@ figure {
     }
   }
 
+  &.instantsearchreact {
+    .project-title {
+      text-align: left;
+    }
+  }
+
+  &.instantsearchandroid {
+    .project-title {
+      text-align: left;
+    }
+  }
+
   &.docsearch {
     background: {
       image: url('img/bg-docsearch.jpg');
       size: 100%
+    }
+  }
+
+  &.discourse {
+    .desc {
+      color: #8995C7;
     }
   }
 
