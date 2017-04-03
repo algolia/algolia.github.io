@@ -115,11 +115,23 @@ figure {
     .project-title {
       text-align: left;
     }
+
+    @media (max-width: $bp-small){
+      .project-title {
+        text-align: center;
+      }
+    }
   }
 
   &.instantsearchandroid {
     .project-title {
       text-align: left;
+    }
+    
+    @media (max-width: $bp-small){
+      .project-title {
+        text-align: center;
+      }
     }
   }
 
