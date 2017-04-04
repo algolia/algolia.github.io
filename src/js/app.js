@@ -21,7 +21,8 @@ function assignEasterEggs(){
     'b_rgb:214062,e_displace/h_310,w_277,f_auto,c_fill/ee_pumpgirl_wsbhu8.gif': 'pumpIt',
     'f_auto,c_fill/ee_flyingsquirrels_hfuw6n.gif': 'flyingSquirrels',
     'w_277,h_150,f_auto,c_fill/ee_trainblocked_tg1wsv.gif': 'blockedTrain',
-    'w_565,h_150,f_auto,c_fill/ee_dance_lpj2nj.gif': 'dancers'
+    'w_565,h_150,f_auto,c_fill/ee_dance_lpj2nj.gif': 'dancers',
+    'f_auto,c_fill/v1491315491/RJbawzOeVYmIg_bpvg7b.gif': 'android'
   };
   for (var key in links) {
     if (links.hasOwnProperty(key)) {
