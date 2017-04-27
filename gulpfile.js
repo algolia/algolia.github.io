@@ -38,7 +38,6 @@ const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
-const favicons = require("gulp-favicons");
 
 // *************************************
 //
@@ -188,31 +187,12 @@ gulp.task('images:optim', function () {
 //   Task: Copy files
 // -------------------------------------
 gulp.task('copy', function () {
+  gulp.src('src/favicon.ico')
+   .pipe(gulp.dest('build'));
   return gulp.src('src/CNAME')
     .pipe(gulp.dest('build'));
 });
 
-// -------------------------------------
-//   Task: Favicons
-// -------------------------------------
-gulp.task("favicons", function () {
-  return gulp.src("src/favicon.png")
-    .pipe(favicons({
-      icons: {
-        android: false,
-        appleIcon: false,
-        appleStartup: false,
-        coast: false,
-        favicons: true,
-        firefox: false,
-        opengraph: false,
-        twitter: false,
-        windows: false,
-        yandex: false
-      }
-    }))
-    .pipe(gulp.dest("build/"));
-});
 
 // -------------------------------------
 //   Task: Watch
@@ -259,7 +239,7 @@ gulp.task('build:dev',['clean'], function(callback) {
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons', 'rev', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'rev', callback);
 });
 
 gulp.task('build:haml', function(callback) {
