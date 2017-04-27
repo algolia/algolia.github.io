@@ -1,5 +1,3 @@
-require('./analytics.js');
-
 var Draggable = require('./vendors/Draggable.js');
 
 // https://github.com/samthor/rippleJS, not a commonJS module

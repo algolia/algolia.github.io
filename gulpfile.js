@@ -255,7 +255,7 @@ gulp.task('rev', function () {
 //   Task: Build DEV - PROD - HAML
 // -------------------------------------
 gulp.task('build:dev',['clean'], function(callback) {
-  runSequence('scss', 'images', 'haml', 'icons', 'js', 'favicons', callback);
+  runSequence('scss', 'images', 'haml', 'icons', 'js',  callback);
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
