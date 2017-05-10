@@ -338,19 +338,6 @@
     "ranking": 1000
   },
   {
-    "name": "Docsearch",
-    "category": "Tool",
-    "description": "",
-    "url_home": "",
-    "url_github": "",
-    "url_forum": "",
-    "discussion_count": "",
-    "icon": "docsearch",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
-  },
-  {
     "name": "Searchbox",
     "category": "Tool",
     "description": "A point-and-click design tool for a search box that matches your site",
@@ -521,7 +508,7 @@
   },
   {
     "name": "Awesome Autocomplete for GitHub",
-    "category": "tool/demo",
+    "category": "Browser Extension",
     "description": "A browser extension that makes it easier to search on Github.",
     "url_home": "https://github.algolia.com/",
     "url_github": "https://github.com/algolia/github-awesome-autocomplete",

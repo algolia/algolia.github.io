@@ -11,7 +11,7 @@ let { appID, apiKey, index } = config.algolia;
 
 appID = "HXQH62TCI4";
 apiKey = "0b9f3069b37517348a864b7239a8abfa";
-index = "community_testing";
+index = "community";
 
 const sortProjectsByCategory = (projects) => {
   let sorted = {};

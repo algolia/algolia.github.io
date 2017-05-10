@@ -135,13 +135,14 @@ $demoColor: #FF6C5F;
   }
 
   .alg-communityareas {
-    border-radius: $border-radius-base;
     box-shadow: 0 1px 3px 0 #C0C8D9;
-    display: flex;
-    background-color: #FFF;
     color: $bunting;
     position: relative;
 
+    @media (min-width: $screen-sm){
+      display: flex;
+      background-color: #FFF;
+    }
     &:after {
       position: absolute;
       content:"";
@@ -154,7 +155,14 @@ $demoColor: #FF6C5F;
     }
 
     .alg-communityareas__area {
-      min-width: 50%; 
+      border-radius: $border-radius-base;
+      background-color: #FFF;
+      @media (max-width: $screen-sm){
+        margin-bottom: 20px;
+      }
+      @media (min-width: $screen-sm){
+        width: 50%;
+      }
     }
 
     button {
@@ -239,17 +247,17 @@ $demoColor: #FF6C5F;
     }
 
     .ais-hits {
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
+      display: flex;
+      flex-wrap: wrap;
     }
   }
   
   .alg-communityprojects__facets {
     width: 20%;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
 
     ul {
       list-style-type: none;
@@ -325,7 +333,14 @@ $demoColor: #FF6C5F;
 
   .alg-communityprojects__hits {
     width: 80%;
-    padding-left: 40px;
+
+    @media (min-width: $screen-sm){
+      padding-left: 40px;
+    }
+
+    @media (max-width: $screen-sm){
+      width: 100%;
+    }
 
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
@@ -391,6 +406,7 @@ $demoColor: #FF6C5F;
       font-weight: 300;
       position: relative;
       display: inline-block;
+      margin-top: 0;
 
       &:after {
         content:"";
@@ -425,9 +441,12 @@ $demoColor: #FF6C5F;
 
   .ais-hits--item {
     width: 24%;
-    display: inline-block;
-    margin-right: 1.333%;
-    vertical-align: top;
+    margin-right: 1%;
+
+    @media (max-width: $screen-md){
+      width: 46%;
+      margin-right: 2%;
+    }
 
     &:nth-child(1),
     &:nth-child(2),
@@ -435,11 +454,13 @@ $demoColor: #FF6C5F;
     &:nth-child(4) {
       .alg-communityhit {
         margin-top: 30px;
+        @media (max-width: $screen-md){
+          margin-top: 50px;
+        }
       }
     }
-
-    &:nth-child(4n) {
-      margin-right: 0%;
+    &:last-child{
+      align-self: flex-end;
     }
   }
 
@@ -448,9 +469,8 @@ $demoColor: #FF6C5F;
     border-radius: 4px;
     padding-top: em(54,14);
     position: relative;
-    margin-top: 60px;
     transition: .25s ease;
-
+    min-height: 220px;
     &:hover {
       transform: translate(0,-8px);
     }
@@ -460,6 +480,9 @@ $demoColor: #FF6C5F;
       text-align: center;
       border-top: 1px solid #F5F5FD;
       min-height: 34px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
 
       svg {
         vertical-align: middle;
@@ -603,6 +626,9 @@ $demoColor: #FF6C5F;
     .alg-communityhit__name {
       color: $bunting;
       font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .alg-communityhit__description {
