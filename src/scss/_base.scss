@@ -2,12 +2,6 @@
   font-size: 14px;
 }
 
-@media (max-width: $screen-sm ) {
-  :root {
-    font-size: calc(3vw + 0.4vh / 2)
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
