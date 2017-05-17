@@ -13,13 +13,13 @@
 //  Import variables
 //---------------------------
 
-@import "partials/buttons";
-@import "partials/_helpers";
+@import "partials/buttons",
+        "partials/_helpers",
+        "partials/_colors";
 
 //---------------------------
 //  Import all fonts
 //---------------------------
-
 @import "_fonts";
 
 
@@ -36,5 +36,5 @@
 //---------------------------
 //  Site specific CSS
 //---------------------------
-@import "_site";
-@import "_navigation";
+@import "_site",
+        "_navigation";
