@@ -521,21 +521,21 @@ $browserExtension: $java;
         flex: 1;
         text-align: center;
         a {
-          color: $bunting;
+          color: #3E396B;
         }
         
         &:not(:last-child) {
           border-right: 1px solid #F5F5FD;
         }
-
+    
         &--github:hover {
-          a { color: $radical-red }
+          a { color: $bunting }
         }
         &--discourse:hover {
-          a { color: $algolia-blue }
+          a { color: $royal-blue }
         }
         &--home:hover {
-          a { color: $algolia-blue }
+          a { color: $royal-blue }
         }
       }
     }
