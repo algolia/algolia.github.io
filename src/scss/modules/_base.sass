@@ -1,19 +1,21 @@
-//fonts
-$light: 300
-$regular: 400
-$bold: 600
 
-//breakpoints
+// Breakpoints
 $screen-xl: 2000px;
 $screen-lg: 1440px;
 $screen-md: 960px;
 $screen-sm: 768px;
 
-//colors
+// Fonts
+$light: 300
+$regular: 400
+$medium: 500
+$bold: 600
+
+// Colors
 $white: white
 $black: black
 
-//V2
+// V2
 $purple-heart: rgb(142,67,231)
 $mulberry: rgb(184,69,146)
 $radical-red: rgb(255,79,129)
@@ -24,13 +26,22 @@ $java: rgb(28,199,208)
 $algolia-blue: rgb(0,174,255)
 $royal-blue: rgb(51,105,231)
 
-$bunting: rgb(24,35,89)
-$titan-white: rgb(247,247,255)
+$bunting: rgb(62,57,107)
+$titan-white: rgb(248,250,255)
 $logan: rgb(157,157,189)
 $deep-cove: rgb(5,15,44)
 
+$port-gore: rgb(58, 69, 112)
+$east-bay: rgb(73, 85, 136)
+$portage: rgb(137, 148, 198)
+$blue-bell: rgb(166, 176, 216)
+
+$ghost: rgb(196, 200, 216)
+$athens-gray: rgb(238, 240, 247)
+
 $highlight-color: #f6624e
 
+//OLD
 $cabaret: #E7486B
 $rouge: #9C4274
 $sea-green: #13C4A5
@@ -45,7 +56,7 @@ $light-navy: #184a80
 
 $primary-color: $bunting
 $secondary-color: $titan-white
-$tertiary-color: $logan
+$tertiary-color: $portage
 
 $cloudy-blue: #c4c8d7;
 $cloudy-blue-2: #a6b0d8;
@@ -71,10 +82,19 @@ $brand-info: $algolia-blue
 $brand-warning: $koromiko
 $brand-danger: $radical-red
 
+$font-size-base: 15px
+$font-size-h1: 36px
+$font-size-h2: 30px
+$font-size-h3: 18px
+$font-size-h4: 12px
+$font-size-h5: 1em
+$font-size-h6: 1em
+$line-height-base: 1.6
+
 $body-bg: $white
 $text-color: $bunting
 
-$text-muted: $logan
+$text-muted: $portage
 
 $border-radius-base: 3px
 $border-radius-large: 3px
@@ -84,9 +104,8 @@ $link-color: $brand-primary
 $link-hover-color: darken($link-color, 15%)
 
 //fonts
-$font-family-base: "Open Sans", Helvetica, Arial, sans-serif;
-$headings-font-family: Raleway, "Times New Roman", Times, serif;
-$headings-font-weight: $light
+$font-family-base: Montserrat, Helvetica, Arial, sans-serif
+$headings-font-family: Montserrat, Helvetica, Arial, sans-serif
 $headings-small-color: darken($tertiary-color,10%)
 
 //Buttons
@@ -144,6 +163,14 @@ $tooltip-opacity: 1
 //popover
 $popover-max-width: 300px
 
+//Cards
+$card-border-transition: all 240ms ease-in-out
+
+
 //code
 $pre-bg: $bunting
 $pre-color: #C2CCCC
+
+
+// Searchboxes
+$searchbox-landing: (input-width: 300px, input-height: 50px, border-width: 2px, border-radius: 25px, input-border-color: #cccccc, input-focus-border-color: #ff2e83, input-background: white, input-focus-background: white, font-size: 14px, placeholder-color: #bbbbbb, icon: sbx-icon-search-18, icon-size: 30px, icon-position: left, icon-color: #ff2e83, icon-background: white, icon-background-opacity: 0, icon-clear: sbx-icon-clear-5, icon-clear-size: 18px)

@@ -1,39 +1,40 @@
+
 exports.hitTemplate = (data) => `
- <article class="alg-communityhit">
+ <article class="alg-communityhit elevation1 radius6 pos-rel">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
-          <div id="icon-${data.name.replace('.js','').toLowerCase()}" class="alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
+          <div id="icon-${data.name.replace('.js','').toLowerCase()}" class="elevation2 alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
             <img src="/img/projects/${data.icon}.svg" alt="" />
           </div>
-          <svg class="icon-glass" width="84px" height="87px" viewBox="0 0 84 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-glass"></use>
-          </svg>
         </div>
-        <p class="alg-communityhit__type text-sm m-t-none m-b-none padder">${data.category}</p>
+        <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder">${data.category}</p>
         <h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3>
         <p class="alg-communityhit__description text-sm m-t-none padder m-b">${data.description}</p>
-        <div class="alg-communityhit__stats">   
-           <div class="alg-communitystat">   
-             <a>   
+        <div class="alg-communityhit__stats">
+          ${data.url_github ? `
+           <div class="alg-communitystat alg-communitystat--github">   
+             <a href="${data.url_github}">   
                <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use>
                </svg>    
              </a>    
-           </div>    
-           <div class="alg-communitystat">   
-             <a>   
+           </div>`: ""}
+           ${data.url_forum ? `
+           <div class="alg-communitystat alg-communitystat--discourse">   
+             <a href="${data.url_forum}">   
                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comments"></use></svg>    
                24    
              </a>    
-           </div>    
-           <div class="alg-communitystat">   
-             <a>   
+           </div>`: ""}
+           ${data.url_home ? `    
+           <div class="alg-communitystat alg-communitystat--home">   
+             <a href="${data.url_home}">   
                <svg width="21" height="11" viewBox="0 0 21 11" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-link"></use>
                </svg>
              </a>    
-           </div>    
+           </div>`:""}    
          </div>
       </div>
     </article>

@@ -286,19 +286,6 @@
     "ranking": 1000
   },
   {
-    "name": "Free T-shirt!",
-    "category": "Represent",
-    "description": "",
-    "url_home": "",
-    "url_github": "",
-    "url_forum": "",
-    "discussion_count": "",
-    "icon": "tshirt",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
-  },
-  {
     "name": "Supersearch",
     "category": "Demo",
     "description": "Search for the videos of Super Bowl commercials, dating back decades.",
@@ -391,7 +378,7 @@
   },
   {
     "name": "Represent",
-    "category": "Represent",
+    "category": "Misc",
     "description": "Show your support with an Algolia t-shirt and stickers.",
     "url_home": "https://docs.google.com/a/algolia.com/forms/d/e/1FAIpQLScFHcqkzw8QoS-XkU1zZ4eOg77K2t88qIXrqOC-828ahyiCnQ/viewform",
     "url_github": null,
@@ -508,13 +495,13 @@
   },
   {
     "name": "Awesome Autocomplete for GitHub",
-    "category": "Browser Extension",
+    "category": "Misc",
     "description": "A browser extension that makes it easier to search on Github.",
     "url_home": "https://github.algolia.com/",
     "url_github": "https://github.com/algolia/github-awesome-autocomplete",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "awesome autocomplete for github",
+    "icon": "autocomplete",
     "featured": false,
     "objectID": "",
     "ranking": 1000

@@ -1,5 +1,5 @@
 :root {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 * {
@@ -8,10 +8,9 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 
-  @include isRetina {
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: grayscaled;
-  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscaled;
+  text-rendering: optimizeLegibility;
 }
 
 html, body {
@@ -23,9 +22,9 @@ html, body {
 
 body {
   background: #fff;
-  font-family: "Open Sans","Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  float: left;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 button {

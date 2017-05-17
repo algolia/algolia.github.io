@@ -13,6 +13,51 @@ appID = "HXQH62TCI4";
 apiKey = "0b9f3069b37517348a864b7239a8abfa";
 index = "community";
 
+const easeInOutCubic = (t, b, c, d) => {
+  return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b
+}
+
+const parentWithClass = (startingNode, matchClassName) => {
+  let node = startingNode;
+  while(node.parentNode){
+    if(node.className.split(' ').indexOf(matchClassName) > -1){
+      return node;
+    }
+    node = node.parentNode;
+  }
+}
+
+function scrollToElement(nodeOrSelector, totalTime = 400){
+  let node,
+      scrollToNode,
+      time = {};
+
+  time.start = performance.now();
+  time.total = totalTime;
+
+  if(typeof nodeOrSelector === "string"){
+    node = document.querySelectorAll(nodeOrSelector);
+    if(node.length > 1){
+      throw new Error(`Selector matches ${node.length} elements, please provide a unique selector`);
+    } 
+    scrollToNode = node[0];
+  } else {
+    scrollToNode = nodeOrSelector;
+  }
+
+  const startDistance = window.scrollY;
+  const endDistance = scrollToNode.getBoundingClientRect().top - 64;
+
+  const tick = now => {
+    const elapsed = now - time.start;
+    const position = Math.round(easeInOutCubic(elapsed, startDistance, endDistance, time.total));
+    window.scroll(0, position);
+    elapsed < time.total ? window.requestAnimationFrame(tick) : null;
+  }
+
+  window.requestAnimationFrame(tick);
+}
+
 const sortProjectsByCategory = (projects) => {
   let sorted = {};
   projects.sort((a, b) => {
@@ -34,16 +79,24 @@ const sortProjectsByCategory = (projects) => {
 
 const renderResults = (projects) => {
   const injectInside = document.querySelector(".alg-communityprojects__hits");
+  let sortedProjects = [];
+
   Object.keys(projects).forEach(cat => {
-    let categoryArray = projects[cat];
-    let viewMore = null;
+    sortedProjects.push(projects[cat])
+  });
+
+  sortedProjects.sort((a,b) => a.length < b.length);
+  
+  sortedProjects.forEach(projectsArray => {
+    let cat = projectsArray[0].category || "Misc"
+    let categoryArray = projects[cat]
+    let dummyArray = projects[cat]
+    let viewMore = null
 
     if(categoryArray.length > 4){
-      viewMore = categoryArray.length;
-      categoryArray = categoryArray.splice(0,4)
-      viewMore -= categoryArray.length;
+      viewMore = dummyArray.length - 4;
     }
-    
+
     const wrapper = document.createElement("div");
     wrapper.className = "alg-communityprojects__hitswrapper";
     wrapper.innerHTML = templates.headerTemplate(cat, viewMore);
@@ -72,13 +125,20 @@ const renderMenuList = (projects) => {
   const totalLi = renderMenuItem("All Projects", totalProjects, true);
   listContainer.appendChild(totalLi);
 
+  let sortedProjects = [];
   Object.keys(projects).forEach(type => {
     const typeCategory = projects[type];
-    if(typeCategory && typeCategory.length){
-      const li = renderMenuItem(type, typeCategory.length)
+    sortedProjects.push(typeCategory);
+  });
+
+  sortedProjects.sort((a,b) => a.length < b.length);
+
+  sortedProjects.forEach(projectArray => {
+    if(projectArray && projectArray.length){
+      const li = renderMenuItem(projectArray[0].category || "Misc", projectArray.length)
       listContainer.appendChild(li);
     }
-  });
+  })
 }
 
 const renderMenuItem = (category, count, isHeader) => {
@@ -109,14 +169,6 @@ $('#mc_embed_signup').on('submit', function success(event) {
   }
 });
 
-window.onload = () => {
-  search.start();
-  const sorted = sortProjectsByCategory(projects);
-  renderMenuList(sorted);
-  renderResults(sorted);
-
-  document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventListener('click', addTagToHelper));
-}
 
 const addTagToHelper = (event) => {
   search.helper.toggleRefine('category', event.target.dataset.tag);
@@ -171,3 +223,23 @@ search.addWidget(
     }
   })
 );
+
+function onViewMoreClick(event) {
+  event.preventDefault();
+  const parentWrapper = parentWithClass(this, "alg-communityprojects__hitswrapper");
+  parentWrapper.classList.contains('expanded') ? 
+    parentWrapper.classList.remove('expanded') : 
+    parentWrapper.classList.add('expanded');
+  scrollToElement(this);
+};
+
+const sorted = sortProjectsByCategory(projects);
+renderMenuList(sorted);
+renderResults(sorted);
+
+const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
+viewMoreLinks.forEach(l => l.addEventListener('click', onViewMoreClick));
+
+document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventListener('click', addTagToHelper));
+
+search.start();

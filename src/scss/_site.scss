@@ -21,13 +21,14 @@ $hitType: #5BA2D2;
   }
 }
 
-$toolColor: #8E32ED;
-$libraryColor: #01ADFF;
-$pluginColor: #3369E7;
-$apiClientColor: #182359;
-$learnColor: #FF3075;
-$representColor: #2DDE98;
-$demoColor: #FF6C5F;
+$toolColor: $purple-heart;
+$libraryColor: $algolia-blue;
+$pluginColor: $royal-blue;
+$apiClientColor: $bunting;
+$learnColor: $radical-red;
+$miscColor: $shamrock;
+$demoColor: $bittersweet;
+$browserExtension: $java;
 
 .alg-header {
   width: 100%;
@@ -60,12 +61,9 @@ $demoColor: #FF6C5F;
       display: flex;
       padding-left: 0;
       list-style-type: none;
-      color: white;
 
       > li {
         padding-right: 16px;
-        font-size: 16px;
-        font-weight: 300;
 
         &:not(:last-child) {
           margin-right: em(35,16);
@@ -87,8 +85,6 @@ $demoColor: #FF6C5F;
   .alg-headerhome__link {
 
     a {
-      font-weight: 300;
-      color: white;
       text-decoration: none;
       padding-right: 12px;
 
@@ -102,19 +98,19 @@ $demoColor: #FF6C5F;
 .alg-community {
 
   .alg-communityheader {
-    background: linear-gradient(324.77deg, #3369E6 0%, #4639A1 80.62%, #4B2E91 100%);
+    background: $white;
     position: relative;
 
-    @include diagonal(-6deg, #FFF,50%, false,before){
+    @include diagonal(-6deg, $titan-white ,50%, false,before){
       left: 0;
       bottom:0;
       transform: skewY(-4deg) translate(0,50%);
+      // box-shadow: inset 0 10px 40px 0 rgba(62,57,107,0.07), 0 2px 9px 0 rgba(62,57,107,0.06);
     }
 
     .alg-communityheader__container {
       max-width: 1000px;
       margin: 0 auto;
-      color: #fff;
       font-weight: 300;
       padding: 0 20px;  
     }
@@ -135,7 +131,6 @@ $demoColor: #FF6C5F;
   }
 
   .alg-communityareas {
-    box-shadow: 0 1px 3px 0 #C0C8D9;
     color: $bunting;
     position: relative;
 
@@ -183,7 +178,7 @@ $demoColor: #FF6C5F;
       font-weight: 400;
     }
   }
-
+  
   .alg-communityprojects {
     position: relative;
     max-width: 1200px;
@@ -204,36 +199,34 @@ $demoColor: #FF6C5F;
 
       .ais-search-box {
         width: 100%;
-        max-width: 320px;
-        border: 1px solid #D4D8E3;
         margin-left: em(38,14);
-        border-radius: 25px;
         overflow: hidden;
         position: relative;
-        box-shadow: 0 1px 1px 0 rgba(85,96,110,0.2);
+        background-color: $titan-white;
 
         &:after {
           color: $pluginColor;
           content: "";
           position: absolute;
           width:44px;
-          left:0;
+          left:6px;
           height: 100%;
           border-radius: 25px 0 0 25px;
           background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='currentColor' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-position: center;
           background-repeat: no-repeat;
+          opacity: .5
         }
       }
 
       input {
         border:none;
         width: 100%;
-        border-radius: 25px;
         background-color: transparent;
-        color: #9D9DBC;
-        font-size: 16px;
-        padding: em(8,16) em(20,16) em(8,16) em(56,16);
+        color: $bunting;
+        font-size: 28px;
+        padding-left: 60px;
+        border-bottom: 1px solid $portage;
 
         &:focus {
           outline: none;
@@ -287,7 +280,7 @@ $demoColor: #FF6C5F;
     }
 
     .alg-facet-tool .alg-facet__tile { background-color: $toolColor }
-    .alg-facet-represent .alg-facet__tile { background-color: $representColor }
+    .alg-facet-misc .alg-facet__tile { background-color: $miscColor }
     .alg-facet-api-client .alg-facet__tile { background-color: $apiClientColor }
     .alg-facet-learn .alg-facet__tile { background-color: $learnColor }
     .alg-facet-demo .alg-facet__tile { background-color: $demoColor }
@@ -306,7 +299,6 @@ $demoColor: #FF6C5F;
 
     .alg-facet__name {
       display: inline-block;
-      background-color: #FFF;
       padding-left: 14px;
       padding-right: 8px;
       font-size: 14px;
@@ -325,7 +317,6 @@ $demoColor: #FF6C5F;
 
     .alg-facet__number {
       float: right;
-      background-color: #FFF;
       color: #9D9DBD;
       padding-left: 3px;
     }
@@ -348,6 +339,16 @@ $demoColor: #FF6C5F;
       &:hover .alg-communityprojects__hitstype:after {
         transform: scaleX(1.4);
       }
+
+      .ais-hits--item:nth-child(4) ~ .ais-hits--item {
+        margin-top: 40px;
+      }
+
+      &:not(.expanded) {
+        .ais-hits--item:nth-child(4) ~ .ais-hits--item{
+          display: none
+        }
+      }
     }
 
     header {
@@ -362,11 +363,6 @@ $demoColor: #FF6C5F;
     .alg-header-plugin {
       h3:after { background-color: $pluginColor }
       .alg-viewmore { color: $pluginColor }
-    }
-
-    .alg-header-represent {
-      h3:after { background-color: $representColor }
-      .alg-viewmore { color: $representColor }
     }
 
     .alg-header-api-client {
@@ -387,6 +383,11 @@ $demoColor: #FF6C5F;
     .alg-header-library {
       h3:after { background-color: $libraryColor }
       .alg-viewmore { color: $libraryColor }
+    }
+
+    .alg-header-misc {
+      h3:after { background-color: $miscColor }
+      .alg-viewmore { color: $miscColor }
     }
 
     .alg-viewmore {
@@ -465,12 +466,10 @@ $demoColor: #FF6C5F;
   }
 
   .alg-communityhit {
-    box-shadow: 0 1px 3px 0 #C0C8D9;
-    border-radius: 4px;
     padding-top: em(54,14);
-    position: relative;
     transition: .25s ease;
     min-height: 220px;
+    background-color: $white;
     &:hover {
       transform: translate(0,-8px);
     }
@@ -483,31 +482,37 @@ $demoColor: #FF6C5F;
       position: absolute;
       bottom: 0;
       width: 100%;
+      justify-content: space-between;
+      align-items: center;
 
       svg {
         vertical-align: middle;
       }
 
       a {
-        color: #9D9DBD;
         cursor: pointer;
         display: block;
-
-        &:hover {
-          color: $bunting;
-        }
       }
 
       .alg-communitystat {
-        flex: 0 0 31%;
-        padding: em(6,14) 0;
-
-        &:nth-child(2){
-          flex: 0 0 38%;
+        flex: 1;
+        text-align: center;
+        a {
+          color: $bunting;
         }
-
+        
         &:not(:last-child) {
           border-right: 1px solid #F5F5FD;
+        }
+
+        &--github:hover {
+          a { color: $radical-red }
+        }
+        &--discourse:hover {
+          a { color: $algolia-blue }
+        }
+        &--home:hover {
+          a { color: $algolia-blue }
         }
       }
     }
@@ -586,8 +591,8 @@ $demoColor: #FF6C5F;
         background-color: $learnColor;
       }
 
-      .alg-icon-represent {
-        background-color: $representColor;
+      .alg-icon-misc {
+        background-color: $miscColor;
       }
 
       .alg-icon-demo {
@@ -637,4 +642,58 @@ $demoColor: #FF6C5F;
       min-height: 3em;
     }
   }
+
+  .cta-free-trial {
+    background-image: url('/img/algolia-fast-bg.svg');
+    background-size: cover;
+    height: 700px;
+
+    @include diagonal(-6deg, $titan-white, 150px, before){
+      top: -75px;
+      left: 0;
+
+      @media (min-width: 2000px){
+        top: -105px;
+        height: 200px;
+        transform: skewY(-4deg);
+      }
+
+      @media (max-width: $screen-sm){
+        display: none;
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+      color: $white;
+      font-weight: 300;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: $white;
+      font-weight: $regular;
+    }
+
+    .container {
+      max-width: $screen-md;
+      margin: 0 auto;
+      z-index: 10;
+    }
+    svg{
+      transform: translate(6px, 0) rotate(-90deg)
+    }
+    .row {
+      .col-md-6{
+        @media (min-width: $screen-sm){
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+}
+
+.svg-icons{
+  display: none;
 }
