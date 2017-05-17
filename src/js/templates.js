@@ -3,7 +3,7 @@ exports.hitTemplate = (data) => `
  <article class="alg-communityhit elevation1 radius6 pos-rel">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
-          <div id="icon-${data.name.replace('.js','').toLowerCase()}" class="elevation2 alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
+          <div id="icon-${data.name.replace('.js','').toLowerCase()}" class="elevation1 alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
             <img src="/img/projects/${data.icon}.svg" alt="" />
           </div>
         </div>
