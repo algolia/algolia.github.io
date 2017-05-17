@@ -185,12 +185,21 @@ $browserExtension: $java;
     padding: 0 20px;
 
     .alg-communityprojects__search {
-      display: flex;
-      align-items: center;
+
+      @media (min-width: $screen-sm){
+        display: flex;
+        align-items: center;
+      }
 
       h1 {
         color: $bunting;
         font-weight: 600;
+
+        @media (max-width: $screen-sm){
+          text-align: center;
+          font-size: 32px;
+          margin-bottom: 32px;
+        }
       }
 
       #alg-community__search {
@@ -199,10 +208,13 @@ $browserExtension: $java;
 
       .ais-search-box {
         width: 100%;
-        margin-left: em(38,14);
         overflow: hidden;
         position: relative;
         background-color: $titan-white;
+
+        @media (min-width: $screen-sm){
+          margin-left: em(38,14);
+        }
 
         &:after {
           color: $pluginColor;
@@ -211,11 +223,14 @@ $browserExtension: $java;
           width:44px;
           left:6px;
           height: 100%;
-          border-radius: 25px 0 0 25px;
           background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='currentColor' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-position: center;
           background-repeat: no-repeat;
-          opacity: .5
+          opacity: .5;
+
+          @media (max-width: $screen-sm) {
+            left: 0px;
+          }
         }
       }
 
@@ -227,6 +242,14 @@ $browserExtension: $java;
         font-size: 28px;
         padding-left: 60px;
         border-bottom: 1px solid $portage;
+
+        @media (max-width: $screen-sm) {
+          padding-left: 44px;
+        }
+
+        @media (max-width: 550px) {
+          font-size: 20px;
+        }
 
         &:focus {
           outline: none;
@@ -345,8 +368,8 @@ $browserExtension: $java;
       }
 
       &:not(.expanded) {
-        .ais-hits--item:nth-child(4) ~ .ais-hits--item{
-          display: none
+        .ais-hits--item:nth-child(4) ~ .ais-hits--item {
+          display: none;
         }
       }
     }
@@ -529,24 +552,13 @@ $browserExtension: $java;
         position: absolute;
         transform: translate(-50%, 0px);
         left:50%;
-        top: 7px;
-        width: 56px;
-        height: 56px;
+        top: 0px;
+        width: 78px;
+        height: 78px;
         margin-left: -7px;
-        background-color: blue;
         border-radius: 100%;
         overflow: hidden;
-
-        &:before {
-          content:"";
-          display: block;
-          width:calc(100% - 8px);
-          height:calc(100% - 8px);
-          position: absolute;
-          transform: translate(4px, 4px);
-          background-color: rgba(255,255,255,.3);
-          border-radius: 150%;
-        }
+        border: 4px solid $white;
 
         &:after {
           content:"";
@@ -572,31 +584,31 @@ $browserExtension: $java;
       }
 
       .alg-icon-tool{
-        background-color: $toolColor;
+        background-image: linear-gradient(to top right, #8E43E6 -20%, #B84592 120%);
       }
 
       .alg-icon-library {
-        background-color: $libraryColor;
+        background-image: linear-gradient(to bottom left, #00AEFF -20%, #3369E6 120%);
       }
 
       .alg-icon-plugin {
-        background-color: $pluginColor;
+        background-image: linear-gradient(to top right, #3E396B -20%, #3369E6 120%);
       }
 
       .alg-icon-api-client {
-        background-color: $apiClientColor;
+        background-image: linear-gradient(to top right, #201C38 0%, #3E396B 60%);
       }
 
       .alg-icon-learn {
-        background-color: $learnColor;
+        background-image: linear-gradient(to top right, #201C38 0%, #3E396B 60%);
       }
 
       .alg-icon-misc {
-        background-color: $miscColor;
+        background-image: linear-gradient(to bottom left, #2CDD97 -20%, #1DC5CE 120%);
       }
 
       .alg-icon-demo {
-        background-color: $demoColor;
+        background-image: linear-gradient(to top right, #FE6C5F -20%, #FFC168 120%);
       }
 
       #icon-zendesk img {
@@ -646,15 +658,16 @@ $browserExtension: $java;
   .cta-free-trial {
     background-image: url('/img/algolia-fast-bg.svg');
     background-size: cover;
-    height: 700px;
+    @media (min-width: $screen-sm) {
+      height: 700px;
+    }
 
-    @include diagonal(-6deg, $titan-white, 150px, before){
-      top: -75px;
+    @include diagonal(-6deg, $titan-white, 200px, before){
+      top: -95px;
       left: 0;
 
       @media (min-width: 2000px){
         top: -105px;
-        height: 200px;
         transform: skewY(-4deg);
       }
 
@@ -679,6 +692,12 @@ $browserExtension: $java;
       max-width: $screen-md;
       margin: 0 auto;
       z-index: 10;
+
+      @media (max-width: $screen-sm) {
+        .col-md-6 {
+          text-align: center;
+        }
+      }
     }
     svg{
       transform: translate(6px, 0) rotate(-90deg)
@@ -693,7 +712,9 @@ $browserExtension: $java;
     }
   }
 }
-
+.btn:hover{
+  box-shadow: inherit;
+}
 .svg-icons{
   display: none;
 }
