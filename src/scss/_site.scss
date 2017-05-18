@@ -153,10 +153,10 @@ $browserExtension: $java;
     .alg-communityareas__area {
       border-radius: $border-radius-base;
       background-color: #FFF;
-      @media (max-width: $screen-sm){
+      @media (max-width: $screen-sm) {
         margin-bottom: 20px;
       }
-      @media (min-width: $screen-sm){
+      @media (min-width: $screen-sm) {
         width: 50%;
       }
     }
@@ -299,7 +299,8 @@ $browserExtension: $java;
         color: inherit;
       }
 
-      &:hover .alg-facet__tile {
+      &:hover .alg-facet__tile, 
+      &__active .alg-facet__tile {
         transform: translate(3px, -50%) scaleY(.7);
       }
     }
@@ -362,7 +363,7 @@ $browserExtension: $java;
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
 
-      &:hover .alg-communityprojects__hitstype:after {
+      &:hover .alg-communityprojects__hitstype:after{
         transform: scaleX(1.4);
       }
 

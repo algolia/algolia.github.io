@@ -246,14 +246,15 @@ let search = instantsearch({
   apiKey: apiKey,
   indexName: index,
   searchFunction: (helper) => {
-    helper.search()
-    if(helper.state.query == ""){
+    const hasCategoryRefinement = helper.state.hierarchicalFacetsRefinements.category && helper.state.hierarchicalFacetsRefinements.category.length > 0;
+    if(helper.state.query == "" && !hasCategoryRefinement) {
       DefaultContainer.style.display = "block";
       SearchContainer.style.display = "none";
     } else {
       DefaultContainer.style.display = "none";
       SearchContainer.style.display = "block";
     }
+    helper.search()
   }
 });
 
@@ -303,8 +304,5 @@ renderResults(sorted);
 
 const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
 viewMoreLinks.forEach(l => l.addEventListener('click', onViewMoreClick));
-
-document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventListener('click', addTagToHelper));
-const facetLinks = [...document.querySelectorAll('.alg-communityprojects__facets')];
 
 search.start();
