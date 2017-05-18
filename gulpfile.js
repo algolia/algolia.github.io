@@ -38,7 +38,7 @@ const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
-const favicons = require("gulp-favicons");
+// const favicons = require("gulp-favicons");
 
 //debug utils
 var gutil = require('gulp-util');
@@ -198,31 +198,31 @@ gulp.task('images:optim', function () {
 //   Task: Copy files
 // -------------------------------------
 gulp.task('copy', function () {
-  return gulp.src('src/CNAME')
+  return gulp.src(['src/CNAME','src/manifest.json'])
     .pipe(gulp.dest('build'));
 });
 
-// -------------------------------------
-//   Task: Favicons
-// -------------------------------------
-gulp.task("favicons", function () {
-  return gulp.src("src/favicon.png")
-    .pipe(favicons({
-      icons: {
-        android: false,
-        appleIcon: false,
-        appleStartup: false,
-        coast: false,
-        favicons: true,
-        firefox: false,
-        opengraph: false,
-        twitter: false,
-        windows: false,
-        yandex: false
-      }
-    }))
-    .pipe(gulp.dest("build/"));
-});
+// // -------------------------------------
+// //   Task: Favicons
+// // -------------------------------------
+// gulp.task("favicons", function () {
+//   return gulp.src("src/favicon.png")
+//     .pipe(favicons({
+//       icons: {
+//         android: false,
+//         appleIcon: false,
+//         appleStartup: false,
+//         coast: false,
+//         favicons: true,
+//         firefox: false,
+//         opengraph: false,
+//         twitter: false,
+//         windows: false,
+//         yandex: false
+//       }
+//     }))
+//     .pipe(gulp.dest("build/"));
+// });
 
 // -------------------------------------
 //   Task: Watch
@@ -265,11 +265,11 @@ gulp.task('rev', function () {
 //   Task: Build DEV - PROD - HAML
 // -------------------------------------
 gulp.task('build:dev',['clean'], function(callback) {
-  runSequence('scss', 'images', 'haml', 'icons', 'js', 'favicons', callback);
+  runSequence('scss', 'images', 'haml', 'icons', 'js', callback);
 });
 
 gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons','rev', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min','rev', callback);
 });
 
 gulp.task('build:haml', function(callback) {
