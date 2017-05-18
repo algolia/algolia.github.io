@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <title>community/card/logo/stackoverflow</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="community/card/logo/stackoverflow">
-            <polyline id="path24-path" fill="#FFFFFF" points="60.7830506 57.5851358 60.7830506 71.8090591 65.4942924 71.8090591 65.4942924 52.8433923 23.1196822 52.8433923 23.1196822 71.8090591 27.830924 71.8090591 27.830924 57.5851358 60.7830506 57.5851358"></polyline>
-            <polygon id="path26-path" fill="#FFC168" points="33.0151984 51.7709324 56.0679561 46.8953399 57.0369136 51.5351075 33.9841559 56.4107"></polygon>
-            <polygon id="path26-path" fill="#FFC168" points="36.0653829 46.1374183 57.4194523 36.1294902 59.4084382 40.4272645 38.0543688 50.4351925"></polygon>
-            <polygon id="path26-path" fill="#FFC168" points="41.9746395 41.4121297 60.07554 26.2417963 63.0905574 29.8850224 44.9896568 45.0552657"></polygon>
-            <polygon id="path26-path" fill="#FFC168" points="53.6596516 40.5213059 49.8793778 37.6919484 63.9380648 18.6711461 67.7182938 21.5005487"></polygon>
-            <polygon id="path26-path" fill="#FFC168" points="32.5474072 57.5845949 56.1036609 57.5845949 56.1036609 62.3256171 32.5474072 62.3256171"></polygon>
-        </g>
-    </g>
-</svg>
+<svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><title>community/card/logo/stackoverflow</title><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M60.783 57.585V71.81h4.711V52.843H23.12V71.81h4.71V57.585h32.953"/><path fill="#FFC168" d="M33.015 51.77l23.053-4.875.969 4.64-23.053 4.876zM36.065 46.137L57.42 36.13l1.99 4.298-21.355 10.008z"/><path fill="#FFC168" d="M41.975 41.412l18.1-15.17 3.016 3.643-18.101 15.17z"/><path fill="#FFC168" d="M53.66 40.521l-3.78-2.83 14.058-19.02 3.78 2.83zM32.547 57.585h23.557v4.74H32.547z"/></g></svg>
