@@ -3,6 +3,7 @@ const path = require('path');
 const del = require('del');
 const rename = require("gulp-rename");
 const runSequence = require('run-sequence');
+const glob = require('glob');
 
 //dev
 const webserver = require('gulp-webserver');
@@ -17,12 +18,15 @@ const sass = require('gulp-sass');
 const scsslint = require('gulp-scss-lint');
 const scssLintStylish = require('gulp-scss-lint-stylish');
 const autoprefixer = require('gulp-autoprefixer');
+const critical = require('critical').stream;
 
 //html
 const haml = require('gulp-haml');
 
+//serviceworker
+const sww = require('gulp-sww');
+
 //SVG
-const inject = require('gulp-inject');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
@@ -33,11 +37,15 @@ const webpackConfig = require("./webpack.config.js");
 const jshint = require('gulp-jshint');
 
 //prod
-const rev = require('gulp-rev-mtime');
+const rev = require('gulp-rev');
+const revNapkin = require('gulp-rev-napkin');
+const revReplace = require('gulp-rev-replace');
+
 const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
+  // const favicons = require("gulp-favicons");
 
 //debug utils
 var gutil = require('gulp-util');
@@ -68,52 +76,17 @@ gulp.task('clean', function() {
 // -------------------------------------
 //   Task: Haml
 // -------------------------------------
-gulp.task('haml', function () {
+gulp.task('haml', function() {
   return gulp.src('src/*.haml')
-  .pipe(haml())
-  .pipe(gulp.dest('build'));
+    .pipe(haml())
+    .pipe(gulp.dest('build'));
 });
 
-// -------------------------------------
-//   Task: Inline Svg Icons
-// -------------------------------------
-gulp.task('icons', function () {
-  var svgs = gulp.src(['src/svg-icons/*.svg','src/img/projects/*.svg'])
-  .pipe(svgmin(function (file) {
-    var prefix = path.basename(file.relative, path.extname(file.relative));
-    return {
-      plugins: [
-        {
-          cleanupIDs: {
-          prefix: prefix + '-'
-        }
-      }
-      ]
-    }
-  }))
-  .pipe(cheerio({
-    run: function ($) {
-      $('title').remove();
-    },
-    parserOptions: { xmlMode: true }
-  }))
-  .pipe(svgstore({ 
-    inlineSvg: false
-  }));
-  function fileContents (filePath, file) {
-    return file.contents.toString();
-  }
-  return gulp
-    .src('build/index.html')
-    .pipe(inject(svgs, {transform: fileContents }))
-    .pipe(gulp.dest('build'))
-    .pipe(livereload());
-});
 
 // -------------------------------------
 //   Task: SCSS
 // -------------------------------------
-gulp.task('scss', function () {
+gulp.task('scss', function() {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -122,6 +95,22 @@ gulp.task('scss', function () {
     }))
     .pipe(gulp.dest('build'))
     .pipe(livereload());
+});
+
+gulp.task('critical-css', function() {
+  const cssFiles = glob.sync('build/*.css');
+  const htmlFiles = glob.sync('build/*.html');
+
+  return gulp.src(htmlFiles)
+    .pipe(critical({ 
+      base: 'build/',
+      inline: true, 
+      minify: true,
+      css: [ ...cssFiles ],
+      extract: true
+    }))
+    .on('error', function(err) { gutil.log(gutil.colors.red(err.message)); })
+    .pipe(gulp.dest('build'));
 });
 
 // -------------------------------------
@@ -138,7 +127,7 @@ gulp.task('scss', function () {
 // -------------------------------------
 //   Task: Minify CSS
 // -------------------------------------
-gulp.task('css:min', ['scss'], function () {
+gulp.task('css:min', ['scss'], function() {
   return gulp.src('build/*.css')
     .pipe(minifyCss())
     .pipe(gulp.dest('build'));
@@ -147,10 +136,10 @@ gulp.task('css:min', ['scss'], function () {
 // -------------------------------------
 //   Task: Javascript
 // -------------------------------------
-gulp.task('js', function () {
+gulp.task('js', function() {
   return gulp.src('src/js/app.js')
     .pipe(webpack(webpackConfig))
-    .on('error',  function(e){
+    .on('error', function(e) {
       this.emit('end'); // Recover from errors
     })
     .pipe(gulp.dest('build/js'))
@@ -169,22 +158,31 @@ gulp.task('lint:js', function() {
 // -------------------------------------
 //   Task: Minify JS
 // -------------------------------------
-gulp.task('js:min', ['js'], function () {
+gulp.task('js:min', ['js'], function() {
   return gulp.src('build/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });
 
 // -------------------------------------
+//   Task: Initialise ServiceWorker 
+// -------------------------------------
+gulp.task('offline', function() {
+  return gulp.src('**/*', { cwd: 'build' })
+    .pipe(sww())
+    .pipe(gulp.dest('build'));
+});
+
+// -------------------------------------
 //   Task: Images & Optmizations
 // -------------------------------------
-gulp.task('images', function () {
+gulp.task('images', function() {
   return gulp.src('src/img/**/*')
     .pipe(gulp.dest('build/img'))
     .pipe(livereload());
 });
 
-gulp.task('images:optim', function () {
+gulp.task('images:optim', function() {
   return gulp.src('src/img/**/*')
     .pipe(imagemin({
       progressive: true,
@@ -196,13 +194,32 @@ gulp.task('images:optim', function () {
 // -------------------------------------
 //   Task: Copy files
 // -------------------------------------
-gulp.task('copy', function () {
-  gulp.src('src/favicon.ico')
-   .pipe(gulp.dest('build'));
-  return gulp.src('src/CNAME')
+gulp.task('copy', function() {
+  return gulp.src(['CNAME'])
     .pipe(gulp.dest('build'));
 });
 
+// // -------------------------------------
+// //   Task: Favicons
+// // -------------------------------------
+// gulp.task("favicons", function () {
+//   return gulp.src("src/favicon.png")
+//     .pipe(favicons({
+//       icons: {
+//         android: false,
+//         appleIcon: false,
+//         appleStartup: false,
+//         coast: false,
+//         favicons: true,
+//         firefox: false,
+//         opengraph: false,
+//         twitter: false,
+//         windows: false,
+//         yandex: false
+//       }
+//     }))
+//     .pipe(gulp.dest("build/"));
+// });
 
 // -------------------------------------
 //   Task: Watch
@@ -212,7 +229,7 @@ gulp.task('watch', function() {
   gulp.watch('src/*.haml', ['build:haml']);
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/js/**/*.js', ['js', 'lint:js']);
-  gulp.watch('src/img/**/*',['images']);
+  gulp.watch('src/img/**/*', ['images']);
 });
 
 // -------------------------------------
@@ -232,28 +249,39 @@ gulp.task('webserver', function() {
 // -------------------------------------
 //   Task: Revision
 // -------------------------------------
-gulp.task('rev', function () {
-	return gulp.src('build/*.html')
-		.pipe(rev({
-      cwd: 'build',
-		  fileTypes: ['css','js']
-    }))
-		.pipe(gulp.dest('build'));
+gulp.task('revision', function() {
+  return gulp.src(['build/**/**/*.{css,js,png,svg,html}'])
+    .pipe(rev())
+    .pipe(gulp.dest('build'))
+    .pipe(revNapkin())
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('build'))
 });
+
+gulp.task('revreplace', ['revision'], () => {
+  const manifest = gulp.src("build/rev-manifest.json");
+  const htmlFiles = glob.sync('build/**/*')
+
+  return gulp.src(['build/*.html', 'build/js/*.js','build/*.js', 'build/*.css', 'build/manifest.json'],{ base: 'build' })
+    .pipe(revReplace({ 
+      manifest: manifest 
+    }))
+    .pipe(gulp.dest('build'))
+})
 
 // -------------------------------------
 //   Task: Build DEV - PROD - HAML
 // -------------------------------------
-gulp.task('build:dev',['clean'], function(callback) {
-  runSequence('scss', 'images', 'haml', 'icons', 'js',  callback);
+gulp.task('build:dev', ['clean'], function(callback) {
+  runSequence('scss', 'images', 'haml', 'js', callback);
 });
 
-gulp.task('build:prod',['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'icons', 'js:min', 'favicons','rev', callback);
+gulp.task('build:prod', ['clean'], function(callback) {
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'js:min', 'revreplace', 'critical-css', callback);
 });
 
 gulp.task('build:haml', function(callback) {
-  runSequence('haml', 'icons', callback);
+  runSequence('haml', callback);
 });
 
 // -------------------------------------
@@ -282,24 +310,24 @@ gulp.task('s3-deploy', ['build:prod'], function() {
 //   Task: Algolia
 // -------------------------------------
 
-gulp.task('export:algolia-index', function(){
+gulp.task('export:algolia-index', function() {
   var client = algolia(config.algolia.appID, config.algolia.apiKey);
   var index = client.initIndex(config.algolia.index);
-  fs.readFile('src/algolia-projects.json', 'utf8', function (err, data) {
+  fs.readFile('src/algolia-projects.json', 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
     }
-    var data = _.chunk(JSON.parse(data), [size=100]);
+    var data = _.chunk(JSON.parse(data), [size = 100]);
     return index.clearIndex(function(err, content) {
       index.waitTask(content.taskID, function() {
         async.each(data, function(batch, callback) {
-          index.addObjects(batch, function(err, result){
+          index.addObjects(batch, function(err, result) {
             index.waitTask(result.taskID, function() {
-              console.log('Indexed '+ batch.length + ' objects');
+              console.log('Indexed ' + batch.length + ' objects');
               callback();
             });
           });
-        }, function(err){
+        }, function(err) {
           console.log(err);
         });
       });
@@ -307,17 +335,16 @@ gulp.task('export:algolia-index', function(){
   });
 });
 
-gulp.task('export:algolia-settings', function(){
+gulp.task('export:algolia-settings', function() {
   var client = algolia(config.algolia.appID, config.algolia.apiKey);
   var index = client.initIndex(config.algolia.index);
-  index.setSettings(config.algolia.settings,function(err, content) {});
+  index.setSettings(config.algolia.settings, function(err, content) {});
 });
-
 
 // -------------------------------------
 //   Task: Deploy Github Page
 // -------------------------------------
-gulp.task('deploy',['build:prod'], function(callback) {
+gulp.task('deploy', ['build:prod'], function(callback) {
   return gulp.src('build/**/*')
-    .pipe(ghPages({branch: "master"}));
+    .pipe(ghPages({ branch: "master" }));
 });

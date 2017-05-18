@@ -283,6 +283,7 @@ search.addWidget(
     hitsPerPage: 10,
     templates:{
       item: templates.hitTemplate,
+      empty: templates.noHits
     }
   })
 );
@@ -304,5 +305,15 @@ const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
 viewMoreLinks.forEach(l => l.addEventListener('click', onViewMoreClick));
 
 document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventListener('click', addTagToHelper));
+const facetLinks = [...document.querySelectorAll('.alg-communityprojects__facets')];
 
 search.start();
+
+console.log(search.helper);
+
+
+function onFacetLinkClick(event){
+  search.helper.toggleFacetRefinement('category', 'Demo');
+}
+
+facetLinks.forEach(link => link.addEventListener('click', onFacetLinkClick));

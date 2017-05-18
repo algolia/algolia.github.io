@@ -73,3 +73,16 @@ exports.headerTemplate = (category, viewMore) => {
   <div class="ais-hits"></div>`;
 }
 
+exports.noHits = (query) => {
+  return `
+    <div class="empty-query">
+      <img src="/img/logos/community-mark-dark.svg" alt="Algolia Community"/>
+      <h4 class="m-b-none" >Your search query <span class="color-radical-red">"${query.query}"</span> did not return any search results,</br> but maybe our community can help?</h4>
+      <div class="spacer24"></div>
+      <a href="https://discourse.algolia.com" class="btn btn-static-secondary">
+        Ask our community
+      </a>
+    </div>
+  `
+}
+
