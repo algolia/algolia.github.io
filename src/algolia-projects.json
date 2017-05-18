@@ -116,19 +116,19 @@
     "objectID": "",
     "ranking": 1000
   },
-  {
-    "name": "WooCommerce",
-    "category": "Plugin",
-    "description": "Bring the power and flexibility of Algolia search to your WooCommerce store.",
-    "url_home": "https://community.algolia.com/woocommerce/",
-    "url_github": "https://github.com/algolia/algoliasearch-woocommerce/",
-    "url_forum": "",
-    "discussion_count": "",
-    "icon": "woocommerce",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
-  },
+  // {
+  //   "name": "WooCommerce",
+  //   "category": "Plugin",
+  //   "description": "Bring the power and flexibility of Algolia search to your WooCommerce store.",
+  //   "url_home": "https://community.algolia.com/woocommerce/",
+  //   "url_github": "https://github.com/algolia/algoliasearch-woocommerce/",
+  //   "url_forum": "",
+  //   "discussion_count": "",
+  //   "icon": "woocommerce",
+  //   "featured": false,
+  //   "objectID": "",
+  //   "ranking": 1000
+  // },
   {
     "name": "Shopify",
     "category": "Plugin",
