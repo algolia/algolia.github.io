@@ -238,21 +238,21 @@ const addTagToHelper = (event) => {
   search.helper.search();
 }
 
-const DefaultContainer = document.querySelector('#alg-communitycontainer--default');
-const SearchContainer = document.querySelector('#alg-communitycontainer');
+const DefaultContainer = document.querySelector('.alg-communityprojects__hits.default');
+const SearchContainer = document.querySelector('.alg-communityprojects__hits.is');
 
 let search = instantsearch({
   appId: appID,
   apiKey: apiKey,
   indexName: index,
   searchFunction: (helper) => {
+    helper.search()
     if(helper.state.query == ""){
-      DefaultContainer.style.display = "flex";
+      DefaultContainer.style.display = "block";
       SearchContainer.style.display = "none";
     } else {
       DefaultContainer.style.display = "none";
-      SearchContainer.style.display = "flex";
-      helper.search()
+      SearchContainer.style.display = "block";
     }
   }
 });
@@ -271,7 +271,8 @@ search.addWidget(
     attributeName: 'category',
     limit: 10,
     templates: {
-      item: templates.menuTemplate_is
+      item: templates.menuTemplate_is,
+      header: templates.header(projects.length)
     }
   })
 );
@@ -279,7 +280,7 @@ search.addWidget(
 // add a hits widget
 search.addWidget(
   instantsearch.widgets.hits({
-    container: '.alg-communityprojects__hits__is',
+    container: '.alg-communityprojects__hits.is',
     hitsPerPage: 10,
     templates:{
       item: templates.hitTemplate,
@@ -292,13 +293,12 @@ function onViewMoreClick(event) {
   event.preventDefault();
   const parentWrapper = parentWithClass(this, "alg-communityprojects__hitswrapper");
   parentWrapper.classList.contains('expanded') ? 
-    parentWrapper.classList.remove('expanded') : 
-    parentWrapper.classList.add('expanded');
+  parentWrapper.classList.remove('expanded') : 
+  parentWrapper.classList.add('expanded');
   scrollToElement(this);
 };
 
 const sorted = sortProjectsByCategory(projects);
-renderMenuList(sorted);
 renderResults(sorted);
 
 const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
@@ -308,12 +308,3 @@ document.querySelectorAll('.ais-menu--item a').forEach(link => link.addEventList
 const facetLinks = [...document.querySelectorAll('.alg-communityprojects__facets')];
 
 search.start();
-
-console.log(search.helper);
-
-
-function onFacetLinkClick(event){
-  search.helper.toggleFacetRefinement('category', 'Demo');
-}
-
-facetLinks.forEach(link => link.addEventListener('click', onFacetLinkClick));

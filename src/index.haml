@@ -61,7 +61,7 @@
 
   %main.alg-community
     %section.alg-communityheader
-      %header.alg-communityheader__container
+      %header.alg-communityheader__container.text-center
         %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Hi there <span>👋<span>
         .spacer8
         %p.p-l-large.text-muted.text-lg.m-t-none Algolia Community is your central hub for discovering our open source projects, getting your hands on the latest search tools, and engaging with 1000s of Algolia developers.
@@ -70,7 +70,7 @@
           .alg-communityareas__area.text-center.p-large
             %h3.text-lg We are Algolia
             %p.m-l-r-auto The API that covers your search experience.
-            %a{href: "https://algolia.com/"}
+            %a{href: "https://algolia.com/doc"}
               %button.btn-lg.btn.btn-static-primary.elevation1
                 Read the Docs
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -88,16 +88,12 @@
         .alg-communityprojects__search
           %h1.text-lg Explore Resources
           #alg-community__search
-        .spacer.spacer40
-        #alg-communitycontainer--default.alg-communitycontainer.alg-communitycontainer__default
-          .alg-communityprojects__facets
-            %ul
-              
-          %section.alg-communityprojects__hits
+        .spacer.spacer40    
 
         #alg-communitycontainer.alg-communitycontainer
           .alg-communityprojects__facets.alg-communityprojects__facets__is
-          .alg-communityprojects__hits.alg-communityprojects__hits__is
+          .alg-communityprojects__hits.default
+          .alg-communityprojects__hits.is
       .spacer120
     %section.cta-free-trial.fill-algolia-blue.pos-rel
       .spacer64.hidden-xs
@@ -110,6 +106,7 @@
             %p.color-white Don't wait! Try Algolia! No credit card required. Try Algolia for free for 14 days.
           .col-md-6.text-right
             .spacer16
+            .spacer32
             %a.btn.btn-static-dark{href: "users/sign_up"}
               Share your story
               <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
