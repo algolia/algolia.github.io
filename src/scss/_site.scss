@@ -100,6 +100,9 @@ $browserExtension: $java;
   .alg-communityheader {
     background: $white;
     position: relative;
+    background-image: url("/img/background.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 
     @include diagonal(-6deg, $titan-white ,50%, false,before){
       left: 0;
@@ -181,6 +184,7 @@ $browserExtension: $java;
     position: relative;
     max-width: 1200px;
     padding: 0 20px;
+    min-height: 800px;
 
     .alg-communityprojects__search {
 
@@ -267,6 +271,7 @@ $browserExtension: $java;
   
   .alg-communityprojects__facets {
     width: 20%;
+    min-width: 20%;
 
     @media (max-width: $screen-sm) {
       display: none;
@@ -344,6 +349,7 @@ $browserExtension: $java;
 
   .alg-communityprojects__hits {
     width: 80%;
+    min-width: 80%;
 
     @media (min-width: $screen-sm){
       padding-left: 40px;
@@ -463,6 +469,10 @@ $browserExtension: $java;
   .ais-hits--item {
     width: 24%;
     margin-right: 1%;
+
+    &:nth-child(4) ~ .ais-hits--item {
+      margin-top: 36px;
+    } 
 
     @media (max-width: $screen-md){
       width: 46%;

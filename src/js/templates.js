@@ -1,4 +1,8 @@
 
+import escape from 'html-escape'
+
+const {log} = console;
+
 exports.hitTemplate = (data) => `
  <article class="alg-communityhit elevation1 radius6 pos-rel">
       <div class="alg-communityhit__details">
@@ -9,7 +13,7 @@ exports.hitTemplate = (data) => `
         </div>
         <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder">${data.category}</p>
         <h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3>
-        <p class="alg-communityhit__description text-sm m-t-none padder m-b">${data.description}</p>
+        <p class="alg-communityhit__description text-sm m-t-none padder m-b">${escape(data.description)}</p>
         <div class="alg-communityhit__stats">
           ${data.url_github ? `
            <div class="alg-communitystat alg-communitystat--github">   
@@ -67,7 +71,7 @@ exports.headerTemplate = (category, viewMore) => {
     <div>
       <h3 class="alg-communityprojects__hitstype text-xl">
       ${category}
-      ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg></a>` : ""}</h3>
+      ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>` : ""}</h3>
       <p class="alg-communityprojects__hitsdesc">${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
   </header>
   <div class="ais-hits"></div>`;
@@ -85,4 +89,13 @@ exports.noHits = (query) => {
     </div>
   `
 }
+
+exports.header = (count) => `
+    <div class="ais-menu--item--header ais-menu--item alg-facet-all-projects">
+      <a href="#" data-tag="All Projects">
+        <span class="alg-facet__tile">
+        </span><span class="alg-facet__name">All Projects</span>
+        <span class="alg-facet__number">${count}</span>
+      </a>
+    </div>`
 
