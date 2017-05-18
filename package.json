@@ -48,7 +48,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "browsernizr": "^2.1.0",
     "html-escape": "^2.0.0",
-    "instantsearch.js": "1.11.8",
+    "instantsearch.js": "1.11.11",
     "jquery": "^2.2.0",
     "mo-js": "^0.288.1"
   }

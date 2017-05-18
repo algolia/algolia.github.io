@@ -2970,9 +2970,9 @@ ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-instantsearch.js@1.11.8:
-  version "1.11.8"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-1.11.8.tgz#8b75cef9ee04e814bec431827dbb4646dbde50ff"
+instantsearch.js@1.11.11:
+  version "1.11.11"
+  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-1.11.11.tgz#e4b6abae1942ad1c0fdd48147ad9970e39450051"
   dependencies:
     algoliasearch "^3.21.1"
     algoliasearch-helper "^2.19.0"
