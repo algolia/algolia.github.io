@@ -312,6 +312,19 @@
     "ranking": 1000
   },
   {
+    "name": "Yarn",
+    "category": "Demo",
+    "description": "Search all packages in the npm and Yarn registry.",
+    "url_home": "https://yarnpkg.com/",
+    "url_github": "https://github.com/yarnpkg/website",
+    "url_forum": "https://discourse.algolia.com/t/2016-algolia-community-gift-yarn-package-search/319",
+    "discussion_count": "",
+    "icon": "yarn",
+    "featured": false,
+    "objectID": "",
+    "ranking": 1000
+  },
+  {
     "name": "Searchbox",
     "category": "Tool",
     "description": "A point-and-click design tool for a search box that matches your site",
