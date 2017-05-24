@@ -16,29 +16,29 @@ exports.hitTemplate = (data) => `
         <p class="alg-communityhit__description text-sm m-t-none padder m-b">${escape(data.description)}</p>
         <div class="alg-communityhit__stats">
           ${data.url_github ? `
-           <div class="alg-communitystat alg-communitystat--github">   
-             <a href="${data.url_github}">   
+           <div class="alg-communitystat alg-communitystat--github">
+             <a href="${data.url_github}">
                <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-github"></use>
-               </svg>    
-             </a>    
+               </svg>
+             </a>
            </div>`: ""}
            ${data.url_forum ? `
-           <div class="alg-communitystat alg-communitystat--discourse">   
-             <a href="${data.url_forum}">   
+           <div class="alg-communitystat alg-communitystat--discourse">
+             <a href="${data.url_forum}">
                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comments"></use></svg>    
-               24    
-             </a>    
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comments"></use></svg>
+               24
+             </a>
            </div>`: ""}
-           ${data.url_home ? `    
-           <div class="alg-communitystat alg-communitystat--home">   
-             <a href="${data.url_home}">   
+           ${data.url_home ? `
+           <div class="alg-communitystat alg-communitystat--home">
+             <a href="${data.url_home}">
                <svg width="21" height="11" viewBox="0 0 21 11" xmlns="http://www.w3.org/2000/svg">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-link"></use>
                </svg>
-             </a>    
-           </div>`:""}    
+             </a>
+           </div>`:""}
          </div>
       </div>
     </article>
@@ -72,7 +72,7 @@ exports.headerTemplate = (category, viewMore) => {
       <h3 class="alg-communityprojects__hitstype text-xl">
       ${category}
       ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>` : ""}</h3>
-      <p class="alg-communityprojects__hitsdesc">${ 'Latest projects or big updates, you should definitely check that projects.' }</p> 
+      <p class="alg-communityprojects__hitsdesc">${ '' }</p> 
   </header>
   <div class="ais-hits"></div>`;
 }
@@ -98,4 +98,3 @@ exports.header = (count) => `
         <span class="alg-facet__number">${count}</span>
       </a>
     </div>`
-

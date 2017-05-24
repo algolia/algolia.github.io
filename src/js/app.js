@@ -102,7 +102,7 @@ function scrollToElement(nodeOrSelector, totalTime = 400){
     node = document.querySelectorAll(nodeOrSelector);
     if(node.length > 1){
       throw new Error(`Selector matches ${node.length} elements, please provide a unique selector`);
-    } 
+    }
     scrollToNode = node[0];
   } else {
     scrollToNode = nodeOrSelector;
@@ -149,7 +149,7 @@ const renderResults = (projects) => {
   });
 
   sortedProjects.sort((a,b) => a.length < b.length);
-  
+
   sortedProjects.forEach(projectsArray => {
     let cat = projectsArray[0].category || "Misc"
     let categoryArray = projects[cat]
@@ -180,7 +180,7 @@ const renderItem = (data) => {
   wrapperDiv.className = "ais-hits--item";
   wrapperDiv.innerHTML = templates.hitTemplate(data);
   return wrapperDiv;
-} 
+}
 
 const renderMenuList = (projects) => {
   const listContainer = document.querySelector(".alg-communityprojects__facets ul");
@@ -262,7 +262,7 @@ let search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#alg-community__search',
-    placeholder: 'Search for libraries in France...'
+    placeholder: 'search projects...'
   })
 );
 
@@ -293,8 +293,8 @@ search.addWidget(
 function onViewMoreClick(event) {
   event.preventDefault();
   const parentWrapper = parentWithClass(this, "alg-communityprojects__hitswrapper");
-  parentWrapper.classList.contains('expanded') ? 
-  parentWrapper.classList.remove('expanded') : 
+  parentWrapper.classList.contains('expanded') ?
+  parentWrapper.classList.remove('expanded') :
   parentWrapper.classList.add('expanded');
   scrollToElement(this);
 };

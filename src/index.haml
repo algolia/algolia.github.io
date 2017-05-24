@@ -44,15 +44,6 @@
         %a{href: ""}
           %img{src: "/img/logos/logo-community-darkbg.svg", alt: ""}/
 
-      .alg-headermenu.color-bunting
-          %ul.alg-headermenu__links
-            %li 
-              %a.color-bunting{href:  "", dropdown: "developers", enabled: "enabled"}
-                Developers
-            %li
-              %a.color-bunting{href:  "", dropdown: "Support", enabled: "enabled"}
-                Support
-
       .alg-headerhome
         .alg-headerhome__link
           %a.color-bunting{href: "https://www.algolia.com"}
@@ -62,33 +53,33 @@
   %main.alg-community
     %section.alg-communityheader
       %header.alg-communityheader__container.text-center
-        %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Hi there <span>👋<span>
+        %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
         .spacer8
-        %p.p-l-large.text-muted.text-lg.m-t-none Algolia Community is your central hub for discovering our open source projects, getting your hands on the latest search tools, and engaging with 1000s of Algolia developers.
+        %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
         .spacer.spacer24
         .alg-communityareas.radius6.elevation2
           .alg-communityareas__area.text-center.p-large
-            %h3.text-lg We are Algolia
-            %p.m-l-r-auto The API that covers your search experience.
+            %h3.text-lg Documentation
+            %p.m-l-r-auto Jump to the official Algolia documentation, guides and tutorials.
             %a{href: "https://algolia.com/doc"}
               %button.btn-lg.btn.btn-static-primary.elevation1
-                Read the Docs
+                Read the docs
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
           .alg-communityareas__area.text-center.p-large
             %h3.text-lg Community Forum
-            %p.m-l-r-auto The forum is a place to ask questions and increase your Algolia knowledge
+            %p.m-l-r-auto Ask questions and get the latest news. <br>Don't miss the Show & Tell category.
             %a{href: "https://discourse.algolia.com/"}
               %button.btn-lg.btn.btn-static-secondary.elevation1
-                Join the Discussion
+                Browse the forum
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
 
     %section.projects.fill-titan
       .alg-communityprojects.m-l-r-auto.pos-rel
         .spacer.spacer120
         .alg-communityprojects__search
-          %h1.text-lg Explore Resources
+          %h1.text-lg Explore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           #alg-community__search
-        .spacer.spacer40    
+        .spacer.spacer40
 
         #alg-communitycontainer.alg-communitycontainer
           .alg-communityprojects__facets.alg-communityprojects__facets__is
@@ -102,18 +93,18 @@
       .container.p-l-small.p-r-small
         .row.cf
           .col-md-6
-            %h3.color-white Share your Algolia story
-            %p.color-white Don't wait! Try Algolia! No credit card required. Try Algolia for free for 14 days.
+            %h3.color-white Built something with Algolia?
+            %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
           .col-md-6.text-right
             .spacer16
             .spacer32
-            %a.btn.btn-static-dark{href: "users/sign_up"}
-              Share your story
+            %a.btn.btn-static-dark{href: "https://discourse.algolia.com/"}
+              Visit the forum
               <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
             .spacer8
       .spacer64.hidden-xs
       .spacer120
-        
+
 
   %div{id: "fb-root"}
     %script
