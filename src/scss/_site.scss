@@ -213,10 +213,6 @@ $browserExtension: $java;
         position: relative;
         background-color: $titan-white;
 
-        @media (min-width: $screen-sm){
-          margin-left: em(38,14);
-        }
-
         &:after {
           color: $pluginColor;
           content: "";

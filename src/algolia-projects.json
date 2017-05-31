@@ -317,7 +317,7 @@
     "description": "Search all packages in the npm and Yarn registry.",
     "url_home": "https://yarnpkg.com/",
     "url_github": "https://github.com/yarnpkg/website",
-    "url_forum": "https://discourse.algolia.com/t/2016-algolia-community-gift-yarn-package-search/319",
+    "url_forum": "",
     "discussion_count": "",
     "icon": "yarn",
     "featured": false,
@@ -411,19 +411,6 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "android",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
-  },
-  {
-    "name": "Objective C",
-    "category": "API Client",
-    "description": "Algolia Search API client for Objective C",
-    "url_home": "https://www.algolia.com/doc/api-client/swift/getting-started/",
-    "url_github": "https://github.com/algolia/algoliasearch-client-objc",
-    "url_forum": "",
-    "discussion_count": "",
-    "icon": "objective c",
     "featured": false,
     "objectID": "",
     "ranking": 1000

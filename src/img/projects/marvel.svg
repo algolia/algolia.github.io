@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5827 4134" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+  <defs>
+    <style>
+    <![CDATA[ .str0 {
+      stroke: white;
+      stroke-width: 23.1496
+    }
+    
+    .fil0 {
+      fill: none
+    }
+    
+    .fil3 {
+      fill: none;
+      fill-rule: nonzero
+    }
+    
+    .fil1 {
+      fill: transparent;
+      fill-rule: nonzero
+    }
+    
+    .fil2 {
+      fill: white;
+      fill-rule: nonzero
+    }
+    
+    ]]>
+    </style>
+  </defs>
+  <g id="Layer_x0020_1">
+    <g id="_515607688">
+      <path class="fil0" d="M0 0h5827v4134H0z" />
+      <path class="fil1" d="M5652 3306H175V827h5477z" />
+      <path class="fil2" d="M4905 1179h306v1453h260v367h-566z" />
+      <path class="fil3 str0" d="M5498 1276c0 64-52 117-117 117-64 0-117-52-117-117 0-64 52-117 117-117 64 0 117 52 117 117" />
+      <path class="fil2" d="M5336 1336v-122h54c11 0 19 1 25 3s10 6 14 12c3 6 5 12 5 18 0 9-3 16-8 22-6 6-14 10-26 11 4 2 8 4 10 6 5 4 9 10 13 16l21 33h-20l-16-25c-5-7-9-13-12-17s-6-7-8-8c-2-2-5-3-7-3s-5-1-9-1h-19v54h-16zm16-68h35c7 0 13-1 17-2 4-2 7-4 10-7 2-3 3-7 3-11 0-6-2-11-6-14-4-4-11-6-20-6h-39v40zM400 2992V1179h413l147 760 167-760h400v1633l260-1633h407l253 1633V1186h540s187 33 280 293l-40-300h327l153 940 160-933h920v340h-273v373h260v380h-253v347h267v367h-593V1247l-307 1746h-367l-193-1160s-33 320-213 466l233 693h-320l-227-606v606h-646l-33-173h-247l-53 173h-613v-666l-160 666H882l-147-660v653l-333 7zm1686-526l-93-553-80 553h173zm706-420c220-13 200-287 200-287-33-267-200-253-200-253v540z" />
+    </g>
+  </g>
+</svg>
