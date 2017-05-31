@@ -1,5 +1,4 @@
 $hitType: #5BA2D2;
-
 @keyframes handAnimation {
   0% {
     transform: rotate(0deg);
@@ -16,7 +15,7 @@ $hitType: #5BA2D2;
   80% {
     transform: rotate(-10deg);
   }
-  100%{
+  100% {
     transform: rotate(0);
   }
 }
@@ -32,14 +31,13 @@ $browserExtension: $java;
 
 .alg-header {
   width: 100%;
-  padding-top: em(16,16);
+  padding-top: em(16, 16);
   position: absolute;
-  top:0;
-  left:50%;
-  transform: translate(-50%,0);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 10;
   padding: 16px 20px;
-
   .alg-header__container {
     max-width: 1160px;
     position: relative;
@@ -47,47 +45,37 @@ $browserExtension: $java;
     justify-content: space-between;
     align-items: center;
   }
-
   .alg-headerhome {
     display: flex;
   }
-
   .alg-headermenu {
     position: absolute;
-    left:50%;
-    transform: translate(-50%,0);
-
+    left: 50%;
+    transform: translate(-50%, 0);
     .alg-headermenu__links {
       display: flex;
       padding-left: 0;
       list-style-type: none;
-
       > li {
         padding-right: 16px;
-
         &:not(:last-child) {
-          margin-right: em(35,16);
+          margin-right: em(35, 16);
         }
       }
     }
   }
-
   .alg-headerhome__search {
-    margin-right: em(35,14);
-
+    margin-right: em(35, 14);
     input {
-      border:none;
+      border: none;
       appearance: none;
       background-color: transparent;
     }
   }
- 
   .alg-headerhome__link {
-
     a {
       text-decoration: none;
       padding-right: 12px;
-
       svg {
         transform: rotate(-90deg) translateY(12px);
       }
@@ -96,60 +84,58 @@ $browserExtension: $java;
 }
 
 .alg-community {
-
   .alg-communityheader {
     background: $white;
     position: relative;
     background-image: url("/img/background.svg");
     background-size: contain;
     background-repeat: no-repeat;
-
-    @include diagonal(-6deg, $titan-white ,50%, false,before){
+    @include diagonal(-6deg,
+    $titan-white,
+    50%,
+    false,
+    before) {
       left: 0;
-      bottom:0;
-      transform: skewY(-4deg) translate(0,50%);
+      bottom: 0;
+      transform: skewY(-4deg) translate(0, 50%);
     }
-
     .alg-communityheader__container {
       max-width: 1000px;
       margin: 0 auto;
       font-weight: 300;
-      padding: 0 20px;  
+      padding: 0 20px;
       &:hover span {
         animation: handAnimation 500ms 200ms ease forwards;
       }
     }
-
     h1 {
       font-weight: 400;
-      padding: em(117,36) em(20,36) 0 em(20,36);
-
+      padding: em(117, 36) em(20, 36) 0 em(20, 36);
       span {
         display: inline-block;
         transform-origin: left 20% bottom 10%;
       }
-    }  
+    }
   }
-
   .alg-communityareas {
     color: $bunting;
     position: relative;
+    z-index: 50;
 
-    @media (min-width: $screen-sm){
+    @media (min-width: $screen-sm) {
       display: flex;
       background-color: #FFF;
     }
     &:after {
       position: absolute;
-      content:"";
+      content: "";
       top: 50%;
-      left:50%;
+      left: 50%;
       height: calc(100% - 40px);
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       background-color: #DEDEF7;
       width: 1px;
     }
-
     .alg-communityareas__area {
       border-radius: $border-radius-base;
       background-color: #FFF;
@@ -160,119 +146,103 @@ $browserExtension: $java;
         width: 50%;
       }
     }
-
     button {
-
       svg {
         transform: translate(6px, 0) rotate(-90deg);
       }
     }
-
     h3 {
       font-weight: 400;
     }
-
     p {
       min-height: 6em;
       max-width: 70%;
-      line-height: em(27,15);
+      line-height: em(27, 15);
       font-weight: 400;
     }
   }
-  
   .alg-communityprojects {
     position: relative;
     max-width: 1200px;
     padding: 0 20px;
     min-height: 800px;
-
     .alg-communityprojects__search {
-
-      @media (min-width: $screen-sm){
+      @media (min-width: $screen-sm) {
         display: flex;
         align-items: center;
       }
-
       h1 {
         color: $bunting;
-
-        @media (max-width: $screen-sm){
+        width: 20%;
+        @media (max-width: $screen-sm) {
           text-align: center;
           font-size: 32px;
           margin-bottom: 32px;
         }
       }
-
       #alg-community__search {
         flex: 1;
       }
-
       .ais-search-box {
         width: 100%;
         overflow: hidden;
         position: relative;
         background-color: $titan-white;
-
+        padding-left: 40px;
         &:after {
           color: $pluginColor;
           content: "";
           position: absolute;
-          width:44px;
-          left:6px;
+          width: 44px;
+          left: 46px;
           height: 100%;
           background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='currentColor' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-position: center;
           background-repeat: no-repeat;
           opacity: .5;
-
-          @media (max-width: $screen-sm) {
-            left: 0px;
+        }
+        @media (max-width: $screen-sm) {
+          padding-left: 0;
+          &:after {
+            left: 6px;
           }
         }
       }
-
       input {
-        border:none;
+        border: none;
         width: 100%;
         background-color: transparent;
         color: $bunting;
         font-size: 28px;
         padding-left: 60px;
         border-bottom: 1px solid $portage;
-
         @media (max-width: $screen-sm) {
           padding-left: 44px;
         }
-
         @media (max-width: 550px) {
           font-size: 20px;
         }
-
         &:focus {
           outline: none;
         }
       }
     }
-
     .alg-communitycontainer {
       max-width: 1160px;
       display: flex;
+      z-index: 500;
     }
-
     .ais-hits {
       display: flex;
       flex-wrap: wrap;
     }
   }
-  
   .alg-communityprojects__facets {
     width: 20%;
     min-width: 20%;
-
     @media (max-width: $screen-sm) {
       display: none;
     }
-
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -280,51 +250,57 @@ $browserExtension: $java;
     .ais-menu--item {
       color: #182359;
       position: relative;
-      line-height: em(40,16);
+      line-height: em(40, 16);
       cursor: pointer;
-
       &--header {
-
         .alg-facet__name {
           padding-left: 0;
           font-weight: bold;
         }
       }
-
       a {
         color: inherit;
       }
-
-      &:hover .alg-facet__tile, 
+      &:hover .alg-facet__tile,
       &__active .alg-facet__tile {
         transform: translate(3px, -50%) scaleY(.7);
       }
     }
-
-    .alg-facet-tool .alg-facet__tile { background-color: $toolColor }
-    .alg-facet-misc .alg-facet__tile { background-color: $miscColor }
-    .alg-facet-api-client .alg-facet__tile { background-color: $apiClientColor }
-    .alg-facet-learn .alg-facet__tile { background-color: $learnColor }
-    .alg-facet-demo .alg-facet__tile { background-color: $demoColor }
-    .alg-facet-library .alg-facet__tile { background-color: $libraryColor }
-    .alg-facet-plugin .alg-facet__tile { background-color: $pluginColor }
-
+    .alg-facet-tool .alg-facet__tile {
+      background-color: $toolColor
+    }
+    .alg-facet-misc .alg-facet__tile {
+      background-color: $miscColor
+    }
+    .alg-facet-api-client .alg-facet__tile {
+      background-color: $apiClientColor
+    }
+    .alg-facet-learn .alg-facet__tile {
+      background-color: $learnColor
+    }
+    .alg-facet-demo .alg-facet__tile {
+      background-color: $demoColor
+    }
+    .alg-facet-library .alg-facet__tile {
+      background-color: $libraryColor
+    }
+    .alg-facet-plugin .alg-facet__tile {
+      background-color: $pluginColor
+    }
     .alg-facet__tile {
       position: absolute;
-      left:4px;
-      top:50%;
-      height:20px;
+      left: 4px;
+      top: 50%;
+      height: 20px;
       width: 3px;
-      transform: translate(0,-50%);
+      transform: translate(0, -50%);
       transition: 170ms ease;
     }
-
     .alg-facet__name {
       display: inline-block;
       padding-left: 14px;
       padding-right: 8px;
       font-size: 14px;
-
       &:before {
         content: "";
         width: 100%;
@@ -336,144 +312,163 @@ $browserExtension: $java;
         z-index: -1;
       }
     }
-
     .alg-facet__number {
       float: right;
       color: #9D9DBD;
       padding-left: 3px;
     }
   }
-
   .alg-communityprojects__hits {
     width: 80%;
     min-width: 80%;
-
-    @media (min-width: $screen-sm){
+    @media (min-width: $screen-sm) {
       padding-left: 40px;
     }
-
-    @media (max-width: $screen-sm){
+    @media (max-width: $screen-sm) {
       width: 100%;
     }
-
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
-
-      &:hover .alg-communityprojects__hitstype:after{
+      &:hover .alg-communityprojects__hitstype:after {
         transform: scaleX(1.4);
       }
-
       .ais-hits--item:nth-child(4) ~ .ais-hits--item {
         margin-top: 40px;
       }
-
       &:not(.expanded) {
         .ais-hits--item:nth-child(4) ~ .ais-hits--item {
           display: none;
         }
       }
     }
-
     header {
       position: relative;
     }
-    
     .alg-header-tool {
-      h3:after { background-color: $toolColor }
-      .alg-viewmore { color: $toolColor }
+      h3:after {
+        background-color: $toolColor
+      }
+      .alg-viewmore {
+        color: $toolColor
+      }
     }
-
     .alg-header-plugin {
-      h3:after { background-color: $pluginColor }
-      .alg-viewmore { color: $pluginColor }
+      h3:after {
+        background-color: $pluginColor
+      }
+      .alg-viewmore {
+        color: $pluginColor
+      }
     }
-
     .alg-header-api-client {
-      h3:after { background-color: $apiClientColor }
-      .alg-viewmore { color: $apiClientColor }
+      h3:after {
+        background-color: $apiClientColor
+      }
+      .alg-viewmore {
+        color: $apiClientColor
+      }
     }
-
     .alg-header-learn {
-      h3:after { background-color: $learnColor }
-      .alg-viewmore { color: $learnColor }
+      h3:after {
+        background-color: $learnColor
+      }
+      .alg-viewmore {
+        color: $learnColor
+      }
     }
-
     .alg-header-demo {
-      h3:after { background-color: $demoColor }
-      .alg-viewmore { color: $demoColor }
+      h3:after {
+        background-color: $demoColor
+      }
+      .alg-viewmore {
+        color: $demoColor
+      }
     }
-
     .alg-header-library {
-      h3:after { background-color: $libraryColor }
-      .alg-viewmore { color: $libraryColor }
+      h3:after {
+        background-color: $libraryColor
+      }
+      .alg-viewmore {
+        color: $libraryColor
+      }
     }
-
     .alg-header-misc {
-      h3:after { background-color: $miscColor }
-      .alg-viewmore { color: $miscColor }
+      h3:after {
+        background-color: $miscColor
+      }
+      .alg-viewmore {
+        color: $miscColor
+      }
     }
-
     .alg-viewmore {
       padding-right: 18px;
       margin-left: 20px;
       text-decoration: none;
       vertical-align: baseline;
       font-weight: 400;
+      margin-bottom: 4px;
 
-      svg {  
+      svg {
         transform: translate(6px, 0) rotate(-90deg)
       }
     }
-
     .alg-communityprojects__hitstype {
       color: #1F3B5D;
       font-weight: 300;
       position: relative;
       display: inline-block;
       margin-top: 0;
-
       &:after {
-        content:"";
+        content: "";
         position: absolute;
         width: 27px;
         height: 3px;
-        left:0;
-        bottom:-10px;
+        left: 0;
+        bottom: -10px;
         transition: 380ms ease;
         transform-origin: left center;
       }
     }
-
     .alg-communityprojects__hitsdesc {
       margin-top: 2px;
       color: #9D9DBC;
       font-weight: 300;
     }
-
     .ais-hits--item:after {
       content: "";
       display: block;
       clear: both;
     }
-
     &:after {
       content: "";
       display: block;
       clear: both;
     }
   }
-
   .ais-hits--item {
     width: 24%;
     margin-right: 1%;
-
     &:nth-child(4) ~ .ais-hits--item {
       margin-top: 36px;
-    } 
-
-    @media (max-width: $screen-md){
+    }
+    @media (max-width: $screen-md) {
       width: 46%;
-      margin-right: 2%;
+      margin-right: 0%;
+
+      &:nth-of-type(odd) {
+        margin-right: 8%;
+      }
+    }
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+
+      &:nth-of-type(odd) {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &:nth-child(1),
@@ -482,25 +477,23 @@ $browserExtension: $java;
     &:nth-child(4) {
       .alg-communityhit {
         margin-top: 30px;
-        @media (max-width: $screen-md){
+        @media (max-width: $screen-md) {
           margin-top: 50px;
         }
       }
     }
-    &:last-child{
+    &:last-child {
       align-self: flex-end;
     }
   }
-
   .alg-communityhit {
-    padding-top: em(54,14);
+    padding-top: em(54, 14);
     transition: .25s ease;
     min-height: 220px;
     background-color: $white;
     &:hover {
-      transform: translate(0,-8px);
+      transform: translate(0, -8px);
     }
-
     .alg-communityhit__stats {
       display: flex;
       text-align: center;
@@ -511,51 +504,50 @@ $browserExtension: $java;
       width: 100%;
       justify-content: space-between;
       align-items: center;
-
       svg {
         vertical-align: middle;
       }
-
       a {
         cursor: pointer;
         display: block;
       }
-
       .alg-communitystat {
         flex: 1;
         text-align: center;
         a {
           color: #3E396B;
         }
-        
         &:not(:last-child) {
           border-right: 1px solid #F5F5FD;
         }
-    
         &--github:hover {
-          a { color: $bunting }
+          a {
+            color: $bunting
+          }
         }
         &--discourse:hover {
-          a { color: $royal-blue }
+          a {
+            color: $royal-blue
+          }
         }
         &--home:hover {
-          a { color: $royal-blue }
+          a {
+            color: $royal-blue
+          }
         }
       }
     }
-
     .alg-communityhit__icon {
       text-align: center;
       display: inline-block;
       position: absolute;
-      top:0;
+      top: 0;
       left: 50%;
-      transform: translate(-50%,-34px);
-
+      transform: translate(-50%, -34px);
       .alg-communityhit__iconcontainer {
         position: absolute;
         transform: translate(-50%, 0px);
-        left:50%;
+        left: 50%;
         top: 0px;
         width: 78px;
         height: 78px;
@@ -563,18 +555,16 @@ $browserExtension: $java;
         border-radius: 100%;
         overflow: hidden;
         border: 4px solid $white;
-
         &:after {
-          content:"";
+          content: "";
           display: block;
-          width:150%;
-          height:150%;
+          width: 150%;
+          height: 150%;
           position: absolute;
           background-color: inherit;
-          transform: translate(2px,8px);
+          transform: translate(2px, 8px);
           border-radius: 150%;
         }
-
         img {
           position: absolute;
           left: 50%;
@@ -586,50 +576,39 @@ $browserExtension: $java;
           z-index: 10;
         }
       }
-
-      .alg-icon-tool{
+      .alg-icon-tool {
         background-image: linear-gradient(to top right, #8E43E6 -20%, #B84592 120%);
       }
-
       .alg-icon-library {
         background-image: linear-gradient(to bottom left, #00AEFF -20%, #3369E6 120%);
       }
-
       .alg-icon-plugin {
         background-image: linear-gradient(to top right, #3E396B -20%, #3369E6 120%);
       }
-
       .alg-icon-api-client {
         background-image: linear-gradient(to top right, #201C38 0%, #3E396B 60%);
       }
-
       .alg-icon-learn {
         background-image: linear-gradient(to top right, #201C38 0%, #3E396B 60%);
       }
-
       .alg-icon-misc {
         background-image: linear-gradient(to bottom left, #2CDD97 -20%, #1DC5CE 120%);
       }
-
       .alg-icon-demo {
         background-image: linear-gradient(to top right, #FE6C5F -20%, #FFC168 120%);
       }
-
       #icon-zendesk img {
         margin-left: -1px;
       }
-
       #icon-autocomplete img {
         width: 35px;
       }
-
       #icon-instantsearch img {
         width: 30px;
       }
-
       .icon-glass {
         position: absolute;
-        left:50%;
+        left: 50%;
         top: 0;
         width: 84px;
         height: 87px;
@@ -637,13 +616,11 @@ $browserExtension: $java;
         z-index: 10;
       }
     }
-
     .alg-communityhit__type {
       color: $hitType;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     .alg-communityhit__name {
       color: $bunting;
       font-weight: 400;
@@ -651,33 +628,20 @@ $browserExtension: $java;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-
     .alg-communityhit__description {
       color: #69719B;
-      line-height: em(20,13);
+      line-height: em(20, 13);
       min-height: 3em;
     }
   }
-
   .cta-free-trial {
     background-image: url('/img/algolia-fast-bg.svg');
     background-size: cover;
-    @media (min-width: $screen-sm) {
-      height: 700px;
-    }
 
-    @include diagonal(-6deg, $titan-white, 200px, before){
-      top: -95px;
-      left: 0;
+    padding-top: 100px;
 
-      @media (min-width: 2000px){
-        top: -105px;
-        transform: skewY(-4deg);
-      }
-
-      @media (max-width: $screen-sm){
-        display: none;
-      }
+    @media (max-width: $screen-sm){
+      padding-top: 160px;
     }
 
     h3 {
@@ -691,24 +655,22 @@ $browserExtension: $java;
       color: $white;
       font-weight: $regular;
     }
-
     .container {
       max-width: $screen-md;
       margin: 0 auto;
       z-index: 10;
-
       @media (max-width: $screen-sm) {
         .col-md-6 {
           text-align: center;
         }
       }
     }
-    svg{
+    svg {
       transform: translate(6px, 0) rotate(-90deg)
     }
     .row {
-      .col-md-6{
-        @media (min-width: $screen-sm){
+      .col-md-6 {
+        @media (min-width: $screen-sm) {
           width: 50%;
           float: left;
         }
@@ -716,10 +678,26 @@ $browserExtension: $java;
     }
   }
 }
-.btn:hover{
+
+.projects {
+
+  @include diagonal(-6deg,
+  $titan-white,
+  200px,
+  false,
+  after) {
+    left: 0;
+    bottom: 0px;
+    z-index: 100;
+    transform: skewY(-4deg) translate(0, 50%);
+  }
+}
+
+.btn:hover {
   box-shadow: inherit;
 }
-.svg-icons{
+
+.svg-icons {
   display: none;
 }
 
@@ -729,7 +707,7 @@ $browserExtension: $java;
   a {
     text-decoration: none;
   }
-  img { 
+  img {
     margin: 0 auto;
     width: 82px;
     height: auto;

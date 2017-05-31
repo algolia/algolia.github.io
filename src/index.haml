@@ -56,7 +56,7 @@
         %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
         .spacer8
         %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
-        .spacer.spacer24
+        .spacer24
         .alg-communityareas.radius6.elevation2
           .alg-communityareas__area.text-center.p-large
             %h3.text-lg Documentation
@@ -73,30 +73,29 @@
                 Browse the forum
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
 
-    %section.projects.fill-titan
+    %section.projects.fill-titan.pos-rel
       .alg-communityprojects.m-l-r-auto.pos-rel
-        .spacer.spacer120
+        .spacer120
         .alg-communityprojects__search
-          %h1.text-lg Explore &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          %h1.text-lg Explore
           #alg-community__search
-        .spacer.spacer40
+        .spacer40
 
         #alg-communitycontainer.alg-communitycontainer
           .alg-communityprojects__facets.alg-communityprojects__facets__is
           .alg-communityprojects__hits.default
           .alg-communityprojects__hits.is
-      .spacer120
+      .spacer64
+
     %section.cta-free-trial.fill-algolia-blue.pos-rel
       .spacer64.hidden-xs
-      .spacer120.hidden-xs
-      .spacer120
       .container.p-l-small.p-r-small
         .row.cf
           .col-md-6
             %h3.color-white Built something with Algolia?
             %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
           .col-md-6.text-right
-            .spacer16
+            .spacer64.hidden-xs
             .spacer32
             %a.btn.btn-static-dark{href: "https://discourse.algolia.com/"}
               Visit the forum
