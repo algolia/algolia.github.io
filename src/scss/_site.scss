@@ -91,7 +91,7 @@ $browserExtension: $java;
     background-size: contain;
     background-repeat: no-repeat;
 
-    @media (max-width: $screen-sm){
+    @media (max-width: 940px){
       background-size: cover;
       background-position: center;
     }
@@ -160,10 +160,11 @@ $browserExtension: $java;
         width: 50%;
       }
     }
+    
     a {
       text-decoration: none;
       margin-bottom: 30px;
-      
+
       svg {
         transform: translate(6px, 0) rotate(-90deg);
       }
@@ -477,9 +478,8 @@ $browserExtension: $java;
         margin-right: 8%;
       }
     }
-    @media (max-width: $screen-md) {
+    @media (max-width: 450px) {
       width: 100%;
-      max-width: 320px;
       margin: 0 auto;
       &:nth-of-type(odd) {
         margin-left: auto;
@@ -636,6 +636,11 @@ $browserExtension: $java;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
+    .hit-namelink {
+      text-decoration: none;
+    }
+
     .alg-communityhit__name {
       color: $bunting;
       font-weight: 400;

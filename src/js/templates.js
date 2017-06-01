@@ -15,7 +15,7 @@ exports.hitTemplate = (data) => `
           </div>
         </div>
         <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder">${data.category}</p>
-        <h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3>
+        <a href="${data.url_home || data.url_github || data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3></a>
         <p class="alg-communityhit__description text-sm m-t-none padder m-b">${escape(data.description)}</p>
         <div class="alg-communityhit__stats">
           ${data.url_github ? `
