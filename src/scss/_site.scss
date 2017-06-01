@@ -513,7 +513,7 @@ $browserExtension: $java;
       display: flex;
       text-align: center;
       border-top: 1px solid #F5F5FD;
-      min-height: 34px;
+      min-height: 38px;
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -529,6 +529,8 @@ $browserExtension: $java;
       .alg-communitystat {
         flex: 1;
         text-align: center;
+        height: 38px;
+        line-height: 38px;
         a {
           color: #3E396B;
         }
