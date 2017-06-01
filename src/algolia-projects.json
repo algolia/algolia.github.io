@@ -274,7 +274,7 @@
   },
   {
     "name": "Supersearch",
-    "category": "Demo",
+    "category": "Live",
     "description": "Search for the videos of Super Bowl commercials, dating back decades.",
     "url_home": "https://community.algolia.com/supersearch/",
     "url_github": "https://github.com/algolia/supersearch",
@@ -287,7 +287,7 @@
   },
   {
     "name": "Searchstone",
-    "category": "Demo",
+    "category": "Live",
     "description": "Hearthstone players rejoice, this visually pleasing card search is yours.",
     "url_home": "http://searchstone.io/",
     "url_github": "https://github.com/shipow/searchstone",
@@ -300,7 +300,7 @@
   },
   {
     "name": "Hacker News",
-    "category": "Demo",
+    "category": "Live",
     "description": "Search all posts on HackerNews, sorted by votes or date.",
     "url_home": "https://hn.algolia.com/",
     "url_github": "https://github.com/algolia/hn-search",
@@ -313,7 +313,7 @@
   },
   {
     "name": "Yarn",
-    "category": "Demo",
+    "category": "Live",
     "description": "Search all packages in the npm and Yarn registry.",
     "url_home": "https://yarnpkg.com/",
     "url_github": "https://github.com/yarnpkg/website",
@@ -456,13 +456,13 @@
   },
   {
     "name": "Marvel Search",
-    "category": "Demo",
+    "category": "Live",
     "description": "Search for characters in the Marvel Universe",
     "url_home": "https://community.algolia.com/marvel-search/",
     "url_github": "https://github.com/algolia/marvel-search",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "marvel search",
+    "icon": "marvel",
     "featured": false,
     "objectID": "",
     "ranking": 1000

@@ -76,6 +76,18 @@ appID = "HXQH62TCI4";
 apiKey = "0b9f3069b37517348a864b7239a8abfa";
 index = "community";
 
+const loadDefs = () => {
+  fetch('/img/projects/projects-defs.svg')
+    .then(r => r.text())
+    .then(svg => {
+      document.querySelector('.svg-icons').innerHTML = svg;
+    })
+}
+
+window.addEventListener('load',() => {
+  loadDefs();
+});
+
 const easeInOutCubic = (t, b, c, d) => {
   return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b
 }

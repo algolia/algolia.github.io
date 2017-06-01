@@ -26,9 +26,8 @@ $pluginColor: $royal-blue;
 $apiClientColor: $bunting;
 $learnColor: $radical-red;
 $miscColor: $shamrock;
-$demoColor: $bittersweet;
+$liveColor: $bittersweet;
 $browserExtension: $java;
-
 .alg-header {
   width: 100%;
   padding-top: em(16, 16);
@@ -121,7 +120,6 @@ $browserExtension: $java;
     color: $bunting;
     position: relative;
     z-index: 50;
-
     @media (min-width: $screen-sm) {
       display: flex;
       background-color: #FFF;
@@ -146,7 +144,8 @@ $browserExtension: $java;
         width: 50%;
       }
     }
-    button {
+    a {
+      text-decoration: none;
       svg {
         transform: translate(6px, 0) rotate(-90deg);
       }
@@ -278,8 +277,8 @@ $browserExtension: $java;
     .alg-facet-learn .alg-facet__tile {
       background-color: $learnColor
     }
-    .alg-facet-demo .alg-facet__tile {
-      background-color: $demoColor
+    .alg-facet-live .alg-facet__tile {
+      background-color: $liveColor
     }
     .alg-facet-library .alg-facet__tile {
       background-color: $libraryColor
@@ -376,12 +375,12 @@ $browserExtension: $java;
         color: $learnColor
       }
     }
-    .alg-header-demo {
+    .alg-header-live {
       h3:after {
-        background-color: $demoColor
+        background-color: $liveColor
       }
       .alg-viewmore {
-        color: $demoColor
+        color: $liveColor
       }
     }
     .alg-header-library {
@@ -407,7 +406,6 @@ $browserExtension: $java;
       vertical-align: baseline;
       font-weight: 400;
       margin-bottom: 4px;
-
       svg {
         transform: translate(6px, 0) rotate(-90deg)
       }
@@ -454,23 +452,19 @@ $browserExtension: $java;
     @media (max-width: $screen-md) {
       width: 46%;
       margin-right: 0%;
-
       &:nth-of-type(odd) {
         margin-right: 8%;
       }
     }
-
     @media (max-width: $screen-md) {
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
-
       &:nth-of-type(odd) {
         margin-left: auto;
         margin-right: auto;
       }
     }
-
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3),
@@ -565,7 +559,7 @@ $browserExtension: $java;
           transform: translate(2px, 8px);
           border-radius: 150%;
         }
-        img {
+        svg {
           position: absolute;
           left: 50%;
           top: 50%;
@@ -594,7 +588,7 @@ $browserExtension: $java;
       .alg-icon-misc {
         background-image: linear-gradient(to bottom left, #2CDD97 -20%, #1DC5CE 120%);
       }
-      .alg-icon-demo {
+      .alg-icon-live {
         background-image: linear-gradient(to top right, #FE6C5F -20%, #FFC168 120%);
       }
       #icon-zendesk img {
@@ -637,13 +631,10 @@ $browserExtension: $java;
   .cta-free-trial {
     background-image: url('/img/algolia-fast-bg.svg');
     background-size: cover;
-
     padding-top: 100px;
-
-    @media (max-width: $screen-sm){
+    @media (max-width: $screen-sm) {
       padding-top: 160px;
     }
-
     h3 {
       font-size: 32px;
       color: $white;
@@ -680,7 +671,6 @@ $browserExtension: $java;
 }
 
 .projects {
-
   @include diagonal(-6deg,
   $titan-white,
   200px,
@@ -711,5 +701,149 @@ $browserExtension: $java;
     margin: 0 auto;
     width: 82px;
     height: auto;
+  }
+}
+
+footer {
+  overflow: hidden;
+  position: relative;
+  background-color: #2E2A51;
+
+  @include diagonal(-6deg,
+  #1F1C3F,
+  130px,
+  false,
+  before) {
+    left: 0;
+    bottom: 80px;
+    z-index: 25;
+    transform: skewY(-2deg);
+  }
+  .container {
+    @include diagonal(-6deg,
+    #1F1C3F,
+    130px,
+    false,
+    before) {
+      left: 0;
+      bottom: 80px;
+      z-index: 25;
+      transform: skewY(-2deg);
+    }
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-bottom: 12px;
+    border-bottom: solid 1px rgba(137,148,198,0.5);
+    color: #9d9dbd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin: 1em 0;
+    line-height: 40px;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    padding: 0 15px;
+
+    @media (max-width: $screen-md){
+      flex-wrap: wrap;
+    }
+  }
+
+  .column {
+    margin: 0 60px 0 0;
+    min-width: 20%;
+    @media (max-width: $screen-md){
+      min-width: 50%;
+      margin: 0;
+      padding-right: 20px;
+      
+      &:first-child{
+        min-width: 100%;
+      }
+    }
+  }
+
+  .email {
+
+    input {
+      background-color: #FFF;
+      border-radius: 20px;
+      line-height: 40px;
+      padding: 0 16px;
+      height: 40px;
+      border: none;
+      width: 230px;
+      margin-right: 10px;
+      appearance: none;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    @media (max-width: $screen-md){
+      input{
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+
+    .mc_embed_signup--success{
+      .mc-signupmessage{
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #FFF;
+        color: #6775b5;
+        text-align: center;
+        z-index: 20;
+        border-radius: 20px;
+
+        svg {
+          width: 15px;
+          margin-left: 4px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: #8994c6;
+      font-size: .9em;
+
+      &:hover {
+        color: #00aeff;
+      }
+    }
+  }
+  .logo {
+    background-color: #050f2c;
+    z-index: 50;
+
+    img {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      z-index: 50;
+      margin: 40px auto;
+    }
   }
 }

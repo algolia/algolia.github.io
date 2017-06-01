@@ -1,146 +1,188 @@
-!!! 5
-%head
-  %meta{charset: "UTF-8"}
-  %title Algolia Community
-  %link{href: "app.css", rel: "stylesheet", type: "text/css"}
+<!DOCTYPE html>
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %title Algolia Community
+    %link{href: "app.css", rel: "stylesheet", type: "text/css"}
 
-  %link{rel: "apple-touch-icon", sizes: "57x57", href: "/img/icons/apple-icon-57x57.png"}
-  %link{rel: "apple-touch-icon", sizes: "60x60", href: "/img/icons/apple-icon-60x60.png"}
-  %link{rel: "apple-touch-icon", sizes: "72x72", href: "/img/icons/apple-icon-72x72.png"}
-  %link{rel: "apple-touch-icon", sizes: "76x76", href: "/img/icons/apple-icon-76x76.png"}
-  %link{rel: "apple-touch-icon", sizes: "114x114", href: "/img/icons/apple-icon-114x114.png"}
-  %link{rel: "apple-touch-icon", sizes: "120x120", href: "/img/icons/apple-icon-120x120.png"}
-  %link{rel: "apple-touch-icon", sizes: "144x144", href: "/img/icons/apple-icon-144x144.png"}
-  %link{rel: "apple-touch-icon", sizes: "152x152", href: "/img/icons/apple-icon-152x152.png"}
-  %link{rel: "apple-touch-icon", sizes: "180x180", href: "/img/icons/apple-icon-180x180.png"}
-  %link{rel: "icon", type: "image/png", sizes: "192x192",  href: "/img/icons/android-icon-192x192.png"}
-  %link{rel: "icon", type: "image/png", sizes: "32x32", href: "/img/icons/favicon-32x32.png"}
-  %link{rel: "icon", type: "image/png", sizes: "96x96", href: "/img/icons/favicon-96x96.png"}
-  %link{rel: "icon", type: "image/png", sizes: "16x16", href: "/img/icons/favicon-16x16.png"}
-  %link{rel: "manifest", href: "/manifest.json"}
-  %meta{name: "msapplication-TileColor", content: "#ffffff"}
-  %meta{name: "msapplication-TileImage", content: "/img/icons/ms-icon-144x144.png"}
-  %meta{name: "theme-color", content: "#ffffff"}
+    %link{rel: "apple-touch-icon", sizes: "57x57", href: "/img/icons/apple-icon-57x57.png"}
+    %link{rel: "apple-touch-icon", sizes: "60x60", href: "/img/icons/apple-icon-60x60.png"}
+    %link{rel: "apple-touch-icon", sizes: "72x72", href: "/img/icons/apple-icon-72x72.png"}
+    %link{rel: "apple-touch-icon", sizes: "76x76", href: "/img/icons/apple-icon-76x76.png"}
+    %link{rel: "apple-touch-icon", sizes: "114x114", href: "/img/icons/apple-icon-114x114.png"}
+    %link{rel: "apple-touch-icon", sizes: "120x120", href: "/img/icons/apple-icon-120x120.png"}
+    %link{rel: "apple-touch-icon", sizes: "144x144", href: "/img/icons/apple-icon-144x144.png"}
+    %link{rel: "apple-touch-icon", sizes: "152x152", href: "/img/icons/apple-icon-152x152.png"}
+    %link{rel: "apple-touch-icon", sizes: "180x180", href: "/img/icons/apple-icon-180x180.png"}
+    %link{rel: "icon", type: "image/png", sizes: "192x192",  href: "/img/icons/android-icon-192x192.png"}
+    %link{rel: "icon", type: "image/png", sizes: "32x32", href: "/img/icons/favicon-32x32.png"}
+    %link{rel: "icon", type: "image/png", sizes: "96x96", href: "/img/icons/favicon-96x96.png"}
+    %link{rel: "icon", type: "image/png", sizes: "16x16", href: "/img/icons/favicon-16x16.png"}
+    %link{rel: "manifest", href: "/manifest.json"}
+    %meta{name: "msapplication-TileColor", content: "#ffffff"}
+    %meta{name: "msapplication-TileImage", content: "/img/icons/ms-icon-144x144.png"}
+    %meta{name: "theme-color", content: "#ffffff"}
 
-  %meta{name: "description", content:"Discover Algolia & build great search with our community"}
-  %meta{name: "viewport", content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
-  -# twitter
-  %meta{name: "twitter:card", content: "summary_large_image"}
-  %meta{name: "twitter:site", content: "@Algolia"}
-  %meta{name: "twitter:creator", content: "@Algolia"}
-  -# og
-  %meta{property: "og:url", content: "https://community.algolia.com/"}
-  %meta{property: "og:title", content: "Algolia Community"}
-  %meta{property: "og:description", content: ""}
-  %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
+    %meta{name: "description", content:"Discover Algolia & build great search with our community"}
+    %meta{name: "viewport", content:"width=device-width, initial-scale=1.0"}
+    -# twitter
+    %meta{name: "twitter:card", content: "summary_large_image"}
+    %meta{name: "twitter:site", content: "@Algolia"}
+    %meta{name: "twitter:creator", content: "@Algolia"}
+    -# og
+    %meta{property: "og:url", content: "https://community.algolia.com/"}
+    %meta{property: "og:title", content: "Algolia Community"}
+    %meta{property: "og:description", content: "Everything from our community in one place"}
+    %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
-  //webmastertools
-  %meta{name: "google-site-verification", content: "Kchm7Sc4EMavWFw1y3NC89h9SpHixZMdGMRyddMEaOI"}
+    //webmastertools
+    %meta{name: "google-site-verification", content: "Kchm7Sc4EMavWFw1y3NC89h9SpHixZMdGMRyddMEaOI"}
 
-%body
-  %header.alg-header
-    .alg-header__container.m-l-r-auto
-      .alg-communitylogo
-        %a{href: "/"}
-          %img{src: "/img/logos/logo-community-darkbg.svg", alt: ""}/
+  %body
+    %header.alg-header
+      .alg-header__container.m-l-r-auto
+        .alg-communitylogo
+          %a{href: "/", title: "Algolia Community"}
+            %img{src: "/img/logos/logo-community-darkbg.svg", alt: "Algolia Community"}/
 
-      .alg-headerhome
-        .alg-headerhome__link
-          %a.color-bunting{href: "https://www.algolia.com"}
-            Go to algolia.com
-            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
+        .alg-headerhome
+          .alg-headerhome__link
+            %a.color-bunting{href: "https://www.algolia.com", title: "Algolia Homepage"}
+              Go to algolia.com
+              <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
-  %main.alg-community
-    %section.alg-communityheader
-      %header.alg-communityheader__container.text-center
-        %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
-        .spacer8
-        %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
-        .spacer24
-        .alg-communityareas.radius6.elevation2
-          .alg-communityareas__area.text-center.p-large
-            %h3.text-lg Documentation
-            %p.m-l-r-auto Jump to the official Algolia documentation, guides and tutorials.
-            %a{href: "https://algolia.com/doc"}
-              %button.btn-lg.btn.btn-static-primary.elevation1
+    %main.alg-community
+      %section.alg-communityheader
+        %header.alg-communityheader__container.text-center
+          %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
+          .spacer8
+          %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
+          .spacer24
+          .alg-communityareas.radius6.elevation2
+            .alg-communityareas__area.text-center.p-large
+              %h3.text-lg Documentation
+              %p.m-l-r-auto Jump to the official Algolia documentation, guides and tutorials.
+              %a.btn-lg.btn.btn-static-primary.elevation1{href: "https://algolia.com/doc", title: "Algolia documentation"}
                 Read the docs
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
-          .alg-communityareas__area.text-center.p-large
-            %h3.text-lg Community Forum
-            %p.m-l-r-auto Ask questions and get the latest news. <br>Don't miss the Show & Tell category.
-            %a{href: "https://discourse.algolia.com/"}
-              %button.btn-lg.btn.btn-static-secondary.elevation1
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
+            .alg-communityareas__area.text-center.p-large
+              %h3.text-lg Community Forum
+              %p.m-l-r-auto Ask questions and get the latest news. <br>Don't miss the Show & Tell category.
+              %a.btn-lg.btn.btn-static-secondary.elevation1{href: "https://discourse.algolia.com/", title: "Algolia Discourse Forum"}
                 Browse the forum
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
-    %section.projects.fill-titan.pos-rel
-      .alg-communityprojects.m-l-r-auto.pos-rel
-        .spacer120
-        .alg-communityprojects__search
-          %h1.text-lg Explore
-          #alg-community__search
-        .spacer40
+      %section.projects.fill-titan.pos-rel
+        .alg-communityprojects.m-l-r-auto.pos-rel
+          .spacer120
+          .alg-communityprojects__search
+            %h1.text-lg Explore
+            #alg-community__search
+          .spacer40
 
-        #alg-communitycontainer.alg-communitycontainer
-          .alg-communityprojects__facets.alg-communityprojects__facets__is
-          .alg-communityprojects__hits.default
-          .alg-communityprojects__hits.is
+          #alg-communitycontainer.alg-communitycontainer
+            .alg-communityprojects__facets.alg-communityprojects__facets__is
+            .alg-communityprojects__hits.default
+            .alg-communityprojects__hits.is
+        .spacer64
+
+      %section.cta-free-trial.fill-algolia-blue.pos-rel
+        .spacer64.hidden-xs
+        .spacer64.hidden-xs
+        .container.p-l-small.p-r-small
+          .row.cf
+            .col-md-6
+              %h3.color-white Built something with Algolia?
+              %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
+            .col-md-6.text-right
+              .spacer64.hidden-xs
+              .spacer32
+              %a.btn.btn-static-dark{href: "https://discourse.algolia.com/", alt: "Visit the Discourse Forum"}
+                Visit the forum
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
+              .spacer8
+        .spacer64.hidden-xs
+        .spacer64
+
+    %footer.pos-rel
+      .spacer24
+      .container
+        .column
+          %h4 Resources
+          %ul
+            %li
+              %a{href: "https://github.com/algolia/community-code-of-conduct"} Code of Conduct
+            %li
+              %a{href: "https://github.com/algolia/awesome-algolia"} awesome-algolia
+            %li
+              %a{href: "https://www.algolia.com/careers"} Work with us
+            %li.email.pos-rel
+              .spacer16
+              #mc_embed_signup.newsletter-signup
+                %form#mc-embedded-subscribe-form.validate.form-inline{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", name: "mc-embedded-subscribe-form", novalidate: true, target: "_blank"}
+                  #mc_embed_signup_scroll
+                    .mc-signupmessage
+                    .mc-field-group
+                    %input#mce-EMAIL.email.form-control{type: "text", name: "email", placeholder: "Your Email Address", type: "email"}/
+                    %button.btn.btn-static-default.color-white{type: "submit"}
+                      Subscribe
+
+        .column
+          %h4 Developer
+          %ul
+            %li
+              %a{href: "https://www.algolia.com/doc/guides/getting-started/how-it-works/"} Getting Started
+            %li
+              %a{href: "https://www.algolia.com/doc/"} Documentation
+
+        .column
+          %h4 Connect
+          %ul
+            %li
+              %a{href: "https://twitter.com/Algolia"}
+                Twitter
+            %li
+              %a{href: "https://www.facebook.com/algolia"}
+                Facebook
+            %li
+              %a{href: "https://github.com/Algolia"}
+                Github
+            %li
+              %a{href: "https://dribbble.com/algolia"}
+                Dribbble
+            %li
+              %a{href: "https://stories.algolia.com/"}
+                Stories
+            %li
+              %a{href: "https://blog.algolia.com/"}
+                Blog
+      
       .spacer64
+      .spacer64
+      .logo.text-center.pos-rel
+        %a{href: "https://algolia.com"}
+          %img{src: "/img/logos/algolia-logo-mark.svg", alt: "Algolia"}/
 
-    %section.cta-free-trial.fill-algolia-blue.pos-rel
-      .spacer64.hidden-xs
-      .container.p-l-small.p-r-small
-        .row.cf
-          .col-md-6
-            %h3.color-white Built something with Algolia?
-            %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
-          .col-md-6.text-right
-            .spacer64.hidden-xs
-            .spacer32
-            %a.btn.btn-static-dark{href: "https://discourse.algolia.com/"}
-              Visit the forum
-              <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M7.046 8.347l3.643-3.25L12 6.64 5.99 12 0 6.64l1.313-1.542L5 8.518V0h2.046v8.347z" fill="currentColor" fill-rule="evenodd"></path></svg>
-            .spacer8
-      .spacer64.hidden-xs
-      .spacer120
+    %script{src: "/js/app.js"}
+    %div{id: "fb-root"}
+      %script
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5&appId=217461055269773";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    %script{type: "text/javascript"}
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1654938174769952');
+        fbq('track', "PageView");
 
 
-  %div{id: "fb-root"}
-    %script
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5&appId=217461055269773";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-  %script{type: "text/javascript"}
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','//connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1654938174769952');
-      fbq('track', "PageView");
-  %noscript
-    %img{height: "1",src: "https://www.facebook.com/tr?id=1654938174769952&ev=PageView&noscript=1",style: "display:none",width: "1"}
-
-  -# %script
-    -# window.twttr = (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {}; if (d.getElementById(id)) return t; js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); t._e = []; t.ready = function(f) { t._e.push(f); }; return t; }(document, "script", "twitter-wjs"));
-
-   -# %script{src: "//platform.twitter.com/oct.js",type: "text/javascript"}
-      -# twttr.conversion.trackPid('nuhd9', { tw_sale_amount: 0, tw_order_quantity: 0 });
-  %noscript
-    %img{alt: "",height: "1",src: "https://analytics.twitter.com/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
-    %img{alt: "",height: "1",src: "//t.co/i/adsct?txn_id=nuhd9&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0", style: "display:none;",width: "1"}
-
-  -# %script
-  -#   adroll_adv_id = "TGR7R4XSGVGYVPX4LQBDFQ"; adroll_pix_id = "YQNWNHGUUBD2JMY7BVOBWM"; (function () { var _onload = function(){ if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return} if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return} var scr = document.createElement("script"); var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com"); scr.setAttribute('async', 'true'); scr.type = "text/javascript"; scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr); }; if (window.addEventListener) {window.addEventListener('load', _onload, false);} else {window.attachEvent('onload', _onload)} }());
-  %script
-    var _kmq = _kmq || []; var _kmk = _kmk || '55469e64b104e85e15613b087c7d95bf9c0b1d6e'; function _kms(u){ setTimeout(function(){ var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u; f.parentNode.insertBefore(s, f); }, 1); } _kms('//i.kissmetrics.com/i.js'); _kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
-  %script{src: "js/app.js"}
-  -# <!-- inject:js --><!-- endinject -->
-
-  .svg-icons{style: "height: 0; width: 0; position: absolute;opacity:0;"}
-    <!-- inject:svg --><!-- endinject -->
+    .svg-icons{style: "height: 0; width: 0; position: absolute;opacity:0;"}
+      <!-- inject:svg --><!-- endinject -->
