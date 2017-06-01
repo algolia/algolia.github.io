@@ -187,6 +187,7 @@ $browserExtension: $java;
     max-width: 1200px;
     padding: 0 20px;
     min-height: 800px;
+    z-index: 150;
     .alg-communityprojects__search {
       @media (min-width: $screen-sm) {
         display: flex;
