@@ -291,7 +291,7 @@ gulp.task('dev', function(callback) {
   runSequence('build:dev', 'watch', 'webserver', callback);
 });
 
-gulp.task('s3-deploy', ['build:prod'], function() {
+gulp.task('s3-deploy', function() {
   var publisher = awspublish.create({
     region: 'us-east-1',
     params: {
