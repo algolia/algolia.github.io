@@ -8,7 +8,7 @@ before_script:
   - npm install -g gulp
   - npm install
 script:
-  - gulp s3-deploy
+  - npm run build && gulp s3-deploy
 branches:
   only:
     - source

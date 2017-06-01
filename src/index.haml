@@ -1,693 +1,222 @@
-!!! 5
-%head
-  %meta{charset: "UTF-8"}
-  %title Algolia Community
-  %link{href: "app.css", rel: "stylesheet", type: "text/css"}
-  %link{href: "//fonts.googleapis.com/css?family=Raleway:100,400,600", rel: "stylesheet", type: "text/css"}
-  %link{href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600", rel: "stylesheet", type: "text/css"}
-  %link{rel:"icon", type: "image/x-icon", href:"favicon.ico"}
-  %meta{name: "description", content:"Discover Algolia & build great search with our community"}
-  %meta{name: "viewport", content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
-  -# twitter
-  %meta{name: "twitter:card", content: "summary_large_image"}
-  %meta{name: "twitter:site", content: "@Algolia"}
-  %meta{name: "twitter:creator", content: "@Algolia"}
-  -# og
-  %meta{property: "og:url", content: "https://community.algolia.com/"}
-  %meta{property: "og:title", content: "Algolia Community"}
-  %meta{property: "og:description", content: ""}
-  %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
+<!DOCTYPE html>
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %title Algolia Community
+    %link{href: "app.css", rel: "stylesheet", type: "text/css"}
 
-  //webmastertools
-  %meta{name: "google-site-verification", content: "Kchm7Sc4EMavWFw1y3NC89h9SpHixZMdGMRyddMEaOI"}
+    %link{rel: "apple-touch-icon", sizes: "57x57", href: "/img/icons/apple-icon-57x57.png"}
+    %link{rel: "apple-touch-icon", sizes: "60x60", href: "/img/icons/apple-icon-60x60.png"}
+    %link{rel: "apple-touch-icon", sizes: "72x72", href: "/img/icons/apple-icon-72x72.png"}
+    %link{rel: "apple-touch-icon", sizes: "76x76", href: "/img/icons/apple-icon-76x76.png"}
+    %link{rel: "apple-touch-icon", sizes: "114x114", href: "/img/icons/apple-icon-114x114.png"}
+    %link{rel: "apple-touch-icon", sizes: "120x120", href: "/img/icons/apple-icon-120x120.png"}
+    %link{rel: "apple-touch-icon", sizes: "144x144", href: "/img/icons/apple-icon-144x144.png"}
+    %link{rel: "apple-touch-icon", sizes: "152x152", href: "/img/icons/apple-icon-152x152.png"}
+    %link{rel: "apple-touch-icon", sizes: "180x180", href: "/img/icons/apple-icon-180x180.png"}
+    %link{rel: "icon", type: "image/png", sizes: "192x192",  href: "/img/icons/android-icon-192x192.png"}
+    %link{rel: "icon", type: "image/png", sizes: "32x32", href: "/img/icons/favicon-32x32.png"}
+    %link{rel: "icon", type: "image/png", sizes: "96x96", href: "/img/icons/favicon-96x96.png"}
+    %link{rel: "icon", type: "image/png", sizes: "16x16", href: "/img/icons/favicon-16x16.png"}
+    %link{rel: "manifest", href: "/manifest.json"}
+    %meta{name: "msapplication-TileColor", content: "#ffffff"}
+    %meta{name: "msapplication-TileImage", content: "/img/icons/ms-icon-144x144.png"}
+    %meta{name: "theme-color", content: "#ffffff"}
 
-%body
-  %header.hero
-    .container.pos-rel
-      %ul.share
-        %li
-          %a{href:"https://twitter.com/algolia"}
-            %svg.icon
-              %use{xlink:href: "#icon-twitter"}
-        %li
-          %a{href:"https://www.facebook.com/algolia"}
-            %svg.icon
-              %use{xlink:href: "#icon-facebook"}
-        %li
-          %a{href:"https://www.linkedin.com/company/algolia"}
-            %svg.icon
-              %use{xlink:href: "#icon-linkedin"}
-        %li
-          %a{href:"https://github.com/algolia"}
-            %svg.icon
-              %use{xlink:href: "#icon-github"}
-        %li
-          %a{href:"https://www.producthunt.com/@algolia"}
-            %svg.icon
-              %use{xlink:href: "#icon-producthunt"}
-      .spacer60
-      %h1
-        %a.logo-community{href: "https://community.algolia.com"}
-          %img{src: "img/logos/logo-community.svg", width: 100, alt: "Community Logo"}
-        %a.logo-algolia{href: "https://www.algolia.com"}
-          %img{src: "img/logo-algolia.svg", width: 120, alt: "Algolia"}
-        %a{href: "https://community.algolia.com" } Community
+    %meta{name: "description", content:"Discover Algolia & build great search with our community"}
+    %meta{name: "viewport", content:"width=device-width, initial-scale=1.0"}
+    -# twitter
+    %meta{name: "twitter:card", content: "summary_large_image"}
+    %meta{name: "twitter:site", content: "@Algolia"}
+    %meta{name: "twitter:creator", content: "@Algolia"}
+    -# og
+    %meta{property: "og:url", content: "https://community.algolia.com/"}
+    %meta{property: "og:title", content: "Algolia Community"}
+    %meta{property: "og:description", content: "Everything from our community in one place"}
+    %meta{property: "og:image", content: "https://community.algolia.com/img/og_screen.png"}
 
-  %main
-    %section.projects
-      .container#grid
-        .row
-          .col-sm-5
-            .project-wrapper.big.ee
-              %img{src:"#", alt: "android", id: "android"}
-            %figure.effect-apollo.project-wrapper.big.instantsearchandroid.draggable
-              %figcaption
-                .project-header LIBRARY
-                %a.project-desc{href: "https://community.algolia.com/instantsearch-android/"}
-                  %link.rippleJS
-                  .spacer60
-                  .row
-                    .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %img{src: "img/logo-instantsearch-android.svg", width: 60, alt: "instantsearch-android"}
-                    .col-xs-7.text-left
-                      .spacer10
-                      .project-title.text-center Instantsearch for android
-                      %p.desc.no-padding Mobile-optimized search components for Android apps.
-                .project-footer
-                  %a{href: "https://github.com/algolia/instantsearch-android"}
-                    %svg.icon.github
-                      %use{xlink:href: "#icon-github"}
-            .spacer10.visible-xs
-          .col-sm-4
-            .project-wrapper.big.ee
-              %img{src:"#", alt: "react", id: "react"}
-            %figure.effect-apollo.project-wrapper.big.instantsearchreact
-              %figcaption
-                .project-header LIBRARY
-                %a.project-desc{href: "https://community.algolia.com/instantsearch.js/react"}
-                  %link.rippleJS
-                  .spacer60
-                  .row
-                    .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %img{src: "img/logo-is-react.svg", width: 60, alt: "instantsearch-react"}
-                    .col-xs-7.col-sm-6.text-left
-                      .spacer10
-                      .project-title.text-center React InstantSearch
-                      %p.desc.no-padding Flexible search components for React and React Native.
-                .project-footer
-                  %a{href: "https://github.com/algolia/instantsearch.js/tree/v2"}
-                    %svg.icon.github
-                      %use{xlink:href: "#icon-github"}
-            .spacer10.visible-xs
-          .col-sm-3
-            .project-wrapper.big.ee
-            %figure.big.effect-apollo.project-wrapper.discourse
-              %figcaption
-                .project-header FORUM
-                %a.project-desc{href: "https://discourse.algolia.com/"}
-                  %link.rippleJS
-                  %img.icon{src:"img/logos/logo-community.svg"}
-                  .project-title
-                  .spacer10
-                  .desc Get news, share projects and ask questions to the Algolia team and community. Join today!
-        .spacer10
-        .row
-          .col-sm-6
-            .project-wrapper.big.ee
-              %img{src:"#", alt: "UX", id: "uxGlass"}
-            %figure.effect-apollo.project-wrapper.big.instantsearch.draggable
-              %figcaption
-                .project-header LIBRARY
-                %a.project-desc{href: "https://community.algolia.com/instantsearch.js/"}
-                  %link.rippleJS
-                  .spacer60
-                  .row
-                    .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                      %img{src: "img/logo-is.svg", width: 60, alt: "instantsearch"}
-                    .col-xs-7.text-left
-                      %img.logo{src: "img/logo-instantsearch.svg", width: 200 , alt: "instantsearch"}
-                      %p.desc.no-padding An extensive library of UI widgets for building a state-of-the-art instant search experience.
-                .project-footer
-                  %a{href: "https://github.com/algolia/instantsearch.js"}
-                    %svg.icon.github
-                      %use{xlink:href: "#icon-github"}
+    //webmastertools
+    %meta{name: "google-site-verification", content: "Kchm7Sc4EMavWFw1y3NC89h9SpHixZMdGMRyddMEaOI"}
+    
+    %script{type: "text/javascript" }
+      (function( w ){
+        var loadJS = function( src, cb ){
+          "use strict";
+          var ref = w.document.getElementsByTagName( "script" )[ 0 ];
+          var script = w.document.createElement( "script" );
+          script.src = src;
+          script.async = true;
+          ref.parentNode.insertBefore( script, ref );
+          if (cb && typeof(cb) === "function") {
+            script.onload = cb;
+          }
+          return script;
+        };
+        if( typeof module !== "undefined" ){
+          module.exports = loadJS;
+        }
+        else {
+          w.loadJS = loadJS;
+        }
+      }( typeof global !== "undefined" ? global : this ));
 
-            .spacer10
-            .row
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", alt: "Get off my way, CAT!",class: "contain", id: "blockedTrain"}
+    %script{type: "text/javascript"}
+      window.loadJS('/js/app.js')
 
-                %figure.effect-apollo.project-wrapper.peek-trigger.magento.draggable
-                  %figcaption
-                    .project-header PLUGIN
-                    %a.project-desc{href: "https://community.algolia.com/magento/"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-magento"}
-                      .project-title Magento 1 & 2
-                      .spacer10
-                    .project-footer
-                      %a{href: "https://github.com/algolia/magento"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
-                    .peek-a-boo
-                      %p Add Algolia search to your Magento store.
-              .spacer10.visible-xs
-              .col-sm-6
-                %figure.effect-apollo.project-wrapper.peek-trigger.wordpress
-                  %figcaption
-                    .project-header PLUGIN
-                    %a.project-desc{href: "https://community.algolia.com/wordpress/"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-wordpress"}
-                      .project-title WordPress
-                      .spacer10
-                    .project-footer
-                      %a{href: "https://github.com/algolia/algoliasearch-wordpress"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
+  %body
+    %header.alg-header
+      .alg-header__container.m-l-r-auto
+        .alg-communitylogo
+          %a{href: "/", title: "Algolia Community"}
+            %img{src: "/img/logos/logo-community-darkbg.svg", alt: "Algolia Community"}/
 
-                    .peek-a-boo
-                      %p Add Algolia search to your WordPress site or blog.
-            .spacer10
-            .row
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", class:"contain", alt: "Push -force my friend!", id: "pushForce"}
-                %figure.effect-apollo.project-wrapper.peek-trigger.jekyll.draggable
-                  %figcaption
-                    .project-header PLUGIN
-                    %a.project-desc{href: "https://blog.algolia.com/instant-search-blog-documentation-jekyll-plugin/"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-jekyll"}
-                      .project-title Jekyll
-                      .spacer10
-                  .project-footer
-                    %a{href: "https://github.com/algolia/algoliasearch-jekyll"}
-                      %svg.icon.github
-                        %use{xlink:href: "#icon-github"}
+        .alg-headerhome
+          .alg-headerhome__link
+            %a.color-bunting{href: "https://www.algolia.com", title: "Algolia Homepage"}
+              Go to algolia.com
+              <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
-                  .peek-a-boo
-                    %p Add Algolia search to your static Jekyll site or blog.
-              .spacer10.visible-xs
-              .col-sm-6
-                .project-wrapper.ee
-                  %img{src:"#", alt: "How many squirrels are stacked in this box?", id: "flyingSquirrels"}
-                %figure.effect-apollo.project-wrapper.peek-trigger.zendesk.draggable
-                  %figcaption
-                    .project-header PLUGIN
-                    %a.project-desc{href: "https://community.algolia.com/zendesk/"}
-                      %link.rippleJS
-                      %svg.icon{height: 40}
-                        %use{xlink:href: "#icon-zendesk"}
-                      .project-title Zendesk
-                      .spacer10
-                    .project-footer
-                      %a{href: "https://github.com/algolia/zendesk"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
+    %main.alg-community
+      %section.alg-communityheader
+        %header.alg-communityheader__container.text-center
+          %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
+          .spacer8
+          %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
+          .spacer24
+          .alg-communityareas.radius6.elevation2
+            .alg-communityareas__area.text-center.p-large
+              %h3.text-lg Documentation
+              %p.m-l-r-auto Jump to the official Algolia documentation, guides and tutorials.
+              %a.btn-lg.btn.btn-static-primary.elevation1{href: "https://algolia.com/doc", title: "Algolia documentation"}
+                Read the docs
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
+            .alg-communityareas__area.text-center.p-large
+              %h3.text-lg Community Forum
+              %p.m-l-r-auto Ask questions and get the latest news. <br>Don't miss the Show & Tell category.
+              %a.btn-lg.btn.btn-static-secondary.elevation1{href: "https://discourse.algolia.com/", title: "Algolia Discourse Forum"}
+                Browse the forum
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
-                    .peek-a-boo
-                      %p Turn your Zendesk help center into a searchable knowledge base.
-                .spacer10.visible-xs
-          .col-sm-6
-            .row
-              .col-sm-6
-                .project-wrapper.big.ee
-                %figure.big.effect-apollo.project-wrapper.helperjs
-                  %figcaption
-                    .project-header LIBRARY
-                    %a.project-desc{href: "https://community.algolia.com/algoliasearch-helper-js/"}
-                      %link.rippleJS
-                      %img.icon{src:"img/logo-helper.svg"}
-                      .project-title Helper.js
-                      .spacer10
-                      .desc A companion library for building advanced search features.
-                    .project-footer
-                      %a{href: "https://github.com/algolia/algoliasearch-helper-js/"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
+      %section.projects.fill-titan.pos-rel
+        .alg-communityprojects.m-l-r-auto.pos-rel
+          .spacer120
+          .alg-communityprojects__search
+            %h1.text-lg Explore
+            #alg-community__search
+          .spacer40
 
-              .spacer10.visible-xs
-              .col-sm-6
+          #alg-communitycontainer.alg-communitycontainer
+            .alg-communityprojects__facets.alg-communityprojects__facets__is
+            .alg-communityprojects__hits.default
+            .alg-communityprojects__hits.is
+        .spacer64
 
-                .row
-                  .col-sm-12
-                    .project-wrapper.ee
-                      %img{src:"#", class:"contain",  alt: "Meow", id: "gianlucaMeme"}
-                    %figure.effect-apollo.project-wrapper.stackoverflow.peek-trigger.draggable
-                      %figcaption
-                        .project-header NEED HELP?
-                        %a.project-desc{href: "http://stackoverflow.com/questions/tagged/algolia"}
-                          %link.rippleJS
-                          %img.icon{src: "img/illus-stackoverflow.svg", width: 40, alt: "stackoverflow"}
-                          .project-title ASK StackOverflow
-                        .project-footer
-                        .peek-a-boo
-                          %p Ask programming-related questions about Algolia.
-                .spacer10
-                .row
-                  .col-sm-12
-                    .project-wrapper.ee
-                      %img{src:"#", class:"contain", alt: "Try me!", id: "uselessBox"}
-                    %figure.effect-apollo.project-wrapper.blog.draggable
-                      %figcaption
-                        .project-header READING
-                        %a.project-desc{href: "javascript:void(0)"}
-                          %link.rippleJS
-                          .project-title
-                            %svg.icon
-                                %use{xlink:href: "#icon-millisecondsmatter", class:"white"}
-                          .spacer10
-                          %a{href: "https://blog.algolia.com/", class:"button full"} VISIT ALGOLIA'S BLOG
+      %section.cta-free-trial.fill-algolia-blue.pos-rel
+        .spacer64.hidden-xs
+        .spacer64.hidden-xs
+        .container.p-l-small.p-r-small
+          .row.cf
+            .col-md-6
+              %h3.color-white Built something with Algolia?
+              %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
+            .col-md-6.text-right
+              .spacer64.hidden-xs
+              .spacer32
+              %a.btn.btn-static-dark{href: "https://discourse.algolia.com/", alt: "Visit the Discourse Forum"}
+                Browse the forum
+                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
+              .spacer8
+        .spacer64.hidden-xs
+        .spacer64
 
-
-            .spacer10
-            .row
-              .col-sm-12
-                .project-wrapper.big.ee
-                  %img{src:"#", class:"contain", alt: "Pump it pump it", id: "pumpIt"}
-                %figure.effect-apollo.project-wrapper.big.autocompletejs.draggable
-                  %figcaption
-                    .project-header LIBRARY
-                    .spacer40
-                    .row
-                      .col-xs-2.col-xs-offset-1.col-sm-offset-2
-                        .spacer40
-                        %img.icon{src: "img/illus-autocomplete.svg", alt: "autocomplete", width: "70"}
-                      .col-xs-7.text-left
-                        %a.project-desc{href: "https://github.com/algolia/autocomplete.js"}
-                          %link.rippleJS
-                          .project-title autocomplete.js
-                          .spacer10
-                          %p.desc Display as-you-type search results with autocomplete.js.
-                    .project-footer
-                      %a{href: "https://github.com/algolia/autocomplete.js"}
-                        %svg.icon
-                          %use{xlink:href: "#icon-github"}
-
-
-        .spacer10
-        .row
-          .col-sm-6
-            .project-wrapper.ee.big
-              %img{src:"#", class:"contain", alt: "Client VS startups", id: "clientReaction"}
-            %figure.effect-apollo.project-wrapper.big.docsearch.draggable
-              %figcaption
-                .project-header TOOL
-                .spacer10
-                %a.project-desc{href: "https://community.algolia.com/docsearch/"}
-                  %link.rippleJS
-                  .spacer40
-                  %img.icon{src: "img/illus-docsearch.svg", alt: "doc search", width:280}
-                  .desc.text-center Add Algolia search to technical documentation, for free!
-                  .spacer40
-                  .button Join the Program
-                .project-footer
-                  %a{href:"https://github.com/algolia/docsearch"}
-                    %svg.icon.github
-                      %use{xlink:href: "#icon-github"}
-
-          .spacer10.visible-xs
-          .col-sm-6
-            .row
-              .col-sm-6
-                .project-wrapper.big.ee
-                  %img{src:"#", alt: "Too quick!", id: "tooQuickDevops"}
-                  %p.quote "I'm too quick for a video!"
-                %figure.effect-apollo.project-wrapper.big.places.draggable
-                  %figcaption
-                    .project-header LIBRARY
-                    %a.project-desc{href: "https://community.algolia.com/places"}
-                      %link.rippleJS
-                      %svg.icon{height: 100}
-                        %use{xlink:href: "#icon-places"}
-                      .spacer20
-                      .project-title Places
-                      .spacer10
-                      .desc Turn any &lsaquo;input&rsaquo; into an address autocomplete.
-                    .project-footer
-                      %a{href: "https://github.com/algolia/places"}
-                        %svg.icon.github
-                          %use{xlink:href: "#icon-github"}
-
-              .spacer10.visible-xs
-
-              .col-sm-6
-                .row
-                  .col-sm-12
-                    .project-wrapper.ee
-                      %img{src:"#", alt: "Meow", id: "balanceBear"}
-                    %figure.effect-apollo.project-wrapper.peek-trigger.githubsearch.draggable
-                      %figcaption
-                        .project-header TOOL
-                        %a.project-desc{href: "https://github.algolia.com"}
-                          %link.rippleJS
-                          %svg.icon{height: 40}
-                            %use{xlink:href: "#icon-github"}
-                          .project-title Github Search
-                          .spacer10
-                        .project-footer
-                        .peek-a-boo
-                          %p Use Algolia to search for repositories and people on Github.
-
-                .spacer10
-                .row
-                  .col-sm-12
-                      .project-wrapper.ee
-                        %img{src:"#", class:"contain", alt: "Psycho cat", id: "psychoCat"}
-                      %figure.effect-apollo.project-wrapper.peek-trigger.hackernews.draggable
-                        %figcaption
-                          .project-header TOOL
-                          %a.project-desc{href: "https://hn.algolia.com?experimental"}
-                            %link.rippleJS
-                            %svg.icon{height: 30}
-                              %use{xlink:href: "#icon-hn"}
-                            .project-title Hackernews Search
-                          .project-footer
-                            %a{href: "https://github.com/algolia/hn-search"}
-                              %svg.icon.github
-                                %use{xlink:href: "#icon-github"}
-
-                          .peek-a-boo
-                            %p Search all HackerNews data. Sort by date and number of votes.
-        .spacer10
-        .row
-          .col-sm-3
-            .project-wrapper.ee
-              %img{src:"#", alt: "Hmmmm Piiiizzaaaaa", id: "pizzaGradient"}
-            %figure.effect-apollo.project-wrapper.searchbox.draggable
-              %figcaption
-                .project-header TOOL
-                %a.project-desc{href: "http://shipow.github.io/searchbox/"}
-                  %link.rippleJS
-                  .spacer50
-                  .project-title SearchBox
-                  .desc.text-center Build and style <br/>a custom search box.
-                .project-footer
-
-
-            .spacer10
-            .col-sm-12.no-padding
-              .project-wrapper.ee
-                %img{src:"#", alt: "Kitty-Kitty Bang-Bang", id: "catShirt"}
-              %figure.effect-apollo.project-wrapper.represent.draggable
-                %figcaption
-                  .project-header REPRESENT
-                  %a.project-desc{href: "https://docs.google.com/a/algolia.com/forms/d/e/1FAIpQLScFHcqkzw8QoS-XkU1zZ4eOg77K2t88qIXrqOC-828ahyiCnQ/viewform"}
-                    %link.rippleJS
-                    %svg.icon{height: 40}
-                      %use{xlink:href: "#icon-tshirt"}
-                    .spacer10
-                    .button.full Get shirts and stickers
-
-          .spacer10.visible-xs
-          .col-sm-3
-            .project-wrapper.big.ee
-              %img{src:"#", alt: "vvo.js", id: "vvoThumb"}
-            %figure.effect-apollo.project-wrapper.big.expectjs.draggable
-              %figcaption
-                .project-header TOOL
-                %a.project-desc{href: "https://github.com/algolia/expect-jsx"}
-                  %link.rippleJS
-                  %svg.icon{height: 120}
-                    %use{xlink:href: "#icon-react"}
-                  .spacer20
-                  .project-title Expect JSX
-                  .desc toEqualJSX for mjackson/expect.
-
-
-          .spacer10.visible-xs
-          .col-sm-6
-            .project-wrapper.ee
-              %img{src:"#", alt: " ", class:"contain", id: "dancers"}
-              %p.quote "When you subscribe, we're like"
-            %figure.effect-apollo.project-wrapper.newsletter.draggable
-              %figcaption
-                .project-header LEARN
-                .project-desc
-                  %link.rippleJS
-                  #mc_embed_signup
-                    %form#mc-embedded-subscribe-form.validate{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", novalidate: ""}
-                      #mc_embed_signup_scroll
-                        .input-group
-                          .mc-signupmessage
-                          %input#mce-EMAIL{ name: "email", placeholder: "Email Address", type: "email", value: ""}
-                          %button#mc-embedded-subscribe.button{ type: "submit"}
-                            Subscribe
-                  .spacer15
-                  .project-title Newsletter
-                  .desc.text-center Stay in the loop and get occassional Algolia updates.
-            .spacer10
-            .row
-              .col-sm-6
-                %figure.effect-apollo.project-wrapper.peek-trigger.publicdatas
-                  %figcaption
-                    %link.rippleJS
-                    .project-header LEARN
-                    %a.project-desc{href: "http://codepen.io/Algolia/"}
-                      %svg.icon{height: 30}
-                        %use{xlink:href: "#icon-codepen"}
-                      .project-title Code snippets
-                    .peek-a-boo
-                      %p Explore Algolia's recipes, demos and samples on Codepen.
-
-
-
-    %section.tools
-      %h2.text-center.m-b-large API Clients, Tools & Integrations
+    %footer.pos-rel
+      .spacer24
       .container
-        .row
-          .col-sm-2.text-center.hidden-xs
-            .tools-category.web
-              %img{src:"img/illus-web.svg", alt: "web"}
-              %h3 Web
-            .tools-category.mobile
-              %img{src:"img/illus-mobile.svg", alt: "mobile"}
-              %h3 Mobile
-            .tools-category.backend
-              %img{src:"img/illus-backend.svg", alt: "backend"}
-              %h3 Back-end
-            .tools-category.integrations
-              %img{src:"img/illus-integrations.svg", alt: "integrations", width: 60}
-              %h3 Integrations
-          .col-sm-10
-            .row.list-tools
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-js"}
-                  %img{src: "img/icons/javascript.svg", height:50, alt: "js"}
-                  .spacer10
-                  .title algoliasearch.js
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-helper-js"}
-                  %img{src: "img/icons/helperjs.svg", height:50, alt: "helper"}
-                  .spacer10
-                  .title  algolia-helper.js
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/autocomplete.js"}
-                  %img{src: "img/icons/autocompletejs.svg", height:50, alt: "autocomplete"}
-                  .spacer10
-                  .title  autocomplete.js
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/instantsearch.js"}
-                  %img{src: "img/icons/instantsearchjs.svg", height:50, alt: "instantsearch"}
-                  .spacer10
-                  .title instantsearch.js
+        .column
+          %h4 Resources
+          %ul
+            %li
+              %a{href: "https://github.com/algolia/community-code-of-conduct"} Code of Conduct
+            %li
+              %a{href: "https://github.com/algolia/awesome-algolia"} awesome-algolia
+            %li
+              %a{href: "https://www.algolia.com/careers"} Work with us
+            %li.email.pos-rel
+              .spacer16
+              #mc_embed_signup.newsletter-signup
+                %form#mc-embedded-subscribe-form.validate.form-inline{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", name: "mc-embedded-subscribe-form", novalidate: true, target: "_blank"}
+                  #mc_embed_signup_scroll
+                    .mc-signupmessage
+                    .mc-field-group
+                    %input#mce-EMAIL.email.form-control{type: "text", name: "email", placeholder: "Your Email Address", type: "email"}/
+                    %button.btn.btn-static-default.color-white{type: "submit"}
+                      Subscribe
 
-            .row.list-tools
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-android"}
-                  %img{src: "img/icons/android.svg", height:50, alt: "android"}
-                  .spacer10
-                  .title Android
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-objc"}
-                  %img{src: "img/icons/objc.svg", height:50, alt: "objective c"}
-                  .spacer10
-                  .title  Objective-C
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-swift"}
-                  %img{src: "img/icons/swift.svg", height:50, alt: "swift"}
-                  .spacer10
-                  .title Swift
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-csharp"}
-                  %img{src: "img/icons/windows.svg", height:50, alt: "windows"}
-                  .spacer10
-                  .title Windows
+        .column
+          %h4 Developer
+          %ul
+            %li
+              %a{href: "https://www.algolia.com/doc/guides/getting-started/how-it-works/"} Getting Started
+            %li
+              %a{href: "https://www.algolia.com/doc/"} Documentation
 
-            .row.list-tools
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-csharp"}
-                  %img{src: "img/icons/csharp.svg", height:50, alt: "c sharp"}
-                  .spacer10
-                  .title C#
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-cmd"}
-                  %img{src: "img/icons/curl.svg", height:50, alt: "curl"}
-                  .spacer10
-                  .title Curl
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-django"}
-                  %img{src: "img/icons/django.svg", height:50, width: 49, alt: "django"}
-                  .spacer10
-                  .title Django
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-go"}
-                  %img{src: "img/icons/go.svg", height:50, alt: "go"}
-                  .spacer10
-                  .title Go
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-java"}
-                  %img{src: "img/icons/java.svg", height:50, alt: "java"}
-                  .spacer10
-                  .title Java
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-js"}
-                  %img{src: "img/icons/node.svg", height:50, alt:"node", alt: "node"}
-                  .spacer10
-                  .title  Node.js
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-php"}
-                  %img{src: "img/icons/php.svg", height:50, alt: "php"}
-                  .spacer10
-                  .title PHP
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-python"}
-                  %img{src: "img/icons/python.svg", height:50, alt: "python"}
-                  .spacer10
-                  .title Python
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-rails"}
-                  %img{src: "img/icons/rails.svg", height:50, alt: "rails"}
-                  .spacer10
-                  .title Rails
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-ruby"}
-                  %img{src: "img/icons/ruby.svg", height:50, alt: "ruby"}
-                  .spacer10
-                  .title Ruby
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-client-scala"}
-                  %img{src: "img/icons/scala.svg", height:50, alt: "scala"}
-                  .spacer10
-                  .title Scala
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/AlgoliaSearchBundle"}
-                  %img{src: "img/icons/symfony.svg", height:50, alt: "symfony"}
-                  .spacer10
-                  .title Symfony
-            .row.list-tools
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-wordpress/"}
-                  %img{src: "img/icons/wordpress.svg", height:50, alt: "js"}
-                  .spacer10
-                  .title WordPress
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-magento/"}
-                  %img{src: "img/icons/magento.svg", height:50, alt: "helper"}
-                  .spacer10
-                  .title  Magento
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-magento-2/"}
-                  %img{src: "img/icons/magento2.svg", height:50, alt: "helper"}
-                  .spacer10
-                  .title  Magento 2
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-zendesk"}
-                  %img{src: "img/icons/zendesk.svg", height:50, alt: "autocomplete"}
-                  .spacer10
-                  .title  Zendesk
-              .col-sm-3.col-xs-6
-                %a.tool-wrapper{href:"https://github.com/algolia/algoliasearch-jekyll"}
-                  %img{src: "img/icons/jekyll.svg", height:50, alt: "instantsearch"}
-                  .spacer10
-                  .title Jekyll
+        .column
+          %h4 Connect
+          %ul
+            %li
+              %a{href: "https://twitter.com/Algolia"}
+                Twitter
+            %li
+              %a{href: "https://www.facebook.com/algolia"}
+                Facebook
+            %li
+              %a{href: "https://github.com/Algolia"}
+                Github
+            %li
+              %a{href: "https://dribbble.com/algolia"}
+                Dribbble
+            %li
+              %a{href: "https://stories.algolia.com/"}
+                Stories
+            %li
+              %a{href: "https://blog.algolia.com/"}
+                Blog
+      
+      .spacer64
+      .spacer64
+      .logo.text-center.pos-rel
+        %a{href: "https://algolia.com"}
+          %img{src: "/img/logos/algolia-logo-mark.svg", alt: "Algolia"}/
 
-    .spacer40
-    %footer.footer
-      .container
-        .row
-          .col-sm-6
-            %h3 Resources
-            %ul.list-unstyled
-              %li
-                %a{href: "https://algolia.com/awesome"}
-                  %code
-                    awesome-algolia
-              %li
-                %a{href: "https://github.com/algolia/community-code-of-conduct"}
-                  Code of Conduct
-            %ul.list-unstyled
-            %h3 Want to work with us ?
-            %ul.list-unstyled
-              %li
-                %a{href: "https://www.algolia.com/careers"}
-                  Open positions
-              %li
-                %a{href: "https://www.algolia.com/about"}
-                  Our team
-          .col-sm-3
-            %h3 Connect
-            %ul.list-unstyled.connect
-              %li
-                %a{href:"https://twitter.com/algolia"}
-                  Twitter
-              %li
-                %a{href:"https://www.facebook.com/algolia"}
-                  Facebook
-              %li
-                %a{href:"https://github.com/algolia"}
-                  GitHub
-              %li
-                %a{href:"https://www.producthunt.com/@algolia"}
-                  Product Hunt
-              %li
-                %a{href:"https://www.linkedin.com/company/algolia"}
-                  LinkedIn
-          .col-sm-3.update
-            %h3 Stay updated
-            %div
-              .fb-page{data-adapt-container-width:"true", data-hide-cover:"false", data-href:"https://www.facebook.com/algolia", data-show-facepile:"true", data-small-header:"true"}
-                .fb-xfbml-parse-ignore
-                  %blockquote{cite:"https://www.facebook.com/algolia"}
-                    %a{href:"https://www.facebook.com/algolia"} Algolia on Facebook
-            %div
-              %a{class:"twitter-follow-button", href:"https://twitter.com/Algolia", data-size:"large"} Follow @Algolia on Twitter
+    %div{id: "fb-root"}
+      %script
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '217461055269773',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v2.9'
+          });
+          FB.AppEvents.logPageView();
+        };
 
-        .row
-          .spacer60
-          .col-absolute-center
-            %a{href: "https://blog.algolia.com/"}
-              %svg.icon.big.center
-                %use{xlink:href: "#icon-millisecondsmatter", class:"grey"}
-        .text-center
-          .spacer30
-          ©<span class="brand-name">Algolia</span>
-          %a{href: "https://www.algolia.com/policies/terms", target:"_blank"}
-            Terms of service
-          &nbsp;-&nbsp;
-          %a{href: "https://www.algolia.com/policies/privacy", target:"_blank"}
-            Privacy Policy
-.ac-footer-actions
-  .footer-container
-    %p Build unique search experiences with Algolia
-    %a.ac-footer-btn.ac-footer-btn-ghost-grey{href: "https://www.algolia.com/why?utm_medium=social-owned&utm_source=places%20website&utm_campaign=homepage&utm_term=why"}
-      Discover Algolia
-      %span.ac-icon-triangle
-    %a.ac-footer-btn.ac-footer-btn-ghost-pink{href: "https://www.algolia.com/users/sign_up?utm_medium=social-owned&utm_source=places%20website&utm_campaign=homepage&utm_term=get_started"} Get Started For Free
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-%script{src: "js/app.js"}
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8JP8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-:javascript
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N8JP8G');
+    %noscript
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8JP8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    %script
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N8JP8G');
 
-.svg-icons{style: "height: 0; width: 0; position: absolute; visibility: hidden; display:none"}
-  <!-- inject:svg --><!-- endinject -->
+
+    .svg-icons{style: "height: 0; width: 0; position: absolute;opacity:0;"}
+      <!-- inject:svg --><!-- endinject -->

@@ -13,15 +13,19 @@ module.exports = {
             {
               test: /\.jsx?$/,
               exclude: /(node_modules|bower_components)/,
-              loader: 'babel-loader'
-            }       ]
+              loader: 'babel-loader?presets[]=es2015'
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            }
+        ]
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            $ : "jquery",
-            jQuery : "jquery",
-            "window.jQuery" : "jquery",
-            "root.jQuery" : "jquery"
+        new webpack.DefinePlugin({
+            "process.env": {
+                'NODE_ENV': '"production"'
+            }
         })
     ]
 };

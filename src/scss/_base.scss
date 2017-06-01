@@ -1,33 +1,41 @@
-::root {
-  font-size: 16px;
+:root {
+  font-size: 15px;
 }
 
 * {
-  border-box: box-sizing;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscaled;
-  font-weight: 300;
-  text-rendering: optimizeLegibility
-}
-
-html, body {
-  width: 100%;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-p {
   text-rendering: optimizeLegibility;
 }
 
-@media (max-width: 960px) {
-  .project-wrapper {
-    font-size: 12px !important;
-  }
+html, body {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-@media (max-width: $bp-small) {
-  .project-wrapper {
-    font-size: 14px !important;
+
+body {
+  background: #fff;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+  transition: 100ms ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.96);
   }
 }
