@@ -37,6 +37,31 @@
 
     //webmastertools
     %meta{name: "google-site-verification", content: "Kchm7Sc4EMavWFw1y3NC89h9SpHixZMdGMRyddMEaOI"}
+    
+    %script{type: "text/javascript" }
+      (function( w ){
+        var loadJS = function( src, cb ){
+          "use strict";
+          var ref = w.document.getElementsByTagName( "script" )[ 0 ];
+          var script = w.document.createElement( "script" );
+          script.src = src;
+          script.async = true;
+          ref.parentNode.insertBefore( script, ref );
+          if (cb && typeof(cb) === "function") {
+            script.onload = cb;
+          }
+          return script;
+        };
+        if( typeof module !== "undefined" ){
+          module.exports = loadJS;
+        }
+        else {
+          w.loadJS = loadJS;
+        }
+      }( typeof global !== "undefined" ? global : this ));
+
+    %script{type: "text/javascript"}
+      window.loadJS('/js/app.js')
 
   %body
     %header.alg-header
@@ -163,25 +188,34 @@
         %a{href: "https://algolia.com"}
           %img{src: "/img/logos/algolia-logo-mark.svg", alt: "Algolia"}/
 
-    %script{src: "/js/app.js"}
     %div{id: "fb-root"}
       %script
-        (function(d, s, id) {
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '217461055269773',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v2.9'
+          });
+          FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id){
           var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
+          if (d.getElementById(id)) {return;}
           js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.5&appId=217461055269773";
+          js.src = "//connect.facebook.net/en_US/sdk.js";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-    %script{type: "text/javascript"}
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','//connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1654938174769952');
-        fbq('track', "PageView");
+    %noscript
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8JP8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    %script
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N8JP8G');
 
 
     .svg-icons{style: "height: 0; width: 0; position: absolute;opacity:0;"}

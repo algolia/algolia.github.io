@@ -274,7 +274,8 @@ let search = instantsearch({
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#alg-community__search',
-    placeholder: 'search projects...'
+    placeholder: 'search projects...',
+    autofocus: false
   })
 );
 

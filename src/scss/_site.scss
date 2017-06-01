@@ -28,6 +28,7 @@ $learnColor: $radical-red;
 $miscColor: $shamrock;
 $liveColor: $bittersweet;
 $browserExtension: $java;
+
 .alg-header {
   width: 100%;
   padding-top: em(16, 16);
@@ -89,6 +90,12 @@ $browserExtension: $java;
     background-image: url("/img/background.svg");
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media (max-width: $screen-sm){
+      background-size: cover;
+      background-position: center;
+    }
+
     @include diagonal(-6deg,
     $titan-white,
     50%,
@@ -120,9 +127,14 @@ $browserExtension: $java;
     color: $bunting;
     position: relative;
     z-index: 50;
+
     @media (min-width: $screen-sm) {
       display: flex;
       background-color: #FFF;
+    }
+
+    @media (max-width: $screen-sm) {
+      box-shadow: none;
     }
     &:after {
       position: absolute;
@@ -133,12 +145,16 @@ $browserExtension: $java;
       transform: translate(-50%, -50%);
       background-color: #DEDEF7;
       width: 1px;
+      @media (max-width: $screen-sm){
+        display: none
+      }
     }
     .alg-communityareas__area {
       border-radius: $border-radius-base;
       background-color: #FFF;
       @media (max-width: $screen-sm) {
         margin-bottom: 20px;
+        box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2);
       }
       @media (min-width: $screen-sm) {
         width: 50%;
@@ -146,6 +162,8 @@ $browserExtension: $java;
     }
     a {
       text-decoration: none;
+      margin-bottom: 30px;
+      
       svg {
         transform: translate(6px, 0) rotate(-90deg);
       }
@@ -158,6 +176,9 @@ $browserExtension: $java;
       max-width: 70%;
       line-height: em(27, 15);
       font-weight: 400;
+      @media (max-width: $screen-sm){
+        br{display: none}
+      }
     }
   }
   .alg-communityprojects {
@@ -632,6 +653,18 @@ $browserExtension: $java;
     background-image: url('/img/algolia-fast-bg.svg');
     background-size: cover;
     padding-top: 100px;
+
+    @include diagonal(-6deg,
+      #302A51,
+      150px,
+      false,
+      before) {
+        left: 0;
+        bottom: -95px;
+        z-index: 25;
+        transform: skewY(-2deg);
+      }
+
     @media (max-width: $screen-sm) {
       padding-top: 160px;
     }
@@ -705,20 +738,12 @@ $browserExtension: $java;
 }
 
 footer {
+  z-index: 50;
+  margin-top: 50px;
   overflow: hidden;
   position: relative;
   background-color: #2E2A51;
 
-  @include diagonal(-6deg,
-  #1F1C3F,
-  130px,
-  false,
-  before) {
-    left: 0;
-    bottom: 80px;
-    z-index: 25;
-    transform: skewY(-2deg);
-  }
   .container {
     @include diagonal(-6deg,
     #1F1C3F,
@@ -834,6 +859,7 @@ footer {
       }
     }
   }
+
   .logo {
     background-color: #050f2c;
     z-index: 50;
@@ -847,3 +873,4 @@ footer {
     }
   }
 }
+
