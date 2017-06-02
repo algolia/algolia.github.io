@@ -44,6 +44,7 @@
     "gulp-svgmin": "^1.2.0",
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
     "image-size": "^0.5.4",
     "imagemin-pngquant": "^4.2.0",
