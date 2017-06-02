@@ -1385,6 +1385,8 @@ textarea {
   outline-offset: -2px;
 }
 
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:active,
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:focus,
 .alg-community .alg-communityprojects .alg-communityprojects__search input:focus,
 footer .email input:focus {
   outline: 0;
@@ -1487,6 +1489,52 @@ footer .email input:focus {
 .alg-community .alg-communityprojects .alg-communityprojects__search #alg-community__search {
   -ms-flex: 1;
   flex: 1;
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch {
+  position: absolute;
+  right: 15px;
+  width: 47px;
+  height: 47px;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:after,
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:before {
+  width: 35%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #8994c6;
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch:after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch.visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.alg-community .alg-communityprojects .alg-communityprojects__search .alg-community--clearSearch.visible:after {
+  opacity: 1;
 }
 
 .alg-community .alg-communityprojects .alg-communityprojects__search .ais-search-box {
@@ -1640,6 +1688,7 @@ footer .email input:focus {
   padding-left: 14px;
   padding-right: 8px;
   font-size: 14px;
+  background-color: #f8faff;
 }
 
 .alg-community .alg-communityprojects__facets .alg-facet__name:before {
@@ -1648,7 +1697,7 @@ footer .email input:focus {
   height: 1px;
   position: absolute;
   right: 0;
-  bottom: 14px;
+  bottom: 11px;
   border-bottom: 1px dashed #E2E2E2;
   z-index: -1;
 }
