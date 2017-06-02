@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version Thu Jun 01 2017 20:37:38 GMT+0200 (CEST)
+# version Fri Jun 02 2017 14:37:48 GMT+0200 (CEST)
 CACHE:
 CNAME
 img/projects/zendesk-4ead31436d.svg
@@ -7,12 +7,12 @@ app-0c69465780.css
 index.html
 manifest.json
 rev-manifest.json
+js/app-0335555d57.js
 img/algolia-fast-bg-65162a8533.svg
 img/background-fb48d60561.svg
 img/logo-instantsearch-android-ec3efab725.svg
 img/logo-is-react-dfff06cdd4.svg
 img/og_screen-6890b0caab.png
-js/app-0335555d57.js
 img/icons/android-icon-144x144-459593f265.png
 img/icons/android-icon-192x192-b28b089d78.png
 img/icons/android-icon-36x36-ff0c2a91cb.png
