@@ -1,6 +1,5 @@
 language: node_js
 cache:
-  - yarn
   directories:
     - node_modules
 before_script:
