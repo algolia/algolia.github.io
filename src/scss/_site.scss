@@ -202,9 +202,67 @@ $browserExtension: $java;
           margin-bottom: 32px;
         }
       }
+
       #alg-community__search {
         flex: 1;
       }
+
+      .alg-community--clearSearch {
+        position: absolute;
+        right: 15px;
+        width: 47px;
+        height: 47px;
+        pointer-events: none;
+        background-color: transparent;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+        z-index: 20;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
+
+        &:before,
+        &:after {
+          width: 35%;
+          height: 2px;
+          border-radius: 1px;
+          background-color: $portage;
+          position: absolute;
+          content: "";
+          left: 50%;
+          top: 50%;
+          z-index: 10;
+          transform: translate(-50%,-50%);
+          pointer-events: none;
+        }
+
+        &:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+          transform: translate(-50%,-50%) rotate(-45deg);
+        }
+
+        &.visible {
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+
+          &:before {
+
+          }
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
       .ais-search-box {
         width: 100%;
         overflow: hidden;
@@ -323,17 +381,20 @@ $browserExtension: $java;
       padding-left: 14px;
       padding-right: 8px;
       font-size: 14px;
+      background-color: #f8faff;
+
       &:before {
         content: "";
         width: 100%;
         height: 1px;
         position: absolute;
         right: 0;
-        bottom: 14px;
+        bottom: 11px;
         border-bottom: 1px dashed #E2E2E2;
         z-index: -1;
       }
     }
+
     .alg-facet__number {
       float: right;
       color: #9D9DBD;
