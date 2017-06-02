@@ -344,7 +344,7 @@ gulp.task('export:algolia-settings', function() {
 // -------------------------------------
 //   Task: Deploy Github Page
 // -------------------------------------
-gulp.task('deploy', ['build:prod'], function(callback) {
+gulp.task('deploy', function(callback) {
   return gulp.src('build/**/*')
     .pipe(ghPages({ branch: "master" }));
 });

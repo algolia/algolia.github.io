@@ -201,6 +201,7 @@ const addTagToHelper = (event) => {
 
 const DefaultContainer = document.querySelector('.alg-communityprojects__hits.default');
 const SearchContainer = document.querySelector('.alg-communityprojects__hits.is');
+const ClearRefinements = document.querySelector('.alg-community--clearSearch');
 
 let search = instantsearch({
   appId: appID,
@@ -208,6 +209,11 @@ let search = instantsearch({
   indexName: index,
   searchFunction: (helper) => {
     const hasCategoryRefinement = helper.state.hierarchicalFacetsRefinements.category && helper.state.hierarchicalFacetsRefinements.category.length > 0;
+    if(helper.state.query == ""){
+      ClearRefinements.classList.remove('visible');
+    } else {
+      ClearRefinements.classList.add('visible');
+    }
     if(helper.state.query == "" && !hasCategoryRefinement) {
       DefaultContainer.style.display = "block";
       SearchContainer.style.display = "none";
@@ -219,7 +225,10 @@ let search = instantsearch({
   }
 });
 
-// add a searchBox widget
+// search.addWidget(
+//   instantsearch.widgets.clearAll()
+// )
+
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#alg-community__search',
@@ -267,4 +276,25 @@ renderResults(sorted);
 const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
 viewMoreLinks.forEach(l => l.addEventListener('click', onViewMoreClick));
 
+search.on('render', () => {
+
+  const header = document.querySelector('[data-tag="All Projects"]');
+
+  header.addEventListener('click', (e) => {
+    e.preventDefault();
+    search.helper.clearRefinements();
+    search.helper.setQuery('');
+    search.helper.search();
+  });
+
+  ClearRefinements.addEventListener('click', (e) => {
+    e.preventDefault();
+    search.helper.clearRefinements();
+    search.helper.setQuery('');
+    search.helper.search();
+  });
+
+})
+
 search.start();
+
