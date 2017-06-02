@@ -492,6 +492,19 @@
     "featured": false,
     "objectID": "",
     "ranking": 1000
+  },
+  {
+    "name": "hexo-algolia",
+    "category": "Plugin",
+    "description": "Index your website content and provide helpers for hexo themes.",
+    "url_home": "https://npmjs.com/hexo-algolia",
+    "url_github": "https://github.com/oncletom/hexo-algolia",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "autocomplete",
+    "featured": false,
+    "objectID": "",
+    "ranking": 1000
   }
 ]
 
