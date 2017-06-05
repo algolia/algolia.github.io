@@ -27,7 +27,10 @@
   "img/icons/ms-icon-310x310.png": "img/icons/ms-icon-310x310-6611b84b92.png",
   "img/icons/ms-icon-70x70.png": "img/icons/ms-icon-70x70-3bdef2e54a.png",
   "img/logo-instantsearch-android.svg": "img/logo-instantsearch-android-ec3efab725.svg",
-  "img/logo-is-react.svg": "img/logo-is-react-dfff06cdd4.svg",
+  "img/logo-instantsearch.svg": "img/logo-instantsearch-b453e92031.svg",
+  "img/logo-is-react.svg": "img/logo-is-react-30ebf17fb2.svg",
+  "img/logo-is.svg": "img/logo-is-636dbfb522.svg",
+  "img/logo-react-instantsearch.svg": "img/logo-react-instantsearch-622f047c1d.svg",
   "img/logos/algolia-logo-mark.svg": "img/logos/algolia-logo-mark-7f34b65071.svg",
   "img/logos/community-mark-dark.svg": "img/logos/community-mark-dark-1fec59b414.svg",
   "img/logos/logo-community-darkbg.svg": "img/logos/logo-community-darkbg-166c137fec.svg",
@@ -83,5 +86,5 @@
   "img/projects/yarn.svg": "img/projects/yarn-1c5da6a622.svg",
   "img/projects/zendesk.svg": "img/projects/zendesk-4ead31436d.svg",
   "index.html": "index-0722a59a33.html",
-  "js/app.js": "js/app-ef800102c6.js"
+  "js/app.js": "js/app-01ce2d975c.js"
 }
