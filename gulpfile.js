@@ -250,7 +250,8 @@ gulp.task('webserver', function() {
 //   Task: Revision
 // -------------------------------------
 gulp.task('revision', function() {
-  return gulp.src(['build/**/**/*.{css,js,png,svg,html}'])
+  return gulp.src(['build/**/**/*.{css,js,png,svg,html}', '!build/img/*.svg'])
+  // return gulp.src(['build/*.css', 'build/js/*.js', 'build/img/icons/*.png', 'build/img/icons/logos/*.svg', 'build/img/icons/projects/*.svg'])
     .pipe(rev())
     .pipe(gulp.dest('build'))
     .pipe(revNapkin())
