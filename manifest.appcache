@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version Mon Jun 05 2017 09:10:06 GMT+0200 (CEST)
+# version Mon Jun 05 2017 09:32:03 GMT+0200 (CEST)
 CACHE:
 CNAME
 img/projects/zendesk-4ead31436d.svg
@@ -9,6 +9,7 @@ manifest.json
 rev-manifest.json
 img/algolia-fast-bg.svg
 img/background.svg
+img/logo-helper.svg
 img/logo-instantsearch-android.svg
 img/logo-instantsearch.svg
 img/logo-is-react.svg
@@ -47,8 +48,8 @@ img/logos/community-mark-dark-1fec59b414.svg
 img/logos/logo-community-1fec59b414.svg
 img/logos/logo-community-darkbg-166c137fec.svg
 img/projects/android-3486d6b728.svg
-img/projects/arrow-right-e7f881f29a.svg
 app-5aa851a856.ba588666.css
+img/projects/autocomplete-9dc4fd5ffe.svg
 img/projects/cli-9d4de40e98.svg
 img/projects/codepen-750f516124.svg
 img/projects/csharp-e239fdba2a.svg
@@ -94,7 +95,7 @@ img/projects/windows-b72caf213c.svg
 img/projects/woocommerce-18bd912321.svg
 img/projects/wordpress-c4ddb578a8.svg
 img/projects/yarn-1c5da6a622.svg
-img/projects/autocomplete-9dc4fd5ffe.svg
+img/projects/arrow-right-e7f881f29a.svg
 install-sw.js
 cache.html
 cache.js
