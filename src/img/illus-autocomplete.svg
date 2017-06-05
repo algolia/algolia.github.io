@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="83px" viewBox="0 0 82 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>illus-autocomplete</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="79.1042755%" cy="82.3870889%" fx="79.1042755%" fy="82.3870889%" r="83.6882473%" id="radialGradient-1">
+            <stop stop-color="#4A0606" offset="0%"></stop>
+            <stop stop-color="#1198B2" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-555.000000, -578.000000)">
+            <g id="projects" transform="translate(14.000000, 167.000000)">
+                <g id="autocomplete" transform="translate(471.000000, 310.000000)">
+                    <g id="illus-autocomplete" transform="translate(71.000000, 102.000000)">
+                        <path d="M5.56453225,40.3028593 C5.56453225,21.3145344 20.8995609,5.9274436 39.8236388,5.9274436 C58.7477167,5.9274436 74.0827453,21.3145344 74.0827453,40.3028593 C74.0827453,59.2911841 58.7477167,74.678275 39.8236388,74.678275 C20.8995609,74.678275 5.56453225,59.2911841 5.56453225,40.3028593 Z" id="Path" fill="#FFFFFF" opacity="0.355352146"></path>
+                        <path d="M0.110591897,40.5007229 C0.110591897,62.6013911 17.9741094,80.525555 40,80.525555 C62.0258906,80.525555 79.8894081,62.6013911 79.8894081,40.5007229 C79.8894081,18.4000548 62.0258906,0.475890878 40,0.475890878 C17.9741094,0.475890878 0.110591897,18.4000548 0.110591897,40.5007229 Z" id="Path" stroke="#FFFFFF" stroke-width="2"></path>
+                        <path d="M18.5921311,75.567783 C14.1989419,69.6826341 11.5964265,62.374417 11.5964265,54.4577298 C11.5964265,34.992693 27.3296172,19.2060884 46.728794,19.2060884 C58.1128457,19.2060884 68.2344365,24.6425439 74.6549284,33.0685379 C71.681038,32.4765849 68.6063041,32.1661791 65.4594874,32.1661791 C40.7645872,32.1661791 20.5088743,51.2823711 18.5921311,75.567783 Z" id="Combined-Shape" fill="url(#radialGradient-1)" opacity="0.475804571" transform="translate(43.125677, 47.386936) rotate(-180.000000) translate(-43.125677, -47.386936) "></path>
+                        <ellipse id="Oval-2" fill="#FFFFFF" opacity="0.164820429" cx="27.4101753" cy="25.6913265" rx="10.0718597" ry="10.0561224"></ellipse>
+                        <ellipse id="Oval-2-Copy" fill="#FFFFFF" opacity="0.496735075" cx="40" cy="39.9375" rx="2.51796493" ry="2.51403061"></ellipse>
+                        <ellipse id="Oval-2-Copy" fill="#FFFFFF" opacity="0.496735075" cx="29.9281403" cy="55.0216837" rx="2.51796493" ry="2.51403061"></ellipse>
+                        <ellipse id="Oval-2-Copy-2" fill="#7AE9F5" opacity="0.496735075" cx="64.3403277" cy="47.4795918" rx="1.67864329" ry="1.67602041"></ellipse>
+                        <ellipse id="Oval-2-Copy" fill="#82F8FF" opacity="0.853311567" cx="58.4650762" cy="61.7257653" rx="2.51796493" ry="2.51403061"></ellipse>
+                        <ellipse id="Oval-2" fill="#FFFFFF" cx="29.9281403" cy="26.5293367" rx="4.19660822" ry="4.19005102"></ellipse>
+                        <ellipse id="Oval-2" fill="#FFFFFF" opacity="0.15234375" cx="40" cy="43.2895408" rx="4.19660822" ry="4.19005102"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
