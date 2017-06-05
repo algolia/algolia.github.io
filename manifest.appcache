@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version Mon Jun 05 2017 08:57:57 GMT+0200 (CEST)
+# version Mon Jun 05 2017 09:10:06 GMT+0200 (CEST)
 CACHE:
 CNAME
 img/projects/zendesk-4ead31436d.svg
@@ -7,13 +7,13 @@ app-5aa851a856.css
 index.html
 manifest.json
 rev-manifest.json
-img/algolia-fast-bg-65162a8533.svg
-img/background-fb48d60561.svg
-img/logo-instantsearch-android-ec3efab725.svg
-img/logo-instantsearch-b453e92031.svg
-img/logo-is-636dbfb522.svg
-img/logo-is-react-30ebf17fb2.svg
-img/logo-react-instantsearch-622f047c1d.svg
+img/algolia-fast-bg.svg
+img/background.svg
+img/logo-instantsearch-android.svg
+img/logo-instantsearch.svg
+img/logo-is-react.svg
+img/logo-is.svg
+img/logo-react-instantsearch.svg
 img/og_screen-6890b0caab.png
 js/app-01ce2d975c.js
 img/icons/android-icon-144x144-459593f265.png
@@ -48,7 +48,7 @@ img/logos/logo-community-1fec59b414.svg
 img/logos/logo-community-darkbg-166c137fec.svg
 img/projects/android-3486d6b728.svg
 img/projects/arrow-right-e7f881f29a.svg
-app-5aa851a856.1c98a0d9.css
+app-5aa851a856.ba588666.css
 img/projects/cli-9d4de40e98.svg
 img/projects/codepen-750f516124.svg
 img/projects/csharp-e239fdba2a.svg
