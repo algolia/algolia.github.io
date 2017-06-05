@@ -130,19 +130,6 @@
     "ranking": 1000
   },
   {
-    "name": "Javascript",
-    "category": "API Client",
-    "description": "",
-    "url_home": "",
-    "url_github": "",
-    "url_forum": "",
-    "discussion_count": "",
-    "icon": "javascript",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
-  },
-  {
     "name": "Ruby on Rails",
     "category": "API Client",
     "description": "Algolia Search API client for Rails",
