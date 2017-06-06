@@ -302,7 +302,6 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/serviceWorker.js', { scope: '/' })
     .then(function(registration) {
-      console.log('REGISTERED');
     })
     .catch(function(error) {
       console.log(error)

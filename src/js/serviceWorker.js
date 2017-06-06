@@ -8,7 +8,6 @@ toolbox.router.get('/', toolbox.fastest);
 
 // Replace old service
 self.addEventListener('install', function(event) {
-  console.log('INSTALLED');
   self.skipWaiting();
 });
 
