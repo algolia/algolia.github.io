@@ -3,10 +3,13 @@ var webpack = require("webpack");
 var path = require("path");
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: {
+        app: './src/js/app.js',
+        serviceWorker: './src/js/serviceWorker.js'
+    },
     output: {
         path: __dirname,
-        filename: 'app.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "gulp build:prod && node createManifest.js && node removeHash.js && gulp offline",
+    "build": "gulp build:prod && node createManifest.js && node removeHash.js",
     "dev": "gulp dev",
     "svgmin": "rm src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
     "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
@@ -63,7 +63,8 @@
     "html-escape": "^2.0.0",
     "instantsearch.js": "1.11.11",
     "jquery": "^2.2.0",
-    "mo-js": "^0.288.1"
+    "mo-js": "^0.288.1",
+    "sw-toolbox": "^3.6.0"
   },
   "engines": {
     "node": "7.10.0"
