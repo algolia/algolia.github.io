@@ -24,7 +24,7 @@ const critical = require('critical').stream;
 const haml = require('gulp-haml');
 
 //serviceworker
-const sww = require('gulp-sww');
+// const sww = require('gulp-sww');
 
 //SVG
 const svgstore = require('gulp-svgstore');
@@ -137,7 +137,7 @@ gulp.task('css:min', ['scss'], function() {
 //   Task: Javascript
 // -------------------------------------
 gulp.task('js', function() {
-  return gulp.src('src/js/app.js')
+  return gulp.src(['src/js/app.js','src/serviceWorker.js'])
     .pipe(webpack(webpackConfig))
     .on('error', function(e) {
       this.emit('end'); // Recover from errors
@@ -167,11 +167,11 @@ gulp.task('js:min', ['js'], function() {
 // -------------------------------------
 //   Task: Initialise ServiceWorker 
 // -------------------------------------
-gulp.task('offline', function() {
-  return gulp.src('**/*', { cwd: 'build' })
-    .pipe(sww())
-    .pipe(gulp.dest('build'));
-});
+// gulp.task('offline', function() {
+//   return gulp.src('**/*', { cwd: 'build' })
+//     .pipe(sww())
+//     .pipe(gulp.dest('build'));
+// });
 
 // -------------------------------------
 //   Task: Images & Optmizations
@@ -198,6 +198,12 @@ gulp.task('copy', function() {
   return gulp.src(['CNAME'])
     .pipe(gulp.dest('build'));
 });
+
+gulp.task('copyWorker', function() {
+  return gulp.src(['build/js/serviceWorker.js'])
+    .pipe(gulp.dest('build'));
+});
+
 
 // // -------------------------------------
 // //   Task: Favicons
@@ -238,7 +244,7 @@ gulp.task('watch', function() {
 gulp.task('webserver', function() {
   gulp.src('build')
     .pipe(webserver({
-      host: '0.0.0.0',
+      host: 'localhost',
       port: 1337,
       livereload: true,
       directoryListing: false,
@@ -250,7 +256,7 @@ gulp.task('webserver', function() {
 //   Task: Revision
 // -------------------------------------
 gulp.task('revision', function() {
-  return gulp.src(['build/**/**/*.{css,js,png,svg,html}', '!build/img/*.svg'])
+  return gulp.src(['build/**/**/*.{css,js,png,svg,html}','!build/js/serviceWorker.js', '!build/img/*.svg'])
   // return gulp.src(['build/*.css', 'build/js/*.js', 'build/img/icons/*.png', 'build/img/icons/logos/*.svg', 'build/img/icons/projects/*.svg'])
     .pipe(rev())
     .pipe(gulp.dest('build'))
@@ -274,11 +280,11 @@ gulp.task('revreplace', ['revision'], () => {
 //   Task: Build DEV - PROD - HAML
 // -------------------------------------
 gulp.task('build:dev', ['clean'], function(callback) {
-  runSequence('scss', 'images', 'haml', 'js', callback);
+  runSequence('scss', 'images', 'haml', 'js', 'copyWorker', callback);
 });
 
 gulp.task('build:prod', ['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'js:min', 'revreplace', 'critical-css', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'js:min', 'revreplace', 'critical-css', 'copyWorker', callback);
 });
 
 gulp.task('build:haml', function(callback) {
