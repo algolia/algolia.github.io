@@ -1023,12 +1023,6 @@ footer ul a {
   box-shadow: 0 5px 15px 0 rgba(112,128,175,.2);
 }
 
-@media (max-width:768px) {
-  .hidden-xs {
-    display: none;
-  }
-}
-
 .color-white {
   color: #fff!important;
 }

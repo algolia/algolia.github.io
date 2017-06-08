@@ -1,5 +1,5 @@
 {
-  "app.css": "app-5aa851a856.css",
+  "app.css": "app-251155ebda.css",
   "img/icons/android-icon-144x144.png": "img/icons/android-icon-144x144-459593f265.png",
   "img/icons/android-icon-192x192.png": "img/icons/android-icon-192x192-b28b089d78.png",
   "img/icons/android-icon-36x36.png": "img/icons/android-icon-36x36-ff0c2a91cb.png",
@@ -29,7 +29,7 @@
   "img/logos/logo-community-darkbg.svg": "img/logos/logo-community-darkbg-166c137fec.svg",
   "img/logos/logo-community.svg": "img/logos/logo-community-1fec59b414.svg",
   "img/og_screen.png": "img/og_screen-6890b0caab.png",
-  "img/projects/android.svg": "img/projects/android-3486d6b728.svg",
+  "img/projects/android.svg": "img/projects/android-6b7491d746.svg",
   "img/projects/arrow-right.svg": "img/projects/arrow-right-e7f881f29a.svg",
   "img/projects/autocomplete.svg": "img/projects/autocomplete-9dc4fd5ffe.svg",
   "img/projects/cli.svg": "img/projects/cli-9d4de40e98.svg",
@@ -59,7 +59,7 @@
   "img/projects/node.svg": "img/projects/node-d45653f130.svg",
   "img/projects/php.svg": "img/projects/php-a29c926665.svg",
   "img/projects/places.svg": "img/projects/places-bb9bbbd6ea.svg",
-  "img/projects/projects-defs.svg": "img/projects/projects-defs-e1d103f985.svg",
+  "img/projects/projects-defs.svg": "img/projects/projects-defs-9635c170d6.svg",
   "img/projects/python.svg": "img/projects/python-e376be0d9d.svg",
   "img/projects/react.svg": "img/projects/react-bcbff4963c.svg",
   "img/projects/represent.svg": "img/projects/represent-3d525e66e1.svg",
@@ -78,6 +78,6 @@
   "img/projects/wordpress.svg": "img/projects/wordpress-c4ddb578a8.svg",
   "img/projects/yarn.svg": "img/projects/yarn-1c5da6a622.svg",
   "img/projects/zendesk.svg": "img/projects/zendesk-4ead31436d.svg",
-  "index.html": "index-0722a59a33.html",
-  "js/app.js": "js/app-590dfb8d40.js"
+  "index.html": "index-5a43267f4d.html",
+  "js/app.js": "js/app-7686f2eb73.js"
 }
