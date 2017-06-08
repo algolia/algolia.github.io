@@ -97,6 +97,10 @@ const renderResults = (projects) => {
 
   sortedProjects.sort((a,b) => a.length < b.length);
 
+  sortedProjects.forEach(p => {
+    p.sort((a,b) => a.ranking < b.ranking);
+  })
+
   sortedProjects.forEach(projectsArray => {
     let cat = projectsArray[0].category || "Misc"
     let categoryArray = projects[cat]

@@ -23,7 +23,7 @@
     "icon": "instantsearch",
     "featured": true,
     "objectID": "",
-    "ranking": 1000
+    "ranking": 1300
   },
   {
     "name": "Places",
@@ -62,20 +62,20 @@
     "icon": "instantsearch-react",
     "featured": false,
     "objectID": "",
-    "ranking": 1000
+    "ranking": 1500
   },
   {
-    "name": "Magento",
-    "category": "Plugin",
-    "description": "Deliver fast and relevant search results with the Algolia extension for Magento.",
-    "url_home": "https://community.algolia.com/magento/",
-    "url_github": "https://github.com/algolia/magento",
+    "name": "Android InstantSearch",
+    "category": "Library",
+    "description": "Lightning-fast search for Android applications",
+    "url_home": "https://community.algolia.com/instantsearch-android/",
+    "url_github": "https://github.com/algolia/instantsearch-android",
     "url_forum": "",
     "discussion_count": "",
-    "icon": "magento",
+    "icon": "android",
     "featured": false,
     "objectID": "",
-    "ranking": 1000
+    "ranking": 1400
   },
   {
     "name": "WordPress",
@@ -88,7 +88,20 @@
     "icon": "wordpress",
     "featured": false,
     "objectID": "",
-    "ranking": 1000
+    "ranking": 1400
+  },
+  {
+    "name": "Magento",
+    "category": "Plugin",
+    "description": "Deliver fast and relevant search results with the Algolia extension for Magento.",
+    "url_home": "https://community.algolia.com/magento/",
+    "url_github": "https://github.com/algolia/magento",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "magento",
+    "featured": false,
+    "objectID": "",
+    "ranking": 1500
   },
   {
     "name": "Zendesk",
@@ -127,7 +140,7 @@
     "icon": "shopify",
     "featured": false,
     "objectID": "",
-    "ranking": 1000
+    "ranking": 1300
   },
   {
     "name": "Ruby on Rails",

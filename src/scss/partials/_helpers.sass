@@ -519,11 +519,13 @@
 .hidden-sm
   @media (max-width: $screen-sm)
     display: none !important
-
 .visible-sm
   @media (max-width: $screen-sm)
     display: block !important
-
+.visible-xs
+  display: none
+  @media (max-width: 768px)
+    display: block !important
 .hidden
   visibility: hidden
 

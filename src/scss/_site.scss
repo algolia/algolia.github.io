@@ -38,6 +38,10 @@ $browserExtension: $java;
   transform: translate(-50%, 0);
   z-index: 10;
   padding: 16px 20px;
+  .alg-communitylogo-mark img{
+    height: 37px
+  }
+
   .alg-header__container {
     max-width: 1160px;
     position: relative;
