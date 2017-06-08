@@ -253,7 +253,7 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.hits({
     container: '.alg-communityprojects__hits.is',
-    hitsPerPage: 10,
+    hitsPerPage: 30,
     templates:{
       item: templates.hitTemplate,
       empty: templates.noHits
