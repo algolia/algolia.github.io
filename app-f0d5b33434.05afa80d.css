@@ -963,6 +963,8 @@ input {
 }
 
 .alg-community .alg-communityhit .hit-namelink,
+.alg-community .alg-communityprojects__hits .alg-viewmore,
+.alg-community .cta-free-trial button,
 .empty-query a,
 .no-decoration,
 footer ul a {
@@ -1717,6 +1719,11 @@ footer .email input:focus {
   margin-bottom: 70px;
 }
 
+.alg-community .alg-communityprojects__hits .alg-communityprojects__hitswrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .alg-community .alg-communityprojects__hits .alg-communityprojects__hitswrapper:hover .alg-communityprojects__hitstype:after {
   transform: scaleX(1.4);
 }
@@ -1792,7 +1799,6 @@ footer .email input:focus {
 .alg-community .alg-communityprojects__hits .alg-viewmore {
   padding-right: 18px;
   margin-left: 20px;
-  text-decoration: none;
   vertical-align: baseline;
   font-weight: 400;
   margin-bottom: 4px;
@@ -2225,7 +2231,7 @@ footer .email input {
   }
 }
 
-footer .email .mc_embed_signup--success .mc-signupmessage {
+footer .email .newsletter-signup--success .mc-signupmessage {
   position: absolute;
   left: 0;
   top: 16px;
@@ -2239,7 +2245,7 @@ footer .email .mc_embed_signup--success .mc-signupmessage {
   border-radius: 20px;
 }
 
-footer .email .mc_embed_signup--success .mc-signupmessage svg {
+footer .email .newsletter-signup--success .mc-signupmessage svg {
   width: 15px;
   margin-left: 4px;
   vertical-align: middle;
