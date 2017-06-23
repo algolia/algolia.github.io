@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "autocomplete.js",
     "category": "Library",
     "description": "Display as-you-type search results with a dropdown.",
@@ -55,8 +54,8 @@
     "name": "React InstantSearch",
     "category": "Library",
     "description": "Lightning-fast search for React and React Native apps",
-    "url_home": "https://community.algolia.com/instantsearch.js/react/",
-    "url_github": "https://github.com/algolia/instantsearch.js/tree/v2",
+    "url_home": "https://community.algolia.com/react-instantsearch/",
+    "url_github": "https://github.com/algolia/react-instantsearch",
     "url_forum": "",
     "discussion_count": "",
     "icon": "instantsearch-react",
@@ -494,4 +493,3 @@
     "ranking": 1000
   }
 ]
-
