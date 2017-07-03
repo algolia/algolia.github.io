@@ -75,9 +75,11 @@ exports.headerTemplate = (category, viewMore) => {
 
   return `<header class="alg-header-${category.toLowerCase().split(" ").join("-")}">
     <div>
-      <h3 class="alg-communityprojects__hitstype text-xl">
-      ${category}
-      ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>` : ""}</h3>
+      <a href="#${category.split(' ').join('').toLowerCase()}"> 
+        <h3 class="alg-communityprojects__hitstype text-xl">
+        ${category}
+        ${displayShowMore ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>` : ""}</h3>
+      </a>
       <p class="alg-communityprojects__hitsdesc">${ '' }</p> 
   </header>
   <div class="ais-hits"></div>`;

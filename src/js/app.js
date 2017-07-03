@@ -19,8 +19,21 @@ const loadDefs = () => {
     })
 }
 
+function validateEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  return re.test(email)
+}
+
 window.addEventListener('load',() => {
+
   loadDefs();
+
+  if(window.location.hash) {
+    const hash = document.querySelector(`[href="${window.location.hash}"]`);
+    setTimeout(() => {
+      scrollToElement(hash, 400);
+    }, 60)
+  }
 });
 
 const easeInOutCubic = (t, b, c, d) => {

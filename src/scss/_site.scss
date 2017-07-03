@@ -416,6 +416,12 @@ $browserExtension: $java;
     }
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       &:hover .alg-communityprojects__hitstype:after {
         transform: scaleX(1.4);
       }
@@ -727,6 +733,10 @@ $browserExtension: $java;
     background-size: cover;
     padding-top: 100px;
 
+    button {
+      text-decoration: none;
+    }
+
     @include diagonal(-6deg,
       #302A51,
       150px,
@@ -885,17 +895,19 @@ footer {
       }
     }
 
-    @media (max-width: $screen-md){
-      input{
+    @media (max-width: $screen-md) {
+
+      input {
         width: 100%;
         margin-bottom: 12px;
       }
+
       button {
         width: 100%;
       }
     }
 
-    .mc_embed_signup--success{
+    .newsletter-signup--success {
       .mc-signupmessage{
         position: absolute;
         left: 0;
