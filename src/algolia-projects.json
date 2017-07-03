@@ -12,10 +12,10 @@
     "ranking": 1000
   },
   {
-    "name": "instantsearch.js",
+    "name": "InstantSearch.js",
     "category": "Library",
     "description": "Library of UI widgets to build an instant-search experience.",
-    "url_home": "https://community.algolia.com/instantsearch.js/",
+    "url_home": "https://community.algolia.com/instantsearch.js/v2/",
     "url_github": "https://github.com/algolia/instantsearch.js",
     "url_forum": "",
     "discussion_count": "",
