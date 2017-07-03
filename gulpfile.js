@@ -298,21 +298,6 @@ gulp.task('dev', function(callback) {
   runSequence('build:dev', 'watch', 'webserver', callback);
 });
 
-gulp.task('s3-deploy', function() {
-  var publisher = awspublish.create({
-    region: 'us-east-1',
-    params: {
-      Bucket: 'community.algolia.com'
-    }
-  });
-
-  return gulp.src('build/**/*')
-    // .pipe(awspublish.gzip({ ext: '.gz'}))
-    .pipe(publisher.publish())
-    .pipe(publisher.cache())
-    .pipe(awspublish.reporter());
-});
-
 // -------------------------------------
 //   Task: Algolia
 // -------------------------------------
