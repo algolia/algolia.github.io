@@ -1,5 +1,5 @@
 [{
-    "name": "Atom.io",
+    "name": "Atom npm search",
     "category": "Tool",
     "description": "Search & install NPM packages from import/require statements powered by Algolia.",
     "url_home": "",
