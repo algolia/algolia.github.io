@@ -45,7 +45,6 @@ const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant')
-  // const favicons = require("gulp-favicons");
 
 //debug utils
 var gutil = require('gulp-util');
@@ -204,29 +203,6 @@ gulp.task('copyWorker', function() {
     .pipe(gulp.dest('build'));
 });
 
-
-// // -------------------------------------
-// //   Task: Favicons
-// // -------------------------------------
-// gulp.task("favicons", function () {
-//   return gulp.src("src/favicon.png")
-//     .pipe(favicons({
-//       icons: {
-//         android: false,
-//         appleIcon: false,
-//         appleStartup: false,
-//         coast: false,
-//         favicons: true,
-//         firefox: false,
-//         opengraph: false,
-//         twitter: false,
-//         windows: false,
-//         yandex: false
-//       }
-//     }))
-//     .pipe(gulp.dest("build/"));
-// });
-
 // -------------------------------------
 //   Task: Watch
 // -------------------------------------
@@ -257,7 +233,6 @@ gulp.task('webserver', function() {
 // -------------------------------------
 gulp.task('revision', function() {
   return gulp.src(['build/**/**/*.{css,js,png,svg,html}','!build/js/serviceWorker.js', '!build/img/*.svg'])
-  // return gulp.src(['build/*.css', 'build/js/*.js', 'build/img/icons/*.png', 'build/img/icons/logos/*.svg', 'build/img/icons/projects/*.svg'])
     .pipe(rev())
     .pipe(gulp.dest('build'))
     .pipe(revNapkin())

@@ -1,4 +1,16 @@
 [{
+    "name": "Atom npm search",
+    "category": "Tool",
+    "description": "Search & install NPM packages from import/require statements powered by Algolia.",
+    "url_home": "",
+    "url_github": "https://github.com/algolia/atom-autocomplete-module-import",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "atom",
+    "featured": true,
+    "objectID": "",
+    "ranking": 1300
+  },{
     "name": "autocomplete.js",
     "category": "Library",
     "description": "Display as-you-type search results with a dropdown.",
