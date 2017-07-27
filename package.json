@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "gulp build:prod && node createManifest.js && node removeHash.js",
+    "build": "gulp build:prod && node createManifest.js && node removeHash.js && yarn svgmin && yarn svgstore",
     "dev": "gulp dev",
     "svgmin": "rm src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
     "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",

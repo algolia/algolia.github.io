@@ -1,8 +1,9 @@
-
-import escape from 'html-escape'
-
-const { log } = console;
-
+function HTMLescape(html){
+    return document.createElement('div')
+        .appendChild(document.createTextNode(html))
+        .parentNode
+        .innerHTML
+}
 exports.hitTemplate = (data) => `
  <article class="alg-communityhit elevation1 radius6 pos-rel">
       <div class="alg-communityhit__details">
@@ -88,7 +89,7 @@ exports.noHits = (query) => {
   return `
     <div class="empty-query">
       <img src="/img/logos/community-mark-dark.svg" alt="Algolia Community"/>
-      <h4 class="m-b-none" >Your search query <span class="color-radical-red">"${query.query}"</span> did not return any search results,</br> but maybe our community can help?</h4>
+      <h4 class="m-b-none" >Your search query <span class="color-radical-red">"${HTMLescape(query.query)}"</span> did not return any search results,</br> but maybe our community can help?</h4>
       <div class="spacer24"></div>
       <a href="https://discourse.algolia.com" class="btn btn-static-secondary">
         Ask our community
