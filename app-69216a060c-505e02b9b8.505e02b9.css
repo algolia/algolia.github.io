@@ -1963,9 +1963,11 @@ footer .email input:focus {
 }
 
 .alg-community .alg-communityhit .alg-communityhit__icon .alg-communityhit__iconcontainer {
-  position: absolute;
-  transform: translate(-50%,0);
-  left: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  place-items: center;
   top: 0;
   width: 78px;
   height: 78px;
@@ -1986,20 +1988,22 @@ footer .email input:focus {
   border-radius: 150%;
 }
 
-.alg-community .cta-free-trial:before,
-footer .container:before {
-  content: '';
-}
-
 .alg-community .alg-communityhit .alg-communityhit__icon .alg-communityhit__iconcontainer svg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  place-items: center;
   fill: transparent;
   width: 50px;
-  height: auto;
+  height: 100px;
   z-index: 10;
+}
+
+.alg-community .cta-free-trial:before {
+  display: block;
+  position: absolute;
+  content: '';
 }
 
 .alg-community .alg-communityhit .alg-communityhit__icon .alg-icon-tool {
@@ -2076,8 +2080,6 @@ footer .container:before {
 }
 
 .alg-community .cta-free-trial:before {
-  display: block;
-  position: absolute;
   width: 100%;
   height: 150px;
   background: #302A51;
@@ -2155,6 +2157,7 @@ footer {
 }
 
 footer .container:before {
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
