@@ -164,7 +164,7 @@ $browserExtension: $java;
         width: 50%;
       }
     }
-    
+
     a {
       text-decoration: none;
       margin-bottom: 30px;
@@ -416,7 +416,7 @@ $browserExtension: $java;
     }
     .alg-communityprojects__hitswrapper {
       margin-bottom: 70px;
-      
+
       a {
         color: inherit;
         text-decoration: none;
@@ -634,9 +634,9 @@ $browserExtension: $java;
       left: 50%;
       transform: translate(-50%, -34px);
       .alg-communityhit__iconcontainer {
-        position: absolute;
-        transform: translate(-50%, 0px);
-        left: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        place-items: center;
         top: 0px;
         width: 78px;
         height: 78px;
@@ -655,13 +655,12 @@ $browserExtension: $java;
           border-radius: 150%;
         }
         svg {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
+        display: flex;
+        flex-flow: column wrap;
+        place-items: center;
           fill: transparent;
           width: 50px;
-          height: auto;
+          height: 100px;
           z-index: 10;
         }
       }
@@ -870,7 +869,7 @@ footer {
       min-width: 50%;
       margin: 0;
       padding-right: 20px;
-      
+
       &:first-child{
         min-width: 100%;
       }
