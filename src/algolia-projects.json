@@ -89,6 +89,19 @@
     "ranking": 1400
   },
   {
+    "name": "iOS InstantSearch",
+    "category": "Library",
+    "description": "Lightning-fast search for iOS applications",
+    "url_home": "https://community.algolia.com/instantsearch-ios/",
+    "url_github": "https://github.com/algolia/instantsearch-ios",
+    "url_forum": "https://discourse.algolia.com/t/instantsearch-ios-release-iphone/2021",
+    "discussion_count": "",
+    "icon": "ios",
+    "featured": false,
+    "objectID": "",
+    "ranking": 1400
+  },
+  {
     "name": "WordPress",
     "category": "Plugin",
     "description": "Surface your site's best content with lighting-fast, beautiful search",
