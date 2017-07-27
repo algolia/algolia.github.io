@@ -33,7 +33,6 @@ exports.hitTemplate = (data) => `
                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                 <title>Discouse Icon</title>
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comments"></use></svg>
-               24
              </a>
            </div>`: ""}
            ${data.url_home ? `
