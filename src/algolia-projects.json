@@ -89,6 +89,19 @@
     "ranking": 1500
   },
   {
+    "name": "Vue InstantSearch",
+    "category": "Library",
+    "description": "The Vue.js ultimate toolbox for creating instant-search experiences",
+    "url_home": "https://community.algolia.com/vue-instantsearch/",
+    "url_github": "https://github.com/algolia/vue-instantsearch",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "instantsearch-react",
+    "featured": false,
+    "objectID": "",
+    "ranking": 1500
+  },
+  {
     "name": "Android InstantSearch",
     "category": "Library",
     "description": "Lightning-fast search for Android applications",
