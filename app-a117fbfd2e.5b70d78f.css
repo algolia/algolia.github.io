@@ -1968,6 +1968,8 @@ footer .email input:focus {
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
   place-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   top: 0;
   width: 78px;
   height: 78px;
