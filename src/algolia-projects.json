@@ -520,7 +520,7 @@
   {
     "name": "Awesome Autocomplete for GitHub",
     "category": "Misc",
-    "description": "A browser extension that makes it easier to search on Github.",
+    "description": "A browser extension that makes it easier to search on GitHub.",
     "url_home": "https://github.algolia.com/",
     "url_github": "https://github.com/algolia/github-awesome-autocomplete",
     "url_forum": "",
