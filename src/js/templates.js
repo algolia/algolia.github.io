@@ -8,12 +8,12 @@ exports.hitTemplate = (data) => `
  <article class="alg-communityhit elevation1 radius6 pos-rel">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
-          <div class="elevation1 alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
+          <a href="${data.url_home || data.url_github || data.url_forum || '#'}" class="elevation1 alg-communityhit__iconcontainer alg-icon-${data.category.toLowerCase().split(" ").join("-")}">
             <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
               <title>${data.name} ${data.category}</title>
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#${data.icon}"></use>
             </svg>
-          </div>
+          </a>
         </div>
         <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder">${data.category}</p>
         <a href="${data.url_home || data.url_github || data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${data.name}</h3></a>
