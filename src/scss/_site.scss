@@ -267,7 +267,12 @@ $browserExtension: $java;
         }
       }
 
+      .ais-search-box--magnifier, .ais-search-box--reset {
+        display: none
+      }
+
       .ais-search-box {
+        max-width: none;
         width: 100%;
         overflow: hidden;
         position: relative;

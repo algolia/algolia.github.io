@@ -1,0 +1,9 @@
+{
+  "extends": [
+    ":app"
+  ],
+  "patch": {
+    "automerge": true,
+    "automergeType": "branch-push"
+  }
+}
