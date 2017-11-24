@@ -2,3 +2,13 @@
   base    = ""
   publish = "build"
   command = "npm run build"
+
+[context.production.environment]
+  YARN_VERSION = "1.3.2"
+
+[context.deploy-preview.environment]
+  YARN_VERSION = "1.3.2"
+
+[context.branch-deploy.environment]
+  YARN_VERSION = "1.3.2"
+  
