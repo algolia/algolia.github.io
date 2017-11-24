@@ -4,4 +4,5 @@
 /places/* https://algolia-places.netlify.com/:splat 200
 /algoliasearch-client-css/* https://app.netlify.com/sites/instantsearch-css/:splat 200
 /vue-instantsearch/* https://vue-instantsearch.netlify.com/:splat 200
-/zendesk/*  https://zendesk-community.netlify.com/:splat 200
+/zendesk/* https://zendesk-community.netlify.com/:splat 200
+/shopify/* https://shopify-community.netlify.com/:splat 200
