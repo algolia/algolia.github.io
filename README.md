@@ -6,6 +6,8 @@ when changes are pushed to the `source` branch.
 ## Dev
 
 ```shell
+nvm install
+nvm use
 yarn
 yarn dev
 ```
