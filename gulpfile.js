@@ -28,7 +28,7 @@ const revNapkin = require('gulp-rev-napkin');
 const revReplace = require('gulp-rev-replace');
 
 const minifyCss = require('gulp-minify-css');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 
