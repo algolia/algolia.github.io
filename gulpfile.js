@@ -11,7 +11,6 @@ const livereload = require('gulp-livereload');
 
 //deploy
 const ghPages = require('gulp-gh-pages');
-const awspublish = require('gulp-awspublish');
 
 //css
 const sass = require('gulp-sass');
@@ -198,6 +197,11 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('copyRedirects', function() {
+  return gulp.src(['_redirects'])
+    .pipe(gulp.dest('build'));
+});
+
 gulp.task('copyWorker', function() {
   return gulp.src(['build/js/serviceWorker.js'])
     .pipe(gulp.dest('build'));
@@ -255,11 +259,11 @@ gulp.task('revreplace', ['revision'], () => {
 //   Task: Build DEV - PROD - HAML
 // -------------------------------------
 gulp.task('build:dev', ['clean'], function(callback) {
-  runSequence('scss', 'images', 'haml', 'js', 'copyWorker', callback);
+  runSequence('scss', 'images', 'haml', 'js', 'copyRedirects', 'copyWorker', callback);
 });
 
 gulp.task('build:prod', ['clean'], function(callback) {
-  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'js:min', 'revreplace', 'critical-css', 'copyWorker', callback);
+  runSequence('scss', 'css:min', 'copy', 'images:optim', 'haml', 'js:min', 'revreplace', 'critical-css', 'copyRedirects', 'copyWorker', callback);
 });
 
 gulp.task('build:haml', function(callback) {
