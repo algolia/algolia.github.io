@@ -6,7 +6,7 @@
     "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
     "svg": "yarn svgmin svgstore"
   },
-  "devDependencies": {
+  "dependencies": {
     "algoliasearch": "^3.21.0",
     "async": "^2.1.4",
     "babel-core": "^6.4.5",
@@ -61,12 +61,12 @@
     "run-sequence": "^1.1.5",
     "sw-toolbox": "^3.6.0",
     "webpack": "^1.12.9",
-    "webpack-stream": "^3.1.0"
+    "webpack-stream": "^3.1.0",
+    "svgmin": "0.1.0",
+    "svgo": "1.0.3",
+    "svgstore": "2.0.2"
   },
   "engines": {
     "node": "^8.9.1"
-  },
-  "dependencies": {
-    "svgo": "1.0.3"
   }
 }

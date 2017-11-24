@@ -6632,6 +6632,10 @@ svg2png@~3.0.1:
     pn "^1.0.0"
     yargs "^3.31.0"
 
+svgmin@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/svgmin/-/svgmin-0.1.0.tgz#a595f200a4caa34834c68a939af0be9b307c516f"
+
 svgo@0.7.2, svgo@^0.7.0, svgo@^0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
@@ -6674,6 +6678,13 @@ svgo@^0.6.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+svgstore@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/svgstore/-/svgstore-2.0.2.tgz#18954ed1e571c389061ecdd3738baa41e4016cac"
+  dependencies:
+    cheerio "^0.22.0"
+    object-assign "^4.1.0"
 
 sw-toolbox@^3.6.0:
   version "3.6.0"
