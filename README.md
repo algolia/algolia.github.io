@@ -1,13 +1,28 @@
-# community
+# Algolia Community website
 
 This is the source code of https://community.algolia.com/. The deployment to this live website is automated
 when changes are pushed to the `source` branch.
 
-## Dev
+## Local setup
 
-```shell
+## Requirements
+
+To run this project, you will need:
+
+- nvm - [install instructions](https://github.com/creationix/nvm#install-script)
+
+And then run this once:
+
+```sh
 nvm install
 nvm use
-yarn
-yarn dev
+```
+
+## Dev
+
+To develop on this project, do:
+
+```shell
+npm install
+npm run dev
 ```
