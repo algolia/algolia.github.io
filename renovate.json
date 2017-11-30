@@ -1,9 +1,13 @@
 {
   "extends": [
-    ":app"
+    "config:application",
+    "schedule:weekends"
   ],
-  "patch": {
-    "automerge": true,
-    "automergeType": "branch-push"
-  }
+  "semanticCommits": true,
+  "rebaseStalePrs": true,
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "automergeType": "branch-push"
 }
