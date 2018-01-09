@@ -12,7 +12,7 @@
     "algoliasearch": "3.24.6",
     "async": "2.6.0",
     "babel-core": "6.26.0",
-    "babel-eslint": "8.0.2",
+    "babel-eslint": "8.2.1",
     "babel-loader": "7.1.2",
     "babel-preset-env": "1.6.1",
     "bootstrap": "4.0.0-alpha.6",
