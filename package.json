@@ -53,7 +53,7 @@
     "gulp-svgmin": "1.2.4",
     "gulp-svgstore": "6.1.1",
     "gulp-sww": "0.1.4",
-    "gulp-uglify-es": "0.1.6",
+    "gulp-uglify-es": "0.2.0",
     "gulp-util": "3.0.8",
     "gulp-webserver": "0.9.1",
     "html-escape": "2.0.0",
