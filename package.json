@@ -15,7 +15,7 @@
     "babel-eslint": "8.2.1",
     "babel-loader": "7.1.2",
     "babel-preset-env": "1.6.1",
-    "bootstrap": "4.0.0-alpha.6",
+    "bootstrap": "4.0.0",
     "browsernizr": "2.2.0",
     "classie": "1.0.0",
     "critical": "1.0.0",
