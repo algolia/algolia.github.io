@@ -35,7 +35,7 @@
     "gulp-favicons": "2.2.7",
     "gulp-filter": "5.1.0",
     "gulp-gh-pages": "0.5.4",
-    "gulp-haml": "0.2.0",
+    "gulp-haml": "1.0.1",
     "gulp-imagemin": "4.1.0",
     "gulp-inject": "4.3.1",
     "gulp-jshint": "2.1.0",
