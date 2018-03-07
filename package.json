@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "algoliasearch": "3.24.6",
+    "algoliasearch": "3.25.1",
     "async": "2.6.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.2.2",
