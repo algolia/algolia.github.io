@@ -1,3 +1,8 @@
+.flex-dir-col,
+.flex-dir-row {
+  -webkit-box-direction: normal;
+}
+
 @font-face {
   font-family: Montserrat;
   font-style: normal;
@@ -889,14 +894,12 @@ footer h4 {
 
 .flex-dir-col {
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
 
 .flex-dir-row {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
@@ -2008,25 +2011,21 @@ footer .email input:focus {
   border-radius: 150%;
 }
 
-.alg-community .alg-communityhit .alg-communityhit__icon .alg-communityhit__iconcontainer svg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  place-items: center;
-  fill: transparent;
-  width: 50px;
-  height: 100px;
-  z-index: 10;
+.alg-community .cta-free-trial:before,
+footer .container:before {
+  content: '';
 }
 
-.alg-community .cta-free-trial:before {
-  display: block;
+.alg-community .alg-communityhit .alg-communityhit__icon .alg-communityhit__iconcontainer img {
+  width: 90%;
+  height: 90%;
+  max-width: 70%;
+  max-height: 90%;
   position: absolute;
-  content: '';
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center center;
+  object-position: center center;
 }
 
 .alg-community .alg-communityhit .alg-communityhit__icon .alg-icon-tool {
@@ -2110,6 +2109,8 @@ footer .email input:focus {
 }
 
 .alg-community .cta-free-trial:before {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 150px;
   background: #302A51;
@@ -2186,7 +2187,6 @@ footer {
 }
 
 footer .container:before {
-  content: '';
   display: block;
   position: absolute;
   width: 100%;

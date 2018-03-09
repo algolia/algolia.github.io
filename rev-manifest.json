@@ -1,5 +1,5 @@
 {
-  "app.css": "app-f565ef5699.css",
+  "app.css": "app-2c65a8cab7.css",
   "img/icons/android-icon-144x144.png": "img/icons/android-icon-144x144-7274d49213.png",
   "img/icons/android-icon-192x192.png": "img/icons/android-icon-192x192-1265a0ba54.png",
   "img/icons/android-icon-36x36.png": "img/icons/android-icon-36x36-183fa7d4d5.png",
@@ -62,7 +62,7 @@
   "img/projects/node.svg": "img/projects/node-eb3db73be4.svg",
   "img/projects/php.svg": "img/projects/php-7d5d6cb5cb.svg",
   "img/projects/places.svg": "img/projects/places-862b58d4d3.svg",
-  "img/projects/projects-defs.svg": "img/projects/projects-defs-fb7d883787.svg",
+  "img/projects/projects-defs.svg": "img/projects/projects-defs-61649c3302.svg",
   "img/projects/python.svg": "img/projects/python-f01e934e0a.svg",
   "img/projects/react.svg": "img/projects/react-9c913613cd.svg",
   "img/projects/represent.svg": "img/projects/represent-2d072bd5f8.svg",
@@ -83,5 +83,5 @@
   "img/projects/yarn.svg": "img/projects/yarn-1c5da6a622.svg",
   "img/projects/zendesk.svg": "img/projects/zendesk-6e2306b197.svg",
   "index.html": "index-545c28d5d6.html",
-  "js/app.js": "js/app-cdaa7a276e.js"
+  "js/app.js": "js/app-fedda27bc4.js"
 }
