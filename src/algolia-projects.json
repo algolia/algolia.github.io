@@ -63,6 +63,19 @@
     "ranking": 1000
   },
   {
+    "name": "Angular InstantSearch",
+    "category": "Library",
+    "description": "Lightning-fast search for Angular",
+    "url_home": "https://community.algolia.com/angular-instantsearch/",
+    "url_github": "https://github.com/algolia/angular-instantsearch",
+    "url_forum": "",
+    "discussion_count": "",
+    "icon": "instantsearch-angular",
+    "featured": true,
+    "objectID": "",
+    "ranking": 1500
+  },
+  {
     "name": "React InstantSearch",
     "category": "Library",
     "description": "Lightning-fast search for React and React Native apps",
