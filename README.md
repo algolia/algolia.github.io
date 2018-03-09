@@ -32,6 +32,8 @@ yarn dev
 
 ## Deploy
 
+The deploy steps are directly handled by Gulp.js in the gulpfile.
+
 ```shell
 yarn build
 yarn deploy
