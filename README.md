@@ -9,9 +9,12 @@ when changes are pushed to the `source` branch.
 
 To run this project, you will need:
 
-- nvm - [install instructions](https://github.com/creationix/nvm#install-script)
+- Node.js >= 9.80, via nvm - [install instructions](https://github.com/creationix/nvm#install-script)
+- Yarn >= 1.5.1 - [install instructions ("Alternatives" tab)](https://yarnpkg.com/en/docs/install): curl -o- -L https://yarnpkg.com/install.sh
 
-And then run this once:
+Pro tip: Remove any brew installed/globall system installed Node.js and Yarn, just use nvm and Alternatives installation, they works perfectly.
+
+Then:
 
 ```sh
 nvm install
@@ -23,6 +26,6 @@ nvm use
 To develop on this project, do:
 
 ```shell
-npm install
-npm run dev
+yarn
+yarn dev
 ```

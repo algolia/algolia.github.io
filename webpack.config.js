@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
+  mode: process.env.NODE_ENV || 'development',
   entry: {
     app: './src/js/app.js',
     serviceWorker: './src/js/serviceWorker.js',
@@ -20,10 +21,6 @@ module.exports = {
             presets: ['@babel/preset-env'],
           },
         },
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader',
       },
     ],
   },
