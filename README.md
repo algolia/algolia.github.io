@@ -29,3 +29,12 @@ To develop on this project, do:
 yarn
 yarn dev
 ```
+
+## Deploy
+
+```shell
+yarn build
+yarn deploy
+```
+
+_You may encounter issues while running `yarn deploy`, you can fix it by following this [GH thread](https://github.com/shinnn/gulp-gh-pages/issues/116#issuecomment-364959382)_

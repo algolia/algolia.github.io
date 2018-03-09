@@ -6,7 +6,8 @@
     "dev": "gulp dev",
     "svgmin": "rm -f src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
     "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "gulp deploy"
   },
   "dependencies": {
     "algoliasearch": "3.25.1",
@@ -78,5 +79,8 @@
   "engines": {
     "node": "^9.8.0",
     "yarn": "^1.5.1"
+  },
+  "devDependencies": {
+    "gift": "^0.10.2"
   }
 }
