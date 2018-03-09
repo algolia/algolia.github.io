@@ -121,9 +121,7 @@ exports.headerTemplate = (category, viewMore) => {
         ${category}
         ${
           displayShowMore
-            ? `<a class="alg-viewmore text-sm" href="">SEE ${
-                viewMore
-              } MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>`
+            ? `<a class="alg-viewmore text-sm" href="">SEE ${viewMore} MORE<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg></a>`
             : ''
         }</h3>
       </a>

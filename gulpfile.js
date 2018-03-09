@@ -119,7 +119,7 @@ gulp.task('css:min', ['scss'], () =>
 gulp.task('js', () =>
   gulp
     .src(['src/js/app.js', 'src/serviceWorker.js'])
-    .pipe(webpack(webpackConfig))
+    .pipe(webpack(webpackConfig, require('webpack')))
     .on('error', function() {
       this.emit('end'); // Recover from errors
     })
