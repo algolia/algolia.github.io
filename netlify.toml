@@ -1,5 +1,7 @@
 [build]
-  base    = ""
   publish = "build"
   command = "npm run build"
+  [build.environment]
+    YARN_VERSION = "1.5.1"
+    NODE_ENV = "production"
   
