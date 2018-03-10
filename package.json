@@ -81,6 +81,6 @@
     "yarn": "^1.5.1"
   },
   "devDependencies": {
-    "gift": "^0.10.2"
+    "gift": "0.10.2"
   }
 }

@@ -3655,7 +3655,7 @@ gifsicle@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-gift@^0.10.2:
+gift@0.10.2:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/gift/-/gift-0.10.2.tgz#4600efe8f284b51fcb01c3527b321e22b494e156"
   dependencies:
