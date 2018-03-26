@@ -1958,9 +1958,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-critical@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/critical/-/critical-1.1.1.tgz#ea4fd30566c30de27acfdd685f596f99a0284883"
+critical@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/critical/-/critical-1.2.1.tgz#4a6cb5f2338f3ea317829e392ef478521f3dbc2f"
   dependencies:
     bluebird "^3.5.1"
     chalk "^2.3.0"
