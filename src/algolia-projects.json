@@ -169,13 +169,13 @@
   {
     "name": "Jekyll",
     "category": "Plugin",
-    "description": "Search your static HTML Jekyll sites with the Algolia for Jekyll plugin.",
-    "url_home": "",
-    "url_github": "https://github.com/algolia/algoliasearch-jekyll",
+    "description": "Add fast and relevant search to your Jekyll site",
+    "url_home": "https://community.algolia.com/jekyll-algolia/",
+    "url_github": "https://github.com/algolia/jekyll-algolia",
     "url_forum": "",
     "discussion_count": "",
     "icon": "jekyll",
-    "featured": false,
+    "featured": true,
     "objectID": "",
     "ranking": 1000
   },
