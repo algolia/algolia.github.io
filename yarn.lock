@@ -2587,12 +2587,12 @@ download@^6.2.2:
     p-event "^1.0.0"
     pify "^3.0.0"
 
-draggabilly@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/draggabilly/-/draggabilly-2.1.1.tgz#3a31a1fa73e4cc71c75a4bfea9acfb2dade01722"
+draggabilly@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/draggabilly/-/draggabilly-2.2.0.tgz#9bac6849816c5cd4e4a59707f63f14ea7d863baf"
   dependencies:
-    get-size "~2.0.2"
-    unidragger "~2.1.0"
+    get-size "^2.0.2"
+    unidragger "^2.3.0"
 
 duplexer2@0.0.2:
   version "0.0.2"
@@ -2974,9 +2974,9 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-ev-emitter@~1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.0.3.tgz#ee5ef74b6ed28d911b32ddcbfc97867f580937bc"
+ev-emitter@^1.0.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
 
 event-emitter@~0.3.5:
   version "0.3.5"
@@ -3639,7 +3639,7 @@ get-proxy@^2.0.0:
   dependencies:
     npm-conf "^1.1.0"
 
-get-size@~2.0.2:
+get-size@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/get-size/-/get-size-2.0.2.tgz#555ea98ab8732e0c021e9e23e2219adcbe398e98"
 
@@ -9378,11 +9378,11 @@ underscore@1.x.x, underscore@^1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
-unidragger@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-2.1.0.tgz#e4c23f5fab8188c637e776d0b3810c7d989e5561"
+unidragger@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-2.3.0.tgz#ab9d9fd62106f3252d88fae5f3a99575e6d31d02"
   dependencies:
-    unipointer "~2.1.0"
+    unipointer "^2.3.0"
 
 union-value@^0.2.3:
   version "0.2.4"
@@ -9402,11 +9402,11 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^0.4.3"
 
-unipointer@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/unipointer/-/unipointer-2.1.0.tgz#b1e9fa2986c1306d97330587ba434d285ccfe37f"
+unipointer@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/unipointer/-/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
   dependencies:
-    ev-emitter "~1.0.1"
+    ev-emitter "^1.0.1"
 
 unique-filename@^1.1.0:
   version "1.1.0"
