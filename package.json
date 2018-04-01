@@ -25,7 +25,7 @@
     "eslint": "4.19.1",
     "eslint-config-algolia": "13.1.0",
     "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-import": "2.10.0",
     "eslint-plugin-prettier": "2.6.0",
     "favicons": "4.8.6",
     "glob": "7.1.2",
