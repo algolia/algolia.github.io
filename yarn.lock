@@ -4856,9 +4856,9 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-instantsearch.js@2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-2.6.3.tgz#0ebfa4504466f18ace9662c53ef6ae57c8bf24d2"
+instantsearch.js@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-2.7.1.tgz#df87e34e98fb67e7580e9c9cceb4245d8b4045ca"
   dependencies:
     algoliasearch "3.25.1"
     algoliasearch-helper "2.24.0"
@@ -4870,6 +4870,7 @@ instantsearch.js@2.6.3:
     preact-compat "3.18.0"
     preact-rheostat "2.1.1"
     prop-types "15.5.10"
+    qs "6.5.1"
     to-factory "1.0.0"
 
 interpret@^1.0.0:
@@ -7672,7 +7673,7 @@ qs@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-5.2.0.tgz#a9f31142af468cb72b25b30136ba2456834916be"
 
-qs@^6.2.1, qs@~6.5.1:
+qs@6.5.1, qs@^6.2.1, qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
