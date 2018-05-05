@@ -10,7 +10,7 @@
     "deploy": "gulp deploy"
   },
   "dependencies": {
-    "algoliasearch": "3.27.0",
+    "algoliasearch": "3.27.1",
     "async": "2.6.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
