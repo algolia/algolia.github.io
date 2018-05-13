@@ -4888,9 +4888,9 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-instantsearch.js@2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-2.7.3.tgz#37f078c1553d017d0491ba9169fc6d61c5bc98e0"
+instantsearch.js@2.7.4:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/instantsearch.js/-/instantsearch.js-2.7.4.tgz#21274ef733b03417f4b40ea8cd0221a33d64d4ec"
   dependencies:
     algoliasearch "3.27.0"
     algoliasearch-helper "2.26.0"
