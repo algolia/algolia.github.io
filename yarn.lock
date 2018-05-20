@@ -4457,13 +4457,13 @@ gulp-sww@0.1.4:
     through "^2.3.8"
     vinyl "^1.1.0"
 
-gulp-uglify-es@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gulp-uglify-es/-/gulp-uglify-es-1.0.1.tgz#9f991de31c646fb37fe589086ffd3f6e2f9e20f1"
+gulp-uglify-es@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gulp-uglify-es/-/gulp-uglify-es-1.0.4.tgz#59ee0d5ea98c1e09c6eaa58c8b018a6ad33f48d4"
   dependencies:
     o-stream "^0.2.2"
     plugin-error "^1.0.1"
-    uglify-es "^3.3.9"
+    terser "^3.7.5"
     vinyl "^2.1.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
@@ -9301,6 +9301,13 @@ tempy@^0.2.1:
     temp-dir "^1.0.0"
     unique-string "^1.0.0"
 
+terser@^3.7.5:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-3.7.5.tgz#b18090210794c79a5774bc1f0ebe80fb877a31bd"
+  dependencies:
+    commander "~2.14.1"
+    source-map "~0.6.1"
+
 text-table@^0.2.0, text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
@@ -9627,7 +9634,7 @@ ua-parser-js@^0.7.9:
   version "0.7.17"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.17.tgz#e9ec5f9498b9ec910e7ae3ac626a805c4d09ecac"
 
-uglify-es@^3.3.4, uglify-es@^3.3.9:
+uglify-es@^3.3.4:
   version "3.3.9"
   resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
   dependencies:
