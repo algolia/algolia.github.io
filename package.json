@@ -77,8 +77,8 @@
     "webpack-stream": "4.0.3"
   },
   "engines": {
-    "node": "^9.8.0",
-    "yarn": "^1.5.1"
+    "node": "9.11.1",
+    "yarn": "1.7.0"
   },
   "devDependencies": {
     "gift": "0.10.2"
