@@ -7,7 +7,8 @@
     "svgmin": "rm -f src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
     "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
     "lint": "eslint .",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "update-index": "gulp export:algolia-index && gulp export:algolia-settings"
   },
   "dependencies": {
     "algoliasearch": "3.27.1",
