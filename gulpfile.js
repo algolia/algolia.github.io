@@ -294,7 +294,7 @@ gulp.task('dev', callback => {
 
 gulp.task('export:algolia-index', () => {
   /* eslint-disable */
-  const client = algolia(config.algolia.appID, config.algolia.apiKey);
+  const client = algolia(config.algolia.appId, config.algolia.adminApiKey);
   const index = client.initIndex(config.algolia.index);
   fs.readFile('src/algolia-projects.json', 'utf8', (err, data) => {
     if (err) {
@@ -326,7 +326,9 @@ gulp.task('export:algolia-index', () => {
             });
           },
           err => {
-            console.log(err); // eslint-disable-line no-console
+            if (err) {
+              console.log(err); // eslint-disable-line no-console
+            }
           }
         );
       });
@@ -335,9 +337,13 @@ gulp.task('export:algolia-index', () => {
 });
 
 gulp.task('export:algolia-settings', () => {
-  const client = algolia(config.algolia.appID, config.algolia.apiKey);
+  const client = algolia(config.algolia.appId, config.algolia.adminApiKey);
   const index = client.initIndex(config.algolia.index);
-  index.setSettings(config.algolia.settings, (err, content) => {});
+  index.setSettings(config.algolia.settings, (err, content) => {
+    if (err) {
+      console.log(err);
+    }
+  });
 });
 
 // -------------------------------------
