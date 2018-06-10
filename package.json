@@ -67,7 +67,7 @@
     "json-loader": "0.5.7",
     "lodash": "4.17.10",
     "mo-js": "0.288.2",
-    "prettier": "1.13.0",
+    "prettier": "1.13.5",
     "run-sequence": "2.2.1",
     "svgmin": "0.1.0",
     "svgo": "1.0.5",
