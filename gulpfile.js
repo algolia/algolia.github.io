@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
 const glob = require('glob');
+const path = require('path');
 
 // dev
 const webserver = require('gulp-webserver');
