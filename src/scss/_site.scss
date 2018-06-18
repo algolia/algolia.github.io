@@ -99,10 +99,8 @@ $browserExtension: $java;
     }
    
     .alg-communityheader__container {
-      max-width: 1000px;
       margin: 0 auto;
       font-weight: 300;
-      padding: 0 20px;
       &:hover span {
         animation: handAnimation 500ms 200ms ease forwards;
       }
@@ -301,8 +299,6 @@ $browserExtension: $java;
       }
     }
     .alg-communitycontainer {
-      max-width: 1160px;
-      display: flex;
       z-index: 500;
     }
     .ais-hits {
@@ -311,8 +307,9 @@ $browserExtension: $java;
     }
   }
   .alg-communityprojects__facets {
-    width: 20%;
-    min-width: 20%;
+    @media (max-width: 960px) {
+      flex: 0 1 30%
+    }
     @media (max-width: $screen-sm) {
       display: none;
     }
@@ -382,8 +379,6 @@ $browserExtension: $java;
     }
   }
   .alg-communityprojects__hits {
-    width: 80%;
-    min-width: 80%;
     @media (min-width: $screen-sm) {
       padding-left: 40px;
     }
@@ -634,8 +629,6 @@ $browserExtension: $java;
       }
     }
     .alg-communityhit__type {
-      color: $hitType;
-      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
@@ -649,6 +642,8 @@ $browserExtension: $java;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-size: 16px;
+      font-family: "Hind", Arial, sans-serif;
     }
     .alg-communityhit__description {
       color: #69719B;
@@ -746,32 +741,62 @@ header .c-txt-section-subtitle {
 .alg-icon-frameworks img {
   background-color: color(mars, 2);
 }
+.cat-frameworks {
+  color: color(mars, 2);
+}
 .alg-icon-instantsearch img {
   background-color: color(nebula);
+}
+.cat-instantsearch {
+  color: color(nebula);
 }
 .alg-icon-api-clients img {
   background-color: color(solstice)
 }
+.cat-api-clients {
+  color: color(solstice)
+}
 .alg-icon-addons img {
   background-color: color(neptune);
+}
+.cat-addons {
+  color: color(neptune);
 }
 .alg-icon-libraries img {
   background-color: color(jupiter, 2);
 }
+.cat-libraries {
+  color: color(jupiter, 2);
+}
 .alg-icon-misc img {
   background-color: color(jupiter);
+}
+.cat-misc {
+  color: color(jupiter);
 }
 .alg-icon-native-instantsearch img {
   background-color: color(mercury,2);
 }
+.cat-native-instantsearch {
+  color: color(mercury,2);
+}
 .alg-icon-showcase img {
   background-color: color(saturn, 1);
+}
+.cat-showcase {
+  color: color(saturn, 1);
 }
 .alg-icon-tools img {
   background-color: color(venus, 1);
 }
+.cat-tools {
+  color: color(venus, 1);
+}
 .alg-icon-learn img {
   background-color: color(neptune, 4)
+}
+.cat-learn {
+  color: color(neptune, 4)
 }
 
 .alg-header-instantsearch {

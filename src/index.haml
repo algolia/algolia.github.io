@@ -82,11 +82,11 @@
 
     %main.alg-community
       %section.alg-communityheader.c-gradient
-        %header.alg-communityheader__container.text-center
+        %header.alg-communityheader__container.maw-1200.text-center
           %h1.c-txt-page-title-hind.color-solstice Oh, hello! <span>👋<span>
           .spacer8
           %p.c-txt-section-subtitle.maw-60ch.mt-8.mh-auto.color-nova Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
-          .spacer16
+          .spacer24.d:none{class:"md:d-none"}
           .alg-communityareas.radius6.bxs-1.top-80.pos-relative
             .alg-communityareas__area.text-center.p-large
               %h3.text-lg Documentation
@@ -104,14 +104,14 @@
       %section.projects.bgc-moon
         .spacer120
         .alg-communityprojects.m-l-r-auto.pos-rel
-          .alg-communityprojects__search
+          .alg-communityprojects__search.maw-1200.m-auto
             %button.alg-community--clearSearch 
             #alg-community__search.w-100p.bgc-white.mv-32.p-8.bdrad-2.bxs-1
 
-          #alg-communitycontainer.alg-communitycontainer.mt-48
-            .alg-communityprojects__facets.alg-communityprojects__facets__is
-            .alg-communityprojects__hits.default
-            .alg-communityprojects__hits.is
+          #alg-communitycontainer.alg-communitycontainer.maw-1200.d-flex.mt-48
+            .alg-communityprojects__facets.alg-communityprojects__facets__is.fx-2
+            .alg-communityprojects__hits.default.fx-12
+            .alg-communityprojects__hits.is.fx-12
         .spacer64
     .footer-cta.bgc-white.w-100p.ta-center.m-auto.ph-20.pb-80.pos-relative.z-1.md:d-flex.md:jc-between.md:ai-end.md:ta-left.lg:pb-120
       %div.pos-relative.z-10

@@ -16,12 +16,15 @@ exports.hitTemplate = data => `
            <img src="img/projects/${data.icon}.svg">
           </a>
         </div>
-        <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder c-txt-label">${
+        <p class="alg-communityhit__type fw-medium text-sm m-t-none m-b-none padder c-txt-label cat-${data.category
+          .toLowerCase()
+          .split(' ')
+          .join('-')}">${
           data.category
         }</p>
         <a href="${data.url_home ||
           data.url_github ||
-          data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${
+          data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name fw-medium padder m-t-none m-b-small">${
   data.name
 }</h3></a>
         <p class="alg-communityhit__description text-sm m-t-none padder m-b">${htmlEscape(
