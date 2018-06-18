@@ -8,7 +8,7 @@ const webserver = require('gulp-webserver');
 const livereload = require('gulp-livereload');
 
 // deploy
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gh-pages');
 
 // css
 const sass = require('gulp-sass');
@@ -332,6 +332,6 @@ gulp.task('export:algolia-settings', () => {
 // -------------------------------------
 //   Task: Deploy Github Page
 // -------------------------------------
-gulp.task('deploy', callback =>
-  gulp.src('build/**/*').pipe(ghPages({ branch: 'master' }))
-);
+gulp.task('deploy', cb => {
+  ghpages.publish(path.join(process.cwd(), 'build'), cb);
+});
