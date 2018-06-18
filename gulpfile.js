@@ -211,9 +211,12 @@ gulp.task('webserver', () => {
 //   Task: Revision
 // -------------------------------------
 gulp.task('rev', () => {
-  const assetFilter = filter(['**/*', '!**/index.html', '!favicon.ico'], {
-    restore: true,
-  });
+  const assetFilter = filter(
+    ['**/*', '!**/index.html', '!favicon.ico', '!robots.txt'],
+    {
+      restore: true,
+    }
+  );
 
   return gulp
     .src('src/**')
