@@ -361,7 +361,7 @@
   {
     "name": "GDPR Search",
     "category": "Showcase",
-    "description": "Official text of GDPR–General Data Protection Regulation–made searchable by Algolia. Search Easily in chapters, articles and recitals to read faster and become GDPR compliant.",
+    "description": "Official text of GDPR–General Data Protection Regulation–made searchable by Algolia.",
     "url_home": "http://gdpr.algolia.com/",
     "url_github": "https://github.com/clemfromspace/api-search",
     "icon": "gdpr-algolia",
