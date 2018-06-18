@@ -379,7 +379,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "searchstone",
-    "ranking": 2,
+    "ranking": 4,
     "categoryRanking": 7
   },
   {
@@ -403,7 +403,7 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "hackernews",
-    "ranking": 3,
+    "ranking": 5,
     "categoryRanking": 7
   },
   {
@@ -427,15 +427,10 @@
     "url_forum": "",
     "discussion_count": "",
     "icon": "public-api-search",
-    "ranking": 1,
+    "ranking": 2,
     "categoryRanking": 7
   },
   {
-    "name": "Searchbox",
-    "category": "Tool",
-    "description": "A point-and-click design tool for a search box that matches your site",
-    "url_home": "http://shipow.github.io/searchbox/",
-    "url_github": "https://github.com/Shipow/searchbox",
     "name": "Atom npm search",
     "category": "Tools",
     "description": "Search & install NPM packages from import/require statements powered by Algolia.",
