@@ -1,8 +1,6 @@
 {
   "algolia": {
-    "appId": "",
-    "adminApiKey": "",
-    "index": "community",
+    "index": "community.algolia.com",
     "settings": {
       "minWordSizefor1Typo": 4,
       "minWordSizefor2Typos": 8,

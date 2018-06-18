@@ -41,13 +41,13 @@ yarn deploy
 
 ## Updating the underlying index
 
-The current `appId` storing the data is `HXQH62TCI4`.
-If you want to update the data, first test it on a new index, modify `algolia-projects.json` then `config.json` and run:
+The current `appId` storing the data is `latency` (accessible for writes by Algolia employees).
+If you want to update the data, first test it on a **new index**: modify `algolia-projects.json` and run:
 
 ```sh
-yarn update-index
+appId= adminApiKey= yarn update-index
 ```
 
-Once you are sure this is the right config, you can update `config.json` to point it to the right production index.
+Once you are sure this is the right config, then run the same command using `latency` credentials.
 
 _You may encounter issues while running `yarn deploy`, you can fix it by following this [GH thread](https://github.com/shinnn/gulp-gh-pages/issues/116#issuecomment-364959382)_

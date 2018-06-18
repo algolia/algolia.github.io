@@ -294,7 +294,7 @@ gulp.task('dev', callback => {
 
 gulp.task('export:algolia-index', () => {
   /* eslint-disable */
-  const client = algolia(config.algolia.appId, config.algolia.adminApiKey);
+  const client = algolia(process.env.appId, process.env.adminApiKey);
   const index = client.initIndex(config.algolia.index);
   fs.readFile('src/algolia-projects.json', 'utf8', (err, data) => {
     if (err) {
