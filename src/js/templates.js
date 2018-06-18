@@ -9,7 +9,6 @@ exports.hitTemplate = data => `
         <div class="alg-communityhit__icon">
           <a href="${data.url_home ||
             data.url_github ||
-            data.url_forum ||
             '#'}" class="bxs-1 bdrad-6 alg-communityhit__iconcontainer alg-icon-${data.category
   .toLowerCase()
   .split(' ')

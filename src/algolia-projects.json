@@ -4,8 +4,6 @@
     "description": "Library of UI widgets to build an instant-search experience.",
     "url_home": "https://community.algolia.com/instantsearch.js/v2/",
     "url_github": "https://github.com/algolia/instantsearch.js",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "instantsearch",
     "ranking": 1,
     "categoryRanking": 1
@@ -16,8 +14,6 @@
     "description": "Lightning-fast search for Angular",
     "url_home": "https://community.algolia.com/angular-instantsearch/",
     "url_github": "https://github.com/algolia/angular-instantsearch",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "instantsearch-angular",
     "ranking": 4,
     "categoryRanking": 1
@@ -28,8 +24,6 @@
     "description": "Lightning-fast search for React and React Native apps",
     "url_home": "https://community.algolia.com/react-instantsearch/",
     "url_github": "https://github.com/algolia/react-instantsearch",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "instantsearch-react",
     "ranking": 2,
     "categoryRanking": 1
@@ -40,8 +34,6 @@
     "description": "The ultimate Vue.js toolbox for creating instant search experiences",
     "url_home": "https://community.algolia.com/vue-instantsearch/",
     "url_github": "https://github.com/algolia/vue-instantsearch",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "instantsearch-vue",
     "ranking": 3,
     "categoryRanking": 1
@@ -52,8 +44,6 @@
     "description": "Lightning-fast search for Android applications",
     "url_home": "https://community.algolia.com/instantsearch-android/",
     "url_github": "https://github.com/algolia/instantsearch-android",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "android",
     "ranking": 1400,
     "categoryRanking": 2
@@ -64,8 +54,6 @@
     "description": "Lightning-fast search for iOS applications",
     "url_home": "https://community.algolia.com/instantsearch-ios/",
     "url_github": "https://github.com/algolia/instantsearch-ios",
-    "url_forum": "https://discourse.algolia.com/t/instantsearch-ios-release-iphone/2021",
-    "discussion_count": "",
     "icon": "ios",
     "ranking": 1400,
     "categoryRanking": 2
@@ -76,8 +64,6 @@
     "description": "Display as-you-type search results with a dropdown.",
     "url_home": "",
     "url_github": "https://github.com/algolia/autocomplete.js",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "autocomplete",
     "ranking": 1,
     "categoryRanking": 3
@@ -88,8 +74,6 @@
     "description": "Turn any <input> into an address autocomplete",
     "url_home": "https://community.algolia.com/places/",
     "url_github": "https://github.com/algolia/places",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "places",
     "ranking": 2,
     "categoryRanking": 3
@@ -100,8 +84,6 @@
     "description": "A set of utilities for further customizing search behavior",
     "url_home": "https://community.algolia.com/algoliasearch-helper-js/",
     "url_github": "https://github.com/algolia/algoliasearch-helper-js/",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "helper.js",
     "ranking": 3,
     "categoryRanking": 3
@@ -112,8 +94,6 @@
     "description": "Surface your site's best content with lighting-fast, beautiful search",
     "url_home": "https://community.algolia.com/wordpress/",
     "url_github": "https://github.com/algolia/algoliasearch-wordpress",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "wordpress",
     "ranking": 1,
     "categoryRanking": 4
@@ -124,8 +104,6 @@
     "description": "Deliver fast and relevant search results with the Algolia extension for Magento.",
     "url_home": "https://community.algolia.com/magento/",
     "url_github": "https://github.com/algolia/magento",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "magento",
     "ranking": 2,
     "categoryRanking": 4
@@ -136,8 +114,6 @@
     "description": "Level up your Zendesk Help Center with an awesome search experience.",
     "url_home": "https://community.algolia.com/zendesk/",
     "url_github": "https://github.com/algolia/zendesk",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "zendesk",
     "ranking": 4,
     "categoryRanking": 4
@@ -148,8 +124,6 @@
     "description": "Add fast and relevant search to your Jekyll site",
     "url_home": "https://community.algolia.com/jekyll-algolia/",
     "url_github": "https://github.com/algolia/jekyll-algolia",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "jekyll",
     "ranking": 5,
     "categoryRanking": 4
@@ -160,8 +134,6 @@
     "description": "Give your customers the search they deserve with Algolia's Shopify integration",
     "url_home": "https://community.algolia.com/shopify/",
     "url_github": null,
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "shopify",
     "ranking": 3,
     "categoryRanking": 4
@@ -172,8 +144,6 @@
     "description": "Ruby on Rails integration for Algolia",
     "url_home": "https://www.algolia.com/doc/api-client/rails/setup/",
     "url_github": "https://github.com/algolia/algoliasearch-rails",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "ror",
     "ranking": 1,
     "categoryRanking": 5
@@ -184,8 +154,6 @@
     "description": "Laravel integration for Algolia",
     "url_home": "https://www.algolia.com/doc/api-client/laravel/install/",
     "url_github": "https://github.com/algolia/algoliasearch-laravel",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "laravel",
     "ranking": 2,
     "categoryRanking": 5
@@ -196,8 +164,6 @@
     "description": "Symfony integration for Algolia",
     "url_home": "https://www.algolia.com/doc/api-client/symfony/setup/",
     "url_github": "https://github.com/algolia/AlgoliaSearchBundle",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "symfony",
     "ranking": 3,
     "categoryRanking": 5
@@ -208,8 +174,6 @@
     "description": "Django integration for Algolia",
     "url_home": "https://www.algolia.com/doc/api-client/django/setup/",
     "url_github": "https://github.com/algolia/algoliasearch-django",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "django",
     "ranking": 4,
     "categoryRanking": 5
@@ -220,8 +184,6 @@
     "description": "Algolia Search API client for Ruby",
     "url_home": "https://www.algolia.com/doc/api-client/ruby/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-ruby",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "ruby",
     "ranking": 4,
     "categoryRanking": 6
@@ -232,8 +194,6 @@
     "description": "Algolia Search API client for Scala",
     "url_home": "https://www.algolia.com/doc/api-client/scala/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-scala",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "scala",
     "ranking": 1000,
     "categoryRanking": 6
@@ -244,8 +204,6 @@
     "description": "Algolia Search API client for Go",
     "url_home": "https://www.algolia.com/doc/api-client/go/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-go",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "go",
     "ranking": 3,
     "categoryRanking": 6
@@ -256,8 +214,6 @@
     "description": "Algolia Search API client for Python",
     "url_home": "https://www.algolia.com/doc/api-client/python/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-python",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "python",
     "ranking": 1000,
     "categoryRanking": 6
@@ -268,8 +224,6 @@
     "description": "Algolia Search API client for Node.js",
     "url_home": "https://www.algolia.com/doc/api-client/javascript/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-javascript",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "node",
     "ranking": 1000,
     "categoryRanking": 6
@@ -280,8 +234,6 @@
     "description": "Algolia Search API client for the command line",
     "url_home": "",
     "url_github": "https://github.com/algolia/algoliasearch-client-cmd",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "cli",
     "ranking": 1000,
     "categoryRanking": 6
@@ -292,8 +244,6 @@
     "description": "Algolia Search API client for Java",
     "url_home": "https://www.algolia.com/doc/api-client/java/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-java",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "java",
     "ranking": 1000,
     "categoryRanking": 6
@@ -304,8 +254,6 @@
     "description": "Algolia Search API client for Android",
     "url_home": "https://www.algolia.com/doc/api-client/android/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-android",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "android",
     "ranking": 1000,
     "categoryRanking": 6
@@ -316,8 +264,6 @@
     "description": "Algolia Search API client for Swift",
     "url_home": "https://www.algolia.com/doc/api-client/swift/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-swift",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "swift",
     "ranking": 1000,
     "categoryRanking": 6
@@ -328,8 +274,6 @@
     "description": "Algolia Search API client for C#",
     "url_home": "https://www.algolia.com/doc/api-client/csharp/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-csharp",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "csharp",
     "ranking": 1000,
     "categoryRanking": 6
@@ -340,8 +284,6 @@
     "description": "Algolia Search API client for PHP",
     "url_home": "https://www.algolia.com/doc/api-client/php/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-php",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "php",
     "ranking": 1,
     "categoryRanking": 6
@@ -352,8 +294,6 @@
     "description": "Algolia Search API client for JavaScript",
     "url_home": "https://www.algolia.com/doc/api-client/javascript/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-javascript",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "javascript",
     "ranking": 2,
     "categoryRanking": 6
@@ -364,8 +304,6 @@
     "description": "Search for the videos of Super Bowl commercials, dating back decades.",
     "url_home": "https://community.algolia.com/supersearch/",
     "url_github": "https://github.com/algolia/supersearch",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "superbowlsearch",
     "ranking": 1000,
     "categoryRanking": 7
@@ -376,8 +314,6 @@
     "description": "Hearthstone players rejoice, this visually pleasing card search is yours.",
     "url_home": "http://searchstone.io/",
     "url_github": "https://github.com/shipow/searchstone",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "searchstone",
     "ranking": 4,
     "categoryRanking": 7
@@ -388,8 +324,6 @@
     "description": "Search for characters in the Marvel Universe",
     "url_home": "https://community.algolia.com/marvel-search/",
     "url_github": "https://github.com/algolia/marvel-search",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "marvel",
     "ranking": 1000,
     "categoryRanking": 7
@@ -400,8 +334,6 @@
     "description": "Search all posts on HackerNews, sorted by votes or date.",
     "url_home": "https://hn.algolia.com/",
     "url_github": "https://github.com/algolia/hn-search",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "hackernews",
     "ranking": 5,
     "categoryRanking": 7
@@ -412,8 +344,6 @@
     "description": "Search all packages in the npm and Yarn registry.",
     "url_home": "https://yarnpkg.com/",
     "url_github": "https://github.com/yarnpkg/website",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "yarn",
     "ranking": 1,
     "categoryRanking": 7
@@ -424,10 +354,18 @@
     "description": "Look for public APIs and find what you need in milliseconds 🔍✨",
     "url_home": "https://www.api-search.io/",
     "url_github": "https://github.com/clemfromspace/api-search",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "public-api-search",
     "ranking": 2,
+    "categoryRanking": 7
+  },
+  {
+    "name": "GDPR Search",
+    "category": "Showcase",
+    "description": "Official text of GDPR–General Data Protection Regulation–made searchable by Algolia. Search Easily in chapters, articles and recitals to read faster and become GDPR compliant.",
+    "url_home": "http://gdpr.algolia.com/",
+    "url_github": "https://github.com/clemfromspace/api-search",
+    "icon": "gdpr-algolia",
+    "ranking": 3,
     "categoryRanking": 7
   },
   {
@@ -436,8 +374,6 @@
     "description": "Search & install NPM packages from import/require statements powered by Algolia.",
     "url_home": "",
     "url_github": "https://github.com/algolia/atom-autocomplete-module-import",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "atom",
     "ranking": 4,
     "categoryRanking": 8
@@ -448,8 +384,6 @@
     "description": "A browser extension that makes it easier to search on GitHub.",
     "url_home": "https://github.algolia.com/",
     "url_github": "https://github.com/algolia/github-awesome-autocomplete",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "autocomplete",
     "ranking": 3,
     "categoryRanking": 8
@@ -460,8 +394,6 @@
     "description": "Size up your search with this step-by-step questionnaire",
     "url_home": "https://grader.algolia.com/",
     "url_github": null,
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "grader",
     "ranking": 2,
     "categoryRanking": 8
@@ -472,8 +404,6 @@
     "description": "Search for technical documentation. Free for open source.",
     "url_home": "https://community.algolia.com/docsearch/",
     "url_github": "https://github.com/algolia/docsearch",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "docsearch",
     "ranking": 1,
     "categoryRanking": 8
@@ -484,8 +414,6 @@
     "description": "A point-and-click design tool for a search box that matches your site",
     "url_home": "http://shipow.github.io/searchbox/",
     "url_github": "https://github.com/Shipow/searchbox",
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "searchbox",
     "ranking": 1000,
     "categoryRanking": 8
@@ -496,8 +424,6 @@
     "description": "Show your support with an Algolia t-shirt and stickers.",
     "url_home": "https://docs.google.com/a/algolia.com/forms/d/e/1FAIpQLScFHcqkzw8QoS-XkU1zZ4eOg77K2t88qIXrqOC-828ahyiCnQ/viewform",
     "url_github": null,
-    "url_forum": "",
-    "discussion_count": "",
     "icon": "represent",
     "ranking": 1000,
     "categoryRanking": 9
