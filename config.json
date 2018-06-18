@@ -17,7 +17,7 @@
       "unretrievableAttributes": null,
       "optionalWords":
        [],
-      "attributesForFaceting": ["name", "description", "category"],
+      "attributesForFaceting": ["category"],
       "attributesToSnippet": null,
       "attributesToHighlight": null,
       "attributeForDistinct": null,

@@ -211,8 +211,12 @@ gulp.task('webserver', () => {
 //   Task: Revision
 // -------------------------------------
 gulp.task('rev', () => {
-  const assetFilter = filter(['**/*', '!**/index.html', '!favicon.ico'], {restore: true});
-  return gulp.src('src/**')
+  const assetFilter = filter(['**/*', '!**/index.html', '!favicon.ico'], {
+    restore: true,
+  });
+
+  return gulp
+    .src('src/**')
     .pipe(assetFilter)
     .pipe(rev()) // Rename all files except index.html
     .pipe(assetFilter.restore)
@@ -302,6 +306,7 @@ gulp.task('export:algolia-index', () => {
           err => {
             if (err) {
               console.log(err); // eslint-disable-line no-console
+              throw err;
             }
           }
         );
@@ -311,11 +316,12 @@ gulp.task('export:algolia-index', () => {
 });
 
 gulp.task('export:algolia-settings', () => {
-  const client = algolia(config.algolia.appId, config.algolia.adminApiKey);
+  const client = algolia(process.env.appId, process.env.adminApiKey);
   const index = client.initIndex(config.algolia.index);
   index.setSettings(config.algolia.settings, (err, content) => {
     if (err) {
       console.log(err);
+      throw err;
     }
   });
 });
