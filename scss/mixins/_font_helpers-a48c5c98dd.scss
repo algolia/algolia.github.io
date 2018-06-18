@@ -1,0 +1,17 @@
+//---------------------------
+//  Better font aliasing
+//---------------------------
+@mixin better-fonts() {
+  h1,h2,h3,h4,h5,h6,span,div,p,pre,code,a,strong,em,i {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+//---------------------------
+//  Convert px to em
+//---------------------------
+$browser-context: 14;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
