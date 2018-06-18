@@ -420,16 +420,15 @@
   },
   {
     "name": "Public API Search",
-    "category": "Live",
+    "category": "Showcase",
     "description": "Look for public APIs and find what you need in milliseconds 🔍✨",
     "url_home": "https://www.api-search.io/",
     "url_github": "https://github.com/clemfromspace/api-search",
     "url_forum": "",
     "discussion_count": "",
     "icon": "public-api-search",
-    "featured": false,
-    "objectID": "",
-    "ranking": 1000
+    "ranking": 1,
+    "categoryRanking": 7
   },
   {
     "name": "Searchbox",
@@ -497,7 +496,7 @@
     "categoryRanking": 8
   },
   {
-    "name": "Pride",
+    "name": "Represent",
     "category": "Misc",
     "description": "Show your support with an Algolia t-shirt and stickers.",
     "url_home": "https://docs.google.com/a/algolia.com/forms/d/e/1FAIpQLScFHcqkzw8QoS-XkU1zZ4eOg77K2t88qIXrqOC-828ahyiCnQ/viewform",
