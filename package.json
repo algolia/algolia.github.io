@@ -27,7 +27,7 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-import": "2.12.0",
     "eslint-plugin-prettier": "2.6.0",
-    "favicons": "4.8.6",
+    "favicons": "5.1.1",
     "glob": "7.1.2",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "5.0.0",
