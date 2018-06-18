@@ -333,5 +333,5 @@ gulp.task('export:algolia-settings', () => {
 //   Task: Deploy Github Page
 // -------------------------------------
 gulp.task('deploy', cb => {
-  ghpages.publish(path.join(process.cwd(), 'build'), cb);
+  ghPages.publish(path.join(process.cwd(), 'build'), cb);
 });
