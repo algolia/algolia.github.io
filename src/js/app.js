@@ -3,13 +3,10 @@ import instantsearch from 'instantsearch.js';
 import { searchBox, menu, hits } from 'instantsearch.js/es/widgets';
 
 const algoliaProjects = require('./../algolia-projects.json');
-const config = require('./../../config.json');
 
-let { appID, apiKey, index } = config.algolia;
-
-appID = 'HXQH62TCI4';
-apiKey = '0b9f3069b37517348a864b7239a8abfa';
-index = 'community';
+const appId = 'latency';
+const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
+const indexName = 'community.algolia.com';
 
 const loadDefs = () => {
   fetch('/img/projects/projects-defs.svg')
@@ -88,23 +85,19 @@ function scrollToElement(nodeOrSelector, totalTime = 400) {
   window.requestAnimationFrame(tick);
 }
 
-const sortProjectsByCategory = projects => {
-  const sorted = {};
-  projects.sort((a, b) => {
-    const catA = a.category;
-    const catB = b.category;
-    if (catA > catB) return -1;
-    else if (catA < catB) return 1;
-    return 0;
-  });
+const groupProjectsByCategory = projects => {
+  const grouped = [];
 
-  projects.forEach(p => {
-    if (!sorted[p.category]) {
-      sorted[p.category] = [];
+  projects
+    .sort((a, b) => a.ranking - b.ranking)
+    .forEach(p => {
+    if (!Array.isArray(grouped[p.categoryRanking - 1])) {
+      grouped[p.categoryRanking - 1] = [];
     }
-    sorted[p.category].push(p);
+
+    grouped[p.categoryRanking - 1].push(p);
   });
-  return sorted;
+  return grouped;
 };
 
 const renderItem = item => {
@@ -114,41 +107,28 @@ const renderItem = item => {
   return wrapperDiv;
 };
 
-const renderResults = projects => {
+const renderResults = allProjectsByCategories => {
   const injectInside = document.querySelector('.alg-communityprojects__hits');
-  const sortedProjects = [];
 
-  Object.keys(projects).forEach(cat => {
-    sortedProjects.push(projects[cat]);
-  });
+  allProjectsByCategories.forEach(allProjectsForCategory => {
+    const categoryName = allProjectsForCategory[0].category;
 
-  sortedProjects.sort((a, b) => a.length < b.length);
-
-  sortedProjects.forEach(p => {
-    p.sort((a, b) => a.ranking < b.ranking);
-  });
-
-  sortedProjects.forEach(projectsArray => {
-    const cat = projectsArray[0].category || 'Misc';
-    const categoryArray = projects[cat];
-    const dummyArray = projects[cat];
     let viewMore = null;
 
-    if (categoryArray.length > 4) {
-      viewMore = dummyArray.length - 4;
+    if (allProjectsForCategory.length > 4) {
+      viewMore = allProjectsForCategory.length - 4;
     }
 
     const wrapper = document.createElement('div');
     wrapper.className = 'alg-communityprojects__hitswrapper';
-    wrapper.innerHTML = templates.headerTemplate(cat, viewMore);
+    wrapper.innerHTML = templates.headerTemplate(categoryName, viewMore);
     const wrapperHits = wrapper.querySelector('.ais-hits');
 
-    if (categoryArray && categoryArray.length) {
-      categoryArray.forEach(project => {
-        const article = renderItem(project);
-        wrapperHits.appendChild(article);
-      });
-    }
+    allProjectsForCategory.forEach(project => {
+      const article = renderItem(project);
+      wrapperHits.appendChild(article);
+    });
+
     injectInside.appendChild(wrapper);
   });
 };
@@ -199,9 +179,12 @@ const SearchContainer = document.querySelector(
 const ClearRefinements = document.querySelector('.alg-community--clearSearch');
 
 const search = instantsearch({
-  appId: appID,
+  appId,
   apiKey,
-  indexName: index,
+  indexName,
+  searchParameters: {
+    hitsPerPage: 42
+  },
   searchFunction: helper => {
     const hasCategoryRefinement =
       helper.state.hierarchicalFacetsRefinements.category &&
@@ -268,8 +251,7 @@ function onViewMoreClick(event) {
   scrollToElement(this);
 }
 
-const sorted = sortProjectsByCategory(algoliaProjects);
-renderResults(sorted);
+renderResults(groupProjectsByCategory(algoliaProjects));
 
 const viewMoreLinks = [...document.querySelectorAll('.alg-viewmore')];
 viewMoreLinks.forEach(l => l.addEventListener('click', onViewMoreClick));

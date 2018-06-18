@@ -4,30 +4,27 @@ function htmlEscape(html) {
     .appendChild(document.createTextNode(html)).parentNode.innerHTML;
 }
 exports.hitTemplate = data => `
- <article class="alg-communityhit elevation1 radius6 pos-rel">
+ <article class="alg-communityhit bxs-1 bdrad-2 c-gradient pos-rel">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
           <a href="${data.url_home ||
             data.url_github ||
-            data.url_forum ||
-            '#'}" class="elevation1 alg-communityhit__iconcontainer alg-icon-${data.category
+            '#'}" class="bxs-1 bdrad-6 alg-communityhit__iconcontainer alg-icon-${data.category
   .toLowerCase()
   .split(' ')
   .join('-')}">
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-              <title>${data.name} ${data.category}</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#${
-                data.icon
-              }"></use>
-            </svg>
+           <img src="img/projects/${data.icon}.svg">
           </a>
         </div>
-        <p class="alg-communityhit__type text-demi text-sm m-t-none m-b-none padder">${
+        <p class="alg-communityhit__type fw-medium text-sm m-t-none m-b-none padder c-txt-label cat-${data.category
+          .toLowerCase()
+          .split(' ')
+          .join('-')}">${
           data.category
         }</p>
         <a href="${data.url_home ||
           data.url_github ||
-          data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name text-lg padder m-t-none m-b-small">${
+          data.url_forum}" class="hit-namelink"><h3 class="alg-communityhit__name fw-medium padder m-t-none m-b-small">${
   data.name
 }</h3></a>
         <p class="alg-communityhit__description text-sm m-t-none padder m-b">${htmlEscape(
@@ -37,7 +34,7 @@ exports.hitTemplate = data => `
           ${
             data.url_github
               ? `
-           <div class="alg-communitystat alg-communitystat--github">
+           <div class="alg-communitystat alg-communitystat--github c-gradient">
              <a href="${data.url_github}" target="_blank" rel="noopener">
                <svg width="20" height="20" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <title>Github repository icon</title>
@@ -50,10 +47,10 @@ exports.hitTemplate = data => `
            ${
              data.url_forum
                ? `
-           <div class="alg-communitystat alg-communitystat--discourse">
+           <div class="alg-communitystat alg-communitystat--discourse c-gradient">
              <a href="${data.url_forum}" target="_blank" rel="noopener">
                <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <title>Discouse Icon</title>
+                <title>Discourse Icon</title>
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-comments"></use></svg>
              </a>
            </div>`
@@ -62,7 +59,7 @@ exports.hitTemplate = data => `
            ${
              data.url_home
                ? `
-           <div class="alg-communitystat alg-communitystat--home">
+           <div class="alg-communitystat alg-communitystat--home c-gradient">
              <a href="${data.url_home}" target="_blank" rel="noopener">
                <svg width="21" height="11" viewBox="0 0 21 11" xmlns="http://www.w3.org/2000/svg">
                 <title>Project homepage</title>
@@ -151,3 +148,4 @@ exports.header = count => `
         <span class="alg-facet__number">${count}</span>
       </a>
     </div>`;
+

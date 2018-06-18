@@ -64,7 +64,7 @@
     %script{type: "text/javascript"}
       window.loadJS('/js/app.js')
 
-  %body
+  %body.bgc-moon
     %header.alg-header
       .alg-header__container.m-l-r-auto
         .alg-communitylogo.hidden-xs
@@ -81,65 +81,48 @@
               <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
     %main.alg-community
-      %section.alg-communityheader
-        %header.alg-communityheader__container.text-center
-          %h1.text-xl.m-t-none.p-l-large.color-bunting.m-b-none Oh, hello! <span>👋<span>
+      %section.alg-communityheader.c-gradient
+        %header.alg-communityheader__container.maw-1200.text-center
+          %h1.c-txt-page-title-hind.color-solstice Oh, hello! <span>👋<span>
           .spacer8
-          %p.p-l-large.text-muted.text-lg.m-t-none Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
-          .spacer24
-          .alg-communityareas.radius6.elevation2
+          %p.c-txt-section-subtitle.maw-60ch.mt-8.mh-auto.color-nova Looking for inspiration? Here's a directory of open source<br> projects from the Algolia team and community.
+          .spacer24.d:none{class:"md:d-none"}
+          .alg-communityareas.radius6.bxs-1.top-80.pos-relative
             .alg-communityareas__area.text-center.p-large
               %h3.text-lg Documentation
               %p.m-l-r-auto Jump to the official Algolia documentation, guides and tutorials.
-              %a.btn-lg.btn.btn-static-primary.elevation1{href: "https://algolia.com/doc", aria_label: "Algolia documentation"}
+              %a.c-btn.c-btn--primary{href: "https://algolia.com/doc", aria_label: "Algolia documentation"}
                 Read the docs
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
             .alg-communityareas__area.text-center.p-large
               %h3.text-lg Community Forum
               %p.m-l-r-auto Ask questions and get the latest news. <br>Don't miss the Show & Tell category.
-              %a.btn-lg.btn.btn-static-secondary.elevation1{href: "https://discourse.algolia.com/", aria_label: "Algolia Discourse Forum"}
+              %a.c-btn.c-btn--secondary{href: "https://discourse.algolia.com/", aria_label: "Algolia Discourse Forum"}
                 Browse the forum
                 <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
 
-      %section.projects.fill-titan.pos-rel
+      %section.projects.bgc-moon
+        .spacer120
         .alg-communityprojects.m-l-r-auto.pos-rel
-          .spacer120
-          .alg-communityprojects__search
-            %h1.text-lg Explore
+          .alg-communityprojects__search.maw-1200.m-auto
             %button.alg-community--clearSearch 
-            #alg-community__search
+            #alg-community__search.w-100p.bgc-white.mv-32.p-8.bdrad-2.bxs-1
 
-          .spacer40
-
-          #alg-communitycontainer.alg-communitycontainer
-            .alg-communityprojects__facets.alg-communityprojects__facets__is
-            .alg-communityprojects__hits.default
-            .alg-communityprojects__hits.is
+          #alg-communitycontainer.alg-communitycontainer.maw-1200.d-flex.mt-48
+            .alg-communityprojects__facets.alg-communityprojects__facets__is.fx-2
+            .alg-communityprojects__hits.default.fx-12
+            .alg-communityprojects__hits.is.fx-12
         .spacer64
-
-      %section.cta-free-trial.fill-algolia-blue.pos-rel
-        .spacer64.hidden-xs
-        .spacer64.hidden-xs
-        .container.p-l-small.p-r-small
-          .row.cf
-            .col-md-6
-              %h3.color-white Built something with Algolia?
-              %p.color-white Share your project with the community. Get feedback and find contributors. Top projects get featured in Algolia's newsletter.
-            .col-md-6.text-right
-              .spacer64.hidden-xs
-              .spacer32
-              %a.btn.btn-static-dark{href: "https://discourse.algolia.com/", aria_label: "Visit the Discourse Forum"}
-                Browse the forum
-                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#icon-arrow"></use></svg>
-              .spacer8
-        .spacer64.hidden-xs
-        .spacer64
-
-    %footer.pos-rel
+    .footer-cta.bgc-white.w-100p.ta-center.m-auto.ph-20.pb-80.pos-relative.z-1.md:d-flex.md:jc-between.md:ai-end.md:ta-left.lg:pb-120
+      %div.pos-relative.z-10
+        %p.c-txt-label.c-txt-label--poppins.lh-bigger.color-nebula Start your search today
+        %p.m-0.fsz-24.fw-semibold.lh-small.color-solstice.lg:fsz-36 See Algolia in action.
+      %a.c-btn.c-btn--primary.mt-16.md:mt-0{href: "/schedule-demo"} Request a demo
+    %footer.pos-rel.bgc-white
       .spacer24
-      .container
-        .column
-          %h4 Resources
+      .container.d-grid.g-3
+        .column.ta-center
+          %h4c-txt-label.c-txt-label--poppins.color-solstice.mb-24 Resources
           %ul
             %li
               %a{href: "https://github.com/algolia/community-code-of-conduct"} Code of Conduct
@@ -147,27 +130,18 @@
               %a{href: "https://github.com/algolia/awesome-algolia"} awesome-algolia
             %li
               %a{href: "https://www.algolia.com/careers"} Work with us
-            %li.email.pos-rel
-              .spacer16
-              #mc_embed_signup.newsletter-signup
-                %form#mc-embedded-subscribe-form.validate.form-inline{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", name: "mc-embedded-subscribe-form", novalidate: true, target: "_blank"}
-                  #mc_embed_signup_scroll
-                    .mc-signupmessage
-                    .mc-field-group
-                    %input#mce-EMAIL.email.form-control{type: "text", name: "email", placeholder: "Your Email Address", type: "email"}/
-                    %button.btn.btn-static-default.color-white{type: "submit"}
-                      Subscribe
 
-        .column
-          %h4 Developer
+
+        .column.ta-center
+          %h4c-txt-label.c-txt-label--poppins.color-solstice.mb-24 Developer
           %ul
             %li
               %a{href: "https://www.algolia.com/doc/guides/getting-started/how-it-works/"} Getting Started
             %li
               %a{href: "https://www.algolia.com/doc/"} Documentation
 
-        .column
-          %h4 Connect
+        .column.ta-center
+          %h4c-txt-label.c-txt-label--poppins.color-solstice.mb-24 Connect
           %ul
             %li
               %a{href: "https://twitter.com/Algolia"}
@@ -187,7 +161,17 @@
             %li
               %a{href: "https://blog.algolia.com/"}
                 Blog
-      
+        .column.gcstart-1.gcend-4.ta-center.mt-32.d-none
+          #mc_embed_signup.newsletter-signup
+            %p.c-txt-section-subtitle.maw-60ch.mt-8.mh-auto.color-nova Wants to stay up to date with the latest Algolia news?
+            %p.c-txt-section-subtitle.maw-60ch.mt-8.mh-auto.color-nova Sign-up to our newsletter! 
+            %form#mc-embedded-subscribe-form.validate.form-inline{action: "https://go.pardot.com/l/139121/2016-06-09/f3kzm", method: "post", name: "mc-embedded-subscribe-form", novalidate: true, target: "_blank"}
+              #mc_embed_signup_scroll
+                .mc-signupmessage
+                .mc-field-group
+                %input#mce-EMAIL.email.form-control.bdw-1.bds-solid.bdc-proton.app-none.w-300.p-8.bdrad-6.mt-8.mr-8 {type: "text", name: "email", placeholder: "Type your email address here..", type: "email"}/
+                %button.c-btn.c-btn--secondary{type: "submit"}
+                  Subscribe
       .spacer64
       .spacer64
       .logo.text-center.pos-rel
