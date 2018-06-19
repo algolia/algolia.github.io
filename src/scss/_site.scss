@@ -91,35 +91,21 @@ $browserExtension: $java;
   .alg-communityheader {
     background: $white;
     position: relative;
-    background-image: url("/img/background.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("/img/background.svg")no-repeat center center / cover,  linear-gradient(#fff, #f5f5fa);
 
     @media (max-width: 940px){
       background-size: cover;
       background-position: center;
     }
-
-    @include diagonal(-6deg,
-    $titan-white,
-    50%,
-    false,
-    before) {
-      left: 0;
-      bottom: 0;
-      transform: skewY(-4deg) translate(0, 50%);
-    }
+   
     .alg-communityheader__container {
-      max-width: 1000px;
       margin: 0 auto;
       font-weight: 300;
-      padding: 0 20px;
       &:hover span {
         animation: handAnimation 500ms 200ms ease forwards;
       }
     }
     h1 {
-      font-weight: 400;
       padding: em(117, 36) em(20, 36) 0 em(20, 36);
       span {
         display: inline-block;
@@ -207,9 +193,6 @@ $browserExtension: $java;
         }
       }
 
-      #alg-community__search {
-        flex: 1;
-      }
 
       .alg-community--clearSearch {
         position: absolute;
@@ -276,14 +259,13 @@ $browserExtension: $java;
         width: 100%;
         overflow: hidden;
         position: relative;
-        background-color: $titan-white;
-        padding-left: 40px;
+
         &:after {
           color: $pluginColor;
           content: "";
           position: absolute;
           width: 44px;
-          left: 46px;
+          left: 0;
           height: 100%;
           background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Community' fill='currentColor' fill-rule='evenodd'%3E%3Cg id='Community-Home' fill='%23182359'%3E%3Cg id='Group-4'%3E%3Cg id='Group-18'%3E%3Cg id='Group-19'%3E%3Cpath d='M13.3806 14.6896c-1.409 1.1858-3.2322 1.901-5.2236 1.901-4.4654 0-8.0853-3.596-8.0853-8.0315 0-4.4356 3.62-8.0314 8.0853-8.0314 4.4654 0 8.0854 3.5958 8.0854 8.0315 0 1.9782-.72 3.7893-1.9137 5.189l1.0594 1.0523.1777-.1764c.1643-.1633.4312-.1627.5955.0005l3.7154 3.6906c.1646.1636.1642.4292.0006.5916l-1.3087 1.3c-.1643.1633-.4312.1627-.5955-.0005l-3.7154-3.6906c-.1646-.1635-.1642-.429-.0006-.5915l.183-.182-1.0594-1.0524zm-5.2236-.301c3.2412 0 5.8688-2.61 5.8688-5.8295 0-3.2195-2.6276-5.8295-5.8688-5.8295s-5.8687 2.61-5.8687 5.8296c0 3.2197 2.6275 5.8297 5.8687 5.8297z' id='Oval-183-Copy-6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
           background-position: center;
@@ -304,7 +286,7 @@ $browserExtension: $java;
         color: $bunting;
         font-size: 28px;
         padding-left: 60px;
-        border-bottom: 1px solid $portage;
+
         @media (max-width: $screen-sm) {
           padding-left: 44px;
         }
@@ -317,8 +299,6 @@ $browserExtension: $java;
       }
     }
     .alg-communitycontainer {
-      max-width: 1160px;
-      display: flex;
       z-index: 500;
     }
     .ais-hits {
@@ -327,8 +307,9 @@ $browserExtension: $java;
     }
   }
   .alg-communityprojects__facets {
-    width: 20%;
-    min-width: 20%;
+    @media (max-width: 960px) {
+      flex: 0 1 30%
+    }
     @media (max-width: $screen-sm) {
       display: none;
     }
@@ -341,6 +322,13 @@ $browserExtension: $java;
       position: relative;
       line-height: em(40, 16);
       cursor: pointer;
+
+      &.ais-menu--item__active {
+        font-weight: 900;
+        a {
+          color: color(nebula)
+        }
+      }
       &--header {
         .alg-facet__name {
           padding-left: 0;
@@ -355,27 +343,7 @@ $browserExtension: $java;
         transform: translate(3px, -50%) scaleY(.7);
       }
     }
-    .alg-facet-tool .alg-facet__tile {
-      background-color: $toolColor
-    }
-    .alg-facet-misc .alg-facet__tile {
-      background-color: $miscColor
-    }
-    .alg-facet-api-client .alg-facet__tile {
-      background-color: $apiClientColor
-    }
-    .alg-facet-learn .alg-facet__tile {
-      background-color: $learnColor
-    }
-    .alg-facet-live .alg-facet__tile {
-      background-color: $liveColor
-    }
-    .alg-facet-library .alg-facet__tile {
-      background-color: $libraryColor
-    }
-    .alg-facet-plugin .alg-facet__tile {
-      background-color: $pluginColor
-    }
+  .alg-community .alg-communityhit .alg-communityhit__icon .alg-icon-api-client
     .alg-facet__tile {
       position: absolute;
       left: 4px;
@@ -390,7 +358,7 @@ $browserExtension: $java;
       padding-left: 14px;
       padding-right: 8px;
       font-size: 14px;
-      background-color: #f8faff;
+      @extend %bgc-moon;
 
       &:before {
         content: "";
@@ -411,8 +379,6 @@ $browserExtension: $java;
     }
   }
   .alg-communityprojects__hits {
-    width: 80%;
-    min-width: 80%;
     @media (min-width: $screen-sm) {
       padding-left: 40px;
     }
@@ -442,62 +408,7 @@ $browserExtension: $java;
     header {
       position: relative;
     }
-    .alg-header-tool {
-      h3:after {
-        background-color: $toolColor
-      }
-      .alg-viewmore {
-        color: $toolColor
-      }
-    }
-    .alg-header-plugin {
-      h3:after {
-        background-color: $pluginColor
-      }
-      .alg-viewmore {
-        color: $pluginColor
-      }
-    }
-    .alg-header-api-client {
-      h3:after {
-        background-color: $apiClientColor
-      }
-      .alg-viewmore {
-        color: $apiClientColor
-      }
-    }
-    .alg-header-learn {
-      h3:after {
-        background-color: $learnColor
-      }
-      .alg-viewmore {
-        color: $learnColor
-      }
-    }
-    .alg-header-live {
-      h3:after {
-        background-color: $liveColor
-      }
-      .alg-viewmore {
-        color: $liveColor
-      }
-    }
-    .alg-header-library {
-      h3:after {
-        background-color: $libraryColor
-      }
-      .alg-viewmore {
-        color: $libraryColor
-      }
-    }
-    .alg-header-misc {
-      h3:after {
-        background-color: $miscColor
-      }
-      .alg-viewmore {
-        color: $miscColor
-      }
-    }
+    
     .alg-viewmore {
       padding-right: 18px;
       margin-left: 20px;
@@ -515,6 +426,8 @@ $browserExtension: $java;
       position: relative;
       display: inline-block;
       margin-top: 0;
+      font-family: 'Hind', Arial, sans-serif;
+      font-weight: 500;
       &:after {
         content: "";
         position: absolute;
@@ -616,17 +529,26 @@ $browserExtension: $java;
         }
         &--github:hover {
           a {
-            color: $bunting
+            color: color(nebula) !important;
+            use {
+              fill: color(nebula) !important
+            }
           }
         }
         &--discourse:hover {
           a {
-            color: $royal-blue
+            color: color(nebula) !important;
+            use {
+              fill: color(nebula) !important
+            }
           }
         }
         &--home:hover {
           a {
-            color: $royal-blue
+            color: color(nebula) !important;
+            use {
+              fill: color(nebula) !important
+            }
           }
         }
       }
@@ -647,7 +569,6 @@ $browserExtension: $java;
         width: 78px;
         height: 78px;
         margin-left: -7px;
-        border-radius: 100%;
         overflow: hidden;
         border: 4px solid $white;
         &:after {
@@ -660,14 +581,11 @@ $browserExtension: $java;
           transform: translate(2px, 8px);
           border-radius: 150%;
         }
-        svg {
-        display: flex;
-        flex-flow: column wrap;
-        place-items: center;
-          fill: transparent;
-          width: 50px;
-          height: 100px;
-          z-index: 10;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding: 10px;
         }
       }
       .alg-icon-tool {
@@ -711,8 +629,6 @@ $browserExtension: $java;
       }
     }
     .alg-communityhit__type {
-      color: $hitType;
-      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
@@ -726,6 +642,8 @@ $browserExtension: $java;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-size: 16px;
+      font-family: "Hind", Arial, sans-serif;
     }
     .alg-communityhit__description {
       color: #69719B;
@@ -742,16 +660,6 @@ $browserExtension: $java;
       text-decoration: none;
     }
 
-    @include diagonal(-6deg,
-      #302A51,
-      150px,
-      false,
-      before) {
-        left: 0;
-        bottom: -95px;
-        z-index: 25;
-        transform: skewY(-2deg);
-      }
 
     @media (max-width: $screen-sm) {
       padding-top: 160px;
@@ -792,24 +700,10 @@ $browserExtension: $java;
 }
 
 .projects {
-  @include diagonal(-6deg,
-  $titan-white,
-  200px,
-  false,
-  after) {
-    left: 0;
-    bottom: 0px;
-    z-index: 100;
-    transform: skewY(-4deg) translate(0, 50%);
-  }
 }
 
 .btn:hover {
   box-shadow: inherit;
-}
-
-.svg-icons {
-  display: none;
 }
 
 .empty-query {
@@ -825,25 +719,185 @@ $browserExtension: $java;
   }
 }
 
+
+
+// New design
+header .c-txt-section-subtitle {
+  text-shadow: 
+    1px 1px rgba(255,255,255, 1), 
+    -1px -1px rgba(255,255,255, 1),
+    1px -1px rgba(255,255,255, 1),
+    -1px 1px rgba(255,255,255, 1),
+    0 0 5px rgba(255,255,255, 1);
+}
+.bg-gradient {
+  background-image: linear-gradient(#fff, #f5f5fa)
+}  
+
+.alg-icon-frameworks img {
+  background-color: color(mars, 2);
+}
+.cat-frameworks {
+  color: color(mars, 2);
+}
+.alg-icon-instantsearch img {
+  background-color: color(nebula);
+}
+.cat-instantsearch {
+  color: color(nebula);
+}
+.alg-icon-api-clients img {
+  background-color: color(solstice)
+}
+.cat-api-clients {
+  color: color(solstice)
+}
+.alg-icon-addons img {
+  background-color: color(neptune);
+}
+.cat-addons {
+  color: color(neptune);
+}
+.alg-icon-libraries img {
+  background-color: color(jupiter, 2);
+}
+.cat-libraries {
+  color: color(jupiter, 2);
+}
+.alg-icon-misc img {
+  background-color: color(jupiter);
+}
+.cat-misc {
+  color: color(jupiter);
+}
+.alg-icon-native-instantsearch img {
+  background-color: color(mercury,2);
+}
+.cat-native-instantsearch {
+  color: color(mercury,2);
+}
+.alg-icon-showcase img {
+  background-color: color(saturn, 1);
+}
+.cat-showcase {
+  color: color(saturn, 1);
+}
+.alg-icon-tools img {
+  background-color: color(venus, 1);
+}
+.cat-tools {
+  color: color(venus, 1);
+}
+.alg-icon-learn img {
+  background-color: color(neptune, 4)
+}
+.cat-learn {
+  color: color(neptune, 4)
+}
+
+.alg-header-instantsearch {
+  h3:after {
+    background-color: #5468ff
+  }
+  .alg-viewmore {
+    color: #5468ff
+  }
+}
+.alg-header-native-instantsearch {
+  h3:after {
+    background-color: #5bbfdd
+  }
+  .alg-viewmore {
+    color: #5bbfdd
+  }
+}
+.alg-header-frameworks {
+  h3:after {
+    background-color: color(mars, 2)
+  }
+  .alg-viewmore {
+    color: color(mars, 2)
+  }
+}
+.alg-header-tools {
+  h3:after {
+    background-color: color(venus, 1);
+  }
+  .alg-viewmore {
+    color: color(venus, 1);
+  }
+}
+.alg-header-addons {
+  h3:after {
+    background-color: color(neptune)
+  }
+  .alg-viewmore {
+    color: color(neptune)
+  }
+}
+.alg-header-api-clients {
+  h3:after {
+    background-color: $apiClientColor
+  }
+  .alg-viewmore {
+    color: $apiClientColor
+  }
+}
+.alg-header-learn {
+  h3:after {
+    background-color: $learnColor
+  }
+  .alg-viewmore {
+    color: $learnColor
+  }
+}
+.alg-header-live {
+  h3:after {
+    background-color: $liveColor
+  }
+  .alg-viewmore {
+    color: $liveColor
+  }
+}
+.alg-header-libraries {
+  h3:after {
+    background-color: color(jupiter, 2)
+  }
+  .alg-viewmore {
+    color: color(jupiter, 2)
+  }
+}
+.alg-header-misc {
+  h3:after {
+    background-color: color(jupiter)
+  }
+  .alg-viewmore {
+    color: color(jupiter)
+  }
+}
+
+
+.footer-cta {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -120px;
+    width: 100%;
+    height: 320px;
+    background-color:#f5f5fa;
+    background-image: url(/img/footer-waves.svg);
+    background-size: 100% 100%;
+    background-position: center top 1px;
+  }
+}
+
+
 footer {
-  z-index: 50;
-  margin-top: 50px;
   overflow: hidden;
   position: relative;
-  background-color: #2E2A51;
-
-  .container {
-    @include diagonal(-6deg,
-    #1F1C3F,
-    130px,
-    false,
-    before) {
-      left: 0;
-      bottom: 80px;
-      z-index: 25;
-      transform: skewY(-2deg);
-    }
-  }
+  padding-top: 50px;
 
   h4 {
     font-weight: 400;
@@ -860,7 +914,6 @@ footer {
   .container {
     margin: 0 auto;
     max-width: 960px;
-    display: flex;
     padding: 0 15px;
 
     @media (max-width: $screen-md){
@@ -868,19 +921,6 @@ footer {
     }
   }
 
-  .column {
-    margin: 0 60px 0 0;
-    min-width: 20%;
-    @media (max-width: $screen-md){
-      min-width: 50%;
-      margin: 0;
-      padding-right: 20px;
-
-      &:first-child{
-        min-width: 100%;
-      }
-    }
-  }
 
   .email {
 
@@ -964,3 +1004,6 @@ footer {
   }
 }
 
+.c-gradient {
+  background-image: linear-gradient(#fff, #f5f5fa)
+}

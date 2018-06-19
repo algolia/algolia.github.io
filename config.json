@@ -1,15 +1,11 @@
 {
   "algolia": {
-    "appID": "",
-    "apiKey": "",
-    "index": "algolia-community",
+    "index": "community.algolia.com",
     "settings": {
       "minWordSizefor1Typo": 4,
       "minWordSizefor2Typos": 8,
       "hitsPerPage": 20,
       "maxValuesPerFacet": 100,
-      "attributesToIndex":
-       [],
       "numericAttributesToIndex": null,
       "attributesToRetrieve": null,
       "allowTyposOnNumericTokens": false,
@@ -21,8 +17,7 @@
       "unretrievableAttributes": null,
       "optionalWords":
        [],
-      "attributesForFaceting":
-       [],
+      "attributesForFaceting": ["category"],
       "attributesToSnippet": null,
       "attributesToHighlight": null,
       "attributeForDistinct": null,
@@ -37,7 +32,8 @@
          "attribute",
          "exact",
          "custom" ],
-      "customRanking": [],
+      "customRanking": ["asc(categoryRanking)", "asc(ranking)"],
+      "searchableAttributes": ["name", "description", "category"],
       "separatorsToIndex": "+-%/",
       "removeWordsIfNoResults": "none",
       "queryType": "prefixAll",

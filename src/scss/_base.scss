@@ -1,3 +1,4 @@
+
 :root {
   font-size: 15px;
 }
@@ -22,9 +23,13 @@ html, body {
 
 body {
   background: #fff;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-family: 'hind', Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.6;
+}
+
+h1,h2,h3 {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
 }
 
 button {

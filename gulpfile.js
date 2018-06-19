@@ -2,13 +2,14 @@ const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
 const glob = require('glob');
+const path = require('path');
 
 // dev
 const webserver = require('gulp-webserver');
 const livereload = require('gulp-livereload');
 
 // deploy
-const ghPages = require('gulp-gh-pages');
+const ghPages = require('gh-pages');
 
 // css
 const sass = require('gulp-sass');
@@ -23,9 +24,9 @@ const webpack = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 
 // prod
+const filter = require('gulp-filter');
 const rev = require('gulp-rev');
-const revNapkin = require('gulp-rev-napkin');
-const revReplace = require('gulp-rev-replace');
+const revRewrite = require('gulp-rev-rewrite');
 
 const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify-es').default;
@@ -210,39 +211,20 @@ gulp.task('webserver', () => {
 // -------------------------------------
 //   Task: Revision
 // -------------------------------------
-gulp.task('revision', () =>
-  gulp
-    .src([
-      'build/**/**/*.{css,js,png,svg,html}',
-      '!build/js/serviceWorker.js',
-      '!build/img/*.svg',
-    ])
-    .pipe(rev())
-    .pipe(gulp.dest('build'))
-    .pipe(revNapkin())
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('build'))
-);
-
-gulp.task('revreplace', ['revision'], () => {
-  const manifest = gulp.src('build/rev-manifest.json');
+gulp.task('rev', () => {
+  const assetFilter = filter(
+    ['**/*', '!**/index.html', '!favicon.ico', '!robots.txt'],
+    {
+      restore: true,
+    }
+  );
 
   return gulp
-    .src(
-      [
-        'build/*.html',
-        'build/js/*.js',
-        'build/*.js',
-        'build/*.css',
-        'build/manifest.json',
-      ],
-      { base: 'build' }
-    )
-    .pipe(
-      revReplace({
-        manifest,
-      })
-    )
+    .src('src/**')
+    .pipe(assetFilter)
+    .pipe(rev()) // Rename all files except index.html
+    .pipe(assetFilter.restore)
+    .pipe(revRewrite()) // Substitute in new filenames
     .pipe(gulp.dest('build'));
 });
 
@@ -269,7 +251,7 @@ gulp.task('build:prod', ['clean'], callback => {
     'images:optim',
     'haml',
     'js:min',
-    'revreplace',
+    'rev',
     'critical-css',
     'copyRedirects',
     'copyWorker',
@@ -294,7 +276,7 @@ gulp.task('dev', callback => {
 
 gulp.task('export:algolia-index', () => {
   /* eslint-disable */
-  const client = algolia(config.algolia.appID, config.algolia.apiKey);
+  const client = algolia(process.env.appId, process.env.adminApiKey);
   const index = client.initIndex(config.algolia.index);
   fs.readFile('src/algolia-projects.json', 'utf8', (err, data) => {
     if (err) {
@@ -326,7 +308,10 @@ gulp.task('export:algolia-index', () => {
             });
           },
           err => {
-            console.log(err); // eslint-disable-line no-console
+            if (err) {
+              console.log(err); // eslint-disable-line no-console
+              throw err;
+            }
           }
         );
       });
@@ -335,14 +320,19 @@ gulp.task('export:algolia-index', () => {
 });
 
 gulp.task('export:algolia-settings', () => {
-  const client = algolia(config.algolia.appID, config.algolia.apiKey);
+  const client = algolia(process.env.appId, process.env.adminApiKey);
   const index = client.initIndex(config.algolia.index);
-  index.setSettings(config.algolia.settings, (err, content) => {});
+  index.setSettings(config.algolia.settings, (err, content) => {
+    if (err) {
+      console.log(err);
+      throw err;
+    }
+  });
 });
 
 // -------------------------------------
 //   Task: Deploy Github Page
 // -------------------------------------
-gulp.task('deploy', callback =>
-  gulp.src('build/**/*').pipe(ghPages({ branch: 'master' }))
-);
+gulp.task('deploy', cb => {
+  ghPages.publish(path.join(process.cwd(), 'build'), {branch: 'master'}, cb);
+});

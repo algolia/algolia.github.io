@@ -3,6 +3,8 @@
 //---------------------------
 @charset "utf-8";
 
+@import "./node_modules/fragments.css/src/main.scss";
+
 //---------------------------
 //  Import mixins
 //---------------------------
@@ -13,9 +15,10 @@
 //  Import variables
 //---------------------------
 
-@import "partials/buttons",
+@import "partials/_buttons",
         "partials/_helpers",
-        "partials/_colors";
+        "partials/_colors",
+        "partials/_text";
 
 //---------------------------
 //  Import all fonts
