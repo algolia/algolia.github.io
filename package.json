@@ -2,9 +2,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "gulp build:prod && node createManifest.js && node removeHash.js && npm run svgmin",
+    "build": "gulp build:prod && node createManifest.js && node removeHash.js && npm run svgmin && npm run svgstore",
     "dev": "gulp dev",
-    "svgmin": "svgo -f src/img/projects/ --pretty",
+    "svgmin": "rm -f src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
+    "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
     "lint": "eslint .",
     "deploy": "gulp deploy",
     "update-index": "gulp export:algolia-index && gulp export:algolia-settings"
