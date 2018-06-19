@@ -2,9 +2,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "gulp build:prod && node createManifest.js && node removeHash.js && npm run svgmin",
+    "build": "gulp build:prod && node createManifest.js && node removeHash.js && npm run svgmin && npm run svgstore",
     "dev": "gulp dev",
-    "svgmin": "svgo -f src/img/projects/ --pretty",
+    "svgmin": "rm -f src/img/projects/projects-defs.svg && svgo -f src/img/projects/ --pretty",
+    "svgstore": "svgstore -o src/img/projects/projects-defs.svg src/img/projects/*.svg",
     "lint": "eslint .",
     "deploy": "gulp deploy",
     "update-index": "gulp export:algolia-index && gulp export:algolia-settings"
@@ -35,7 +36,7 @@
     "gulp-rename": "1.3.0",
     "gulp-rev": "8.1.1",
     "gulp-rev-rewrite": "1.1.1",
-    "gulp-sass": "3.2.1",
+    "gulp-sass": "4.0.1",
     "gulp-uglify-es": "1.0.4",
     "gulp-util": "3.0.8",
     "gulp-webserver": "0.9.1",
@@ -51,13 +52,11 @@
     "svgstore-cli": "1.3.1",
     "sw-toolbox": "3.6.0",
     "webpack": "4.12.0",
-    "webpack-stream": "4.0.3"
+    "webpack-stream": "4.0.3",
+    "gh-pages": "1.2.0"
   },
   "engines": {
     "node": "^9.8.0",
     "yarn": "^1.7.0"
-  },
-  "devDependencies": {
-    "gh-pages": "1.2.0"
   }
 }

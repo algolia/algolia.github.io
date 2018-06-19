@@ -8,6 +8,14 @@ const appId = 'latency';
 const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
 const indexName = 'community.algolia.com';
 
+const loadDefs = () => {
+  fetch('/img/projects/projects-defs.svg')
+    .then(r => r.text())
+    .then(svg => {
+      document.querySelector('.svg-icons').innerHTML = svg;
+    });
+};
+
 function validateEmail(email) {
   /* eslint-disable */
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -15,6 +23,8 @@ function validateEmail(email) {
 }
 
 window.addEventListener('load', () => {
+  loadDefs();
+
   if (window.location.hash) {
     const hash = document.querySelector(`[href="${window.location.hash}"]`);
     setTimeout(() => {
