@@ -2,14 +2,14 @@ const templates = require('./templates.js');
 import instantsearch from 'instantsearch.js';
 import { searchBox, menu, hits } from 'instantsearch.js/es/widgets';
 
-const algoliaProjects = require('./../algolia-projects-22e1bd8471.json');
+const algoliaProjects = require('./../algolia-projects-e508982d8f.json');
 
 const appId = 'latency';
 const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
 const indexName = 'community.algolia.com';
 
 const loadDefs = () => {
-  fetch('/img/projects/projects-defs-8141d8aa81.svg')
+  fetch('/img/projects/projects-defs-f9632323b5.svg')
     .then(r => r.text())
     .then(svg => {
       document.querySelector('.svg-icons').innerHTML = svg;

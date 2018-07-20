@@ -90,7 +90,7 @@
   },
   {
     "name": "WordPress",
-    "category": "Addons",
+    "category": "Extensions",
     "description": "Surface your site's best content with lighting-fast, beautiful search",
     "url_home": "https://community.algolia.com/wordpress/",
     "url_github": "https://github.com/algolia/algoliasearch-wordpress",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Magento",
-    "category": "Addons",
+    "category": "Extensions",
     "description": "Deliver fast and relevant search results with the Algolia extension for Magento.",
     "url_home": "https://community.algolia.com/magento/",
     "url_github": "https://github.com/algolia/magento",
@@ -110,7 +110,7 @@
   },
   {
     "name": "Zendesk",
-    "category": "Addons",
+    "category": "Extensions",
     "description": "Level up your Zendesk Help Center with an awesome search experience.",
     "url_home": "https://community.algolia.com/zendesk/",
     "url_github": "https://github.com/algolia/zendesk",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Jekyll",
-    "category": "Addons",
+    "category": "Extensions",
     "description": "Add fast and relevant search to your Jekyll site",
     "url_home": "https://community.algolia.com/jekyll-algolia/",
     "url_github": "https://github.com/algolia/jekyll-algolia",
@@ -130,7 +130,7 @@
   },
   {
     "name": "Shopify",
-    "category": "Addons",
+    "category": "Extensions",
     "description": "Give your customers the search they deserve with Algolia's Shopify integration",
     "url_home": "https://community.algolia.com/shopify/",
     "url_github": null,
