@@ -334,9 +334,9 @@ algoliasearch@3.27.0:
     semver "^5.1.0"
     tunnel-agent "^0.6.0"
 
-algoliasearch@3.29.0:
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-3.29.0.tgz#d04021a5450be55ce314b928bba4a38723399bd8"
+algoliasearch@3.30.0:
+  version "3.30.0"
+  resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-3.30.0.tgz#355585e49b672e5f71d45b9c2b371ecdff129cd1"
   dependencies:
     agentkeepalive "^2.2.0"
     debug "^2.6.8"
