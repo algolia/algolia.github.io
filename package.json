@@ -43,7 +43,7 @@
     "html-escape": "2.0.0",
     "image-size": "0.6.3",
     "imagemin-pngquant": "5.1.0",
-    "instantsearch.js": "2.9.0",
+    "instantsearch.js": "2.10.0",
     "lodash": "4.17.10",
     "prettier": "1.14.0",
     "run-sequence": "2.2.1",
