@@ -21,7 +21,7 @@
     "eslint-config-algolia": "13.2.3",
     "eslint-config-prettier": "2.10.0",
     "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-prettier": "2.7.0",
     "fragments.css": "1.0.49-alpha",
     "glob": "7.1.3",
     "gulp": "3.9.1",
