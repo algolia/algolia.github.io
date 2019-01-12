@@ -41,7 +41,7 @@
     "gulp-util": "3.0.8",
     "gulp-webserver": "0.9.1",
     "html-escape": "2.0.0",
-    "image-size": "0.6.3",
+    "image-size": "0.7.1",
     "imagemin-pngquant": "5.1.0",
     "instantsearch.js": "2.10.4",
     "lodash": "4.17.11",
