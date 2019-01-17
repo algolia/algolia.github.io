@@ -4,12 +4,12 @@ function htmlEscape(html) {
     .appendChild(document.createTextNode(html)).parentNode.innerHTML;
 }
 exports.hitTemplate = data => `
- <article class="alg-communityhit bxs-1 bdr-2 c-gradient pos-rel">
+ <article class="alg-communityhit bxs-1 bdrad-2 c-gradient pos-rel">
       <div class="alg-communityhit__details">
         <div class="alg-communityhit__icon">
           <a href="${data.url_home ||
             data.url_github ||
-            '#'}" class="bxs-1 bdr-6 alg-communityhit__iconcontainer alg-icon-${data.category
+            '#'}" class="bxs-1 bdrad-6 alg-communityhit__iconcontainer alg-icon-${data.category
   .toLowerCase()
   .split(' ')
   .join('-')}">

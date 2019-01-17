@@ -89,13 +89,23 @@
     "categoryRanking": 3
   },
   {
+    "name": "Prestamodule",
+    "category": "Extensions",
+    "description": "As-you-type autocomplete and instant search results service for PrestaShop",
+    "url_home": "https://instantsearch.app",
+    "url_github": "false",
+    "icon": "prestamodule",
+    "ranking": 1,
+    "categoryRanking": 4
+  },
+  {
     "name": "WordPress",
     "category": "Extensions",
     "description": "Surface your site's best content with lighting-fast, beautiful search",
     "url_home": "https://community.algolia.com/wordpress/",
     "url_github": "https://github.com/algolia/algoliasearch-wordpress",
     "icon": "wordpress",
-    "ranking": 1,
+    "ranking": 2,
     "categoryRanking": 4
   },
   {
@@ -105,7 +115,7 @@
     "url_home": "https://community.algolia.com/magento/",
     "url_github": "https://github.com/algolia/magento",
     "icon": "magento",
-    "ranking": 2,
+    "ranking": 3,
     "categoryRanking": 4
   },
   {
