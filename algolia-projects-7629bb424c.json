@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "InstantSearch.js",
     "category": "InstantSearch",
     "description": "Library of UI widgets to build an instant-search experience.",
@@ -93,7 +94,7 @@
     "category": "Extensions",
     "description": "As-you-type autocomplete and instant search results service for PrestaShop",
     "url_home": "https://instantsearch.app",
-    "url_github": "false",
+    "url_github": null,
     "icon": "prestamodule",
     "ranking": 1,
     "categoryRanking": 4
