@@ -4228,10 +4228,10 @@ gulp-rename@^1.2.0:
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
   integrity sha1-OtRCh2PwXidk3sHGfYaNsnVoeBc=
 
-gulp-rev-rewrite@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/gulp-rev-rewrite/-/gulp-rev-rewrite-1.1.3.tgz#1b3ae10a51f3ed9b60ef5ae5e93776ae288aa2f9"
-  integrity sha512-PrRw3bIa4TuPCAR5iAqMdtYTGRGpp9/Xz9rangGJQXfruWWOMn+OOqwY3hnxSPyNDq6gikfdZQL2gLcjXLtV1g==
+gulp-rev-rewrite@1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/gulp-rev-rewrite/-/gulp-rev-rewrite-1.1.4.tgz#575495a080fb9d95f89a508f40f81dc5369d03a6"
+  integrity sha512-sDdQLODLBC+56GRqs+kSyrDry7HI2eWD4JiN6xoXycq1l/OxF4rXMVQorLqd1jfY7b3XzeoYEJQG+JIvPqOCsg==
   dependencies:
     lodash.escaperegexp "^4.1.2"
     plugin-error "^1.0.1"
