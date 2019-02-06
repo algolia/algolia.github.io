@@ -172,7 +172,7 @@
     "name": "Symfony",
     "category": "Frameworks",
     "description": "Symfony integration for Algolia",
-    "url_home": "https://www.algolia.com/doc/api-client/symfony/setup/",
+    "url_home": "https://www.algolia.com/doc/framework-integration/symfony/getting-started/",
     "url_github": "https://github.com/algolia/AlgoliaSearchBundle",
     "icon": "symfony",
     "ranking": 3,
