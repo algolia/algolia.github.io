@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "InstantSearch.js",
     "category": "InstantSearch",
     "description": "Library of UI widgets to build an instant-search experience.",
@@ -94,7 +93,7 @@
     "category": "Extensions",
     "description": "As-you-type autocomplete and instant search results service for PrestaShop",
     "url_home": "https://instantsearch.app",
-    "url_github": null,
+    "url_github": "false",
     "icon": "prestamodule",
     "ranking": 1,
     "categoryRanking": 4
@@ -173,7 +172,7 @@
     "name": "Symfony",
     "category": "Frameworks",
     "description": "Symfony integration for Algolia",
-    "url_home": "https://www.algolia.com/doc/api-client/symfony/setup/",
+    "url_home": "https://www.algolia.com/doc/framework-integration/symfony/getting-started/",
     "url_github": "https://github.com/algolia/AlgoliaSearchBundle",
     "icon": "symfony",
     "ranking": 3,
