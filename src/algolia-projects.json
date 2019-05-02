@@ -103,8 +103,8 @@
     "name": "WordPress",
     "category": "Extensions",
     "description": "Surface your site's best content with lighting-fast, beautiful search",
-    "url_home": "https://community.algolia.com/wordpress/",
-    "url_github": "https://github.com/algolia/algoliasearch-wordpress",
+    "url_home": "https://www.algolia.com/doc/integration/wordpress/getting-started/quick-start/",
+    "url_github": null,
     "icon": "wordpress",
     "ranking": 2,
     "categoryRanking": 4
