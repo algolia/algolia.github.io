@@ -1,0 +1,46 @@
+
+:root {
+  font-size: 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscaled;
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #fff;
+  font-family: 'hind', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1,h2,h3 {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  transition: 100ms ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.96);
+  }
+}
