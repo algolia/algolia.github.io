@@ -29,7 +29,7 @@
     "gulp-critical-css": "1.0.1",
     "gulp-filter": "5.1.0",
     "gulp-haml": "1.0.1",
-    "gulp-imagemin": "4.1.0",
+    "gulp-imagemin": "5.0.3",
     "gulp-livereload": "3.8.1",
     "gulp-minify-css": "1.2.4",
     "gulp-notify": "3.2.0",
