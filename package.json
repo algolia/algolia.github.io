@@ -45,7 +45,7 @@
     "imagemin-pngquant": "5.1.0",
     "instantsearch.js": "2.10.4",
     "lodash": "4.17.11",
-    "prettier": "1.17.1",
+    "prettier": "1.18.2",
     "run-sequence": "2.2.1",
     "svgmin": "0.1.0",
     "svgo": "1.2.2",
