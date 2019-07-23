@@ -300,6 +300,16 @@
     "categoryRanking": 6
   },
   {
+    "name": "Kotlin",
+    "category": "API Clients",
+    "description": "Algolia Search API Client for Kotlin",
+    "url_home": "https://www.algolia.com/doc/api-client/getting-started/install/kotlin/",
+    "url_github": "https://github.com/algolia/algoliasearch-client-kotlin",
+    "icon": "php",
+    "ranking": 1,
+    "categoryRanking": 6
+  },
+  {
     "name": "JavaScript",
     "category": "API Clients",
     "description": "Algolia Search API client for JavaScript",
