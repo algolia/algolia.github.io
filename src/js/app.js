@@ -5,7 +5,7 @@ import { searchBox, menu, hits } from 'instantsearch.js/es/widgets';
 const algoliaProjects = require('./../algolia-projects.json');
 
 const appId = 'latency';
-const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
+const apiKey = 'cabc86cd58866969740b9dc331be75f8';
 const indexName = 'community.algolia.com';
 
 const loadDefs = () => {
