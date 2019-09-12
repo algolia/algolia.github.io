@@ -306,7 +306,7 @@
     "url_home": "https://www.algolia.com/doc/api-client/getting-started/install/kotlin/",
     "url_github": "https://github.com/algolia/algoliasearch-client-kotlin",
     "icon": "kotlin",
-    "ranking": 1,
+    "ranking": 2,
     "categoryRanking": 6
   },
   {
@@ -316,7 +316,7 @@
     "url_home": "https://www.algolia.com/doc/api-client/javascript/getting-started/",
     "url_github": "https://github.com/algolia/algoliasearch-client-javascript",
     "icon": "javascript",
-    "ranking": 2,
+    "ranking": 3,
     "categoryRanking": 6
   },
   {

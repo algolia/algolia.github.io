@@ -23,6 +23,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "2.7.0",
     "fragments.css": "1.0.49-alpha",
+    "gh-pages": "1.2.0",
     "glob": "7.1.4",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "5.0.0",
@@ -52,8 +53,7 @@
     "svgstore-cli": "1.3.1",
     "sw-toolbox": "3.6.0",
     "webpack": "4.36.1",
-    "webpack-stream": "4.0.3",
-    "gh-pages": "1.2.0"
+    "webpack-stream": "4.0.3"
   },
   "engines": {
     "node": "^9.8.0",
