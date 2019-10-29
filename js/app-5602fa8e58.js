@@ -9,7 +9,7 @@ const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
 const indexName = 'community.algolia.com';
 
 const loadDefs = () => {
-  fetch('/img/projects/projects-defs-ac4c6f804d.svg')
+  fetch('/img/projects/projects-defs-571bc213f3.svg')
     .then(r => r.text())
     .then(svg => {
       document.querySelector('.svg-icons').innerHTML = svg;
