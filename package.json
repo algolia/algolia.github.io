@@ -26,7 +26,7 @@
     "gh-pages": "1.2.0",
     "glob": "7.1.4",
     "gulp": "3.9.1",
-    "gulp-autoprefixer": "5.0.0",
+    "gulp-autoprefixer": "7.0.1",
     "gulp-critical-css": "1.0.1",
     "gulp-filter": "5.1.0",
     "gulp-haml": "1.0.1",
