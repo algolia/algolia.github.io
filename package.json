@@ -11,7 +11,7 @@
     "update-index": "gulp export:algolia-index && gulp export:algolia-settings"
   },
   "dependencies": {
-    "algoliasearch": "3.33.0",
+    "algoliasearch": "4.9.2",
     "async": "2.6.3",
     "babel-eslint": "8.2.6",
     "babel-loader": "8.0.6",
