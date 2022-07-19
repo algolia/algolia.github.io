@@ -70,16 +70,6 @@
     "categoryRanking": 3
   },
   {
-    "name": "Places",
-    "category": "Libraries",
-    "description": "Turn any <input> into an address autocomplete",
-    "url_home": "https://community.algolia.com/places/",
-    "url_github": "https://github.com/algolia/places",
-    "icon": "places",
-    "ranking": 2,
-    "categoryRanking": 3
-  },
-  {
     "name": "helper.js",
     "category": "Libraries",
     "description": "A set of utilities for further customizing search behavior",
