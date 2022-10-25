@@ -2,7 +2,7 @@ const templates = require('./templates.js');
 import instantsearch from 'instantsearch.js';
 import { searchBox, menu, hits } from 'instantsearch.js/es/widgets';
 
-const algoliaProjects = require('./../algolia-projects-1865f63fac.json');
+const algoliaProjects = require('./../algolia-projects-f31c9af48e.json');
 
 const appId = 'latency';
 const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
