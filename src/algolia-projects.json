@@ -403,7 +403,7 @@
     "name": "DocSearch",
     "category": "Tools",
     "description": "Search for technical documentation. Free for open source.",
-    "url_home": "https://community.algolia.com/docsearch/",
+    "url_home": "https://docsearch.algolia.com/",
     "url_github": "https://github.com/algolia/docsearch",
     "icon": "docsearch",
     "ranking": 1,
