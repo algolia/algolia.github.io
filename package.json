@@ -37,7 +37,7 @@
     "gulp-rename": "1.4.0",
     "gulp-rev": "8.1.1",
     "gulp-rev-rewrite": "1.1.4",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "4.1.1",
     "gulp-uglify-es": "1.0.4",
     "gulp-util": "3.0.8",
     "gulp-webserver": "0.9.1",
