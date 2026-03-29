@@ -45,7 +45,7 @@
     "image-size": "0.9.7",
     "imagemin-pngquant": "5.1.0",
     "instantsearch.js": "2.10.5",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "prettier": "1.19.1",
     "run-sequence": "2.2.1",
     "svgmin": "0.1.0",
