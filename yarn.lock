@@ -2901,10 +2901,10 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-algolia@13.4.0:
-  version "13.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-algolia/-/eslint-config-algolia-13.4.0.tgz#d622ae33ca6129a712a3880efd6e7c7511f08207"
-  integrity sha512-dSOlc6/XTvBTVBAfgqKrUpt3ej74yahYw04L6yvE+2q3mwS+/Pnp71L2xDaOhkyZD1VGf7FSoi6qrrJFq5zdhQ==
+eslint-config-algolia@24.0.0:
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-algolia/-/eslint-config-algolia-24.0.0.tgz#06ed4c5125a1b252c5bfa46ac3978cd960072c5c"
+  integrity sha512-O4noUpd248lh1X3sDVbf/dbotnOveluFVU19odgLs9IlQGTrLehzB0deqSPVOt8/cli1DLTUePAYRAe9lYPQYg==
 
 eslint-config-prettier@2.10.0:
   version "2.10.0"
